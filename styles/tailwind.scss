@@ -1,0 +1,264 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.task-list-item::before {
+  @apply hidden;
+}
+
+.task-list-item {
+  @apply list-none;
+}
+
+.footnotes {
+  @apply pt-8 mt-12 border-t border-gray-200 dark:border-gray-700;
+}
+
+.csl-entry {
+  @apply my-5;
+}
+
+/* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+/* Custom styles - light mode */
+/* page body background color */
+.bg-white {
+  background-color: $discord-teal;
+}
+
+.text-3xl {
+  font-weight: normal;
+}
+
+main.mb-auto {
+  border: 1px solid;
+  border-radius: 0.63rem;
+  background: $discord-lilac;
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+  // border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+	transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 1026px;
+  width: 100%;
+}
+
+dd.text-gray-500 > time {
+  color: $discord-charcoal;
+}
+
+/* "sectioning" border */
+
+.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
+  tw-divide-opacity: 0;
+  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
+}
+
+.divide-y.divide-gray-200 > dd > a:hover {
+  color: $peppermint-blush-white;
+}
+
+img.rounded-full {
+  border: 1px solid !important;
+}
+
+dd.text-gray-900, dd > a.text-primary-500 {
+  font-size: 1.1rem;
+}
+
+dd > a.text-primary-500 {
+  color: #000 !important;
+  text-decoration: underline;
+  &:hover {
+    color: $peppermint-blush-white;
+    text-decoration: none;
+  }
+}
+
+.prose {
+  color: $discord-charcoal;
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  & strong, & strong > em {
+    color: #000;
+  }
+  & h2 {
+    font-weight: 500;
+  }
+}
+
+.prose > div > img {
+  // border-radius: 3px;
+  box-shadow: 2px 5px 5px 2px rgb(0,0,0) !important;
+}
+
+.prose p > code {
+  background: $discord-lilac;
+  color: $tailwind-code-pink;
+  font-size: 1rem;
+}
+
+.prose p > a:hover {
+  text-decoration: none;
+  color: $peppermint-blush-white !important;
+}
+
+.prose p > a, .prose ul li > a {
+  color: $discord-charcoal !important;
+  &:hover {
+    color: $discord-earth-red !important;
+  }
+}
+
+.prose > ul {
+   list-style: square;
+   margin-left: -0.75rem;
+
+  & li > a:hover {
+    color: $discord-earth-red !important;
+  }
+}
+
+.prose ul > li::marker {
+  color: $discord-charcoal;
+}
+
+.prose > blockquote {
+  background: $main-background;
+  color: $discord-charcoal;
+  border-left: 0.4rem solid rgb(132 0 88 / 100%);
+  padding: 0.5rem 1rem;
+  background: rgb(255 244 230);
+
+  & p::before {
+    content: " ";
+  }
+
+  & code {
+    background: $main-background;
+  }
+}
+
+.prose > div.relative > pre {
+  border-radius: 0;
+}
+
+/* Tag h2 title/previous/next article styling */
+
+h2.text-gray-500 {
+  color: $discord-charcoal;
+}
+
+/* discuss on twitter/view on github styling */
+
+.divide-gray-200 a {
+  color: $discord-charcoal;
+  text-decoration: underline;
+  &:hover {
+    color: $discord-earth-red;
+    text-decoration: none;
+  }
+}
+
+/* tag/previous/next article styling */
+
+a.text-primary-500, div.text-primary-500 a {
+  text-decoration: underline;
+  &:hover {
+    color: $discord-earth-red !important;
+    text-decoration: none;
+  }
+}
+
+#comment button {
+  color: $white;
+  background: $discord-charcoal;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid $peppermint-blush-white;
+  box-shadow: 2px 4px 4px rgba(0,0,0,0.5);
+  transform: scale(1);
+  &:hover {
+    border: 1px solid $chai-punk-pink-lite;
+    box-shadow: none;
+    color: $chai-punk-pink-lite;
+    transform: scale(0.99);
+  }
+}
+
+/* footer text styling */
+
+footer a, footer div {
+  color: $discord-charcoal;
+}
+
+/* social/contact icon anchor styling */
+
+a.text-gray-500 > svg {
+  fill: $discord-charcoal;
+}
+
+/* Custom styles - dark mode */
+
+.dark dd > a {
+  color: #14b8a6 !important;
+
+  &:hover {
+    color: $discord-coral !important;
+  }
+}
+
+.dark ul > li::marker {
+  color: $peppermint-blush-white;
+}
+
+.dark .dark\:prose-dark :where(blockquote):not(:where([class~="not-prose"] *)) {
+  color: $discord-charcoal !important;
+  border-left: 0.4rem solid rgb(132 0 88 / 100%) !important;
+
+  & code {
+    background: $main-background;
+  }
+}
+
+.dark .dark\:prose-dark > ul {
+  & li > a {
+    color: #14b8a6 !important;
+    &:hover {
+      color: $discord-earth-red !important;
+    }
+  }
+  
+}
+
+.dark p > a {
+  color: #14b8a6 !important;
+
+  &:hover {
+    text-decoration: none;
+    color: $discord-earth-red !important;
+  }
+}
+
+
+/* tag styling */
+
+.dark .dark\:text-gray-400 > div > a {
+  color: #14b8a6 !important;
+
+  &:hover {
+    color: $discord-earth-red !important;
+  }
+}
+
+
+/* previous/next article styling */
+
+.dark a:hover.text-primary-500, .dark div.text-primary-500 a:hover {
+  color: $discord-earth-red !important;
+}
