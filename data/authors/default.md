@@ -1,16 +1,13 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+name: Maria D. Campbell
+avatar: /static/images/interglobalmedia-avatar.jpg
+occupation: Full Stack JavaScript Developer and Cat Whisperer
+company: Inter-Global Media Network, Inc.
+twitter: https://twitter.com/letsbsocial1
+linkedin: https://www.linkedin.com/in/mariacampbell/
+github: https://github.com/interglobalmedia
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+I build and teach all things JavaScript, HTML, and CSS. I am also passionate about all things Git and Command Line. I feel it important that students should become better acquainted with their operating systems and understand how they work under the hood, and what better way than the Command Line. In addition, Command Line is essential for working with a variety of developer tools. I teach on two operating systems. Windows and macOS. I work on both myself. I discovered that more and more of my students were using Windows, and I did not want to exclude that population. I cover the Windows CMD Prompt and PowerShell, Git, Node.js and npm. Everything the macOS users install and use, the Windows users install the equivalent of and use as well. This makes the teaching all inclusive. I take a very hands on approach, and believe in learning by doing. I am a strong proponent of the Maker Culture as regards Web Development, and my goal is to foster it in my teaching and building. Since the onset of COVID-19, I began teaching seniors about their computers too. I have found senior students can be very eager quick to learn.
 
-He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Teaching is great, but there is nothing like building applications, especially as part of a team, which are useful to others and contribute to bettering and/or making their lives simpler!

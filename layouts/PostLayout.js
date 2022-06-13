@@ -59,8 +59,8 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       {author.avatar && (
                         <Image
                           src={author.avatar}
-                          width="38px"
-                          height="38px"
+                          width="120px"
+                          height="120px"
                           alt="avatar"
                           className="h-10 w-10 rounded-full"
                         />
@@ -75,7 +75,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                               href={author.twitter}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace('https://twitter.com/', '@')}
+                              {author.twitter.replace(
+                                'https://twitter.com/letsbsocial1',
+                                '@letsbsocial1'
+                              )}
                             </Link>
                           )}
                         </dd>

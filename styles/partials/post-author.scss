@@ -1,0 +1,9 @@
+li.flex.items-center.space-x-2 {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    & dd {
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+}
