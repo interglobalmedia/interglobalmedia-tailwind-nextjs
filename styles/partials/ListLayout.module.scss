@@ -1,6 +1,7 @@
 /* variables */
 $discord-charcoal: #23272a;
 $discord-lilac-lighter: #9eb3e6;
+$peppermint-blush-white: #f2ebe3;
 
 /* ListLayout light mode styling */
 
@@ -29,3 +30,18 @@ $discord-lilac-lighter: #9eb3e6;
         font-weight: 600;
     }
 }
+
+/* ListLayout dark mode styling */
+
+.dark div.dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+
+    color: rgb(237 225 213 / var(--tw-text-opacity));
+}
+
+.dark .divide-y > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-y-reverse: 0;
+
+        border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+        border-top-color: $peppermint-blush-white;
+    }
