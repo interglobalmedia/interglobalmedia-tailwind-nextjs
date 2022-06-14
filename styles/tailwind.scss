@@ -24,8 +24,10 @@ input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
 
-/* Custom styles - light mode */
+/* Custom styles - light mode individual post page */
+
 /* page body background color */
+
 .bg-white {
   background-color: $discord-teal;
 }
@@ -37,9 +39,9 @@ input:-webkit-autofill:focus {
 main.mb-auto {
   border: 1px solid;
   border-radius: 0.63rem;
-  background: $discord-lilac;
-  box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
-  // border-radius: 10px;
+
+  /* lighter shade of $discord-lilac because of color contrast issue (accessibility) */
+  background: #9eb3e6;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
 	transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 1026px;
@@ -53,7 +55,8 @@ dd.text-gray-500 > time {
 /* "sectioning" border */
 
 .divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-  tw-divide-opacity: 0;
+  --tw-divide-opacity: 1;
+
   border-color: rgb(0 0 0 / var(--tw-divide-opacity));
 }
 
@@ -72,6 +75,7 @@ dd.text-gray-900, dd > a.text-primary-500 {
 dd > a.text-primary-500 {
   color: #000 !important;
   text-decoration: underline;
+
   &:hover {
     color: $peppermint-blush-white;
     text-decoration: none;
@@ -80,14 +84,17 @@ dd > a.text-primary-500 {
 
 .prose {
   color: $discord-charcoal;
+
   /* These are technically the same, but use both */
   overflow-wrap: break-word;
   word-wrap: break-word;
+
   & strong, & strong > em {
     color: #000;
   }
+
   & h2 {
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 
@@ -97,9 +104,12 @@ dd > a.text-primary-500 {
 }
 
 .prose p > code {
-  background: $discord-lilac;
-  color: $tailwind-code-pink;
+  background: #9eb3e6;
+
+  /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
+  color: #4D0F0F;
   font-size: 1rem;
+  font-weight: normal;
 }
 
 .prose p > a:hover {
@@ -109,14 +119,15 @@ dd > a.text-primary-500 {
 
 .prose p > a, .prose ul li > a {
   color: $discord-charcoal !important;
+  
   &:hover {
     color: $discord-earth-red !important;
   }
 }
 
 .prose > ul {
-   list-style: square;
-   margin-left: -0.75rem;
+  list-style: square;
+  margin-left: -0.75rem;
 
   & li > a:hover {
     color: $discord-earth-red !important;
@@ -132,7 +143,8 @@ dd > a.text-primary-500 {
   color: $discord-charcoal;
   border-left: 0.4rem solid rgb(132 0 88 / 100%);
   padding: 0.5rem 1rem;
-  background: rgb(255 244 230);
+
+  // background: rgb(255 244 230);
 
   & p::before {
     content: " ";
@@ -158,6 +170,7 @@ h2.text-gray-500 {
 .divide-gray-200 a {
   color: $discord-charcoal;
   text-decoration: underline;
+  
   &:hover {
     color: $discord-earth-red;
     text-decoration: none;
@@ -168,6 +181,7 @@ h2.text-gray-500 {
 
 a.text-primary-500, div.text-primary-500 a {
   text-decoration: underline;
+  
   &:hover {
     color: $discord-earth-red !important;
     text-decoration: none;
@@ -183,6 +197,7 @@ a.text-primary-500, div.text-primary-500 a {
   border: 1px solid $peppermint-blush-white;
   box-shadow: 2px 4px 4px rgba(0,0,0,0.5);
   transform: scale(1);
+
   &:hover {
     border: 1px solid $chai-punk-pink-lite;
     box-shadow: none;
@@ -195,6 +210,10 @@ a.text-primary-500, div.text-primary-500 a {
 
 footer a, footer div {
   color: $discord-charcoal;
+
+  &.text-gray-500 div {
+    color: $discord-charcoal;
+  }
 }
 
 /* social/contact icon anchor styling */
@@ -203,13 +222,35 @@ a.text-gray-500 > svg {
   fill: $discord-charcoal;
 }
 
-/* Custom styles - dark mode */
+/* Custom styles - dark mode - individual post page */
 
-.dark dd > a {
-  color: #14b8a6 !important;
+.dark main.mb-auto {
+  background:$discord-earth-red;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: $peppermint-blush-white;
+}
+
+.dark .dark\:text-gray-400 > time {
+  color: $peppermint-blush-white;
+}
+
+/* "sectioning" border */
+
+.dark .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 1;
+    border-color: rgb(237 225 213 / var(--tw-divide-opacity)) !important;
+}
+
+.dark dd > a.text-primary-500 {
+  color: $peppermint-blush-white !important;
 
   &:hover {
-    color: $discord-coral !important;
+    color: $tailwind-peppermint-green !important;
   }
 }
 
@@ -217,34 +258,71 @@ a.text-gray-500 > svg {
   color: $peppermint-blush-white;
 }
 
-.dark .dark\:prose-dark :where(blockquote):not(:where([class~="not-prose"] *)) {
-  color: $discord-charcoal !important;
-  border-left: 0.4rem solid rgb(132 0 88 / 100%) !important;
-
-  & code {
-    background: $main-background;
-  }
-}
-
 .dark .dark\:prose-dark > ul {
   & li > a {
-    color: #14b8a6 !important;
+    color: $peppermint-blush-white !important;
     &:hover {
-      color: $discord-earth-red !important;
+      color: $tailwind-peppermint-green !important;
     }
   }
   
 }
 
-.dark p > a {
-  color: #14b8a6 !important;
+.dark p {
+  color: $peppermint-blush-white;
 
-  &:hover {
-    text-decoration: none;
-    color: $discord-earth-red !important;
+  & strong, & strong > em {
+    color: $white;
   }
 }
 
+.dark .dark\:prose-dark h2 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.dark p > a {
+  color: $peppermint-blush-white !important;
+
+  &:hover {
+    text-decoration: none;
+    color: $tailwind-peppermint-green !important;
+  }
+}
+
+.dark .dark\:prose-dark > p > code {
+  background: $discord-earth-red;
+  color: #FFE96B;
+  font-weight: normal;
+}
+
+.dark .dark\:prose-dark blockquote > p {
+  color: $discord-charcoal !important;
+
+  & code {
+    // color: #b81111 !important;
+    background: $main-background;
+  }
+}
+
+/* discuss on twitter view on github styling & h2 tag/next/prervious article title styling */
+
+.dark .dark\:text-gray-300 a, .dark h2.dark\:text-gray-400 {
+  color: $peppermint-blush-white;
+}
+
+.dark .dark\:text-gray-300 a {
+  &:hover {
+    color: $tailwind-peppermint-green;
+  }
+}
+
+.dark #comment button {
+  &:hover {
+    border-color: $tailwind-peppermint-green;
+    color: $tailwind-peppermint-green;
+  }
+}
 
 /* tag styling */
 
@@ -256,9 +334,29 @@ a.text-gray-500 > svg {
   }
 }
 
-
 /* previous/next article styling */
 
-.dark a:hover.text-primary-500, .dark div.text-primary-500 a:hover {
-  color: $discord-earth-red !important;
+.dark a.text-primary-500, .dark div.text-primary-500 a {
+  color: $peppermint-blush-white;
+  &:hover {
+    color: $tailwind-peppermint-green !important;
+  }
+}
+
+/* footer text styling */
+
+.dark footer a, .dark footer div {
+  color: $white;
+}
+
+.dark .dark\:text-gray-400 div {
+    --tw-text-opacity: 1;
+    
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* social/contact icon anchor styling */
+
+.dark a.text-gray-500 > svg {
+  fill: $white;
 }
