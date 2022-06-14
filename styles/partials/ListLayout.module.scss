@@ -1,0 +1,31 @@
+/* variables */
+$discord-charcoal: #23272a;
+$discord-lilac-lighter: #9eb3e6;
+
+/* ListLayout light mode styling */
+
+.mb-auto {
+    padding: 1.5rem;
+
+    & input.border-gray-300 {
+        --tw-border-opacity: 1;
+
+        border-color: rgb(0 0 0 / var(--tw-border-opacity));
+        background: $discord-charcoal;
+    }
+
+    & .divide-y > :not([hidden]) ~ :not([hidden]) {
+        --tw-divide-y-reverse: 0;
+
+        border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+        border-top-color: $discord-charcoal;
+    }
+
+    & a.text-primary-500 {
+        color: $discord-charcoal;
+    }
+    
+    & a.text-gray-900 {
+        font-weight: 600;
+    }
+}
