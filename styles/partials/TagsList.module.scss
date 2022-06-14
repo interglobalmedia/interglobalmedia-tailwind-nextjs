@@ -1,0 +1,36 @@
+/* color variables */
+$discord-charcoal: #23272a;
+
+/* TagsList light mode styling */
+
+.mb-auto .divide-y> :not([hidden])~ :not([hidden]) {
+    --tw-divide-y-reverse: 1;
+
+    border-top-width: calc(1px * (1 - var(--tw-divide-y-reverse)));
+    border-top-color: #23272a;
+
+    @media (max-width: 767px) {
+        --tw-divide-y: 0;
+
+        border-top-width: calc(0px * (1 - var(--tw-divide-y)));
+        border-bottom-width: calc(0px * (1 - var(--tw-divide-y)));
+    }
+}
+
+@media (min-width: 768px) {
+    .space-x-2.pt-6.pb-8.md\:space-y-5 {
+        margin-top: -6rem;
+        
+        & h1.text-gray-900 {
+            border-right-width: 2px;
+            border-right-color: $discord-charcoal;
+        }
+    }
+    
+}
+
+@media (min-width: 768px) {
+    .flex.max-w-lg.flex-wrap {
+        margin-top: -6rem;
+    }
+}
