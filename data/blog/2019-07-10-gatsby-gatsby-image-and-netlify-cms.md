@@ -15,7 +15,7 @@ tags:
     'gatsby-plugin-netlify-cms',
   ]
 categories: ['gatsbyjs', 'netlify-cms']
-authors: ['interglobalmedia']
+author: Maria D. Campbell
 draft: false
 ---
 
