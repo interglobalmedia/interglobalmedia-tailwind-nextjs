@@ -2,10 +2,10 @@
 title: 'Data Recovery with Git'
 date: '10 23 2016'
 summary: 'Why is there data recovery? Because sometimes you may lose a commit. Stuff happens! Remember. Nothing is perfect.'
-image: ['/static/images/posts/img/jpg/fredy-jacob-764477-unsplash.jpg']
+images: ['/static/images/posts/img/jpg/fredy-jacob-764477-unsplash.jpg']
 tags: ['git', 'distributed-version-control', 'data-recovery', 'branching', 'data-backup']
 categories: ['distributed-version-control', 'web-development', 'web-development-workflows']
-author: 'Maria D. Campbell'
+authors: ['interglobalmedia']
 draft: false
 ---
 
