@@ -1,5 +1,5 @@
 ---
-name: Maria D. Campbell
+name: interglobalmedia
 avatar: /static/images/interglobalmedia-avatar.jpg
 occupation: Full Stack JavaScript Developer and Cat Whisperer
 company: Inter-Global Media Network, Inc.
