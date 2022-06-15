@@ -1,6 +1,7 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import formatDate from '@/lib/utils/formatDate'
+import '../styles/partials/Article.module.scss'
 
 const Article = ({
   slug,
@@ -46,9 +47,7 @@ const Article = ({
         <div className="space-y-3 xl:col-span-3">
           <div>
             <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-              <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                <a>{title}</a>
-              </h2>
+              <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
             </Link>
             <div className="flex flex-wrap">
               {tags.map((tag) => (
@@ -64,7 +63,7 @@ const Article = ({
                 className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
                 aria-label={`Read "${title}"`}
               >
-                <a>Learn more</a>
+                Learn more
               </Link>
             </div>
           )}
