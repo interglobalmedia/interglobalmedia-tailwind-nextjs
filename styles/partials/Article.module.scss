@@ -1,0 +1,20 @@
+/* color variables */
+$inline-code-color-lite-mode: #4d0f0f;
+$next-blue: #34569d;
+
+.mb-auto {
+  & a.text-blue-500 {
+    color: $inline-code-color-lite-mode;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  h2.text-2xl.font-bold.leading-8.tracking-tight {
+    margin-bottom: 0.5rem;
+  }
+}
