@@ -25,6 +25,9 @@ $peppermint-blush-white: #f2ebe3;
 
     & a.text-primary-500 {
         color: $discord-charcoal;
+        line-height: 1.5;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
     }
     
     & a.text-gray-900 {

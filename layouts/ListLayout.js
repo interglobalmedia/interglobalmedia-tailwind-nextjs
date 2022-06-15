@@ -53,8 +53,8 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               <Article
                 {...frontMatter}
                 images={frontMatter.images}
-                hasExtraLink={false}
-                isH2={false}
+                hasExtraLink={true}
+                isH2={true}
               />
             </li>
           ))}
