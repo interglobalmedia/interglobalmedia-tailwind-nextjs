@@ -1,12 +1,19 @@
+import { useState } from 'react'
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import { useState } from 'react'
 import Pagination from '@/components/Pagination'
 import formatDate from '@/lib/utils/formatDate'
 import '../styles/partials/ListLayout.module.scss'
 
-export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
+export default function ListLayout({
+  posts,
+  slug,
+  title,
+  initialDisplayPosts = [],
+  pagination,
+  hasExtraLink = true,
+}) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
@@ -50,38 +57,55 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
         </div>
         <ul>
           {!filteredBlogPosts.length && 'No posts found.'}
-          {displayPosts.map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
-            return (
-              <li key={slug} className="py-4">
-                <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+          {displayPosts.map((frontMatter) => (
+            <li key={frontMatter.slug} className="py-4">
+              <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
+                <div className="grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-4 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
+                  <div className="xl:row-span-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={frontMatter.images} alt="" />
+                  </div>
                   <dl>
                     <dt className="sr-only">Published on</dt>
                     <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={date}>{formatDate(date)}</time>
+                      <time dateTime={frontMatter.date}>{formatDate(frontMatter.date)}</time>
                     </dd>
                   </dl>
                   <div className="space-y-3 xl:col-span-3">
                     <div>
-                      <h3 className="text-2xl font-bold leading-8 tracking-tight">
-                        <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-                          {title}
-                        </Link>
-                      </h3>
+                      <Link
+                        href={`/blog/${frontMatter.slug}`}
+                        className="text-gray-900 dark:text-gray-100"
+                      >
+                        <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                          <a>{frontMatter.title}</a>
+                        </h2>
+                      </Link>
                       <div className="flex flex-wrap">
-                        {tags.map((tag) => (
+                        {frontMatter.tags.map((tag) => (
                           <Tag key={tag} text={tag} />
                         ))}
                       </div>
                     </div>
                     <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                      {summary}
+                      {frontMatter.summary}
                     </div>
+                    {hasExtraLink && (
+                      <div className="text-base font-medium leading-6">
+                        <Link
+                          href={`/blog/${slug}`}
+                          className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
+                          aria-label={`Read "${title}"`}
+                        >
+                          <a>Learn more</a>
+                        </Link>
+                      </div>
+                    )}
                   </div>
-                </article>
-              </li>
-            )
-          })}
+                </div>
+              </article>
+            </li>
+          ))}
         </ul>
       </div>
       {pagination && pagination.totalPages > 1 && !searchValue && (
