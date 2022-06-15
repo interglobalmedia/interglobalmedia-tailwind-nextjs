@@ -3,7 +3,7 @@ title: 'Gatsby, gatsby-image, and Netlify CMS'
 date: '07 10 2019'
 summary: >-
   Adding Netlify CMS to a GatsbyJS website.
-image: ['/img/pawel-czerwinski-knx8h8schdk-unsplash.webp']
+images: ['/static/images/posts/img/webp/pawel-czerwinski-knx8h8schdk-unsplash.webp']
 tags:
   [
     'source-maps',
@@ -15,7 +15,7 @@ tags:
     'gatsby-plugin-netlify-cms',
   ]
 categories: ['gatsbyjs', 'netlify-cms']
-author: 'Maria D. Camcpbell'
+authors: ['interglobalmedia']
 draft: false
 ---
 
