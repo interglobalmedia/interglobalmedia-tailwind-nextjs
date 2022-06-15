@@ -16,7 +16,7 @@ tags:
     'javascript',
   ]
 categories: ['frontend-development']
-authors: ['Maria D. Campbell']
+author: Maria D. Campbell
 draft: false
 ---
 

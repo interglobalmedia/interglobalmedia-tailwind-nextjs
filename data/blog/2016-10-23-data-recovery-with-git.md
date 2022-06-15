@@ -5,7 +5,7 @@ summary: 'Why is there data recovery? Because sometimes you may lose a commit. S
 images: ['/static/images/posts/img/jpg/fredy-jacob-764477-unsplash.jpg']
 tags: ['git', 'distributed-version-control', 'data-recovery', 'branching', 'data-backup']
 categories: ['distributed-version-control', 'web-development', 'web-development-workflows']
-authors: ['interglobalmedia']
+author: Maria D. Campbell
 draft: false
 ---
 
