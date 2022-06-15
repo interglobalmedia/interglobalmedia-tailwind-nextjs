@@ -1,19 +1,10 @@
 import { useState } from 'react'
-import Link from '@/components/Link'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Pagination from '@/components/Pagination'
-import formatDate from '@/lib/utils/formatDate'
+import Article from '@/components/Article'
 import '../styles/partials/ListLayout.module.scss'
 
-export default function ListLayout({
-  posts,
-  slug,
-  title,
-  initialDisplayPosts = [],
-  pagination,
-  hasExtraLink = true,
-}) {
+export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
     const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
@@ -59,51 +50,12 @@ export default function ListLayout({
           {!filteredBlogPosts.length && 'No posts found.'}
           {displayPosts.map((frontMatter) => (
             <li key={frontMatter.slug} className="py-4">
-              <article className="space-y-2 xl:grid xl:grid-cols-4 xl:items-baseline xl:space-y-0">
-                <div className="grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-4 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
-                  <div className="xl:row-span-2">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={frontMatter.images} alt="" />
-                  </div>
-                  <dl>
-                    <dt className="sr-only">Published on</dt>
-                    <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                      <time dateTime={frontMatter.date}>{formatDate(frontMatter.date)}</time>
-                    </dd>
-                  </dl>
-                  <div className="space-y-3 xl:col-span-3">
-                    <div>
-                      <Link
-                        href={`/blog/${frontMatter.slug}`}
-                        className="text-gray-900 dark:text-gray-100"
-                      >
-                        <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                          <a>{frontMatter.title}</a>
-                        </h2>
-                      </Link>
-                      <div className="flex flex-wrap">
-                        {frontMatter.tags.map((tag) => (
-                          <Tag key={tag} text={tag} />
-                        ))}
-                      </div>
-                    </div>
-                    <div className="prose max-w-none text-gray-500 dark:text-gray-400">
-                      {frontMatter.summary}
-                    </div>
-                    {hasExtraLink && (
-                      <div className="text-base font-medium leading-6">
-                        <Link
-                          href={`/blog/${slug}`}
-                          className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
-                          aria-label={`Read "${title}"`}
-                        >
-                          <a>Learn more</a>
-                        </Link>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </article>
+              <Article
+                {...frontMatter}
+                images={frontMatter.images}
+                hasExtraLink={false}
+                isH2={false}
+              />
             </li>
           ))}
         </ul>
