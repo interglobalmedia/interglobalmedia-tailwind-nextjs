@@ -5,9 +5,9 @@ $peppermint-blush-white: #f2ebe3;
 /* TagsList light mode styling */
 
 .mb-auto .divide-y> :not([hidden])~ :not([hidden]) {
-    --tw-divide-y-reverse: 1;
+    --tw-divide-y-opacity: 1;
 
-    border-top-width: calc(1px * (1 - var(--tw-divide-y-reverse)));
+    border-top-width: calc(1px * (1 - var(--tw-divide-y-opacity)));
     border-top-color: #23272a;
 
     @media (max-width: 767px) {

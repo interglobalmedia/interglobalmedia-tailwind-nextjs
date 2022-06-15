@@ -37,17 +37,11 @@ dd.text-gray-500 > time {
   color: $discord-charcoal;
 }
 
-/* "sectioning" border */
-
-.divide-gray-200 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-
-  border-color: rgb(0 0 0 / var(--tw-divide-opacity));
-}
-
-.divide-y.divide-gray-200 > dd > a:hover {
-  color: $peppermint-blush-white;
-}
+// .divide-y.divide-gray-200 > dd > a {
+//   &:hover {
+//     color: $peppermint-blush-white;
+//   }
+// }
 
 img.rounded-full {
   border: 1px solid !important;
@@ -60,6 +54,8 @@ dd.text-gray-900, dd > a.text-primary-500 {
 dd > a.text-primary-500 {
   color: #000 !important;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 
   &:hover {
     color: $peppermint-blush-white;
@@ -97,6 +93,11 @@ dd > a.text-primary-500 {
   font-weight: normal;
 }
 
+.prose p > a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
 .prose p > a:hover {
   text-decoration: none;
   color: $peppermint-blush-white !important;
@@ -114,8 +115,13 @@ dd > a.text-primary-500 {
   list-style: square;
   margin-left: -0.75rem;
 
-  & li > a:hover {
-    color: $discord-earth-red !important;
+  & li > a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+
+    &:hover {
+      color: $discord-earth-red !important;
+    }
   }
 }
 
@@ -155,6 +161,8 @@ h2.text-gray-500 {
 .divide-gray-200 a {
   color: $discord-charcoal;
   text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
   
   &:hover {
     color: $discord-earth-red;
@@ -166,6 +174,7 @@ h2.text-gray-500 {
 
 a.text-primary-500, div.text-primary-500 a {
   text-decoration: underline;
+  text-decoration-thickness: 1px;
   
   &:hover {
     color: $discord-earth-red !important;
@@ -244,13 +253,15 @@ a.text-gray-500 > svg {
 }
 
 .dark .dark\:prose-dark > ul {
-  & li > a {
+  & li {
     color: $peppermint-blush-white !important;
+    & > a {
+      color: $peppermint-blush-white !important;
+    }
     &:hover {
       color: $tailwind-peppermint-green !important;
     }
   }
-  
 }
 
 .dark p {
@@ -268,6 +279,8 @@ a.text-gray-500 > svg {
 
 .dark p > a {
   color: $peppermint-blush-white !important;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 
   &:hover {
     text-decoration: none;

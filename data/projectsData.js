@@ -1,19 +1,33 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
+    title: 'Speech To Text',
+    summary: `What if you could look up any information in the world? Webpages, images, videos
     and more. Google has many features to help you find exactly what you're looking
     for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
+    imgSrc: '/static/images/projects/img/webp/speech-to-text.webp',
+    href: '/blog/projects/time-machine',
+    tags: ['api'],
   },
   {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
+    title: 'Welcome To The Groove',
+    summary: `A voice controlled notes app using the Speech Recognition Api and React.
+    
+    This little app was built with React, Webpack, The Web Speech Recognition Api, and Session Storage. I also use Babel 7 for JS compilation and Jest for testing.`,
     imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
+    tags: [
+      'web speech recognition api',
+      ', ',
+      'session storage',
+      ', ',
+      'react',
+      ', ',
+      'webpack 4',
+      ', ',
+      'babel 7',
+      ', ',
+      'jest testing',
+    ],
+    href: '/projects/time-machine',
   },
 ]
 
