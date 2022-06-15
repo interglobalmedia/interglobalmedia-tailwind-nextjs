@@ -2,7 +2,7 @@
 title: 'Creating a Custom HTML5 Video Player and the Shadow DOM'
 date: '01 04 2017'
 summary: 'The challenges of creating a custom HTML5 video player and the Shadow DOM.'
-image: ['/static/images/posts/img/shadow_dom.webp']
+images: ['/static/images/posts/img/webp/shadow_dom.webp']
 tags:
   [
     'fullscreen-api',
@@ -16,7 +16,7 @@ tags:
     'javascript',
   ]
 categories: ['frontend-development']
-author: 'Maria D. Campbell'
+authors: ['Maria D. Campbell']
 draft: false
 ---
 
