@@ -23,8 +23,7 @@ $peppermint-blush-white: #f2ebe3;
         margin-top: -6rem;
 
         & h1.text-gray-900 {
-            border-right-width: 2px;
-            border-right-color: $discord-charcoal;
+            border-right: none;
         }
     }
 }

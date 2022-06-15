@@ -1,10 +1,11 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
+import '../styles/partials/Footer.module.scss'
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className="site-footer">
       <div className="mt-16 flex flex-col items-center">
         <div className="mb-3 flex space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size="6" />
