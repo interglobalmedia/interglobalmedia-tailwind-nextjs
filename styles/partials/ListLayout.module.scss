@@ -13,6 +13,7 @@ $peppermint-blush-white: #f2ebe3;
 
         border-color: rgb(0 0 0 / var(--tw-border-opacity));
         background: $discord-charcoal;
+        color: $peppermint-blush-white;
     }
 
     & .divide-y > :not([hidden]) ~ :not([hidden]) {
@@ -40,8 +41,16 @@ $peppermint-blush-white: #f2ebe3;
 }
 
 .dark .divide-y > :not([hidden]) ~ :not([hidden]) {
-        --tw-divide-y-reverse: 0;
+    --tw-divide-y-reverse: 0;
 
-        border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
-        border-top-color: $peppermint-blush-white;
+    border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+    border-top-color: $peppermint-blush-white;
+}
+
+.relative.max-w-lg {
+    max-width: 768px;
+
+    & input.search.dark\:border-gray-900 {
+        box-shadow: none;
     }
+}
