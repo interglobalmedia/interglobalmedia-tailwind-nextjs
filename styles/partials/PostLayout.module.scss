@@ -301,6 +301,10 @@ a.text-gray-500 > svg {
     // color: #b81111 !important;
     background: $main-background;
   }
+
+  & strong, & strong > em {
+    color: $discord-charcoal;
+  }
 }
 
 /* discuss on twitter view on github styling & h2 tag/next/prervious article title styling */

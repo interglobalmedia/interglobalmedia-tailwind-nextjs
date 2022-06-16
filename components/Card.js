@@ -1,13 +1,23 @@
 import Image from './Image'
 import Link from './Link'
+import '../styles/partials/Card.module.scss'
 
-const Card = ({ title, description, imgSrc, href }) => (
-  <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
+const Card = ({ title, summary, imgSrc, href, tags }) => (
+  <div className="md p-4 style={{ maxWidth: '768px' }}">
     <div
       className={`${
         imgSrc && 'h-full'
       }  overflow-hidden rounded-md border-2 border-gray-200 border-opacity-60 dark:border-gray-700`}
     >
+      <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
+        {href ? (
+          <Link href={href} aria-label={`Link to ${title}`}>
+            {title}
+          </Link>
+        ) : (
+          title
+        )}
+      </h2>
       {imgSrc &&
         (href ? (
           <Link href={href} aria-label={`Link to ${title}`}>
@@ -15,8 +25,9 @@ const Card = ({ title, description, imgSrc, href }) => (
               alt={title}
               src={imgSrc}
               className="object-cover object-center md:h-36 lg:h-48"
-              width={544}
-              height={306}
+              width={768}
+              height={432}
+              layout="responsive"
             />
           </Link>
         ) : (
@@ -24,21 +35,13 @@ const Card = ({ title, description, imgSrc, href }) => (
             alt={title}
             src={imgSrc}
             className="object-cover object-center md:h-36 lg:h-48"
-            width={544}
-            height={306}
+            width={768}
+            height={432}
           />
         ))}
       <div className="p-6">
-        <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">
-          {href ? (
-            <Link href={href} aria-label={`Link to ${title}`}>
-              {title}
-            </Link>
-          ) : (
-            title
-          )}
-        </h2>
-        <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
+        <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{summary}</p>
+        <div className="flex flex-wrap">{tags}</div>
         {href && (
           <Link
             href={href}
