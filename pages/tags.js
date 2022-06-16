@@ -3,7 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllTags } from '@/lib/tags'
-import kebabCase from '@/lib/utils/kebabCase'
+import tagKebabCase from '@/lib/utils/tagKebabCase'
 import '../styles/partials/TagsList.module.scss'
 
 export async function getStaticProps() {
@@ -30,8 +30,8 @@ export default function Tags({ tags }) {
               <div key={t} className="mt-2 mb-2 mr-5">
                 <Tag text={t} />
                 <Link
-                  href={`/tags/${kebabCase(t)}`}
-                  className="-ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
+                  href={`/tags/${tagKebabCase(t)}`}
+                  className="tags -ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
                 >
                   {` (${tags[t]})`}
                 </Link>
