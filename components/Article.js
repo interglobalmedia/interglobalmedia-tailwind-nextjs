@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
+import Category from '@/components/Category'
 import formatDate from '@/lib/utils/formatDate'
 import '../styles/partials/Article.module.scss'
 
@@ -9,6 +10,7 @@ const Article = ({
   date,
   summary,
   tags,
+  categories,
   images,
   isH2 = true,
   hasExtraLink = true,
@@ -50,8 +52,13 @@ const Article = ({
               <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
             </Link>
             <div className="flex flex-wrap">
-              {tags.map((tag) => (
-                <Tag key={tag} text={tag} />
+              {tags.map((tag, index) => (
+                <Tag key={index} text={tag} />
+              ))}
+            </div>
+            <div className="flex flex-wrap">
+              {categories.map((category, index) => (
+                <Category key={index} text={category} />
               ))}
             </div>
           </div>
