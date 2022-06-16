@@ -1,1 +1,6 @@
-
+a.category::before {
+  content: '🗂';
+  text-decoration: none;
+  display:inline-block;
+  margin-right: 0.125rem;
+}
