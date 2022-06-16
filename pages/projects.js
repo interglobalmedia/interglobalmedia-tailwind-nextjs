@@ -53,11 +53,12 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
             {!filteredProjectPosts.length && 'No projects found.'}
             {displayProjectPosts.map((d) => (
               <Card
-                key={d.title}
+                key={d.id}
                 title={d.title}
-                description={d.description}
+                summary={d.summary}
                 imgSrc={d.imgSrc}
                 href={d.href}
+                tags={d.tags}
               />
             ))}
           </div>

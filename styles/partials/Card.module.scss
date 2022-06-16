@@ -1,0 +1,36 @@
+/* color variables */
+$discord-charcoal: #23272a;
+$discord-magenta: #ff73fa;
+$peppermint-blush-white: #f2ebe3;
+
+.h-full.overflow-hidden.rounded-md.border-2.border-gray-200 {
+    padding: 1.5rem;
+    border-color: $peppermint-blush-white;
+    border-width: 1px;
+
+    &:hover {
+        background: rgba($discord-magenta, 0.6);
+    }
+}
+
+.p-6 {
+    padding: 1rem 0 0;
+
+    & div.flex.flex-wrap {
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* dark mode styling */
+
+/* changes the color fo the project title */
+.dark h2 > a {
+    color: $peppermint-blush-white;
+}
+
+/* changes the color of the project text summary */
+.dark p.dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+
+    color: rgb(237 225 213 / var(--tw-text-opacity));
+}

@@ -1,19 +1,13 @@
 const projectsData = [
   {
+    id: 1,
     title: 'Speech To Text',
-    summary: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
+    repository: 'https://github.com/interglobalmedia/speech-to-text-app',
+    website: 'https://interglobalmedia.github.io/speech-to-text-app/',
+    summary: `A voice controlled notes app using the Speech Recognition Api and React.`,
+
     imgSrc: '/static/images/projects/img/webp/speech-to-text.webp',
-    href: '/blog/projects/time-machine',
-    tags: ['api'],
-  },
-  {
-    title: 'Welcome To The Groove',
-    summary: `A voice controlled notes app using the Speech Recognition Api and React.
-    
-    This little app was built with React, Webpack, The Web Speech Recognition Api, and Session Storage. I also use Babel 7 for JS compilation and Jest for testing.`,
-    imgSrc: '/static/images/time-machine.jpg',
+    href: '/blog/projects/speech-to-text',
     tags: [
       'web speech recognition api',
       ', ',
@@ -27,7 +21,32 @@ const projectsData = [
       ', ',
       'jest testing',
     ],
-    href: '/projects/time-machine',
+    more: `https://interglobalmedia.github.io/portfolio/#/work/speech-to-text-app`,
+  },
+  {
+    id: 2,
+    title: 'Welcome To The Groove',
+    repository: 'https://github.com/interglobalmedia/jukebox',
+    website: 'https://interglobalmedia.github.io/jukebox/',
+    summary: `An audio player in the form of a jukebox created with es6-javascript, html5-audio, oop, and includes a search-in-text searchbar.`,
+    imgSrc: '/static/images/projects/img/webp/welcome-to-the-groove.webp',
+    href: '/blog/projects/welcome-to-the-groove',
+    tags: [
+      'audio web api',
+      ', ',
+      'metadata',
+      ', ',
+      'object oriented javascript',
+      ', ',
+      'object oriented javascript',
+      ', ',
+      'progress bar',
+      ', ',
+      'search',
+      ', ',
+      'thumb slider',
+    ],
+    more: `https://interglobalmedia.github.io/portfolio/#/work/welcome-to-the-groove`,
   },
 ]
 
