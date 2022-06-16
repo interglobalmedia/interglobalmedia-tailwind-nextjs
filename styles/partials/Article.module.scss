@@ -18,3 +18,7 @@ $inline-code-color-lite-mode: #4d0f0f;
     font-weight: 600;
   }
 }
+
+.flex.flex-wrap:first-of-type {
+  margin-bottom: 0.75rem;
+}
