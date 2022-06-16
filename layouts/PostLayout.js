@@ -3,6 +3,7 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
+import Category from '@/components/Category'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
@@ -18,7 +19,7 @@ const discussUrl = (slug) =>
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, fileName, date, title, categories, tags } = frontMatter
 
   return (
     <SectionContainer>
@@ -108,8 +109,20 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       Tags
                     </h2>
                     <div className="flex flex-wrap">
-                      {tags.map((tag) => (
-                        <Tag key={tag} text={tag} />
+                      {tags.map((tag, index) => (
+                        <Tag key={index} text={tag} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {categories && (
+                  <div className="py-4 xl:py-8">
+                    <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                      Categories
+                    </h2>
+                    <div className="flex flex-wrap">
+                      {categories.map((category, index) => (
+                        <Category key={index} text={category} />
                       ))}
                     </div>
                   </div>
