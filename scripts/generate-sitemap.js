@@ -3,6 +3,7 @@ const globby = require('globby')
 const matter = require('gray-matter')
 const prettier = require('prettier')
 const siteMetadata = require('../data/siteMetadata')
+const formatSitemapDate = require('../lib/utils/formatSitemapDate')
 
 ;(async () => {
   const prettierConfig = await prettier.resolveConfig('./.prettierrc.js')
@@ -11,6 +12,7 @@ const siteMetadata = require('../data/siteMetadata')
     'pages/*.tsx',
     'data/blog/**/*.mdx',
     'data/blog/**/*.md',
+    'public/categories/**/*.xml',
     'public/tags/**/*.xml',
     '!pages/_*.js',
     '!pages/_*.tsx',
@@ -19,6 +21,7 @@ const siteMetadata = require('../data/siteMetadata')
 
   const sitemap = `
         <?xml version="1.0" encoding="UTF-8"?>
+        <?xml-stylesheet type="text/xsl" href="SitemapTransform.xslt"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
             ${pages
               .map((page) => {
@@ -36,6 +39,7 @@ const siteMetadata = require('../data/siteMetadata')
                 const path = page
                   .replace('pages/', '/')
                   .replace('data/blog', '/blog')
+                  .replace('data/blog/projects', '/projects')
                   .replace('public/', '/')
                   .replace('.js', '')
                   .replace('.tsx', '')
@@ -50,6 +54,9 @@ const siteMetadata = require('../data/siteMetadata')
                 return `
                         <url>
                             <loc>${siteMetadata.siteUrl}${route}</loc>
+                            <lastmod>${formatSitemapDate(new Date())}</lastmod>
+                            <changefreq>daily</changefreq>
+                            <priority>1.0</priority>
                         </url>
                     `
               })

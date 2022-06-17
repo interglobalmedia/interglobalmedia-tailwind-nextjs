@@ -14,18 +14,8 @@ import { ClientReload } from '@/components/ClientReload'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
-import { pageview } from '@/lib/gtag'
 
 export default function App({ Component, pageProps, router }) {
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      pageview(url, document.title)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [])
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
       <Head>

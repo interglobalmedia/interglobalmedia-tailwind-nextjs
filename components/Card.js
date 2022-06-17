@@ -37,6 +37,7 @@ const Card = ({ title, summary, imgSrc, href, tags }) => (
             className="object-cover object-center md:h-36 lg:h-48"
             width={768}
             height={432}
+            layout="responsive"
           />
         ))}
       <div className="p-6">
