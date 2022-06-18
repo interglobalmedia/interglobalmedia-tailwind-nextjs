@@ -19,6 +19,8 @@ $inline-code-color-lite-mode: #4d0f0f;
   }
 }
 
-.flex.flex-wrap:first-of-type {
-  margin-bottom: 0.75rem;
+/* had to add .-m-4 class along with display block, otherwise first project did not span across full width or center */
+.-m-4.flex.flex-wrap {
+  margin: 0 auto 0.75rem;
+  display: block;
 }

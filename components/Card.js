@@ -3,7 +3,7 @@ import Link from './Link'
 import '../styles/partials/Card.module.scss'
 
 const Card = ({ title, summary, imgSrc, href, tags }) => (
-  <div className="md p-4 style={{ maxWidth: '768px' }}">
+  <div className="md p-4 style={{ maxWidth: '1280px' }}">
     <div
       className={`${
         imgSrc && 'h-full'
@@ -25,8 +25,8 @@ const Card = ({ title, summary, imgSrc, href, tags }) => (
               alt={title}
               src={imgSrc}
               className="object-cover object-center md:h-36 lg:h-48"
-              width={768}
-              height={432}
+              width={1280}
+              height={720}
               layout="responsive"
             />
           </Link>
