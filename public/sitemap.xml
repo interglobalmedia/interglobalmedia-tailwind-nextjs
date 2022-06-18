@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="SitemapTransform.xslt"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/about</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/blog</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/projects</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/blog/projects/speech-to-text</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/blog/projects/welcome-to-the-groove</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc
+      >https://tailwind-nextjs-starter-blog.vercel.app/blog/2016-10-23-data-recovery-with-git</loc
+    >
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc
+      >https://tailwind-nextjs-starter-blog.vercel.app/blog/2017-01-04-creating-a-custom-html5-video-player-and-the-shadow-dom</loc
+    >
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc
+      >https://tailwind-nextjs-starter-blog.vercel.app/blog/2019-07-10-gatsby-gatsby-image-and-netlify-cms</loc
+    >
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc
+      >https://tailwind-nextjs-starter-blog.vercel.app/categories/distributed-version-control</loc
+    >
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/es6-javascript</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/frontend-development</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/gatsbyjs</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/html5-audio</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/oop</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/netlify-cms</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/react</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/search</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/web-development</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/web-development-workflows</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/categories/web-speech-recognition-api</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/audio-web-api</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/babel</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/book</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/cascading-stylesheets</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/branching</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/cross-browser-issues</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/data-backup</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/data-recovery</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/distributed-version-control</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/fullscreen-api</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/gatsby-image</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/gatsby-plugin-netlify-cms</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/gatsbyjs</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/git</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/html-5</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/html-5-video</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/javascript</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/jest-testing</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/metadata</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/netlify-cms</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/npm-force-resolutions</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/progress-bar</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/pseudo-elements</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/object-oriented-javascript</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/react</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/reflection</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/search</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/session-storage</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/shadow-dom</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/source-maps</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/terser</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/thumb-slider</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/user-agent-stylesheets</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/web-speech-recognition-api</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/webpack</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://tailwind-nextjs-starter-blog.vercel.app/tags/writings</loc>
+    <lastmod>6-17-2022 at 4:37 pm</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

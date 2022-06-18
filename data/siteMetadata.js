@@ -16,7 +16,7 @@ const siteMetadata = {
   facebook: 'https://www.facebook.com/interglobalmedia/',
   youtube: 'https://www.youtube.com/user/letsbsocial1',
   linkedin: 'https://www.linkedin.com/in/mariacampbell/',
-  sitemap: 'https://tailwind-nextjs-starter-blog.vercel.app/sitemap.xml',
+  sitemap: 'https://interglobalmedia-tailwind-nextjs.vercel.app/sitemap.xml',
   locale: 'en-US',
   analytics: {
     // If you want to use an analytics provider you have to add it to the

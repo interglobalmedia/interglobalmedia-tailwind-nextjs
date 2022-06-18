@@ -51,7 +51,8 @@ $peppermint-blush-white: #f2ebe3;
 }
 
 .relative.max-w-lg {
-    max-width: 768px;
+    max-width: 1280px;
+    width: 100%;
 
     & input.search.dark\:border-gray-900 {
         box-shadow: none;
