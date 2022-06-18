@@ -3,4 +3,6 @@ $peppermint-blush-white: #f2ebe3;
 
 .mb-auto input.search.border-gray-300 {
     color: $peppermint-blush-white;
+    width: 100%;
+    max-width: 1280px;
 }
