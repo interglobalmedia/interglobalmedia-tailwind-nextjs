@@ -1,5 +1,18 @@
+/* color variables */
+$peppermint-blush-white: #f2ebe3;
+
 .text-gray-500 {
     --tw-text-opacity: 1;
-    
+
     color: rgb(35 39 42 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1280px) {
+    /* stylelint-disable-next-line selector-class-pattern */
+    .xl\:divide-y> :not([hidden])~ :not([hidden]) {
+        --tw-divide-y-reverse: 1;
+
+        border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+        border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+    }
 }

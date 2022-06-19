@@ -20,7 +20,15 @@ $inline-code-color-lite-mode: #4d0f0f;
 }
 
 /* had to add .-m-4 class along with display block, otherwise first project did not span across full width or center */
+
+/* stylelint-disable-next-line selector-class-pattern */
 .-m-4.flex.flex-wrap {
   margin: 0 auto 0.75rem;
   display: block;
+}
+
+@media (min-width: 1280px) {
+  .meta-wrapper>.flex.flex-wrap {
+    display: none;
+  }
 }

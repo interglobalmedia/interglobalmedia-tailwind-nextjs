@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import tagKebabCase from '@/lib/utils/tagKebabCase'
-import '../styles/partials/Tag.module.scss'
+// import '../styles/partials/Tag.module.scss'
 
 const Tag = ({ text }) => {
   return (
