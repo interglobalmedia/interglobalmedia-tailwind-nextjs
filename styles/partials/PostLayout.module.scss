@@ -1,364 +1,456 @@
-/* variables */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable-next-line no-descending-specificity */
+
+/*color  variables */
 $chai-punk-pink-lite: #f293b1;
 $discord-charcoal: #23272a;
 $discord-earth-red: #c52828;
 $discord-lilac-lighter: #9eb3e6;
 $discord-teal: #99aab5;
+$french-yellow: #ffe556;
 $main-background: #fee9d7;
 $peppermint-blush-white: #f2ebe3;
 $tailwind-peppermint-green: #14b8a6;
 $white: #fff;
+
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
 
 /* Custom styles - light mode individual post page */
 
 /* page body background color */
 
 .bg-white {
-  background-color: $discord-teal;
+    background-color: $discord-teal;
 }
 
 .text-3xl {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 main.mb-auto {
-  border: 1px solid;
-  border-radius: 0.63rem;
+    border: 1px solid $peppermint-blush-white;
+    border-radius: 0.63rem;
 
   /* lighter shade of $discord-lilac because of color contrast issue (accessibility) */
-  background: $discord-lilac-lighter;
-  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
-	transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 1026px;
-  width: 100%;
+    background: $discord-lilac-lighter;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
+    transition: color 0.15s ease, border-color 0.15s ease;
+    max-width: 1026px;
+    width: 100%;
 }
 
-dd.text-gray-500 > time {
-  color: $discord-charcoal;
+dd.text-gray-500>time {
+    color: $discord-charcoal;
 }
-
-// .divide-y.divide-gray-200 > dd > a {
-//   &:hover {
-//     color: $peppermint-blush-white;
-//   }
-// }
 
 img.rounded-full {
-  border: 1px solid !important;
+    border: 1px solid !important;
 }
 
-dd.text-gray-900, dd > a.text-primary-500 {
-  font-size: 1.1rem;
+dd.text-gray-900,
+dd>a.text-primary-500 {
+    font-size: 1.1rem;
 }
 
-dd > a.text-primary-500 {
-  color: #000 !important;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-
-  &:hover {
-    color: $peppermint-blush-white;
-    text-decoration: none;
-  }
-}
-
-.prose {
-  color: $discord-charcoal;
-
-  /* These are technically the same, but use both */
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-
-  & strong, & strong > em {
-    color: #000;
-  }
-
-  & h2 {
-    font-weight: 600;
-  }
-}
-
-.prose > div > img {
-  // border-radius: 3px;
-  box-shadow: 2px 5px 5px 2px rgb(0,0,0) !important;
-}
-
-.prose p > code {
-  background: #9eb3e6;
-
-  /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
-  color: #4D0F0F;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.prose p > a {
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
-
-.prose p > a:hover {
-  text-decoration: none;
-  color: $peppermint-blush-white !important;
-}
-
-.prose p > a, .prose ul li > a {
-  color: $discord-charcoal !important;
-  
-  &:hover {
-    color: $discord-earth-red !important;
-  }
-}
-
-.prose > ul {
-  list-style: square;
-  margin-left: -0.75rem;
-
-  & li > a {
+dd>a.text-primary-500 {
+    color: #000 !important;
+    text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
 
     &:hover {
-      color: $discord-earth-red !important;
+        color: $peppermint-blush-white;
+        text-decoration: none;
     }
-  }
 }
 
-.prose ul > li::marker {
-  color: $discord-charcoal;
+.prose {
+    color: $discord-charcoal;
+
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    & strong,
+    & strong>em {
+        color: #000;
+    }
+
+    & h2 {
+        font-weight: 600;
+    }
 }
 
-.prose > blockquote {
-  background: $main-background;
-  color: $discord-charcoal;
-  border-left: 0.4rem solid rgb(132 0 88 / 100%);
-  padding: 0.5rem 1rem;
+.prose>div>img {
+    box-shadow: 2px 5px 5px 2px rgb(0, 0, 0) !important;
+}
 
-  // background: rgb(255 244 230);
+.prose p>code {
+    background: #9eb3e6;
 
-  & p::before {
-    content: " ";
-  }
+    /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
+    color: #4d0f0f;
+    font-size: 1rem;
+    font-weight: normal;
+}
 
-  & code {
+.prose p>a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.prose p>a:hover {
+    text-decoration: none;
+    color: $peppermint-blush-white !important;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.prose p>a,
+.prose ul li>a {
+    color: $discord-charcoal !important;
+
+    &:hover {
+        color: $discord-earth-red !important;
+    }
+}
+
+.prose>ul {
+    list-style: square;
+    margin-left: -0.75rem;
+
+      /* stylelint-disable-next-line no-descending-specificity */
+    & li>a {
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
+
+        &:hover {
+            color: $discord-earth-red !important;
+      }
+    }
+}
+
+.prose ul>li::marker {
+    color: $discord-charcoal;
+}
+
+.prose>blockquote {
     background: $main-background;
-  }
+    color: $discord-charcoal;
+    border-left: 0.4rem solid rgb(132 0 88 / 100%);
+    padding: 0.5rem 1rem;
+
+    & p::before {
+        content: ' ';
+    }
+
+    & code {
+        background: $main-background;
+    }
 }
 
-.prose > div.relative > pre {
-  border-radius: 0;
+.prose>div.relative>pre {
+    border-radius: 0;
 }
 
 /* Tag h2 title/previous/next article styling */
 
 h2.text-gray-500 {
-  color: $discord-charcoal;
+    color: $discord-charcoal;
+}
+
+.post-tags-wrapper.py-4.xl\:py-8, .post-cats-wrapper > .flex {
+    border-bottom-width: 1px;
+    border-bottom-color: $peppermint-blush-white;
+    border-bottom-style: solid;
+}
+
+.post-tags-wrapper h2 {
+    @media #{$min-1280}  {
+        margin-top: 0.25rem;
+    }
+}
+
+.post-tags-wrapper .flex {
+    margin-bottom: 1rem;
+    @media #{$min-1280} {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.post-cats-wrapper .flex {
+    padding-bottom: 2rem;
+    @media #{$min-1280} {
+        padding-bottom: 2.25rem;
+    }
+}
+
+.post-cats-wrapper h2 {
+    margin-top: 1rem;
+    @media #{$min-1280} {
+        margin-top: 0.5rem;
+    }
 }
 
 /* discuss on twitter/view on github styling */
 
+/* stylelint-disable-next-line no-descending-specificity */
 .divide-gray-200 a {
-  color: $discord-charcoal;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-  
-  &:hover {
-    color: $discord-earth-red;
-    text-decoration: none;
-  }
+    color: $discord-charcoal;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:hover {
+        color: $discord-earth-red;
+        text-decoration: none;
+    }
 }
 
 /* tag/previous/next article styling */
 
-a.text-primary-500, div.text-primary-500 a {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  
-  &:hover {
-    color: $discord-earth-red !important;
-    text-decoration: none;
-  }
+/* stylelint-disable-next-line no-descending-specificity */
+a.text-primary-500,
+div.text-primary-500 a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:hover {
+        color: $discord-earth-red !important;
+        text-decoration: none;
+    }
 }
 
 #comment button {
-  color: $white;
-  background: $discord-charcoal;
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid $peppermint-blush-white;
-  box-shadow: 2px 4px 4px rgba(0,0,0,0.5);
-  transform: scale(1);
+    color: $white;
+    background: $discord-charcoal;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid $peppermint-blush-white;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
 
-  &:hover {
-    border: 1px solid $chai-punk-pink-lite;
-    box-shadow: none;
-    color: $chai-punk-pink-lite;
-    transform: scale(0.99);
-  }
+    &:hover {
+        border: 1px solid $chai-punk-pink-lite;
+        box-shadow: none;
+        color: $chai-punk-pink-lite;
+        transform: scale(0.99);
+    }
 }
 
 /* footer text styling */
 
-.post-layout-footer a, .post-layout-footer div {
-  color: $discord-charcoal;
-
-  &.text-gray-500 div {
+.post-layout-footer a,
+.post-layout-footer div {
     color: $discord-charcoal;
-  }
+
+    &.text-gray-500 div {
+        color: $discord-charcoal;
+    }
 }
 
 /* social/contact icon anchor styling */
 
-a.text-gray-500 > svg {
-  fill: $discord-charcoal;
+a.text-gray-500>svg {
+    fill: $discord-charcoal;
+}
+
+h2.text-gray-500 {
+    margin-bottom: 0.75rem;
+
+    & a.tag {
+        margin-bottom: 1rem;
+    }
 }
 
 /* Custom styles - dark mode - individual post page */
 
 .dark main.mb-auto {
-  background:$discord-earth-red;
+    background: $discord-earth-red;
 }
 
-// *, ::before, ::after {
-//     box-sizing: border-box;
-//     border-width: 0;
-//     border-style: solid;
-//     border-color: $peppermint-blush-white;
-// }
-
-.dark .dark\:text-gray-400 > time {
-  color: $peppermint-blush-white;
+.dark .dark\:text-gray-400>time {
+    color: $peppermint-blush-white;
 }
 
-/* "sectioning" border */
-
-.dark .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-opacity: 1;
-    border-color: rgb(237 225 213 / var(--tw-divide-opacity)) !important;
-}
-
-.dark dd > a.text-primary-500 {
-  color: $peppermint-blush-white !important;
-
-  &:hover {
-    color: $tailwind-peppermint-green !important;
-  }
-}
-
-.dark ul > li::marker {
-  color: $peppermint-blush-white;
-}
-
-.dark .dark\:prose-dark > ul {
-  & li {
+.dark dd>a.text-primary-500 {
     color: $peppermint-blush-white !important;
-    & > a {
-      color: $peppermint-blush-white !important;
-    }
+
     &:hover {
-      color: $tailwind-peppermint-green !important;
+        color: $tailwind-peppermint-green !important;
     }
-  }
+}
+
+.dark ul>li::marker {
+    color: $peppermint-blush-white;
+}
+
+.dark .dark\:prose-dark>ul {
+    & li {
+        color: $peppermint-blush-white !important;
+
+      &>a {
+          color: $peppermint-blush-white !important;
+      }
+
+      &:hover {
+          color: $tailwind-peppermint-green !important;
+      }
+    }
 }
 
 .dark p {
-  color: $peppermint-blush-white;
+    color: $peppermint-blush-white;
 
-  & strong, & strong > em {
-    color: $white;
-  }
+    & strong,
+    & strong>em {
+        color: $white;
+    }
 }
 
 .dark .dark\:prose-dark h2 {
-  font-weight: 600;
-  letter-spacing: -0.025em;
+    font-weight: 600;
+    letter-spacing: -0.025em;
 }
 
-.dark p > a {
-  color: $peppermint-blush-white !important;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+/* stylelint-disable-next-line no-descending-specificity */
+.dark p>a {
+    color: $peppermint-blush-white !important;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
 
-  &:hover {
-    text-decoration: none;
-    color: $tailwind-peppermint-green !important;
-  }
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:hover {
+        text-decoration: none;
+        color: $tailwind-peppermint-green !important;
+    }
 }
 
-.dark .dark\:prose-dark > p > code {
-  background: $discord-earth-red;
-  color: #FFE96B;
-  font-weight: normal;
+.dark .dark\:prose-dark>p>code {
+    background: $discord-earth-red;
+    color: #ffe96b;
+    font-weight: normal;
 }
 
-.dark .dark\:prose-dark blockquote > p {
-  color: $discord-charcoal !important;
+.dark .dark\:prose-dark blockquote>p {
+    color: $discord-charcoal !important;
 
-  & code {
-    // color: #b81111 !important;
-    background: $main-background;
-  }
+    & code {
+        // color: #b81111 !important;
+        background: $main-background;
+    }
 
-  & strong, & strong > em {
-    color: $discord-charcoal;
+    & strong,
+    & strong>em {
+        color: $discord-charcoal;
   }
 }
 
 /* discuss on twitter view on github styling & h2 tag/next/prervious article title styling */
 
-.dark .dark\:text-gray-300 a, .dark h2.dark\:text-gray-400 {
-  color: $peppermint-blush-white;
+/* stylelint-disable-next-line no-descending-specificity */
+.dark .dark\:text-gray-300 a,
+.dark h2.dark\:text-gray-400 {
+    color: $peppermint-blush-white;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .dark .dark\:text-gray-300 a {
-  &:hover {
-    color: $tailwind-peppermint-green;
-  }
+    &:hover {
+        color: $tailwind-peppermint-green;
+    }
 }
 
 .dark #comment button {
-  &:hover {
-    border-color: $tailwind-peppermint-green;
-    color: $tailwind-peppermint-green;
-  }
+    &:hover {
+        border-color: $tailwind-peppermint-green;
+        color: $tailwind-peppermint-green;
+    }
 }
 
 /* tag styling */
 
-.dark .dark\:text-gray-400 > div > a {
-  color: #14b8a6 !important;
+/* stylelint-disable-next-line no-descending-specificity */
+.dark .dark\:text-gray-400>div>a {
+    color: #14b8a6 !important;
 
-  &:hover {
-    color: $discord-earth-red !important;
-  }
+    &:hover {
+        color: $discord-earth-red !important;
+    }
 }
 
 /* previous/next article styling */
 
-.dark a.text-primary-500, .dark div.text-primary-500 a {
-  color: $peppermint-blush-white;
-  &:hover {
-    color: $tailwind-peppermint-green !important;
-  }
+/* stylelint-disable-next-line no-descending-specificity */
+.dark a.text-primary-500,
+.dark div.text-primary-500 a {
+    color: $peppermint-blush-white;
+
+    /* stylelint-disable-next-line no-descending-specificity */
+    &:hover {
+        color: $french-yellow !important;
+    }
+}
+
+.dark div.post-cats-wrapper.py-4.xl:py-8 > .flex.flex-wrap {
+    border-bottom-width: 1px;
+    border-bottom-color: $peppermint-blush-white;
+    border-bottom-style: solid;
 }
 
 /* footer text styling */
 
-.dark footer a, .dark footer div {
-  color: $white;
+/* stylelint-disable-next-line no-descending-specificity */
+.dark footer a,
+.dark footer div {
+    color: $white;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .dark .dark\:text-gray-400 div {
     --tw-text-opacity: 1;
-    
+
     color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* social/contact icon anchor styling */
 
-.dark a.text-gray-500 > svg {
-  fill: $white;
+.dark a.text-gray-500>svg {
+    fill: $white;
+}
+
+/* targets the footer section - set opacity to 0 so that every section on page does not get a bottom border */
+
+.dark .dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-opacity: 0;
+
+    border-bottom-color: rgb(237 225 213 / var(--tw-divide-opacity));
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+@media (min-width: 1280px) {
+  
+    /* creates border bottoms in left column for viewports >= 1280px under author details */
+    /* stylelint-disable-next-line rule-empty-line-before */
+    .xl\:border-b,
+    .dark.xl\:border-b {
+        --tw-border-opacity: 1;
+
+        border-bottom-color: rgb(237 225 213 / var(--tw-border-opacity));
+        border-style: solid;
+        border-bottom-width: 1px;
+    }
+
+    /* Targets bottom border under author twitter handle in viewports >= 1280px */
+    .dark .xl\:dark\:border-gray-700 {
+        --tw-border-opacity: 1;
+        
+        border-bottom-color: rgb(237 225 213 / var(--tw-border-opacity));
+        border-style: solid;
+        border-bottom-width: 1px;
+    }
 }
