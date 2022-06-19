@@ -1,8 +1,12 @@
 /* variables */
+$discord-burgundy: #b81111;
 $discord-charcoal: #23272a;
 $discord-lilac-lighter: #9eb3e6;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
+
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
 
 /* ListLayout light mode styling */
 
@@ -31,7 +35,6 @@ $peppermint-blush-white: #f2ebe3;
     }
 
     & .meta-wrapper {
-        // margin-top: 0.5rem;
         margin-bottom: 1.5rem;
 
         & a.category {
@@ -39,45 +42,60 @@ $peppermint-blush-white: #f2ebe3;
         }
     }
 
-    & .meta-wrapper a.text-gray-900 > h2 {
-        font-weight: 600;
-        margin-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        
-        &:hover {
-            color: $french-yellow;
+    /* stylelint-disable-next-line no-duplicate-selectors */
+    & .meta-wrapper {
+
+        /* stylelint-disable-next-line rule-empty-line-before */
+        & a.text-gray-900 > h2 {
+            font-weight: 600;
+            margin-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-decoration: underline;
+
+            &:hover {
+                color: $discord-burgundy;
+                text-decoration: none;
+            }
         }
     }
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
+.dark a.dark\:text-gray-100 > h2.text-2xl.font-bold.leading-8.tracking-tight:hover {
+    color: $french-yellow;
+}
+
 /* removes border above author in single post view in viewports >= 1280px */
 
-@media (min-width: 1280px) {
 /* stylelint-disable-next-line selector-class-pattern */
 .dark .xl\:dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-y-opacity: 1;
+    @media #{$min-1280} {
+        --tw-divide-y-opacity: 1;
 
-    border-color: rgb(237 225 213 / var(--tw-divide-y-opacity));
-    border-top-width: calc(0px * calc(1 - var(--tw-divide-y)));
-}
+        border-color: rgb(237 225 213 / var(--tw-divide-y-opacity));
+        border-top-width: calc(0px * calc(1 - var(--tw-divide-y)));
+    }
 }
 
-@media (min-width: 1280px) {
-    /* stylelint-disable-next-line selector-class-pattern */
-    .xl\:row-span-1 {
+/* stylelint-disable-next-line selector-class-pattern */
+.xl\:row-span-1 {
+    @media #{$min-1280} {
+        margin-top: 1rem;
+    }
+}
+
+div.meta-wrapper > .flex.flex-wrap:nth-of-type(2) {
+    @media #{$min-1280} {
         margin-top: 1rem;
     }
     
-    div.meta-wrapper > .flex.flex-wrap:nth-of-type(2) {
-        margin-top: 1rem;
-    }
 }
 
 /* creates two columns on bloglist page in viewports >= 1280px */
 
-@media (min-width: 1280px) {
-    /* stylelint-disable-next-line selector-class-pattern */
-    .xl\:grid-columns-2 {
+/* stylelint-disable-next-line selector-class-pattern */
+.xl\:grid-columns-2 {
+    @media #{$min-1280} {
         grid-template-columns: repeat(1, 1fr);
     }
 }

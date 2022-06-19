@@ -18,7 +18,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
   return (
     <>
       <div className="divide-y">
-        <div className="list-layout spt-6 space-y-2 pb-8 md:space-y-5">
+        <div className="list-layout-title-wrapper spt-6 space-y-2 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             {title}
           </h1>
@@ -53,7 +53,7 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
               <Article
                 {...frontMatter}
                 images={frontMatter.images[0]}
-                hasExtraLink={false}
+                hasExtraLink={true}
                 isH2={false}
               />
             </li>
