@@ -1,6 +1,16 @@
+
+.about-page-title-wrapper {
+    margin-top: -1.5rem;
+}
+
+h1#my-philosophy-mission-and-goals {
+    font-weight: 500 !important;
+}
+
+
 .flex.flex-col.items-center.pt-8 {
     & h3.pt-4.pb-2.text-2xl.font-bold.leading-8.tracking-tight {
-        font-weight: 600 !important;
+        font-weight: 500 !important;
     }
 
     & div.text-gray-500 {
@@ -10,7 +20,3 @@
         text-align: center;
     }
 }
-
-h1#my-philosophy-mission-and-goals {
-        font-weight: 600;
-    }

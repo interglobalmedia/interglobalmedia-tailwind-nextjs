@@ -1,8 +1,38 @@
 /* color variables */
 $peppermint-blush-white: #f2ebe3;
 
-.mb-auto input.search.border-gray-300 {
-    color: $peppermint-blush-white;
-    width: 100%;
-    max-width: 1280px;
+.mb-auto {
+    input.search.border-gray-300 {
+        color: $peppermint-blush-white;
+    }
+}
+
+/* removes border below projects page heading */
+
+.container.py-12 {
+    margin-top: -3rem;
+}
+
+.projects-page-title-wrapper {
+    margin-top: -1.5em;
+}
+
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+        border-top: 0;
+    }
+}
+
+.divide-y.divide-gray-200.pb-8>dl>dd>ul>li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    & dl {
+        text-align: center;
+        margin-top: 1.5rem;
+        line-height: 1.7;
+    }
 }

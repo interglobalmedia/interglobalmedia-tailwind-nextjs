@@ -1,6 +1,7 @@
 /* variables */
 $discord-charcoal: #23272a;
 $discord-lilac-lighter: #9eb3e6;
+$french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
 
 /* ListLayout light mode styling */
@@ -9,29 +10,75 @@ $peppermint-blush-white: #f2ebe3;
     padding: 1.5rem;
 
     & input.border-gray-300 {
-        --tw-border-opacity: 1;
-
-        border-color: rgb(0 0 0 / var(--tw-border-opacity));
         background: $discord-charcoal;
         color: $peppermint-blush-white;
     }
 
-    & .divide-y > :not([hidden]) ~ :not([hidden]) {
-        --tw-divide-y-reverse: 0;
+    &.divide-y:not([hidden])~ :not([hidden]) {
+        --tw-divide-y-opacity: 0;
 
-        border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
-        border-top-color: $discord-charcoal;
+        /* this removes all borders from everywhere */
+
+        border-top-width: calc(0px * calc(1 - var(--tw-divide-y-opacity)));
+        border-top-color: $peppermint-blush-white;
     }
 
     & a.text-primary-500 {
         color: $discord-charcoal;
-        line-height: 1.5;
+        line-height: 2;
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
     }
-    
-    & a.text-gray-900 {
+
+    & .meta-wrapper {
+        // margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+
+        & a.category {
+            margin-top: 0.5rem;
+        }
+    }
+
+    & .meta-wrapper a.text-gray-900 > h2 {
         font-weight: 600;
+        margin-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        
+        &:hover {
+            color: $french-yellow;
+        }
+    }
+}
+
+/* removes border above author in single post view in viewports >= 1280px */
+
+@media (min-width: 1280px) {
+/* stylelint-disable-next-line selector-class-pattern */
+.dark .xl\:dark\:divide-gray-700 > :not([hidden]) ~ :not([hidden]) {
+    --tw-divide-y-opacity: 1;
+
+    border-color: rgb(237 225 213 / var(--tw-divide-y-opacity));
+    border-top-width: calc(0px * calc(1 - var(--tw-divide-y)));
+}
+}
+
+@media (min-width: 1280px) {
+    /* stylelint-disable-next-line selector-class-pattern */
+    .xl\:row-span-1 {
+        margin-top: 1rem;
+    }
+    
+    div.meta-wrapper > .flex.flex-wrap:nth-of-type(2) {
+        margin-top: 1rem;
+    }
+}
+
+/* creates two columns on bloglist page in viewports >= 1280px */
+
+@media (min-width: 1280px) {
+    /* stylelint-disable-next-line selector-class-pattern */
+    .xl\:grid-columns-2 {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 
@@ -43,10 +90,10 @@ $peppermint-blush-white: #f2ebe3;
     color: rgb(237 225 213 / var(--tw-text-opacity));
 }
 
-.dark .divide-y > :not([hidden]) ~ :not([hidden]) {
-    --tw-divide-y-reverse: 0;
+.dark .divide-y> :not([hidden])~ :not([hidden]) {
+    --tw-divide-y-opacity: 0;
 
-    border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+    border-top-width: calc(0px * calc(1 - var(--tw-divide-y)));
     border-top-color: $peppermint-blush-white;
 }
 
@@ -56,5 +103,11 @@ $peppermint-blush-white: #f2ebe3;
 
     & input.search.dark\:border-gray-900 {
         box-shadow: none;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
+}
+
+h1.text-3xl.font-extrabold.leading-9.tracking-tight.text-gray-900 {
+    margin-top: 1.5rem;
 }
