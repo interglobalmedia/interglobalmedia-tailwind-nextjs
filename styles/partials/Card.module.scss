@@ -1,12 +1,14 @@
 /* color variables */
 $discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
+$french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
 
 .h-full.overflow-hidden.rounded-md.border-2.border-gray-200 {
     padding: 1.5rem;
     border-color: $peppermint-blush-white;
     border-width: 1px;
+    border-style: solid;
 
     &:hover {
         background: rgba($discord-magenta, 0.6);
@@ -29,8 +31,15 @@ $peppermint-blush-white: #f2ebe3;
 }
 
 /* changes the color of the project text summary */
+
+/* stylelint-disable-next-line selector-class-pattern */
 .dark p.dark\:text-gray-400 {
     --tw-text-opacity: 1;
 
     color: rgb(237 225 213 / var(--tw-text-opacity));
+}
+
+/* Styles the project title on hover in projects page */
+.dark h2.mb-3.text-2xl.font-bold.leading-8.tracking-tight a:hover {
+    color: $french-yellow;
 }
