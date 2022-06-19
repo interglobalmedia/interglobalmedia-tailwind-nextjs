@@ -258,6 +258,7 @@ a.text-gray-500>svg {
     fill: $discord-charcoal;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 h2.text-gray-500 {
     margin-bottom: 0.75rem;
 
@@ -398,6 +399,7 @@ h2.text-gray-500 {
 .dark div.post-cats-wrapper.py-4.xl:py-8 > .flex.flex-wrap {
     border-bottom-width: 1px;
     border-bottom-color: $peppermint-blush-white;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
     border-bottom-style: solid;
 }
 
@@ -431,24 +433,25 @@ h2.text-gray-500 {
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
-
-@media (min-width: 1280px) {
   
-    /* creates border bottoms in left column for viewports >= 1280px under author details */
-    /* stylelint-disable-next-line rule-empty-line-before */
-    .xl\:border-b,
-    .dark.xl\:border-b {
+/* creates border bottoms in left column for viewports >= 1280px under author details */
+/* stylelint-disable-next-line rule-empty-line-before */
+.xl\:border-b,
+.dark.xl\:border-b {
+    @media #{$min-1280} {
         --tw-border-opacity: 1;
 
         border-bottom-color: rgb(237 225 213 / var(--tw-border-opacity));
         border-style: solid;
         border-bottom-width: 1px;
     }
+}
 
-    /* Targets bottom border under author twitter handle in viewports >= 1280px */
-    .dark .xl\:dark\:border-gray-700 {
+/* Targets bottom border under author twitter handle in viewports >= 1280px */
+.dark .xl\:dark\:border-gray-700 {
+    @media #{$min-1280} {
         --tw-border-opacity: 1;
-        
+    
         border-bottom-color: rgb(237 225 213 / var(--tw-border-opacity));
         border-style: solid;
         border-bottom-width: 1px;

@@ -1,6 +1,9 @@
 /* color variables */
 $peppermint-blush-white: #f2ebe3;
 
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
+
 .mb-auto {
     input.search.border-gray-300 {
         color: $peppermint-blush-white;
@@ -11,18 +14,14 @@ $peppermint-blush-white: #f2ebe3;
 
 .container.py-12 {
     margin-top: -3rem;
+    @media #{$min-1280} {
+        max-width: 1280px;
+        border-top: 0;
+    }
 }
 
 .projects-page-title-wrapper {
     margin-top: -1.5em;
-}
-
-
-@media (min-width: 1280px) {
-    .container {
-        max-width: 1280px;
-        border-top: 0;
-    }
 }
 
 .divide-y.divide-gray-200.pb-8>dl>dd>ul>li {
