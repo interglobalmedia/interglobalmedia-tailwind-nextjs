@@ -1,27 +1,30 @@
 /* color variables */
-$inline-code-color-lite-mode: #4d0f0f;
-$discord-blue: #001c81;
+$discord-charcoal: #23272a;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
+$tailwind-lighter-orange: #ff9933;
 
 /* media query variables */
 $min-1280: '(min-width: 1280px)';
 
 .mb-auto {
     & a.text-blue-500 {
-        color: $discord-blue;
-        text-decoration: underline;
+        color: $discord-charcoal;
         text-decoration-thickness: 1px;
         text-underline-offset: 2px;
 
         &:hover {
-            text-decoration: none;
+            color: $french-yellow;
         }
     }
 
     h2.text-2xl.font-bold.leading-8.tracking-tight {
         margin-bottom: 0.5rem;
         font-weight: 600;
+
+        &:hover {
+            color: $french-yellow;
+        }
     }
 }
 
@@ -30,7 +33,7 @@ $min-1280: '(min-width: 1280px)';
   color: $peppermint-blush-white;
 
   &:hover {
-    color: $french-yellow;
+    color: $tailwind-lighter-orange;
   }
 }
 

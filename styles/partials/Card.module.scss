@@ -1,8 +1,10 @@
 /* color variables */
 $discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
-$french-yellow: #ffe556;
+$gradient-background-blue: #1095c1;
 $peppermint-blush-white: #f2ebe3;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$tailwind-lighter-orange: #ff9933;
 
 .h-full.overflow-hidden.rounded-md.border-2.border-gray-200 {
     padding: 1.5rem;
@@ -11,7 +13,8 @@ $peppermint-blush-white: #f2ebe3;
     border-style: solid;
 
     &:hover {
-        background: rgba($discord-magenta, 0.6);
+        background: rgba($gradient-background-blue, 0.5);
+        cursor: pointer;
     }
 }
 
@@ -23,10 +26,14 @@ $peppermint-blush-white: #f2ebe3;
     }
 }
 
+.dark div.flex.flex-wrap {
+    color: $discord-magenta;
+}
+
 /* dark mode styling */
 
-/* changes the color fo the project title */
-.dark h2 > a {
+/* changes the color of the project title */
+.dark h2 {
     color: $peppermint-blush-white;
 }
 
@@ -39,7 +46,11 @@ $peppermint-blush-white: #f2ebe3;
     color: rgb(237 225 213 / var(--tw-text-opacity));
 }
 
+.dark h2.mb-3.text-2xl.font-bold.leading-8.tracking-tight a {
+    color: $tailwind-dark-orange;
+}
 /* Styles the project title on hover in projects page */
 .dark h2.mb-3.text-2xl.font-bold.leading-8.tracking-tight a:hover {
-    color: $french-yellow;
+    color: $tailwind-lighter-orange;
+    cursor: pointer;
 }
