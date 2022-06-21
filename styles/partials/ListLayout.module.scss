@@ -1,9 +1,9 @@
 /* variables */
-$discord-burgundy: #b81111;
 $discord-charcoal: #23272a;
-$discord-lilac-lighter: #9eb3e6;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$tailwind-lighter-orange: #ff9933;
 
 /* media query variables */
 $min-1280: '(min-width: 1280px)';
@@ -30,8 +30,10 @@ $min-1280: '(min-width: 1280px)';
     & a.text-primary-500 {
         color: $discord-charcoal;
         line-height: 2;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 2px;
+
+        &:hover {
+            color: $tailwind-dark-orange;
+        }
     }
 
     & .meta-wrapper {
@@ -50,19 +52,21 @@ $min-1280: '(min-width: 1280px)';
             font-weight: 600;
             margin-top: 0.5rem;
             padding-bottom: 0.5rem;
-            text-decoration: underline;
 
             &:hover {
-                color: $discord-burgundy;
-                text-decoration: none;
+                color: $french-yellow;
             }
         }
     }
 }
 
+.dark a.dark\:text-gray-100 > h2.text-2xl.font-bold.leading-8.tracking-tight {
+    color: $peppermint-blush-white;
+}
+
 /* stylelint-disable-next-line selector-class-pattern */
 .dark a.dark\:text-gray-100 > h2.text-2xl.font-bold.leading-8.tracking-tight:hover {
-    color: $french-yellow;
+    color: $tailwind-lighter-orange;
 }
 
 /* removes border above author in single post view in viewports >= 1280px */
@@ -103,9 +107,7 @@ div.meta-wrapper > .flex.flex-wrap:nth-of-type(2) {
 /* ListLayout dark mode styling */
 
 .dark div.dark\:text-gray-400 {
-    --tw-text-opacity: 1;
-
-    color: rgb(237 225 213 / var(--tw-text-opacity));
+    color: $peppermint-blush-white;
 }
 
 .dark .divide-y> :not([hidden])~ :not([hidden]) {
@@ -127,5 +129,5 @@ div.meta-wrapper > .flex.flex-wrap:nth-of-type(2) {
 }
 
 h1.text-3xl.font-extrabold.leading-9.tracking-tight.text-gray-900 {
-    margin-top: 1.5rem;
+    font-weight: 500;
 }

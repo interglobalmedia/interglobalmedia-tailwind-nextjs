@@ -4,25 +4,20 @@
 /*color  variables */
 $chai-punk-pink-lite: #f293b1;
 $discord-charcoal: #23272a;
-$discord-earth-red: #c52828;
+$discord-burgundy: #b81111;
 $discord-lilac-lighter: #9eb3e6;
-$discord-teal: #99aab5;
-$french-yellow: #ffe556;
 $main-background: #fee9d7;
 $peppermint-blush-white: #f2ebe3;
 $tailwind-peppermint-green: #14b8a6;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$tailwind-lighter-orange: #ff9933;
 $white: #fff;
+$inline-code-color-lite-mode: #4D0F0F;
 
 /* media query variables */
 $min-1280: '(min-width: 1280px)';
 
-/* Custom styles - light mode individual post page */
-
-/* page body background color */
-
-.bg-white {
-    background-color: $discord-teal;
-}
+/* Custom styles - light mode individual post page */å
 
 .text-3xl {
     font-weight: normal;
@@ -33,19 +28,28 @@ main.mb-auto {
     border-radius: 0.63rem;
 
   /* lighter shade of $discord-lilac because of color contrast issue (accessibility) */
-    background: $discord-lilac-lighter;
+    background: rgba($discord-lilac-lighter, 0.5);
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 25%);
     transition: color 0.15s ease, border-color 0.15s ease;
     max-width: 1026px;
     width: 100%;
 }
 
+.home-page-wrapper {
+        display:flex;
+        flex-direction: column;
+    }
+
 dd.text-gray-500>time {
     color: $discord-charcoal;
 }
 
 img.rounded-full {
-    border: 1px solid !important;
+    border: 1px solid $discord-charcoal !important;
+}
+
+.dark img.rounded-full {
+     border: 1px solid $white !important;
 }
 
 dd.text-gray-900,
@@ -54,15 +58,7 @@ dd>a.text-primary-500 {
 }
 
 dd>a.text-primary-500 {
-    color: #000 !important;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-
-    &:hover {
-        color: $peppermint-blush-white;
-        text-decoration: none;
-    }
+    color: $discord-charcoal;
 }
 
 .prose {
@@ -87,10 +83,10 @@ dd>a.text-primary-500 {
 }
 
 .prose p>code {
-    background: #9eb3e6;
+    background: transparent;
 
     /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
-    color: #4d0f0f;
+    color: $inline-code-color-lite-mode;
     font-size: 1rem;
     font-weight: normal;
 }
@@ -111,7 +107,7 @@ dd>a.text-primary-500 {
     color: $discord-charcoal !important;
 
     &:hover {
-        color: $discord-earth-red !important;
+        color: $discord-burgundy !important;
     }
 }
 
@@ -125,7 +121,7 @@ dd>a.text-primary-500 {
         text-underline-offset: 2px;
 
         &:hover {
-            color: $discord-earth-red !important;
+            color: $discord-burgundy !important;
       }
     }
 }
@@ -197,13 +193,10 @@ h2.text-gray-500 {
 /* stylelint-disable-next-line no-descending-specificity */
 .divide-gray-200 a {
     color: $discord-charcoal;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
-
+    
     /* stylelint-disable-next-line no-descending-specificity */
     &:hover {
-        color: $discord-earth-red;
+        color: $discord-burgundy;
         text-decoration: none;
     }
 }
@@ -213,12 +206,12 @@ h2.text-gray-500 {
 /* stylelint-disable-next-line no-descending-specificity */
 a.text-primary-500,
 div.text-primary-500 a {
-    text-decoration: underline;
+    // text-decoration: underline;
     text-decoration-thickness: 1px;
 
     /* stylelint-disable-next-line no-descending-specificity */
     &:hover {
-        color: $discord-earth-red !important;
+        color: $discord-burgundy !important;
         text-decoration: none;
     }
 }
@@ -270,7 +263,7 @@ h2.text-gray-500 {
 /* Custom styles - dark mode - individual post page */
 
 .dark main.mb-auto {
-    background: $discord-earth-red;
+    background: rgba($discord-charcoal, 0.5);
 }
 
 .dark .dark\:text-gray-400>time {
@@ -278,10 +271,10 @@ h2.text-gray-500 {
 }
 
 .dark dd>a.text-primary-500 {
-    color: $peppermint-blush-white !important;
+    color: $tailwind-dark-orange !important;
 
     &:hover {
-        color: $tailwind-peppermint-green !important;
+        color: $tailwind-lighter-orange !important;
     }
 }
 
@@ -331,8 +324,8 @@ h2.text-gray-500 {
 }
 
 .dark .dark\:prose-dark>p>code {
-    background: $discord-earth-red;
-    color: #ffe96b;
+    background: transparent;
+    color: $tailwind-peppermint-green;
     font-weight: normal;
 }
 
@@ -340,7 +333,6 @@ h2.text-gray-500 {
     color: $discord-charcoal !important;
 
     & code {
-        // color: #b81111 !important;
         background: $main-background;
     }
 
@@ -379,7 +371,7 @@ h2.text-gray-500 {
     color: #14b8a6 !important;
 
     &:hover {
-        color: $discord-earth-red !important;
+        color: $tailwind-dark-orange !important;
     }
 }
 
@@ -388,11 +380,11 @@ h2.text-gray-500 {
 /* stylelint-disable-next-line no-descending-specificity */
 .dark a.text-primary-500,
 .dark div.text-primary-500 a {
-    color: $peppermint-blush-white;
+    color: $tailwind-dark-orange;
 
     /* stylelint-disable-next-line no-descending-specificity */
     &:hover {
-        color: $french-yellow !important;
+        color: rgba($tailwind-lighter-orange, 1) !important;
     }
 }
 

@@ -1,8 +1,11 @@
 const siteMetadata = {
   title: 'Inter-Global Media Network, Inc.',
   author: 'Maria D. Campbell',
+  authorNickName: 'interglobalmedia',
+  authorFirstName: 'Maria',
   headerTitle: 'Inter-Global Media',
-  description: "Where we design, develop, and teach experiences that make people's lives simpler.",
+  description:
+    "I'm Maria. I design, develop, and teach experiences that make people's lives simpler.",
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

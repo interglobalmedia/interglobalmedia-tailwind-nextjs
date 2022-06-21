@@ -75,7 +75,7 @@ const Article = ({
                   className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
                   aria-label={`Read "${title}"`}
                 >
-                  Learn more
+                  Read more &rarr;
                 </Link>
               </div>
             )}

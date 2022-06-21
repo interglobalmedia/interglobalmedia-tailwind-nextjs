@@ -1,0 +1,35 @@
+/* color variables */
+$discord-burgundy: #b81111;
+$discord-charcoal: #23272a;
+$french-yellow: #ffe556;
+$steal-magenta: #c90076;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$white: #fff;
+
+/* media query variables */
+$min-768: '(min-width: 768px)';
+
+
+/* Header Logo styling */
+div.h-6.text-2xl.font-semibold.sm\:block {
+    margin-top: -0.5rem;
+    color: $discord-charcoal;
+
+     &:hover {
+        color: $french-yellow;
+    }
+}
+
+.dark div.h-6.text-2xl.font-semibold.sm\:block {
+    color: $white;
+
+    &:hover {
+        color: $tailwind-dark-orange;
+    }
+}
+
+.md\:items-center {
+    @media #{$min-768} {
+        align-items: flex-start;
+    }
+}
