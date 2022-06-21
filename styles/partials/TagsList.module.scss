@@ -1,8 +1,5 @@
-/* color variables */
-$discord-charcoal: #23272a;
-$peppermint-blush-white: #f2ebe3;
-
 /* media query variables */
+$min-768: '(min-width: 768px)';
 $min-1280: '(min-width: 1280px)';
 
 /* TagsList styling */
@@ -14,11 +11,11 @@ $min-1280: '(min-width: 1280px)';
 }
 
 .space-x-2.pt-6.pb-8.md\:space-y-5 {
-    @media #{$min-1280} {
-        margin-top: -6rem;
-
-        & h1.text-gray-900 {
-            border-right: none;
+    & h1.text-gray-900 {
+        border-right: none;
+        @media #{$min-768} {
+            text-orientation: upright;
+            writing-mode: vertical-lr;
         }
     }
 }
@@ -28,5 +25,17 @@ $min-1280: '(min-width: 1280px)';
 .flex.max-w-lg.flex-wrap {
     @media #{$min-1280} {
         margin-top: -6rem;
+    }
+}
+
+.justify-start {
+    justify-content: center;
+}
+
+.md\:mt-24 {
+    margin-bottom: 2rem;
+    @media #{$min-768} {
+        margin-top: 6rem;
+        margin-bottom: 6rem;
     }
 }

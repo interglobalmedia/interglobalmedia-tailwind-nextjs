@@ -29,7 +29,14 @@ module.exports = {
       },
       colors: {
         primary: colors.teal,
-        gray: colors.neutral,
+        // gray: colors.neutral,
+        transparent: 'transparent',
+        black: '#000',
+        white: '#ff73fa',
+        gray: {
+          100: '#f7fafc',
+          900: '#1a202c',
+        },
       },
       typography: (theme) => ({
         DEFAULT: {
