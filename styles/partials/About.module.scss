@@ -1,3 +1,5 @@
+/* color variables */
+$white: #fff;
 
 .about-page-title-wrapper {
     margin-top: -1.5rem;
@@ -19,4 +21,8 @@ h1#my-philosophy-mission-and-goals {
         justify-content: center;
         text-align: center;
     }
+}
+
+.dark h3.pt-4.pb-2.text-2xl.font-bold.leading-8.tracking-tight {
+    color: $white;
 }
