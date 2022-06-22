@@ -52,9 +52,7 @@ const Article = ({
             </dd>
           </dl>
           <div className="meta-wrapper">
-            <Link href={`/blog/${slug}`} className="text-gray-900 dark:text-gray-100">
-              <h2 className="text-2xl font-bold leading-8 tracking-tight">{title}</h2>
-            </Link>
+            {header}
             <div className="flex flex-wrap">
               {tags.map((tag, index) => (
                 <Tag key={index} text={tag} />
