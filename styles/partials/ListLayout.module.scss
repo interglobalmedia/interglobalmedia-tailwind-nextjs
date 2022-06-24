@@ -2,7 +2,6 @@
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
-$tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #ff9933;
 
 /* media query variables */
@@ -30,10 +29,6 @@ $min-1280: '(min-width: 1280px)';
     & a.text-primary-500 {
         color: $discord-charcoal;
         line-height: 2;
-
-        &:hover {
-            color: $tailwind-dark-orange;
-        }
     }
 
     & .meta-wrapper {

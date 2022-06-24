@@ -1,0 +1,31 @@
+ /* media query variables */
+ $min-1280: '(min-width: 1280px)';
+ 
+ .react-slideshow-services-wrapper {
+    max-width: 1280px;
+    width: 100%;
+
+    &.slide-container {
+        border-radius: 0.5rem;
+        cursor: pointer;
+        padding: 0.25rem 0.5rem 0.5rem;
+    }
+
+    &img {
+        width: 100%;
+        max-width: 1280px;
+    }
+
+        & h2.slider-top-heading {
+            @media #{$min-1280} {
+                display: none;
+            }
+        }
+
+        & h2.slider-bottom-heading {
+            display: none;
+            @media #{$min-1280} {
+                display: block;
+            }
+        }
+ }

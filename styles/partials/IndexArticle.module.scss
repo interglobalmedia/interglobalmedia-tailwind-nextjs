@@ -1,4 +1,41 @@
+/* color variables */
+$cream: #feedde;
+
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
+
+.index-article-wrapper.grid.gap-2.space-y-2.xl\:grid-flow-col.xl\:grid-cols-2.xl\:grid-rows-2.xl\:gap-4.xl\:space-y-0 {
+    border: 1.5px solid;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.5rem 0.125rem;
+}
+
+.dark .index-article-wrapper.grid.gap-2.space-y-2.xl\:grid-flow-col.xl\:grid-cols-2.xl\:grid-rows-2.xl\:gap-4.xl\:space-y-0 {
+    border-radius: 0.5rem;
+}
+
 h2.index-article-latest-header {
-    font-size: 200%;
+    font-size: 2rem;
     font-weight: 600;
+    margin-top: 2.5rem;
+}
+
+span.top-heading {
+    &:hover {
+        color: $cream;
+    }
+    @media #{$min-1280} {
+        display: none;
+    }
+}
+
+
+
+span.bottom-heading {
+    display: none;
+    margin-top: -1.5rem;
+    @media #{$min-1280} {
+        display: block;
+        margin-top: 0;
+    }
 }

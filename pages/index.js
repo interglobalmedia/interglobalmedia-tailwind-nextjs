@@ -5,6 +5,8 @@ import IndexArticle from '@/components/IndexArticle'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
+import ServicesSlider from '@/components/ServicesSlider'
+import DevTips from '@/components/DevTips'
 import '../styles/partials/Index.module.scss'
 
 const MAX_DISPLAY = 1
@@ -21,7 +23,7 @@ export default function Home({ posts, hasExtraLink = true }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
         <div className="home-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+          <h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Hi there!
           </h1>
           <p className="home-page-description text-lg leading-7 text-gray-500 dark:text-gray-400">
@@ -52,6 +54,18 @@ export default function Home({ posts, hasExtraLink = true }) {
             </defs>
           </svg>
         </div>
+        <article className="blog-page-post-wrapper">
+          <h2 className="index-article-latest-header pb-10 text-left text-6xl font-bold">
+            <span className="circle-sketch-highlight text-gray-500 dark:text-gray-100">
+              Podcast
+            </span>
+          </h2>
+          <h3 className="latest-podcast-episode">
+            <a href="https://anchor.fm/maria-campbell/episodes/Migrating-from-Gatsby-v2-to-v3-eukj32">
+              <span className=" realistic-marker-highlight">Listen to the latest episode</span>
+            </a>
+          </h3>
+        </article>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
@@ -73,13 +87,15 @@ export default function Home({ posts, hasExtraLink = true }) {
           <div className="flex justify-end text-base font-medium leading-6">
             <Link
               href="/blog"
-              className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+              className="text-primary-500 dark:hover:text-primary-400"
               aria-label="all posts"
             >
               All Posts &rarr;
             </Link>
           </div>
         )}
+        <ServicesSlider />
+        <DevTips />
         {siteMetadata.newsletter.provider !== '' && (
           <div className="flex items-center justify-center pt-4">
             <NewsletterForm />
