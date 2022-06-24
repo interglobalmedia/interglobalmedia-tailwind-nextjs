@@ -1,5 +1,7 @@
 /* color variables */
 $cream: #feedde;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$tailwind-lighter-orange: #ff9933;
 
 /* media query variables */
 $min-1280: '(min-width: 1280px)';
@@ -20,12 +22,20 @@ h2.index-article-latest-header {
     margin-top: 2.5rem;
 }
 
-span.top-heading {
+h2.slider-top-heading {
     &:hover {
         color: $cream;
     }
     @media #{$min-1280} {
         display: none;
+    }
+}
+
+.dark h2.slider-top-heading {
+     color: $tailwind-dark-orange;
+
+    &:hover {
+        color: $tailwind-lighter-orange
     }
 }
 

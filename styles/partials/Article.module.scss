@@ -1,8 +1,9 @@
 /* color variables */
-$cream: #feedde;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$tailwind-lighter-orange: #ff9933;
 $white: #fff;
 
 /* media query variables */
@@ -19,33 +20,16 @@ $min-1280: '(min-width: 1280px)';
         }
     }
 
-    /* styles the sliders on home page */
-    h2.text-2xl.font-bold.leading-8.tracking-tight {
-        margin-bottom: 0.5rem;
-        font-weight: 600;
-
-        &:hover {
-            color: $cream;
-        }
-    }
-
     article {
         cursor: pointer;
     }
 }
 
-/* styles the latest post on home page */
-h2.text-2xl.font-bold.leading-8.tracking-tight > a.text-gray-900 {
-    &:hover {
-        color: $cream;
-    }
-}
-
-.dark h2.text-2xl.font-bold.leading-8.tracking-tight  > a.text-gray-900 {
-    color: $white;
+.dark h2.text-2xl.font-bold.leading-8.tracking-tight a.text-gray-900 {
+    color: $tailwind-dark-orange;
 
     &:hover {
-        color: $french-yellow;
+        color: $tailwind-lighter-orange;
     }
 }
 
