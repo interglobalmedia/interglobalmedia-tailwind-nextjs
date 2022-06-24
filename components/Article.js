@@ -40,20 +40,21 @@ const Article = ({
     <article className="blog-page-post-wrapper">
       <div className="grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
         <div className="xl:row-span-2">
+          <span className="top-heading">{header}</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           {thumbnail}
         </div>
 
         <div className="xl:row-span-2">
-          <dl>
+          {/* <dl>
             <dt className="sr-only">Published on</dt>
             <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
               <time dateTime={date}>{formatDate(date)}</time>
             </dd>
-          </dl>
+          </dl> */}
           <div className="meta-wrapper">
-            {header}
-            <div className="flex flex-wrap">
+            <span className="bottom-heading">{header}</span>
+            {/* <div className="flex flex-wrap">
               {tags.map((tag, index) => (
                 <Tag key={index} text={tag} />
               ))}
@@ -62,7 +63,7 @@ const Article = ({
               {categories.map((category, index) => (
                 <Category key={index} text={category} />
               ))}
-            </div>
+            </div> */}
           </div>
           <div className="xl:col-span-2 xl:row-span-1">
             <div className="prose max-w-none text-gray-500 dark:text-gray-400">{summary}</div>

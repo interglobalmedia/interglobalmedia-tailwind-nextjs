@@ -4,6 +4,7 @@ $cream: #feedde;
 $discord-burgundy: #b81111;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
+$french-yellow-darker: #fbce07;
 $steal-magenta: #c90076;
 $tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #f93;
@@ -35,7 +36,7 @@ div.h-6.text-2xl.font-semibold.sm\:block {
     color: $discord-charcoal;
 
     &:hover {
-        color: $cream;
+        color: $french-yellow-darker;
     }
 }
 
