@@ -37,7 +37,7 @@ const IndexArticle = ({ slug, title, images, summary, isH2 = true }) => {
   return (
     <article className="blog-page-post-wrapper">
       {latestHeader}
-      <div className="index-article-wrapper grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
+      <div className="index-article-wrapper grid gap-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
         <div className="xl:row-span-2">
           <span className="top-heading">{header}</span>
           {/* eslint-disable-next-line @next/next/no-img-element */}
