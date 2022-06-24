@@ -39,13 +39,37 @@ h2.slider-top-heading {
     }
 }
 
-
-
-span.bottom-heading {
+.dark h2.slider-bottom-heading {
     display: none;
-    margin-top: -1.5rem;
+    @media #{$min-1280} {
+        display:block;
+        color: $tailwind-dark-orange;
+
+        &:hover {
+            color: $tailwind-lighter-orange;
+        }
+    }
+}
+
+span.top-heading h2 a {
+    margin-bottom: -1.5rem;
+    
+    &:hover {
+        color: $cream;
+    }
+    @media #{$min-1280} {
+        display: none;
+    }
+}
+
+span.bottom-heading h2 a {
+    display: none;
     @media #{$min-1280} {
         display: block;
         margin-top: 0;
+
+        &:hover {
+            color: $cream;
+        }
     }
 }
