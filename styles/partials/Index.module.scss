@@ -5,6 +5,7 @@ $discord-burgundy: #b81111;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
 $steal-magenta: #c90076;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #f93;
 $white: #fff;
 
@@ -72,10 +73,10 @@ h3.latest-podcast-episode a:hover {
 }
 
 .dark h3.latest-podcast-episode a span.realistic-marker-highlight {
-    color: $white;
+    color: $tailwind-dark-orange;
 
     &:hover {
-        color: $french-yellow;
+        color: $tailwind-lighter-orange;
     }
 }
 
