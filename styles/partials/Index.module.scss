@@ -1,15 +1,10 @@
 /* color variables */
 $chai-punk-pink: #ed5181;
-$discord-burgundy: #b81111;
+$cream: #feedde;
 $discord-charcoal: #23272a;
-$discord-magenta: #ff73fa;
 $french-yellow: #ffe556;
-$gradient-background-blue: #1095c1;
-$peppermint-blush-white: #f2ebe3;
 $steal-magenta: #c90076;
-$tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #f93;
-$tailwind-peppermint-green: #14b8a6;
 $white: #fff;
 
 /* media query variables */
@@ -17,11 +12,18 @@ $min-768: '(min-width: 768px)';
 
 h1.home-page-title.text-4xl.font-extrabold.leading-9.tracking-tight.text-gray-900,
 h2.home-page-latest.text-3xl.font-extrabold.leading-9.tracking-tight.text-gray-900 {
+    --tw-text-opacity: 1;
+    
+    font-weight: 500;
+    color: rgb(0 0 0/var(--tw-text-opacity));
+}
+
+h1.home-page-title, .dark h1.home-page-title {
     font-weight: 500;
 }
 
 h2.home-page-latest.text-3xl.font-extrabold.leading-9.tracking-tight.text-gray-900 {
-    font-size: 175%;
+    font-size: 1.75rem;
 }
 
 /* Header Logo styling */
@@ -31,7 +33,7 @@ div.h-6.text-2xl.font-semibold.sm\:block {
     color: $discord-charcoal;
 
     &:hover {
-        color: $french-yellow;
+        color: $cream;
     }
 }
 
@@ -40,7 +42,7 @@ div.h-6.text-2xl.font-semibold.sm\:block {
     color: $white;
 
     &:hover {
-        color: $tailwind-dark-orange;
+        color: $french-yellow;
     }
 }
 
@@ -56,6 +58,24 @@ span.realistic-marker-highlight {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    padding: 1rem;
+    max-width: 760px;
+}
+
+h3.latest-podcast-episode a span.realistic-marker-highlight {
+    max-width: 250px;  
+}
+
+h3.latest-podcast-episode a:hover {
+    color: $cream;
+}
+
+.dark h3.latest-podcast-episode a span.realistic-marker-highlight {
+    color: $white;
+
+    &:hover {
+        color: $french-yellow;
+    }
 }
 
 span.realistic-marker-highlight::before {
@@ -71,6 +91,10 @@ span.realistic-marker-highlight::before {
     top: 0.1em;
     width: 100%;
     z-index: -1;
+}
+
+.dark span.realistic-marker-highlight::before {
+    background-color: $steal-magenta;
 }
 
 /* circle text sketch effect around "Latest" text */
@@ -96,6 +120,11 @@ span.realistic-marker-highlight::before {
     transform: rotate(10deg);
     width: 120%;
     z-index: -1;
+}
+
+.dark .circle-sketch-highlight::before {
+    border-color: $french-yellow;
+    opacity: 1;
 }
 
 /* style the article element on home page */
