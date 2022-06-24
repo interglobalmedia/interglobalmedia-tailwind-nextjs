@@ -1,0 +1,42 @@
+/* color variables */
+$discord-charcoal: #23272a;
+$discord-magenta: #ff73fa;
+
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
+
+.react-slideshow-container {
+    &.react-slideshow-fade-wrapper {
+        &.react-slideshow-fade-images-wrap {
+            padding: 2rem 0;
+            cursor: pointer;
+            width: 100%;
+            max-width: 1280px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+
+            & p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.react-slideshow-fade-wrapper {
+    margin-bottom: 3rem;
+    border: 1.5px solid $discord-charcoal;
+    border-radius: 0.5rem;
+}
+
+.dark .react-slideshow-fade-wrapper {
+    border-color: $discord-magenta;
+    border-radius: 0.5rem;
+}
+
+.dev-tips-wrapper.slide-container {
+    padding: 0.25rem 0.5rem 0.5rem;
+}   

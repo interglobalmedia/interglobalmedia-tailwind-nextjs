@@ -6,6 +6,7 @@ $chai-punk-pink-lite: #f293b1;
 $discord-charcoal: #23272a;
 $discord-burgundy: #b81111;
 $discord-lilac-lighter: #9eb3e6;
+$french-yellow: #ffe556;
 $main-background: #fee9d7;
 $peppermint-blush-white: #f2ebe3;
 $tailwind-peppermint-green: #14b8a6;
@@ -26,6 +27,7 @@ $min-1280: '(min-width: 1280px)';
 main.mb-auto {
     border: 1px solid $peppermint-blush-white;
     border-radius: 0.63rem;
+    cursor: pointer;
 
   /* lighter shade of $discord-lilac because of color contrast issue (accessibility) */
     background: rgba($discord-lilac-lighter, 0.5);
@@ -196,7 +198,7 @@ h2.text-gray-500 {
     
     /* stylelint-disable-next-line no-descending-specificity */
     &:hover {
-        color: $discord-burgundy;
+        color: $french-yellow;
         text-decoration: none;
     }
 }

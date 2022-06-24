@@ -1,6 +1,6 @@
 /* color variables */
-$discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
+$french-yellow: #ffe556;
 $gradient-background-blue: #1095c1;
 $peppermint-blush-white: #f2ebe3;
 $tailwind-dark-orange: rgb(249 115 22 / 100%);
@@ -33,8 +33,12 @@ $tailwind-lighter-orange: #ff9933;
 /* dark mode styling */
 
 /* changes the color of the project title */
-.dark h2 {
+.dark h2 a {
     color: $peppermint-blush-white;
+
+    &:hover {
+        color: $french-yellow;
+    }
 }
 
 /* changes the color of the project text summary */
