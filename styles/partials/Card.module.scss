@@ -1,20 +1,29 @@
 /* color variables */
+$cream: #feedde;
 $discord-magenta: #ff73fa;
 $french-yellow: #ffe556;
-$gradient-background-blue: #1095c1;
 $peppermint-blush-white: #f2ebe3;
 $tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #ff9933;
 
 .h-full.overflow-hidden.rounded-md.border-2.border-gray-200 {
     padding: 1.5rem;
-    border-color: $peppermint-blush-white;
-    border-width: 1px;
-    border-style: solid;
+    border: 1.5px solid;
 
     &:hover {
-        background: rgba($gradient-background-blue, 0.5);
         cursor: pointer;
+    }
+
+    & a.text-primary-500 {
+        &:hover {
+            color: $cream;
+        }
+    } 
+}
+
+h2.mb-3.text-2xl.font-bold.leading-8.tracking-tight a {
+    &:hover {
+        color: $cream;
     }
 }
 
