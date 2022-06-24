@@ -1,8 +1,9 @@
 /* color variables */
+$cream: #feedde;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
-$tailwind-lighter-orange: #f93;
+$white: #fff;
 
 /* media query variables */
 $min-1280: '(min-width: 1280px)';
@@ -18,12 +19,13 @@ $min-1280: '(min-width: 1280px)';
         }
     }
 
+    /* styles the sliders on home page */
     h2.text-2xl.font-bold.leading-8.tracking-tight {
         margin-bottom: 0.5rem;
         font-weight: 600;
 
         &:hover {
-            color: $french-yellow;
+            color: $cream;
         }
     }
 
@@ -32,12 +34,27 @@ $min-1280: '(min-width: 1280px)';
     }
 }
 
+/* styles the latest post on home page */
+h2.text-2xl.font-bold.leading-8.tracking-tight > a.text-gray-900 {
+    &:hover {
+        color: $cream;
+    }
+}
+
+.dark h2.text-2xl.font-bold.leading-8.tracking-tight  > a.text-gray-900 {
+    color: $white;
+
+    &:hover {
+        color: $french-yellow;
+    }
+}
+
 /* stylelint-disable-next-line no-descending-specificity */
 .dark a.text-blue-500 {
   color: $peppermint-blush-white;
 
   &:hover {
-    color: $tailwind-lighter-orange;
+    color: $french-yellow;
   }
 }
 

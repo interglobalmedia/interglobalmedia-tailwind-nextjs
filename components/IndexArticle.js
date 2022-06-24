@@ -6,9 +6,12 @@ const IndexArticle = ({ slug, title, images, summary, isH2 = true }) => {
   let thumbnail = (
     <>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      {images.length > 0 && (
-        <Image alt={title} src={images} width={1280} height={720} layout="intrinsic" />
-      )}
+      <Link href={`/blog/${slug}`} title={title} className="w-full xl:w-auto">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        {images.length > 0 && (
+          <Image alt={title} src={images} width={1280} height={720} layout="intrinsic" />
+        )}
+      </Link>
     </>
   )
   let headerLink = (
@@ -24,45 +27,27 @@ const IndexArticle = ({ slug, title, images, summary, isH2 = true }) => {
   )
 
   let latestHeader = (
-    <h2>
-      <span className="circle-sketch-highlight">Latest:</span>
+    <h2 className="index-article-latest-header pb-10 text-left text-6xl font-bold">
+      <span className="top-heading circle-sketch-highlight text-gray-500 dark:text-gray-100">
+        Latest
+      </span>
     </h2>
   )
 
   return (
     <article className="blog-page-post-wrapper">
-      <h2 className="index-article-latest-header">{latestHeader}</h2>
-      <div className="grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
+      {latestHeader}
+      <div className="index-article-wrapper grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
         <div className="xl:row-span-2">
+          {header}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           {thumbnail}
         </div>
         <div className="meta-wrapper">
-          {header}
-          {/* <div className="flex flex-wrap">
-            {tags.map((tag, index) => (
-              <Tag key={index} text={tag} />
-            ))}
-          </div>
-          <div className="flex flex-wrap">
-            {categories.map((category, index) => (
-              <Category key={index} text={category} />
-            ))}
-          </div> */}
+          <span className="bottom-heading">{header}</span>
         </div>
         <div className="xl:col-span-2 xl:row-span-1">
           <div className="prose max-w-none text-gray-500 dark:text-gray-400">{summary}</div>
-          {/* {hasExtraLink && (
-            <div className="text-base font-medium leading-6">
-              <Link
-                href={`/blog/${slug}`}
-                className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
-                aria-label={`Read "${title}"`}
-              >
-                Read more &rarr;
-              </Link>
-            </div>
-          )} */}
         </div>
       </div>
     </article>
