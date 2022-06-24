@@ -1,20 +1,11 @@
 import React from 'react'
 //These are Third party packages for smooth slideshow
 import { Fade } from 'react-slideshow-image'
+import tips from '@/data/devTips'
 import 'react-slideshow-image/dist/styles.css'
 import '../styles/partials/DevTips.module.scss'
 
 const DevTips = () => {
-  const tips = [
-    {
-      title: 'Dev Tip #1',
-      tip: 'If you are UX (designer), make sure you learn enough about DX (developer) so that you can effectively communicate and understand the process. If you are DX, make sure you learn enough about UX so that you can effectively communicate and understand the process as well.  Separation of concerns does not mean the exclusion of communication and understanding! If you are UX (designer), make sure you learn enough about DX (developer) so that you can effectively communicate and understand the process. If you are DX, make sure you learn enough about UX so that you can effectively communicate and understand the process as well.  Separation of concerns does not mean the exclusion of communication and understanding!',
-    },
-    {
-      title: 'Dev Tip #2',
-      tip: 'This is a tip for testing purposes.',
-    },
-  ]
   return (
     <article className="blog-page-post-wrapper">
       <h2 className="index-article-latest-header pb-10 text-left text-6xl font-bold">
