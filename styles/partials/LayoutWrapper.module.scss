@@ -1,8 +1,16 @@
 /* color variables */
+$cream: #ffe9d6;
+$discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
 
 .sketch-highlight{
   position:relative;
+}
+
+a span.sketch-highlight {
+  &:hover {
+    color: rgba($cream, 1);
+  }
 }
 
 .sketch-highlight::before{
@@ -10,7 +18,7 @@ $discord-magenta: #ff73fa;
   z-index:-1;
   left:0;
   top:0;
-  border-width:2px;
+  border-width:1.5px;
   border-style:solid;
   border-color:black;
   position:absolute;
@@ -18,7 +26,7 @@ $discord-magenta: #ff73fa;
   width:100%;
   height:1em;
   transform:rotate(2deg);
-  opacity:0.7;
+  opacity:0.8;
   border-radius:0.25em;
 }
 
@@ -36,7 +44,7 @@ $discord-magenta: #ff73fa;
   width:100%;
   height:1em;
   transform:rotate(-1deg);
-  opacity:0.9;
+  opacity:0.8;
   border-radius:0.25em;
 }
 

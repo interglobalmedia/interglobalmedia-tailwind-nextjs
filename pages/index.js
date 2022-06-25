@@ -27,7 +27,15 @@ export default function Home({ posts, hasExtraLink = true }) {
             Hi there!
           </h1>
           <p className="home-page-description text-lg leading-7 text-gray-500 dark:text-gray-400">
-            <span className="realistic-marker-highlight">{siteMetadata.description}</span>
+            <span className="realistic-marker-highlight">
+              And <b className="intro-highlight">welcome</b> to{' '}
+              <b className="intro-highlight">Inter-Global Media Network.</b> I'm{' '}
+              <b className="intro-highlight">Maria,</b> and I{' '}
+              <b className="intro-highlight">design,</b> <b className="intro-highlight">develop,</b>{' '}
+              and <b className="intro-highlight">teach experiences</b>
+              that <b className="intro-highlight">make</b> people's lives{' '}
+              <b className="intro-highlight">simpler.</b>
+            </span>
           </p>
           <svg
             xmlns="//www.w3.org/2000/svg"

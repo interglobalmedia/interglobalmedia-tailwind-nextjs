@@ -1,6 +1,6 @@
 /* color variables */
 $chai-punk-pink: #ed5181;
-$cream: #feedde;
+$cream: #ffe9d6;
 $discord-burgundy: #b81111;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
@@ -36,7 +36,7 @@ div.h-6.text-2xl.font-semibold.sm\:block {
     color: $discord-charcoal;
 
     &:hover {
-        color: $french-yellow-darker;
+        color: $white;
     }
 }
 
@@ -56,21 +56,17 @@ div.h-6.text-2xl.font-semibold.sm\:block {
     }
 }
 
-/* realistic marker styling for siteMetadata.description */
-span.realistic-marker-highlight {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    max-width: 760px;
-}
-
 h3.latest-podcast-episode a span.realistic-marker-highlight {
-    max-width: 250px;  
+    max-width: 250px;
+    color: $white;
+
+    &:hover {
+        color: $discord-charcoal;
+    }
 }
 
 h3.latest-podcast-episode a:hover {
-    color: $cream;
+    color: $white;
 }
 
 .dark h3.latest-podcast-episode a span.realistic-marker-highlight {
@@ -79,6 +75,16 @@ h3.latest-podcast-episode a:hover {
     &:hover {
         color: $tailwind-lighter-orange;
     }
+}
+
+/* realistic marker styling for siteMetadata.description */
+span.realistic-marker-highlight {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    // max-width: 800px;
+    line-height: 2;
 }
 
 span.realistic-marker-highlight::before {
@@ -165,4 +171,18 @@ span.realistic-marker-highlight::before {
   mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   mask-composite: destination-out;
   mask-composite: exclude;
+}
+
+b.intro-highlight {
+    color: $white;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+b.intro-highlight:nth-of-type(2) {
+    border: 1px solid;
+    padding: 0.25rem;
+    margin-top: -0.5rem;
+    border-radius: 0.5rem;
 }
