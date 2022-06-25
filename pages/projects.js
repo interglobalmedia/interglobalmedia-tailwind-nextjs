@@ -19,12 +19,12 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className="divide-y divide-gray-200 dark:divide-gray-900">
-        <div className="projects-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
+      <main className="divide-y divide-gray-200 dark:divide-gray-900">
+        <section className="projects-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Search All Projects
           </h1>
-          <div className="relative max-w-lg">
+          <section className="relative max-w-lg">
             <input
               aria-label="Search projects"
               type="text"
@@ -46,10 +46,10 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               ></path>
             </svg>
-          </div>
-        </div>
-        <div className="container py-12">
-          <div className="-m-4 flex flex-wrap">
+          </section>
+        </section>
+        <section className="container py-12">
+          <article className="grid gap-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
             {!filteredProjectPosts.length && 'No projects found.'}
             {displayProjectPosts.map((d) => (
               <Card
@@ -61,9 +61,9 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
                 tags={d.tags}
               />
             ))}
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </main>
       {pagination && pagination.totalPages > 1 && !searchValue && (
         <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
       )}

@@ -20,14 +20,6 @@ $min-1280: '(min-width: 1280px)';
     }
 }
 
-/* TagsList dark mode styling */
-
-.flex.max-w-lg.flex-wrap {
-    @media #{$min-1280} {
-        margin-top: -6rem;
-    }
-}
-
 .justify-start {
     justify-content: center;
 }
