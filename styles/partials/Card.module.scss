@@ -7,7 +7,7 @@ $tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #ff9933;
 
 .h-full.overflow-hidden.rounded-md.border-2.border-gray-200 {
-    padding: 1.5rem;
+    padding: 0.25rem 0.75rem;
     border: 1.5px solid;
 
     &:hover {
@@ -21,9 +21,16 @@ $tailwind-lighter-orange: #ff9933;
     } 
 }
 
-h2.mb-3.text-2xl.font-bold.leading-8.tracking-tight a {
+h2.mb-1.text-2xl.font-bold.leading-8.tracking-tight a {
     &:hover {
         color: $cream;
+    }
+}
+
+.dark h2.mb-1.text-2xl.font-bold.leading-8.tracking-tight a {
+    color: $tailwind-dark-orange;
+    &:hover {
+        color: $tailwind-lighter-orange;
     }
 }
 
