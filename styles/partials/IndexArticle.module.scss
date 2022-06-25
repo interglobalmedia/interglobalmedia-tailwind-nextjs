@@ -1,18 +1,18 @@
 /* color variables */
-$cream: #feedde;
+$cream: #ffe9d6;
 $tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #ff9933;
 
 /* media query variables */
 $min-1280: '(min-width: 1280px)';
 
-.index-article-wrapper.grid.gap-2.space-y-2.xl\:grid-flow-col.xl\:grid-cols-2.xl\:grid-rows-2.xl\:gap-4.xl\:space-y-0 {
+.index-article-wrapper {
     border: 1.5px solid;
     border-radius: 0.5rem;
     padding: 0.5rem 0.5rem 0.125rem;
 }
 
-.dark .index-article-wrapper.grid.gap-2.space-y-2.xl\:grid-flow-col.xl\:grid-cols-2.xl\:grid-rows-2.xl\:gap-4.xl\:space-y-0 {
+.dark .index-article-wrapper {
     border-radius: 0.5rem;
 }
 

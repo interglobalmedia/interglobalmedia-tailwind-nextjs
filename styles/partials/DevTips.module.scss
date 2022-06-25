@@ -1,5 +1,5 @@
 /* color variables */
-$cream: #feedde;
+$cream: #ffe9d6;
 $discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
 $tailwind-lighter-orange: #ff9933;
@@ -47,8 +47,8 @@ $min-1280: '(min-width: 1280px)';
             display: block;
             
             &:hover {
-                color: $tailwind-lighter-orange;
+                color: $cream;
             }
         }
-    }   
+    } 
 }   

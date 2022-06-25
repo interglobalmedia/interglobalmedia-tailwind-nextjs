@@ -6,7 +6,6 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import '../styles/partials/LayoutWrapper.module.scss'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -16,21 +15,14 @@ const LayoutWrapper = ({ children }) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
+                <div className="h-6 text-2xl font-semibold sm:block">
+                  <span className="globe sketch-highlight">Inter 🌐 Media</span>
                 </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    <span className="sketch-highlight">{siteMetadata.headerTitle}</span>
-                  </div>
-                ) : (
-                  <span className="sketch-highlight">siteMetadata.headerTitle</span>
-                )}
               </div>
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="sm:block:hidden hidden">
+            <div className="hidden sm:block">
               {headerNavLinks.map((link) => (
                 <Link
                   key={link.title}

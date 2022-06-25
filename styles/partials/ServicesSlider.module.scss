@@ -1,7 +1,9 @@
- /* media query variables */
- $min-1280: '(min-width: 1280px)';
- 
- .react-slideshow-services-wrapper {
+/* color variables */
+$cream: #ffe9d6;
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
+
+.react-slideshow-services-wrapper {
     max-width: 1280px;
     width: 100%;
 
@@ -16,16 +18,21 @@
         max-width: 1280px;
     }
 
-        & h2.slider-top-heading {
-            @media #{$min-1280} {
-                display: none;
-            }
-        }
-
-        & h2.slider-bottom-heading {
+    & h2.slider-top-heading {
+        @media #{$min-1280} {
             display: none;
-            @media #{$min-1280} {
-                display: block;
+        }
+    }
+
+    & h2.slider-bottom-heading {
+        display: none;
+
+        @media #{$min-1280} {
+            display: block;
+            
+            &:hover {
+                color: $cream;
             }
         }
- }
+    }
+}

@@ -15,6 +15,10 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        sm: '1280px',
+        // => @media (min-width: 992px) { ... }
+      },
       spacing: {
         '9/16': '56.25%',
       },
