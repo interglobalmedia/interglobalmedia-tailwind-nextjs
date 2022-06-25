@@ -1,5 +1,5 @@
 /* color variables */
-$cream: #feedde;
+$cream: #ffe9d6;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
 $peppermint-blush-white: #f2ebe3;
@@ -28,8 +28,9 @@ $min-1280: '(min-width: 1280px)';
 }
 
 /* creates the margin between read more and post description on blog page */
-.text-base {
+.flex.items-center.text-base.leading-5 a {
     margin-top: 0.75rem;
+    font-size: 1.2rem;
 }
 
 span.top-heading h3 a, span.bottom-heading h3 a {
