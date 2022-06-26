@@ -3,6 +3,7 @@
 
 /*color  variables */
 $chai-punk-pink-lite: #f293b1;
+$cream: #ffe9d6;
 $discord-charcoal: #23272a;
 $discord-burgundy: #b81111;
 $discord-lilac-lighter: #9eb3e6;
@@ -89,7 +90,7 @@ dd>a.text-primary-500 {
 
     /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
     color: $inline-code-color-lite-mode;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: normal;
 }
 
@@ -198,7 +199,7 @@ h2.text-gray-500 {
     
     /* stylelint-disable-next-line no-descending-specificity */
     &:hover {
-        color: $french-yellow;
+        color: $discord-burgundy;
         text-decoration: none;
     }
 }
@@ -213,7 +214,7 @@ div.text-primary-500 a {
 
     /* stylelint-disable-next-line no-descending-specificity */
     &:hover {
-        color: $discord-burgundy !important;
+        color: $discord-burgundy;
         text-decoration: none;
     }
 }
