@@ -30,7 +30,7 @@ const projectsData = [
     website: 'https://interglobalmedia.github.io/jukebox/',
     summary: `An audio player in the form of a jukebox created with es6-javascript, html5-audio, oop, and includes a search-in-text searchbar.`,
     imgSrc: '/static/images/projects/img/webp/welcome-to-the-groove.webp',
-    href: '/blog/projects/welcome-to-the-groove',
+    canonicalUrl: '/blog/projects/welcome-to-the-groove',
     tags: [
       'audio web api',
       ', ',
@@ -47,6 +47,30 @@ const projectsData = [
       'thumb slider',
     ],
     more: `https://interglobalmedia.github.io/portfolio/#/work/welcome-to-the-groove`,
+  },
+  {
+    id: 3,
+    title: 'Rockin Synth',
+    repository: 'https://github.com/interglobalmedia/rockin-synth',
+    website: 'https://interglobalmedia.github.io/rockin-synth/',
+    summary:
+      'A piano deyboard application built with JavaScript, es6 modules, the Web Audio API, event delegation, Sass, and more.',
+    imgSrc: '/static/images/projects/img/webp/rockin-synth.webp',
+    canonicalUrl: '/blog/projects/rockin-synth',
+    tags: [
+      'babel',
+      'e.keyCode',
+      'e.which',
+      'es6 modules',
+      'eslint',
+      'event delegation',
+      'event listeners',
+      'kbd tags',
+      'prettier',
+      'transitions',
+      'web audio api',
+    ],
+    more: 'https://interglobalmedia.github.io/portfolio/#/work/rockin-synth',
   },
 ]
 
