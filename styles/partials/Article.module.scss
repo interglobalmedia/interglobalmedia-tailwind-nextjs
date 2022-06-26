@@ -83,3 +83,10 @@ margin-bottom: 0.25rem;
 .meta-wrapper>.flex.flex-wrap {
     display: none;
 }
+
+.meta-wrapper span.bottom-heading {
+    display: none;
+    @media #{$min-1280} {
+        display: block;
+    }
+}

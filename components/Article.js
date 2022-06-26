@@ -46,24 +46,8 @@ const Article = ({
         </div>
 
         <div className="xl:row-span-2">
-          {/* <dl>
-            <dt className="sr-only">Published on</dt>
-            <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-              <time dateTime={date}>{formatDate(date)}</time>
-            </dd>
-          </dl> */}
           <div className="meta-wrapper">
             <span className="bottom-heading">{header}</span>
-            {/* <div className="flex flex-wrap">
-              {tags.map((tag, index) => (
-                <Tag key={index} text={tag} />
-              ))}
-            </div>
-            <div className="flex flex-wrap">
-              {categories.map((category, index) => (
-                <Category key={index} text={category} />
-              ))}
-            </div> */}
           </div>
           <div className="xl:col-span-2 xl:row-span-1">
             <div className="prose max-w-none text-gray-500 dark:text-gray-400">{summary}</div>
