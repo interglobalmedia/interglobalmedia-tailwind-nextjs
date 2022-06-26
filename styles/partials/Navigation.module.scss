@@ -1,0 +1,83 @@
+/* color variables */
+$aussie-blue: #80d0ff;
+$aussie-brick: #910000;
+$chai-punk-pink: #ed5181;
+$chai-punk-pink-lite: #f293b1;
+$cream: #ffe9d6;
+$discord-charcoal: #23272a;
+$discord-magenta: #ff73fa;
+$tailwind-dark-orange: rgb(249 115 22 / 100%);
+$tailwind-lighter-orange: #ff9933;
+
+.menu-link.font-bold.tracking-widest, .menu-link.p-1.font-medium {
+    font-weight: 500;
+}
+
+.menu-link, .dark .menu-link {
+    font-weight: 500;
+}
+
+.menu-link:hover {
+    color: lighten($aussie-blue, 5%);
+    text-shadow: 1px 2px 2px darken($discord-charcoal, 5%);
+    transition: color 0.5s ease-in-out;
+    transform: translateY(5px);
+}
+
+.menu-link.active {
+    color: lighten($aussie-blue, 5%);
+    background: $discord-charcoal;
+    border: 1.5px solid lighten($aussie-blue, 10%);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px $aussie-blue;
+    padding: 0.5rem;
+    transition: all 0.5s ease-in-out;
+    transform: scaleY(2);
+    transform: translateY(5px);
+
+    &:hover {
+        box-shadow: 1px 2px 2px 1px darken($aussie-blue, 75%);
+        padding: 0.5rem;
+        text-shadow: 1px 1px 2px darken($aussie-blue, 20%);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.dark .menu-link {
+    &:hover {
+        color: darken($cream, 15%);
+        text-shadow: 1px 1px 2px $discord-charcoal;
+        transition: color 0.5s ease-in-out;
+        transform: translateY(5px);
+    }
+}
+
+.dark .menu-link.active {
+    background: lighten($tailwind-dark-orange, 3.5%);
+    border: 2px solid darken($discord-magenta, 25%);
+    border-radius: 0.5rem;
+    box-shadow: 0 8px darken($discord-magenta, 25%);
+    color: $white;
+    padding: 0.5rem;
+    text-shadow: 1px 1px 2px $discord-charcoal;
+    transition: all 0.5s ease-in-out;
+    transform: scale(2);
+    transform: translateY(5px);
+
+    &:hover {
+        border: 1.5px solid darken($discord-magenta, 25%);
+        box-shadow: 2px 2px 3px 2px lighten($discord-magenta, 5%);
+        color: $white;
+        padding: 0.5rem;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+/* Mobile nav backdrop color */
+.fixed.h-full.w-full.transform.bg-gray-200.opacity-95.duration-300.ease-in-out {
+    background: rgba(103, 128, 159, 1);
+}
+
+.dark .fixed.h-full.w-full.transform.bg-gray-200.opacity-95.duration-300.ease-in-out {
+    background: rgba(44,62,80, 1);
+}
