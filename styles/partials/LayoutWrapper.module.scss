@@ -1,53 +1,57 @@
 /* color variables */
+$black: #000;
 $cream: #ffe9d6;
 $discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
 
-.sketch-highlight{
-  position:relative;
+.sketch-highlight {
+  position: relative;
 }
 
 a span.sketch-highlight {
   &:hover {
-    color: rgba($cream, 1);
+    color: darken($cream, 15%);
+    text-shadow: 1px 1px 2px darken($discord-charcoal, 20%);
+    transition: all 0.7s ease-in-out;
   }
 }
 
-.sketch-highlight::before{
-  content:"";
-  z-index:-1;
-  left:0;
-  top:0;
-  border-width:1.5px;
-  border-style:solid;
-  border-color:black;
-  position:absolute;
-  border-right-color:transparent;
-  width:100%;
-  height:1em;
-  transform:rotate(2deg);
-  opacity:0.8;
-  border-radius:0.25em;
+.sketch-highlight::before {
+  content: "";
+  z-index: -1;
+  left: 0;
+  top: 0;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: darken($black, 5%);
+  position: absolute;
+  border-right-color: transparent;
+  width: 100%;
+  height: 1.05em;
+  transform: rotate(-2deg);
+  opacity: 1;
+  border-radius: 0.25em;
 }
 
-.sketch-highlight::after{
-  content:"";
-  z-index:-1;
-  left:0;
-  top:0;
-  border-width:2px;
-  border-style:solid;
-  border-color:black;
-  border-left-color:transparent;
-  border-top-color:transparent;
-  position:absolute;
-  width:100%;
-  height:1em;
-  transform:rotate(-1deg);
-  opacity:0.8;
-  border-radius:0.25em;
+.sketch-highlight::after {
+  content: "";
+  z-index: -1;
+  left: 0;
+  top: 0;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: darken($black, 5%);
+  border-left-color: transparent;
+  border-top-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 1em;
+  transform: rotate(4deg);
+  opacity: 1;
+  border-radius: 0.25em;
 }
 
-.dark .sketch-highlight::before, .dark .sketch-highlight::after {
-    border-color: $discord-magenta;
+.dark .sketch-highlight::before,
+.dark .sketch-highlight::after {
+  border-color: darken($discord-magenta, 20%);
 }
