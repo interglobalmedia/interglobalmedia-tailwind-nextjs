@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router'
-import { document } from 'browser-monads'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Link from './Link'
