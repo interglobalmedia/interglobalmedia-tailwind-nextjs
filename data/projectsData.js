@@ -90,6 +90,17 @@ const projectsData = [
     ],
     more: 'https://interglobalmedia.github.io/portfolio/#/work/cat-whisperer-app',
   },
+  {
+    id: 5,
+    title: 'Trump Talks Trash',
+    repository: `https://github.com/interglobalmedia/trump-talks-trash`,
+    website: `https://trump-talks-trash.herokuapp.com/`,
+    summary: 'A Random Quote API Application using the What Does Trump Think? API.',
+    imgSrc: '/static/images/projects/img/webp/trump-talks.webp',
+    href: '/blog/projects/trump-talks-trash',
+    tags: ['fetch api', 'nodejs', 'express', 'ejs', 'random quote api'],
+    more: `https://interglobalmedia.github.io/portfolio/#/work/trump-talks`,
+  },
 ]
 
 export default projectsData
