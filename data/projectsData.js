@@ -119,6 +119,31 @@ const projectsData = [
     ],
     more: 'https://github.com/interglobalmedia/node-chat-app',
   },
+  {
+    id: 7,
+    title: 'Node Collaborative Drawing',
+    repository: 'https://github.com/interglobalmedia/node-collaborative-drawing-app',
+    website: 'https://node-collaborative-drawing-app.herokuapp.com/',
+    summary:
+      'A real time collaborative drawing app built with websockets and the socket.io websocket library, express, and node canvas.',
+    imgSrc: '/static/images/projects/img/webp/node-collaborative-drawing-app.webp',
+    href: '/blog/projects/node-collaborative-drawing',
+    tags: [
+      'collaboration',
+      'expressjs',
+      'node canvas',
+      'nodejs',
+      'serve favicon',
+      'socket.io',
+      'touch-friendly',
+      'touch-end event',
+      'touch event fix for canvas 2d',
+      'touchmove event',
+      'touch-start event',
+      'websockets',
+    ],
+    more: 'https://github.com/interglobalmedia/node-collaborative-drawing-app',
+  },
 ]
 
 export default projectsData
