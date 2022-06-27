@@ -182,7 +182,7 @@ const projectsData = [
     summary:
       'An app which implements the OMDB API Using Nodejs, protects your API key, and deploys to Heroku.',
     imgSrc: '/static/images/projects/img/webp/omdb-api-nodejs-app.webp',
-    href: '//blog/projects/omdb-api-nodejs',
+    href: '/blog/projects/omdb-api-nodejs',
     tags: [
       'async-await',
       'css animation',
@@ -209,6 +209,28 @@ const projectsData = [
       'stacktrace error-handing development',
     ],
     more: 'https://github.com/interglobalmedia/omdb-api-nodejs',
+  },
+  {
+    id: 10,
+    title: 'Custom HTML5 Video Player/Shadow DOM',
+    repository: 'https://github.com/interglobalmedia/custom-html5-video-player',
+    website: 'https://interglobalmedia.github.io/custom-html5-video-player/',
+    summary:
+      'An app which creates a custom HTML5 video player using the Shadow DOM so that the video player can go full screen without issue.',
+    imgSrc: '/static/images/projects/img/webp/custom-html5-video-player.webp',
+    href: '/blog/projects/custom-html5-video-player-and-shadow-dom',
+    tags: [
+      'fullscreen api',
+      'html5 video',
+      'html5',
+      'cross-browser issues',
+      'cascading stylesheets',
+      'shadow dom',
+      'user-agent stylesheets',
+      'pseudo elements',
+      'javascript',
+    ],
+    more: 'https://www.interglobalmedianetwork.com/blog/2017-01-04-creating-a-custom-html5-video-player-and-the-shadow-dom/',
   },
 ]
 
