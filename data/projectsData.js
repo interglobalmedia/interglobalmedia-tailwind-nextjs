@@ -212,7 +212,7 @@ const projectsData = [
   },
   {
     id: 10,
-    title: 'Custom HTML5 Video Player/Shadow DOM',
+    title: 'Custom HTML5 Video Player',
     repository: 'https://github.com/interglobalmedia/custom-html5-video-player',
     website: 'https://interglobalmedia.github.io/custom-html5-video-player/',
     summary:
