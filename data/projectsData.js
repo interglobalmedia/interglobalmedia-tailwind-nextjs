@@ -101,6 +101,24 @@ const projectsData = [
     tags: ['fetch api', 'nodejs', 'express', 'ejs', 'random quote api'],
     more: `https://interglobalmedia.github.io/portfolio/#/work/trump-talks`,
   },
+  {
+    id: 6,
+    title: 'Chattrbox',
+    repository: `https://github.com/interglobalmedia/node-chat-app`,
+    website: `https://pacific-savannah-76659.herokuapp.com/`,
+    summary: `A real time communications app built with websockets/socket.io websocket library, Node.js, and Express.`,
+    imgSrc: '/static/images/projects/img/webp/chatterbox.webp',
+    href: '/blog/projects/node-chat-app',
+    tags: [
+      'websockets',
+      'socket.io',
+      'nodejs',
+      'express',
+      'geolocation api',
+      'google maps api maps url',
+    ],
+    more: 'https://github.com/interglobalmedia/node-chat-app',
+  },
 ]
 
 export default projectsData
