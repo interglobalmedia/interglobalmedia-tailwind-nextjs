@@ -30,7 +30,7 @@ const projectsData = [
     website: 'https://interglobalmedia.github.io/jukebox/',
     summary: `An audio player in the form of a jukebox created with es6-javascript, html5-audio, oop, and includes a search-in-text searchbar.`,
     imgSrc: '/static/images/projects/img/webp/welcome-to-the-groove.webp',
-    canonicalUrl: '/blog/projects/welcome-to-the-groove',
+    href: '/blog/projects/welcome-to-the-groove',
     tags: [
       'audio web api',
       ', ',
@@ -56,7 +56,7 @@ const projectsData = [
     summary:
       'A piano deyboard application built with JavaScript, es6 modules, the Web Audio API, event delegation, Sass, and more.',
     imgSrc: '/static/images/projects/img/webp/rockin-synth.webp',
-    canonicalUrl: '/blog/projects/rockin-synth',
+    href: '/blog/projects/rockin-synth',
     tags: [
       'babel',
       'e.keyCode',
@@ -71,6 +71,35 @@ const projectsData = [
       'web audio api',
     ],
     more: 'https://interglobalmedia.github.io/portfolio/#/work/rockin-synth',
+  },
+  {
+    id: 4,
+    title: 'Cat Whisperer',
+    repository: 'https://github.com/interglobalmedia/the-cat-whisperer',
+    website: 'https://interglobalmedia.github.io/the-cat-whisperer/',
+    summary:
+      'A little text to speech app I created so that cat lovers could be inspired to write about their cats using the Speech Synthesis API while being inspired by the app’s cat image slideshow',
+    imgSrc: '/static/images/projects/img/webp/cat-whisperer-app.webp',
+    href: '/blog/projects/cat-whisperer',
+    tags: [
+      'text to speech',
+      'speech synthesis api',
+      'audio web api',
+      'session storage',
+      'file downloads',
+    ],
+    more: 'https://interglobalmedia.github.io/portfolio/#/work/cat-whisperer-app',
+  },
+  {
+    id: 5,
+    title: 'Trump Talks Trash',
+    repository: `https://github.com/interglobalmedia/trump-talks-trash`,
+    website: `https://trump-talks-trash.herokuapp.com/`,
+    summary: 'A Random Quote API Application using the What Does Trump Think? API.',
+    imgSrc: '/static/images/projects/img/webp/trump-talks.webp',
+    href: '/blog/projects/trump-talks-trash',
+    tags: ['fetch api', 'nodejs', 'express', 'ejs', 'random quote api'],
+    more: `https://interglobalmedia.github.io/portfolio/#/work/trump-talks`,
   },
 ]
 
