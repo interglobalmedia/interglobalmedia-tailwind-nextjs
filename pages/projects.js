@@ -49,18 +49,21 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
           </section>
         </section>
         <section className="container py-12">
-          <article className="grid gap-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
+          <article className="grid gap-4 xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
             {!filteredProjectPosts.length && 'No projects found.'}
-            {displayProjectPosts.map((d) => (
-              <Card
-                key={d.id}
-                title={d.title}
-                summary={d.summary}
-                imgSrc={d.imgSrc}
-                href={d.href}
-                tags={d.tags}
-              />
-            ))}
+            {displayProjectPosts
+              .map((d) => (
+                <Card
+                  key={d.id}
+                  title={d.title}
+                  summary={d.summary}
+                  imgSrc={d.imgSrc}
+                  href={d.href}
+                  tags={d.tags}
+                />
+              ))
+              .sort()
+              .reverse()}
           </article>
         </section>
       </main>

@@ -29,7 +29,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif'],
+        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.teal,
