@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
+import { document } from 'browser-monads'
 import Link from './Link'
 import ThemeSwitch from './ThemeSwitch'
 import headerNavLinks from '@/data/headerNavLinks'
@@ -9,31 +10,31 @@ import MobileNav from './MobileNav'
 import '../styles/partials/Navigation.module.scss'
 
 const Navigation = () => {
-  const router = useRouter()
+  const [isMobile, setMobile] = useState(document.body.clientWidth <= 991)
+  const [navDropStatus, setNavDropStatus] = useState('init')
   const [mounted, setMounted] = useState(false)
+  const router = useRouter()
   const { theme, setTheme, resolvedTheme } = useTheme()
-  // When mounted on client, now we can show the UI
-  useEffect(() => setMounted(true), [])
-  const toggleNav = () => {
+
+  // toggles hamburger menu in and out when clicking on the hamburger
+  function toggleHamburger() {
     const navbar = document.querySelector('.main-nav')
     const ham = document.querySelector('.hamburger')
-
-    // toggles hamburger menu in and out when clicking on the hamburger
-    function toggleHamburger() {
-      navbar.classList.toggle('showNav')
-      ham.classList.toggle('showClose')
-    }
-
-    ham.addEventListener('click', toggleHamburger)
-
-    // toggle when clicking on links
-
-    // METHOD 2
-    const menuLinks = document.querySelectorAll('.menu-link')
-    menuLinks.forEach(function (menuLink) {
-      menuLink.addEventListener('click', toggleHamburger)
-    })
+    navbar.classList.toggle('showNav')
+    ham.classList.toggle('showClose')
   }
+
+  // toggle when clicking on links
+  // When mounted on client, now we can show the UI
+  // add listener only once, or many listeners would be created every render
+  useEffect(() => {
+    setMounted(true)
+    const mq = window.matchMedia('(max-width: 991px)')
+    mq.addListener((res) => {
+      setMobile(res.matches)
+    })
+    return () => mq.removeListener(toggleHamburger)
+  }, [])
   return (
     <header className="header">
       <nav className="navbar">
@@ -86,7 +87,7 @@ const Navigation = () => {
               )}
             </svg>
           </button>
-          <button className="hamburger" aria-label="Right Align" onClick={toggleNav}>
+          <button className="hamburger" aria-label="Right Align" onClick={toggleHamburger}>
             <svg width="100" height="100" viewBox="0 0 100 100">
               <path
                 className="line top"
