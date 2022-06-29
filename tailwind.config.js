@@ -16,7 +16,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        sm: '1280px',
+        sm: '992px',
         // => @media (min-width: 992px) { ... }
       },
       spacing: {
