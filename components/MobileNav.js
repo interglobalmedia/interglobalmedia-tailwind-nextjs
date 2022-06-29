@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from './Link'
+import ThemeSwitch from './ThemeSwitch'
 import headerNavLinks from '@/data/headerNavLinks'
+import siteMetadata from '@/data/siteMetadata'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -10,14 +12,41 @@ const MobileNav = () => {
   const onToggleNav = () => {
     setNavShow((status) => {
       if (status) {
-        document.body.style.overflow = 'auto'
+        document.body.style.overflow = 'hidden'
       } else {
         // Prevent scrolling
-        document.body.style.overflow = 'hidden'
+        document.body.style.overflow = 'auto'
       }
       return !status
     })
   }
+  ;<header className="header">
+    <div className="flex items-center justify-between">
+      <div className="h-6 text-2xl font-semibold sm:block">
+        <Link href="/" className="brand menu-link" aria-label={siteMetadata.headerTitle}>
+          <span className="globe sketch-highlight h-6 text-2xl font-semibold sm:block">
+            Inter 🌐 Media
+          </span>
+        </Link>
+      </div>
+    </div>
+
+    <div className="flex items-center text-base leading-5">
+      <div className="hidden sm:block">
+        {headerNavLinks.map((link) => (
+          <Link
+            key={link.title}
+            href={link.href}
+            className="font-medium text-gray-900 first-letter:p-1 dark:text-gray-100 sm:p-4"
+          >
+            {link.title}
+          </Link>
+        ))}
+      </div>
+      <ThemeSwitch />
+      <MobileNav />
+    </div>
+  </header>
 
   return (
     <div className="sm:hidden">

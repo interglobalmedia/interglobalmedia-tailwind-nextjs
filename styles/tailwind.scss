@@ -31,3 +31,12 @@ input:-webkit-autofill,
 input:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+.mb-auto {
+    width: 100%;
+    margin: 0 auto;
+}

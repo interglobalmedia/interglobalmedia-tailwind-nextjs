@@ -12,20 +12,6 @@ body {
     linear-gradient( 45deg,var(--_g),var(--c) 0 67%,#0000 0 83%,var(--c) 0 92%,#0000 0),
     #1095c1; /* second color */
   background-size: var(--s) var(--s);
+  overflow-x: hidden;
   transition: background 0.3s ease-in-out;
 }
-
-/* global sticky footer styling */
-div.flex.h-screen.flex-col.justify-between {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
-}
-
-main {
-    flex: 1;
-    width: 100%;
-}
-
-/* end global sticky footer styling */
