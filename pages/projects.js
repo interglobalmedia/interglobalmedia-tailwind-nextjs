@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
-import Tag from '@/components/Tag'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
 import Pagination from '@/components/Pagination'
