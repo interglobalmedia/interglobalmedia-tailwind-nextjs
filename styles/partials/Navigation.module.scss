@@ -12,6 +12,7 @@ $tailwind-lighter-ora: #ff9933;
 $white: #fff;
 
 /* media query vars */
+$max-991: '(max-width: 991px)';
 $min-992: '(min-width: 992px)';
 
 /* moon-sun svg styling */
@@ -44,17 +45,14 @@ $min-992: '(min-width: 992px)';
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.dark .line {
+    stroke: $white;
+}
+
 a.menu-link {
     list-style-type: none;
     margin: 1.5vh 1.5vw;
-    @media #{$min-992} {
-        margin: 1.5vh 0.5vw;
-    }
 }
-
-// .header a:hover {
-//     color: #fd8c00;
-// }
 
 .hamburger {
     display: none;
@@ -271,35 +269,104 @@ a.menu-link {
     }
 }
 
+.dark .main-nav {
+    @media #{$max-991} {
+        background: rgba(44, 62, 80, 1);
+    }
+}
+
 .menu-link.font-bold.tracking-widest,
 .menu-link.p-1.font-medium {
     font-weight: 500;
 }
 
-/* for animated underline on hover */
+/* for .active link underline styling */
 .menu-link,
 .dark .menu-link {
     font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     position: relative;
+    padding: 0;
+}
+
+.brand.menu-link.active::after {
+    @media #{$min-992} {
+        content: "";
+        position: absolute;
+        bottom: 0.8rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: lighten($aussie-blue, 2.5%);
+        transition: background-color 2s linear;
+    }
 }
 
 .active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: $blue;
-  transition: all 2s ease-in-out;
+    @media #{$min-992} {
+        content: "";
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: lighten($aussie-blue, 2.5%);
+        margin-bottom: -1.3rem;
+        transition: background-color 2s linear;
+    }
 }
 
-.menu-link:hover {
-    color: lighten($aussie-blue, 5%);
-    // text-shadow: 1px 2px 2px darken($discord-charcoal, 5%);
+.dark .brand.menu-link.active::after {
+    @media #{$min-992} {
+        content: "";
+        position: absolute;
+        bottom: 0.8rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: lighten($tailwind-dark-orange, 3.5%);
+        transition: background-color 2s linear;
+    }
+}
+
+.dark .active::after {
+    @media #{$min-992} {
+        content: "";
+        position: absolute;
+        bottom: 1rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: lighten($tailwind-dark-orange, 3.5%);
+        transition: background-color 2s linear;
+    }
+}
+
+/* end .active link underline styling */
+
+.menu-link.active {
+    color: lighten($aussie-blue, 2.5%);
+    text-shadow: 1px 1px 2px lighten($discord-charcoal, 15%);
     transition: color 0.5s ease-in-out;
-    // transform: translateY(5px);
+}
+
+.dark .menu-link.active {
+    color: lighten($tailwind-dark-orange, 3.5%);
+    text-shadow: 1px 1px 2px $discord-charcoal;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        color: darken($cream, 15%);
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.menu-link {
+    &:hover {
+        color: lighten($aussie-blue, 15%);
+        text-shadow: 1px 1px 2px lighten($discord-charcoal, 15%);
+        transition: color 0.5s ease-in-out;
+    }
 }
 
 .dark .menu-link {
@@ -307,28 +374,6 @@ a.menu-link {
         color: darken($cream, 15%);
         text-shadow: 1px 1px 2px $discord-charcoal;
         transition: color 0.5s ease-in-out;
-        transform: translateY(5px);
-    }
-}
-
-.dark .menu-link.active {
-    background: lighten($tailwind-dark-orange, 3.5%);
-    border: 2px solid darken($discord-magenta, 25%);
-    border-radius: 0.5rem;
-    box-shadow: 0 8px darken($discord-magenta, 25%);
-    color: $white;
-    padding: 0.5rem;
-    text-shadow: 1px 1px 2px $discord-charcoal;
-    transition: all 0.5s ease-in-out;
-    transform: scale(2);
-    transform: translateY(5px);
-
-    &:hover {
-        border: 1.5px solid darken($discord-magenta, 25%);
-        box-shadow: 2px 2px 3px 2px lighten($discord-magenta, 5%);
-        color: $white;
-        padding: 0.5rem;
-        transition: all 0.5s ease-in-out;
     }
 }
 
@@ -338,10 +383,5 @@ a.menu-link {
 }
 
 .dark .fixed.h-full.w-full.transform.bg-gray-200.opacity-95.duration-300.ease-in-out {
-    background: rgba(44, 62, 80, 1);
-}
-
-.active {
-    color: lighten($aussie-blue, 5%);
-    transition: color 0.5s ease-in-out;
+    background: rgba(44 62 80 / 100%);
 }
