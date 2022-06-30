@@ -18,8 +18,10 @@ const siteMetadata = {
   facebook: 'https://www.facebook.com/interglobalmedia/',
   youtube: 'https://www.youtube.com/user/letsbsocial1',
   linkedin: 'https://www.linkedin.com/in/mariacampbell/',
-  sitemap: 'https://interglobalmedia-tailwind-nextjs.vercel.app/sitemap.xml',
+  sitemap: '/sitemap.xml',
   locale: 'en-US',
+  category: '/categories',
+  tag: '/tags',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
