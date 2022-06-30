@@ -16,10 +16,4 @@ $min-1280: '(min-width: 1280px)';
         border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
         border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
     }
-    
-}
-
-.mb-3 {
-    flex-wrap: wrap;
-    justify-content: center;
 }
