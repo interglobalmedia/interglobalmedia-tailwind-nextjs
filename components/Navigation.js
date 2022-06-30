@@ -27,6 +27,8 @@ const Navigation = () => {
     for (var i = 0; i < links.length; i++) {
       if (links[i].href === document.URL) {
         links[i].classList.add('active')
+      } else {
+        links[i].classList.remove('active')
       }
     }
   }
@@ -34,14 +36,13 @@ const Navigation = () => {
   useEffect(() => {
     navHighlight()
   }, [navHighlight])
+
   return (
     <header className="header">
       <nav className="navbar">
         <div className="brand-wrapper">
           <Link href="/" className="brand menu-link" aria-label={siteMetadata.headerTitle}>
-            <span className="globe sketch-highlight h-6 text-2xl font-semibold sm:block">
-              Inter 🌐 Media
-            </span>
+            <span className="globe h-6 text-2xl font-semibold sm:block">Inter 🌐 Media</span>
           </Link>
         </div>
         <ul className="main-nav">
