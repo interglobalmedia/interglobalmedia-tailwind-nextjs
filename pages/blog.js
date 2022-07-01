@@ -2,6 +2,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import { PageSEO } from '@/components/SEO'
+import ScrollTop from '@/components/ScrollTop'
 
 export const POSTS_PER_PAGE = 10
 
@@ -24,6 +25,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/blog`}
       />
+      <ScrollTop />
       <ListLayout
         posts={posts}
         initialDisplayPosts={initialDisplayPosts}
