@@ -43,7 +43,7 @@ const Card = ({ title, summary, imgSrc, href, tags }) => {
           ))}
         <div className="p-6">
           <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{summary}</p>
-          <div className="flex flex-wrap">{tags}</div>
+          <div className="project-tags flex flex-wrap">{tags}</div>
           {href && (
             <Link
               href={href}
