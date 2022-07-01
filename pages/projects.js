@@ -3,10 +3,10 @@ import siteMetadata from '@/data/siteMetadata'
 import projectsData from '@/data/projectsData'
 import Card from '@/components/Card'
 import { PageSEO } from '@/components/SEO'
-import Pagination from '@/components/Pagination'
+import ScrollTop from '@/components/ScrollTop'
 import '../styles/partials/Projects.module.scss'
 
-export default function Projects({ initialDisplayPosts = [], pagination }) {
+export default function Projects({ initialDisplayPosts = [] }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredProjectPosts = projectsData.filter((project) => {
     const searchContent = project.title + project.summary + project.tags.join(' ')
@@ -18,6 +18,7 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
   return (
     <>
       <PageSEO title={`Projects - ${siteMetadata.author}`} description={siteMetadata.description} />
+      <ScrollTop />
       <main className="divide-y divide-gray-200 dark:divide-gray-900">
         <section className="projects-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
@@ -66,9 +67,6 @@ export default function Projects({ initialDisplayPosts = [], pagination }) {
           </article>
         </section>
       </main>
-      {pagination && pagination.totalPages > 1 && !searchValue && (
-        <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
-      )}
     </>
   )
 }
