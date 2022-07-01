@@ -20,7 +20,7 @@ const Article = ({
     <Link href={`/blog/${slug}`} title={title} className="w-full xl:w-auto">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       {images.length > 0 && (
-        <Image alt={title} src={images} width={1280} height={720} layout="intrinsic" />
+        <Image alt={title} src={images} width={1280} height={960} layout="intrinsic" />
       )}
     </Link>
   )
