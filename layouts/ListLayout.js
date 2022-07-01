@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import siteMetadata from '@/data/siteMetadata'
 import Pagination from '@/components/Pagination'
 import Article from '@/components/Article'
 import '../styles/partials/ListLayout.module.scss'
@@ -7,7 +6,11 @@ import '../styles/partials/ListLayout.module.scss'
 export default function ListLayout({ posts, title, initialDisplayPosts = [], pagination }) {
   const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts.filter((frontMatter) => {
-    const searchContent = frontMatter.title + frontMatter.summary + frontMatter.tags.join(' ')
+    const searchContent =
+      frontMatter.title +
+      frontMatter.summary +
+      frontMatter.tags.join(' ') +
+      frontMatter.categories.join(' ')
     return searchContent.toLowerCase().includes(searchValue.toLowerCase())
   })
 

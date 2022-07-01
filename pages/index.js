@@ -7,6 +7,7 @@ import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
 import ServicesSlider from '@/components/ServicesSlider'
 import DevTips from '@/components/DevTips'
+import ScrollTop from '@/components/ScrollTop'
 import '../styles/partials/Index.module.scss'
 
 const MAX_DISPLAY = 1
@@ -21,6 +22,7 @@ export default function Home({ posts, hasExtraLink = true }) {
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
+      <ScrollTop />
       <div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
         <div className="home-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
