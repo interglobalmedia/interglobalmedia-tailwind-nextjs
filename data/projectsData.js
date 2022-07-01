@@ -412,6 +412,7 @@ const projectsData = [
     summary:
       'An idea I had been brewing for a while where students could join, save information from classes and collaborate.',
     imgSrc: '/static/images/projects/img/webp/letsbcoding.webp',
+    href: '/blog/projects/letsbcoding-wordpress',
     tags: [
       'advanced custom fields',
       ', ',
@@ -461,6 +462,7 @@ const projectsData = [
     summary:
       'I have always wanted to closely tie audio and audio volume controls with visual and creating multiple audio sources, which I tie to one input of type range. So what better way than with the HTML5 Web Audio and HTML5 Canvas 2D APIs!',
     imgSrc: '/static/images/projects/img/webp/dragging-bubbles.webp',
+    href: '/blog/projects/dragging-bubbles-app',
     tags: [
       'ajax',
       ', ',
@@ -499,6 +501,38 @@ const projectsData = [
       'web audio api',
     ],
     more: 'https://interglobalmedia.github.io/dragging-bubbles/',
+  },
+  {
+    id: 15,
+    title: 'Canvas 2D Breakout Game',
+    repository: 'https://github.com/interglobalmedia/2d-breakout-game-mdn',
+    website: 'https://interglobalmedia.github.io/2d-breakout-game-mdn/',
+    summary:
+      'I always had wanted to be able to create games using the HTML5 Canvas 2D API, so I built (and refactored) a Canvas 2D Breakout Game inspired by one I came across on MDN.',
+    imgSrc: '/static/images/projects/img/webp/canvas-2d-breakout-game.webp',
+    href: '/blog/projects/canvas-2d-breakout-game',
+    tags: [
+      'babel 7',
+      ', ',
+      'canvas 2D',
+      ', ',
+      'eslint 8',
+      ', ',
+      'innerhtml property',
+      ', ',
+      'keydown event',
+      ', ',
+      'keyup event',
+      ', ',
+      'modern javascript',
+      ', ',
+      'mousemove event',
+      ', ',
+      'node sass',
+      ', ',
+      'webpack 5',
+    ],
+    more: 'https://interglobalmedia.github.io/2d-breakout-game-mdn/',
   },
 ]
 
