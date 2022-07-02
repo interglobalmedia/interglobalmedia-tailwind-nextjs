@@ -24,9 +24,15 @@ const Navigation = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   function navHighlight() {
     const links = document.querySelectorAll('.menu-link')
-    for (var i = 0; i < links.length; i++) {
+    for (let i = 0; i < links.length; i++) {
       if (links[i].href === document.URL) {
         links[i].classList.add('active')
+      } else if (links[2].href === document.URL || document.URL.includes(`/blog`)) {
+        links[2].classList.add('active')
+      } else if (links[4].href === document.URL || document.URL.includes(`/categories`)) {
+        links[4].classList.add('active')
+      } else if (links[5].href === document.URL || document.URL.includes(`/tags`)) {
+        links[5].classList.add('active')
       } else {
         links[i].classList.remove('active')
       }
@@ -52,8 +58,8 @@ const Navigation = () => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className={`${router.pathname} === ${link.href} ? 'active' : ''
-            } menu-link font-medium text-gray-900 dark:text-gray-100 sm:p-4`}
+                  className={`${router.pathname} ===
+                    ${link.href} ? 'active' : ''} menu-link font-medium text-gray-900 dark:text-gray-100 sm:p-4`}
                   onClick={toggleMobileNav}
                 >
                   {link.title}
