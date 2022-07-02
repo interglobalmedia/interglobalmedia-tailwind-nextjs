@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import IndexArticle from '@/components/IndexArticle'
+import Article from '@/components/Article'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
@@ -79,14 +79,13 @@ export default function Home({ posts, hasExtraLink = true }) {
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, title, summary } = frontMatter
+            const { slug } = frontMatter
             return (
               <li key={slug} className="py-12">
-                <IndexArticle
-                  slug={slug}
-                  title={title}
-                  summary={summary}
+                <Article
+                  {...frontMatter}
                   images={frontMatter.images[0]}
+                  hasExtraLink={true}
                   isH2={true}
                 />
               </li>
