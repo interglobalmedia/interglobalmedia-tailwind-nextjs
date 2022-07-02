@@ -30,12 +30,17 @@ const genFrontMatter = (answers) => {
   const tagArray = answers.tags.split(',')
   tagArray.forEach((tag, index) => (tagArray[index] = tag.trim()))
   const tags = "'" + tagArray.join("','") + "'"
+  const categoryArray = answers.categories.split(',')
+  categoryArray.forEach((category, index) => (categoryArray[index] = category.trim()))
+  const categories = "'" + categoryArray.join("','") + "'"
   const authorArray = answers.authors.length > 0 ? "'" + answers.authors.join("','") + "'" : ''
 
   let frontMatter = dedent`---
   title: ${answers.title ? answers.title : 'Untitled'}
   date: '${date}'
+  lastmod: '${date}'
   tags: [${answers.tags ? tags : ''}]
+  categories: [${answers.categories ? categories : ''}]
   draft: ${answers.draft === 'yes' ? true : false}
   summary: ${answers.summary ? answers.summary : ' '}
   images: []
@@ -85,6 +90,11 @@ inquirer
     {
       name: 'tags',
       message: 'Any Tags? Separate them with , or leave empty if no tags.',
+      type: 'input',
+    },
+    {
+      name: 'categories',
+      message: 'Any Categories? Separate them with , or leave empty if no categories.',
       type: 'input',
     },
     {
