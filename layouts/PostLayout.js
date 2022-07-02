@@ -50,10 +50,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="post-heading-wrapper">
                 <dt className="sr-only">Last Modified on</dt>
                 <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                  <em>
-                    <strong>last modified</strong>
-                  </em>{' '}
-                  on{' '}
+                  <strong>Last modified</strong> on{' '}
                   <time dateTime={lastmod}>
                     {new Date(lastmod).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
                   </time>
