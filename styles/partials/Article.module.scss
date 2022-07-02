@@ -55,8 +55,13 @@ margin-bottom: 0.25rem;
     }
 }
 
+h2.text-2xl.font-bold.leading-8.tracking-tight a.text-gray-900 {
+    font-weight: 600;
+}
+
 .dark h2.text-2xl.font-bold.leading-8.tracking-tight a.text-gray-900 {
     color: $tailwind-dark-orange;
+    font-weight: 600;
 
     &:hover {
         color: $tailwind-lighter-orange;

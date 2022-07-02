@@ -4,7 +4,7 @@ import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { getAllTags } from '@/lib/tags'
-import tagKebabCase from '@/lib/utils/tagKebabCase'
+import kebabCase from '@/lib/utils/kebabCase'
 import fs from 'fs'
 import path from 'path'
 
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const allPosts = await getAllFilesFrontMatter('blog')
   const filteredPosts = allPosts.filter(
-    (post) => post.draft !== true && post.tags.map((t) => tagKebabCase(t)).includes(params.tag)
+    (post) => post.draft !== true && post.tags.map((t) => kebabCase(t)).includes(params.tag)
   )
 
   // rss
