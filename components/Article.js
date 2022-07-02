@@ -39,30 +39,33 @@ const Article = ({
   return (
     <article className="blog-page-post-wrapper">
       <div className="grid gap-2 space-y-2 xl:grid-flow-col xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:space-y-0">
-        <div className="xl:row-span-2">
-          <span className="top-heading">{header}</span>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          {thumbnail}
+        <div className="xl:row-span-2">{thumbnail}</div>
+        <div className="order-first space-y-0 xl:order-none xl:col-span-2 xl:space-y-0">
+          <div>
+            {header}
+            <div className="flex flex-wrap">
+              {categories.map((category) => (
+                <Category key={category} text={category} />
+              ))}
+              {tags.map((tag) => (
+                <Tag key={tag} text={tag} />
+              ))}
+            </div>
+          </div>
         </div>
-
-        <div className="xl:row-span-2">
-          <div className="meta-wrapper">
-            <span className="bottom-heading">{header}</span>
-          </div>
-          <div className="xl:col-span-2 xl:row-span-1">
-            <div className="prose max-w-none text-gray-500 dark:text-gray-400">{summary}</div>
-            {hasExtraLink && (
-              <div className="text-base font-medium leading-6">
-                <Link
-                  href={`/blog/${slug}`}
-                  className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
-                  aria-label={`Read "${title}"`}
-                >
-                  Read more &rarr;
-                </Link>
-              </div>
-            )}
-          </div>
+        <div className="xl:col-span-2 xl:row-span-1">
+          <div className="prose max-w-none text-gray-500 dark:text-gray-400">{summary}</div>
+          {hasExtraLink && (
+            <div className="text-base font-medium leading-6">
+              <Link
+                href={`/blog/${slug}`}
+                className="text-blue-500 hover:text-blue-600 dark:text-orange-500 dark:hover:text-orange-400"
+                aria-label={`Read "${title}"`}
+              >
+                Read more &rarr;
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </article>

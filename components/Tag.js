@@ -1,10 +1,10 @@
 import Link from 'next/link'
-import tagKebabCase from '@/lib/utils/tagKebabCase'
+import kebabCase from '@/lib/utils/kebabCase'
 // import '../styles/partials/Tag.module.scss'
 
 const Tag = ({ text }) => {
   return (
-    <Link href={`/tags/${tagKebabCase(text)}`}>
+    <Link href={`/tags/${kebabCase(text)}`}>
       <a className="tag mr-3 text-sm font-medium capitalize text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
         {text.split(' ').join('-')}
       </a>

@@ -3,7 +3,7 @@ import { PageSEO } from '@/components/SEO'
 import Category from '@/components/Category'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllCategories } from '@/lib/categories'
-import catKebabCase from '@/lib/utils/catKebabCase'
+import kebabCase from '@/lib/utils/kebabCase'
 import ScrollTop from '@/components/ScrollTop'
 import '../styles/partials/CategoriesList.module.scss'
 
@@ -17,7 +17,11 @@ export default function Categories({ categories }) {
   const sortedCategories = Object.keys(categories).sort((a, b) => categories[b] - categories[a])
   return (
     <>
-      <PageSEO title={`Categories - ${siteMetadata.author}`} description="Things I blog about" />
+      <PageSEO
+        title={`Categories - ${siteMetadata.author}`}
+        description="Things I blog about"
+        url={`${siteMetadata.siteUrl}/categories`}
+      />
       <ScrollTop />
       <div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
         <div className="space-x-2 pt-6 pb-8 md:space-y-5">
@@ -32,7 +36,7 @@ export default function Categories({ categories }) {
               <div key={c} className="mt-2 mb-2 mr-5">
                 <Category text={c} />
                 <Link
-                  href={`/categories/${catKebabCase(c)}`}
+                  href={`/categories/${kebabCase(c)}`}
                   className="categories -ml-2 text-sm font-semibold uppercase text-gray-600 dark:text-gray-300"
                 >
                   {` (${categories[c]})`}
