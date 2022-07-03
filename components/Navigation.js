@@ -27,14 +27,23 @@ const Navigation = () => {
     for (let i = 0; i < links.length; i++) {
       if (links[i].href === document.URL) {
         links[i].classList.add('active')
-      } else if (links[2].href === document.URL || document.URL.includes(`/blog`)) {
-        links[2].classList.add('active')
-      } else if (links[4].href === document.URL || document.URL.includes(`/categories`)) {
-        links[4].classList.add('active')
-      } else if (links[5].href === document.URL || document.URL.includes(`/tags`)) {
-        links[5].classList.add('active')
       } else {
         links[i].classList.remove('active')
+      }
+      if (links[2].href === document.URL || document.URL.includes(`/blog`)) {
+        links[2].classList.add('active')
+      } else {
+        links[2].classList.remove('active')
+      }
+      if (links[4].href === document.URL || document.URL.includes(`/categories`)) {
+        links[4].classList.add('active')
+      } else {
+        links[4].classList.remove('active')
+      }
+      if (links[5].href === document.URL || document.URL.includes(`/tags`)) {
+        links[5].classList.add('active')
+      } else {
+        links[5].classList.remove('active')
       }
     }
   }
