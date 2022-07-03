@@ -151,7 +151,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     )}
                     {next && (
                       <div>
-                        <h2 className="next-article-link text-sm text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+                        <h2 className="next-article-link text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">
                           Next Article
                         </h2>
                         <div className="text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
