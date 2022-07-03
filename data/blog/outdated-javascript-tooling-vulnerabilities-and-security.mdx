@@ -1,0 +1,120 @@
+---
+title: Outdated JavaScript tooling, vulnerabilities and security
+date: '2019-06-29'
+lastmod: '2022-07-02'
+tags: ['node-security', 'outdated-tooling', 'open-source-software']
+categories: ['npm audit', 'post']
+draft: false
+summary: Node Security/npm audit appeared for the first time in my Terminal window in March of last year (2018).
+images: ['/static/images/posts/img/webp/spenser-OxJxV4qakx0-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/outdated-js-tooling-vulnerabilities-security
+---
+
+- Link to [Outdated JavaScript tooling, vulnerabilities and security podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/Outdated-JavaScript-tooling--vulnerabilities-and-security-e4fsi9)
+
+I have spoken or written about this topic before, but feel the need to
+re-address it.
+
+[Node Security/npm audit](https://blog.npmjs.org/post/175511531085/the-node-security-platform-service-is-shutting)
+**_appeared_** for the **first time** in my **_Terminal window_** in **March of
+last year** (**2018**). I had read that it was a **_new feature_** in **npm**
+created by **Node Security**, and was excited about the prospect of knowing more
+about what was going on under the hood with my **npm packages** and how that all
+boded for **Web/Software Development** and **Individual Machine(s) Security**.
+Previously, many of us were under the false impression that everything in our
+code, in our workflows using third party plugins and packages passed muster. But
+the minute npm audit came along and we downloaded various npm packages, added
+libraries and frameworks using those packages, or simply learned from other code
+using the tooling etc, if there were "known" vulnerabilities in any of the code,
+**Node Security** (now part of **npmjs**) would print out something like this:
+
+```shell
+ॐ  ~/development/testing-javascript/js_mocking_fundamentals/1_override_object_props_monkey_patching_js:
+10314 ◯  npm audit
+
+                       === npm audit security report ===
+
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                Manual Review                                 │
+│            Some vulnerabilities require your attention to resolve            │
+│                                                                              │
+│         Visit https://go.npm.me/audit-guide for additional guidance          │
+└──────────────────────────────────────────────────────────────────────────────┘
+┌───────────────┬──────────────────────────────────────────────────────────────┐
+│ Low           │ Regular Expression Denial of Service                         │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Package       │ braces                                                       │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Patched in    │ >=2.3.1                                                      │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Dependency of │ babel-cli [dev]                                              │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ Path          │ babel-cli > chokidar > anymatch > micromatch > braces        │
+├───────────────┼──────────────────────────────────────────────────────────────┤
+│ More info     │ https://npmjs.com/advisories/786                             │
+└───────────────┴──────────────────────────────────────────────────────────────┘
+found 1 low severity vulnerability in 864568 scanned packages
+  1 vulnerability requires manual review. See the full report for details.
+```
+
+The first time I had done this, I was in a **_full stack JS_** class (**_not_**
+the boot camp by the same name, another school which has since then closed
+down), and we were told to clone a repo which had been created 2 YEARS before.
+We all did so, and I **received** a **_message_** in **Terminal** from **Node
+Security** on download, that there were around 1,000 vulnerabilities in the
+project. I mentioned it to the teacher, but he looked at me as if I had three
+heads. That was a little over a year ago. March, 2018, to be more exact.
+
+You know what? It seems that there are still people in "teaching" positions who
+don't bother to check their repos, even though, most probably, **Github** is
+sending them security alerts regarding such vulnerabilities.
+
+So **_this podcast_** is for those who might be **_new_** to the **JavaScript
+Developer** **_ecosystem_**, and might see similar warnings when cloning or
+downloading courses they have paid for and want to learn the **_best_** and
+**_latest_** **practices** from. Apparently, many teachers of courses don't
+bother to share this kind of information because it just is **_"not relevant"_**
+to their **subject matter**. You'd better bet your bottom dollar it is. It is
+relevant to **_everything_** **JavaScript**, and **_everything_** **all other
+programming languages**.
+
+If, when you clone or download something from a repository, and then run `npm i`
+(assuming there is a `package.json` present), and there is a message
+(**correction: npmjs and not Node Security**) stating that it has detected
+vulnerabilities in your package(s), follow their instructions to **_run_**
+`npm audit`.
+
+Oftentimes, there is already a **remediation/patch/package** update that will
+**_remove_** the **vulnerabilities**. Follow the instructions you **_receive_**
+in **Terminal** after running `npm audit`. Sometimes there is no remediation
+yet, or it might be difficult for you to do manually. That's when you should
+contact the creator/maintainer of the repository or package.
+
+Sometimes things take a little while. After all, these packages are open source.
+Sometimes, however, it is not a matter of fixing the vulnerabilities in a
+current version of a package by simply updating to the latest version, but
+updating one that **results in** **_breaking changes_**. That's when things get
+a bit ugly. Sometimes developers are too lazy to have to do a complete overhaul
+of their workflows associated with those breaking changes, and this results in
+vulnerabilities in the current package(s) version(s) that won't go away. This is
+especially NOT COOL when it happens within course code that you have paid good
+money for. If the creator of the course has not updated the code/curriculum in
+more than 6 months or even 3 months (things these days are changing daily),
+think twice before signing up for it. Do a bit of **detective work** regarding
+the **_dependencies_** and **_devDependencies_** in the `package.json` before
+making your final decision. Of course, sometimes we don't have access to this
+information until we have actually paid for it. I don't have an answer for that.
+
+**Note:** Be sure to do the same in your own open source repositories. It is
+hard to keep up with **Github** **_security alerts_**, but just do your best to
+do so as you can. The longer you wait, the more complicated the remediation.
+
+I will be embedding this episode of **Plugging in The Holes** along with a
+transcript in the form of a post on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com) for your
+hearing and reading pleasure. Bye for now!
+
+## Related Resources
+
+- [The Node Security Platform service is shutting down 9/30](https://blog.npmjs.org/post/175511531085/the-node-security-platform-service-is-shutting)

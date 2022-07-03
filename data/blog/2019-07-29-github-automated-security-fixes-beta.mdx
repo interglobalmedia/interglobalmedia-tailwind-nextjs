@@ -1,0 +1,77 @@
+---
+title: Github automated security fixes (beta)
+date: 2019-07-30T01:19:16.834Z
+lastmod: '2022-07-02'
+tags: ['automated-security-fixes', 'code-vulnerabilities', 'vulnerability-fixes']
+categories: ['github', 'post', 'open-source-software', 'security']
+draft: false
+summary: Github automated security fixes and how they work.
+images: ['/static/images/posts/img/webp/daniel-plan-kfq0kjskcx8-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2019-07-29-github-automated-security-fixes-beta
+---
+
+- Link to [Github automated security fixes (beta) podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/Github-automated-security-fixes-beta-e4peal)
+
+I thought it was so cool when I stumbled across [Snyk](https://snyk.io/), a tool
+which "enables developers to automatically find and fix open source
+vulnerabilities". However, given that we encounter myriad vulnerabilities we
+have to fix each day, the monthly free tier of this tool could potentially run
+out very quickly. And the next tier is horribly expensive, especially for
+individual developers. \$599/month! Forget about it! I took my chances with the
+free tier.
+
+Well, guess what? Now [Github](https://github.com/) has introduced something
+called **"Automated security fixes"**.
+
+How does [Github's](https://github.com/) automated security fixes (in beta)
+work?
+
+First of all, **public repositories** receive **security alerts** by
+**_default_**. In order for **private repositories** to receive **_security
+alerts_**, the owner or admin of the repository must **manually enable** the
+**dependency graph** and **security alerts** in the **_repository_**.
+
+The **_languages_** that the **dependency graph** **_supports_** are **Java**,
+**JavaScript**, **.NET**, **Python**, and **Ruby**. To learn more, please visit
+the [Github](https://github.com/) article entitled
+[Listing the packages that a repository depends on](https://help.github.com/en/articles/listing-the-packages-that-a-repository-depends-on).
+
+[Github](https://github.com/) **_does_** **state**,
+
+> GitHub's security features, such as security alerts, do not claim to catch all
+> vulnerabilities. Though we are always trying to update our vulnerability
+> database and alert you with our most up-to-date information, we will not be
+> able to catch everything or alert you to known vulnerabilities within a
+> guaranteed time frame. These features are not substitutes for human review of
+> each dependency for potential vulnerabilities or any other issues, and we
+> recommend consulting with a security service or conducting a thorough
+> vulnerability review when necessary.
+
+Having yet another source to fix the vulnerabilities in your code is a good
+thing. The more sources you can use the better. Those of us that use
+[Node.js](https://nodejs.org/en/) and
+[NPM (Node Package Manager)](https://www.npmjs.com/) know that we also have
+`npm audit` to check and fix known vulnerabilities in our code, and
+[Snyk](https://snyk.io/) has been doing this kind of thing for a while, so they
+are another good source to glean from. I am sure there are many other similar
+tools out there, but I mention these because I know about them and use them. If
+you know of any others and would like to share them with me, feel free to ping
+me on **Twitter** [@letsbsocial1](https://twitter.com/letsbsocial1). That's
+**letsbsocial1**. And then there are always **developers** or **services**
+specializing in **_security_** that can **conduct** thorough **vulnerability
+code reviews** as well.
+
+I will be **embedding** this **_episode_** of **Plugging in The Holes** along
+with a **_transcript_** in the form of a **post** on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/) for your
+**_hearing_** and **_reading_** pleasure. I will be including the related
+resource links mentioned in the podcast of course. Always do. Bye for now!
+
+## Related Resources
+
+- [Configuring automated security fixes](https://help.github.com/en/articles/configuring-automated-security-fixes)
+
+- [Listing the packages that a repository depends on](https://help.github.com/en/articles/listing-the-packages-that-a-repository-depends-on)
+
+- [About security alerts for vulnerable dependencies](https://help.github.com/en/articles/about-security-alerts-for-vulnerable-dependencies)

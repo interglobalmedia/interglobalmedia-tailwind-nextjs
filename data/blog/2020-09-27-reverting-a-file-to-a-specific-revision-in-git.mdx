@@ -1,0 +1,70 @@
+---
+title: Reverting a File to a Specific Revision in Git
+date: 2020-09-27T11:54:51.593Z
+lastmod: '2022-07-02'
+tags: ['git', 'file reversion']
+categories: ['git', 'post']
+draft: false
+summary: Restoring a file to a specific state using Git.
+images: ['/static/images/posts/img/webp/egor-vikhrev-s0cqn0mzu0e-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2020-09-27-reverting-a-file-to-a-specific-revision-in-git
+---
+
+- Link to
+  [Reverting a file to a specific revision in Git](https://anchor.fm/maria-campbell/episodes/Reverting-a-file-to-a-specific-revision-in-Git-ek7upq)
+  podcast on anchorfm
+
+Sometimes when you are working on an application using `Git`, you made a
+**change** to a **_specific_** **file**, **committed** it, and then **pushed**
+the **commit** to `remote`. But **_later_**, you **decided** that you **wanted**
+to **_bring back_** that **file** to the `state` **previous** to that **change**
+you **made**. In **_other_** **words**, perhaps you **want** to **_re-insert_**
+the `code` that you had **removed**, for **_instance_**.
+
+**That** is **exactly** what **happened** with **me** a little while ago. I
+found that I **_still_** **needed** the `code` I had **removed** from a file,
+and **wanted** to `revert` to the **file state** which still **contained** that
+`code`. It's very **simple** really, especially if a **_particular_** **commit**
+only **involved** that **_one_** **file**. This is the `command` I **executed**
+to `revert` to the **file state** that **contained** the `code` I **wanted** to
+**bring back**:
+
+```shell
+git checkout cf0d404 src/index.js
+```
+
+What I am doing here is **checking out** into a **_specific_** `commit` with the
+**hash** `cf0d404`, and **_specifically_** into the **file path** `src/index.js`
+that I **want** to **restore**. When I hit `return`, I **see** that the **file**
+has indeed **reverted** to the `state` I **want**. Then, when I **execute** the
+`Git` **command**:
+
+```shell
+git status
+```
+
+The **_following_** is **returned** in `Terminal`:
+
+```shell
+git status                                                                                  ✚
+On branch handling-express-errors
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   src/index.js
+```
+
+**Since** I **_do_** **want** this **change** to **remain** `staged` and
+actually `commit` it, I simply **execute** the **command** `git commit`,
+**create** and **save** my `commit` **message**, and then `return` to `Terminal`
+from `VIM`.
+
+And that is it!
+
+I will be embedding this episode of **Plugging in The Holes** along with a
+**_transcript_** in the form of a **post** on interglobalmedianetwork.com for
+your **_hearing_** and **_reading_** pleasure. Bye for now!
+
+## Related Resources
+
+- [How can I reset or revert a file to a specific revision?](https://stackoverflow.com/questions/215718/how-can-i-reset-or-revert-a-file-to-a-specific-revision)

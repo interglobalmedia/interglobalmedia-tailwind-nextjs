@@ -1,0 +1,66 @@
+---
+title: The Apple dictation and text editors bug
+date: '2019-06-21'
+lastmod: '2022-07-02'
+tags: ['macos dictation', 'mojave']
+categories: ['macOS dictation', 'post']
+draft: false
+summary: The bug I encountered when typing non-alpha numeric characters in a text editor on my Mac, and how I came to fix the issue.
+images: ['/static/images/posts/img/webp/luke-chesser-49-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/osx-dictation-and-text-editors
+---
+
+- Link to [The Apple dictation and text editors bug podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/The-Apple-dictation-and-text-editors-bug-e4dgid)
+
+Ever since I upgraded to **OSX Mojave,** a very strange thing would take place
+in **VSCode**, at first every now and again, and then more and more frequently.
+When I would **type** **_non-alpha characters_**, the wrong character would
+render. At first closing the window and re-opening via **Terminal** would take
+care of the issue. Then the other day I **_updated_** to **OSX 10.14.5** from
+**10.14.4**, and almost immediately, when I typed a non-alpha character, the
+wrong one rendered. When I closed out and re-opened the project, the bug no
+longer went away.
+
+To make sure that it was **_not_** a **VSCode** **_only_** related issue, I
+opened the **_default_** **Mac** text editor **TextEdit** to see if the same
+would happen there. And it did! So it was **_not_** a **VSCode** issue as I
+initially thought, but a **_bug_** in the system.
+
+I thought it over for a short while, and then inadvertently hovered over the
+**language icon** in my **Macbook Pro**'s **_navigation menu_**. It was **set**
+to **_Croatian_** and _NOT_ **English**. I hadn't _TOUCHED_ **OSX Dictation** in
+like forever. How did it suddenly switch my language of choice on me? That would
+be the only way that this could happen. When **_using_** **Dictation**, you can
+**choose** from a **_large variety_** of **languages**, and then **Dictation**
+uses that alphabet when transcribing your voice dictation. This is the only way
+that I can access foreign alphabets via the keyboard, for lack of a better word.
+I have searched for software that will do it for me so that I don't have to
+dictate if I don't want, but had no luck. Those days are over! Thank God then
+for **Apple Dictation**. Please don't ever go away!
+
+So how I did I solve my problem? The minute I **_switched_** from the **Croatian
+flag icon** to the **_American flag icon_**, my typing resulted in the rendering
+of correct non-alpha characters and I could **_resume_** my **web development**
+in **VSCode**.
+
+This (not so little) glitch probably resulted first from the **_initial
+upgrade_** to **Mojave** and then the **_latest update_** to **10.14.5**. If you
+experience a similar situation, just remember that simply checking to see which
+language is running on your system and then selecting your language of choice
+should remedy the issue.
+
+I will be embedding **_this episode_** of **Plugging in The Holes** along with a
+transcript in the form of a post on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com) for your
+hearing and reading pleasure. Bye for now!
+
+## Related Resources
+
+- [Nuance Has Abandoned Mac Speech Recognition. Will Apple Fill the Void?](https://tidbits.com/2019/01/21/nuance-has-abandoned-mac-speech-recognition-will-apple-fill-the-void/)
+
+- [Dictation is not working on Mac OS X & macOS, how do I fix it?](https://appletoolbox.com/2012/08/mac-os-x-dictation-not-working-how-to-fix/)
+
+- [Enable OS X's Enhanced Dictation for on-the-fly transcription](https://www.macworld.com/article/2601862/enable-os-xs-enhanced-dictation-for-on-the-fly-transcription.html)
+
+- [How to use Dictation on Mac](https://www.imore.com/how-use-dictation-mac)

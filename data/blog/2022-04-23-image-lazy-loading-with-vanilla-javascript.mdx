@@ -1,0 +1,44 @@
+---
+title: Image Lazy Loading with Vanilla JavaScript
+date: 2022-04-23T11:32:37.500Z
+lastmod: '2022-07-02'
+tags: ['image-lazy-load', 'image-formats', 'webp']
+categories: ['site-performance', 'post']
+draft: false
+summary: How I came to add image lazy load functionality and next-gen WEBP image file format to an HTML, CSS, JS site's image gallery due to poor page performance.
+images: ['/static/images/posts/img/webp/priscilla-du-preez-donefhq7ojs-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2022-04-23-image-lazy-loading-with-vanilla-javascript
+---
+
+**Update 4.23.22**: I **_ended up_** **removing** `lazy load` for the `body element` **_background images_** in the `index.html`, `portfolio.html`, and `contact.html` **_pages_**, but **_added_** `lazy load` to **_all_** the `img elements` **_inside_** all the `figure elements`. **_That way_**, once the `body` **_background image_** for the `portfolio.html` **_page_** started **_loading_**, it **_triggered_** the `loading` for the **_other images_**. **_Otherwise_**, whichever `figure element` **_images_** I **_did not_** `lazy load`, appeared **_completely collapsed_**, because they **_did not_** initially **_contain_** the `placeholder images` **_inside_** the **_values_** of their `src attributes`. And that just **_looked strange_** and not the **_greatest_** `visual UX`!
+
+**_Recently_**, I changed the **_images_** on my **example portfolio site** for the **Web Design I** **_class_** I am **teaching** from **_absolute paths_** to i**mages** **_under_** the **_Creative Commons_** **license** to **_locally installed_** **images** **_inside_** an **_images folder_**. I **_cropped_** them all **_down_** to 1500x1000 **_pixels_**, about **_double_** the **_size_** of the **Creative Commons** **_images_**, but I was **_not_** going to get **_fancy_** with using **picture elements** or **srcset elements** with **_different_** **size images** for **_different_** **viewport widths**. So **_at first_**, I did **_nothing_**.
+
+I **_checked_** my **_page performance_** using `Lighthouse`. It was **_abysmal_**. The **audit score** was **_very low_** for **_performance_**.
+
+**_Subsequently_**, I had a session with a student, and she told me that all she saw on her screen on my page was the **_default_ aqua blue** **_background color_**, and **_nothing else_**. Then I **_realized_** that **_not everyone_** is going to always have the **_greatest_ internet connection**, and **_even_** on **_my devices_**, it was **_taking_** a **_long time_** for **_all_ 15 images** to **_load_**. I **_knew then_** that I **_had_** to do **_something_** about it.
+
+**_First_** I **_studied_** the **Lighthouse** **_audit details_** regarding **_how_** I **_could improve_** my page’s **_performance_**. It **_mentioned_** **using** a **_next-gen_ image format**. **_Either_** **AVIF** or **WebP**. I l**_ooked up_** both, and **WebP**’s **_browser support_** was **_much better_**. So I **_went_** with **_that_**.
+
+**_Next_**, I found a **_site_** that **_transformed_** jpgs into webp files. I **_transformed_** as **_many_** as I could until I **_maxed out_** my **_free trial_**, and then found **_another site_** to **_transform_** the **_rest_**. I **_also_** found out **_however_**, that I **_could use_** `Node.js` to **_transform_** my **jpgs** into **webp** **_files_**, or I could **_download_** a **_converter_** on my **_computer_** using **Homebrew** and do it that way. In the **_future_**, `Node.js` **_seems_** like the way I **_would want_** to **_go_**. But that is for **_another post_**!
+
+Then I **_looked into_** whether there was a **_special way_** of **_adding_** **webp** to my `HTML` **_markup_**, my `CSS`, or even my `JavaScript` **_code_**. And guess what! There is **_no difference_**. So I **_removed_** all my **_jpg_** files and **_replaced_** them with **_webp_** **_files_**.
+
+But **_that_** was **_not enough_**. My page **_paint_** was **_very expensive_**, so my **Lighthouse** **_audit score_** was **_not_** too **_much better_**. And **_load time_** in `Firefox`, `Chrome`, and `Safari` was **_still_** fairly **_slow_**. So what was I to do?
+
+Then I thought of a `React` **_project_** that I had **_just_** **_completed_**, where I was **_retrieving images_** from the `Robohash API` and **_dynamically inserting_** the **_absolute path_** to these **images** **_retrieved_** from the `API` as the **_value_** of the `img` **_element_**’s `src` **_attribute_**. And **_sometimes_**, because of **_either_** the **insertion approach** or the `API` **_performance_** (probably a **_little_** of **_both_**), an `image` or **_two_** would **_render_** a the **_default_** `browser placeholder image` if the **_actual one_** did **_not_** **upload _immediately_**. Now this was some **_terrible_** `UX`, no?
+
+I **_decided_** to **_add_** **image lazy load** **_functionality_** to my **_app_**. The **_difference_** was like **_night_** and **_day_**! **_No more_** `placeholder images`. **_Virtually_** **no more** **_load time_**! So I also **_added_** `image lazy load` **_functionality_** to my `HTML/CSS/JS` **_site_**.
+
+I **_found_** a **_great article_** on [dev.to](https://dev.to/) regarding **_adding_ image _lazy load_** using **_vanilla_** **JavaScript**, and it **_definitely improved_** the **performance** of my page **_tremendously_**. To **_read_** the **_article_**, please **_visit_** [Lazy loading images with vanilla JavaScript](https://dev.to/ekafyi/lazy-loading-images-with-vanilla-javascript-2fbj) on [dev.to](https://dev.to/).
+
+For **_my purposes_** and **_edge case_**, I **_applied_** **lazy load** to **_all_** my **_images_**. I **_found_** that it **_sped up_** `load time` a **_bit more_**. I **_have_** to **_study_** the **API**, but it is **_basically_** the **_same_** as what I **_added_** to my **_React app_**. The **_only difference_** is that I **_did_** it with the **_help_** of a `yarn` **_package module_**.
+
+**_Link_** to the **_page_** in **_question_**: [letsbsocial.nyc](https://www.letsbsocial.nyc/portfolio.html)
+
+**_Link_** to the **_repository_** in **_question_**: [Example Portfolio Site Namecheap](https://github.com/interglobalmedia/example-portfolio-site-namecheap)
+
+**_Link_** to the **_article_** I **_found_** regarding the **WebP _image file format_** on **CSS Tricks**: [Using WebP Images](https://css-tricks.com/using-webp-images/)
+
+And if you **_don’t use_** **Chrome** and therefore **_don’t_** **_have_** the `Lighthouse` **_Chrome extension_** for **_auditing_** site **_performance_**, **_progressive web apps_**, **_best practices_**, **_accessibility_**, or **_seo_**, you can **_use_** the **_following_** **site tool _instead_**: [PageSpeed Insights](https://pagespeed.web.dev/). It **_audits sites_** basically in the **_same way_** as `Lighthouse`. I just **_like_** `Lighthouse` **_better_**. But I **_did find_** that **_audits_** are **_not_** **_equal_** `across browsers`!
