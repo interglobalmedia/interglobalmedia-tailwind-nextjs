@@ -1,0 +1,75 @@
+---
+title: The importance and advantage of git push -u
+date: 2020-02-15T13:00:43.816Z
+lastmod: '2022-07-02'
+tags: ['git push']
+categories: ['git', 'post']
+draft: false
+summary: The importance and advantage of the -u flag when pushing a local git repository to remote for the first time.
+images: ['/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2020-02-15-the-importance-and-advantage-of-git-push-u
+---
+
+- Link to
+  [The importance and advantage of git push -u](https://anchor.fm/maria-campbell/episodes/The-importance-and-advantage-of-git-push--u-earohp)
+  podcast on anchorfm
+
+I have been executing the `git push -u origin master` command for what seems
+like forever now, and knew it was important for **_syncing_** my
+`local git repository` with my `remote git repository` when **_pushing_** to
+**remote** for the first time, but I never knew the extent of its importance or
+the convenience it provided.
+
+The other day I completed a slide deck entitled basic Git commands, and I
+researched the `-u` flag. I came across a fabulous website dedicated to `Git`
+**commands**, and it went into depth about what `-u` actually does. According to
+[jquery-az.com](https://www.jquery-az.com/),
+
+```shell
+The -u flag is used to set origin as the upstream remote in your git config. As you push a branch successfully or up to date it, it adds upstream reference.
+
+As you push local branch with (the) git push -u option, that local branch is linked with the remote branch automatically. The advantage is, you may use git pull without any arguments.
+```
+
+The key here is in
+
+```shell
+The advantage is, you may use git pull without any arguments.
+```
+
+So whenever you want to sync your local repo with remote, or want to make sure
+that you have incorporated all the changes that other contributors have made to
+the repository, you can use
+
+```shell
+git pull
+```
+
+instead of
+
+```shell
+git pull remoteRepositoryUrl
+```
+
+It saves you fetching the url from the remote or going into your git config to
+retrieve it. This saves much time and inconvenience!
+
+Over the years I have asked people who **_don't_** **use** `git push -u` but
+only `git push`, "Don't you have to use the `-u` flag when **_first_** pushing
+your local repository to remote?" They would always say, "No. Don't need to, and
+never have had any problems". They were always right, but they probably didn't
+realize that it meant having to use the `remote url` each time they had to
+`git pull`, for example, which meant extra time and some inconvenience. Those
+two little characters may be of use to them after all! I know I have **_never_**
+had to use the `remote repository url` when `git pulling`!
+
+I will be embedding this episode of **Plugging in The Holes** along with a
+**_transcript_** in the form of a **post** on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/) for your
+**_hearing_** and **_reading_** pleasure. I will be including the related
+resource links mentioned in the podcast of course. Always do. Bye for now!
+
+## Related Resources
+
+- [The Purpose of Git Push command](https://www.jquery-az.com/git-push-command/)

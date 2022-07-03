@@ -1,0 +1,235 @@
+---
+title: How to prevent buttons from moving on click
+date: 2020-03-02T21:37:47.020Z
+lastmod: '2022-07-02'
+tags: ['geolocation', 'apis', 'browser scrollbars']
+categories: ['cross-browser compatibility', 'post']
+draft: false
+summary: How I solved the issue of moving buttons on click, and what the side effects were of that move!
+images: ['/static/images/posts/img/webp/olivier-miche-skva4bc_bsg-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2020-03-02-how-to-prevent-buttons-from-moving-on-click
+---
+
+- Link to
+  [How to prevent buttons from moving on click](https://anchor.fm/maria-campbell/episodes/How-to-prevent-buttons-from-moving-on-click-eb71ic)
+  podcast on anchorfm
+
+Recently I just finished a `geo ip api` **_application_** as a project for the
+`JavaScript` **course** I am teaching, and I **_couldn't_** get my **buttons**
+to **_stop moving_** when I **clicked** them. I quickly figured out that it was
+the **_disappearance_** of the **browser window scrollbar** that was
+**_causing_** the **buttons** to **_move_**! When there was **_no data_**
+**rendered** to the **_page_**, there was **no overflow** on the **_Y axis_**,
+so **_by default_**, there was **no scrollbar**. But when I clicked on the
+`"Find me"` button that **_triggered_** the `getGeoIp()` **function**, which
+resulted in the **_appearance_** of the **data** on the **_page_**, the
+**scrollbar** **_appeared_**. The **toggling** of the `appearance` and
+`disappearance` of the **browser window** **_scrollbar_** was what **caused**
+the **buttons** to **_move_**.
+
+Setting the body element to
+
+```css
+body {
+  overflow-y: scroll;
+}
+```
+
+took care of the **_moving buttons_** **issue**.
+
+Then I decided that I wanted to **_add_** the `overflow-y` **property** to the
+`div` with the `.wrapper` **class**, which contains the `api` **data**
+**_fetched_** from the `Free IP Geolocation API` I am **_using_** in my
+**application** called `free-geo-ip`, because I like the idea of making it
+**_easier_** for my **users** to **_scroll through_** a **smaller area**,
+thereby **_making_** the **actual height** of the `browser window`
+**_shorter_**. I **_love_** using **inner scrollbars**, especially when
+**_rendering lists_** to a **page** in my **_applications_**.
+
+But **_setting_** the `body` to `overflow-y: scroll` created a **_new issue_**!
+First of all, I **set** an **_inner_** `scrollbar` to my `div` with the
+`.wrapper` class with the `overflow-y` **property** set to `"auto"`. However, I
+**_also_** had the `overflow-y` **property** on my `body` **element** set to
+**_scroll_**. This meant that **_initially_**, even though I was **_hiding_**
+the `wrapper div` and **_everything_** **inside it**, the `scrollbar` of the
+`wrapper div` was NOT **hidden** in `Chrome`.
+
+As a **_result_** of this **situation**, I had to **create** some **_extra
+conditions_** in my `JavaScript` based on my `CSS` **_styling_** in my
+**external stylesheet** AND the `CSS in JS` **styling** in my `main.js` file, to
+**_make sure_** that my `inner scrollbar` did not **_initially appear_** when
+there was **_no_** `data` **rendered** to the page. The `data` is **_only_**
+**rendered** to the page when the `Find me!` **button** is clicked.
+
+At **_first_**, when I **hid** my `div` with the `.wrapper` **class**, the
+`scrollbar` **_still_** **showed up** **_locally_** in `Safari` and `Chrome`. It
+did **_not_** **show up** in `Firefox`. In `Firefox`, the `scrollbar`, along
+with **_everything residing_** in the `div` with the `.wrapper` **class**, was
+**_initially_** **hidden**.
+
+This **_signaled_** **to me** that I would **_have_** to **do** some
+`cross-browser compatibility styling`. So I **_looked into_** the **issue** of
+**_initially hiding_** the `scrollbar` of the `div` with the `.wrapper`
+**class** when the page was supposed to be **_completely empty_** **except for**
+the `Find me!` **button**, the `Refresh me!` **button**, and the `site`
+**footer**. I found a great article on `CSS Tricks` about **_styling_**
+`scrollbars`, which I have included in the **Related Resources** **_section_**
+of this `podcast` **post**.
+
+First I did the **_following_** in my `main.scss/main.css` **file(s)**:
+
+```css
+body {
+  /* So that there is always a browser window scrollbar to make sure that the find me and refresh me buttons do not move on click. */
+  overflow-y: scroll;
+}
+
+.wrapper {
+  /* Set a height to .wrapper div that is shorter than the actual wrapper div height when the data is rendered to the page, to ensure that there will always be overflow on the Y axis when the data renders to the page. */
+  height: 350px;
+  /* This is to make sure that a scrollbar appears when there is overflow on the Y axis. */
+  overflow-y: auto;
+}
+
+/* Scrollbar related styling */
+/* Needed for scrollbar styling without -webkit pseudo-class to ensure that the scrollbar-thumb styling is applied to the .wrapper div */
+.scrollbar-thumb {
+  background-color: #16174b;
+  outline: 1px solid slategrey;
+  border-radius: 15px;
+}
+
+/* end scrollbar styling without -webkit pseudo-class*/
+/* Default/starting state of -webkit-scrollbar styling when there is no data on the page - hides the scrollbar */
+.wrapper::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+/* .show-scrollbar class added when .backgroundSkyblue class added - shows the scrollbar for the .wrapper class */
+.show-scrollbar::-webkit-scrollbar {
+  width: 1rem;
+  background: white;
+}
+
+/* ::-webkit-scrollbar-track-piece is the top-most layer of the progress bar not covered by the draggable scrolling element (thumb). */
+.show-scrollbar::-webkit-scrollbar-track-piece {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* The -webkit-scrollbar-track styling addressed the albeit small but empty apace below the scrollbar progress bar. */
+.show-scrollbar::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.show-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #16174b;
+  outline: 1px solid slategrey;
+  border-radius: 15px;
+}
+
+/* the .backgroundSkyblue class added to div with .wrapper class in if/else statement if there is no .backgroundSkyblue class present. Causes switch from initial default orange background color to sky blue background color. And when the background is sky blue, the div.wrapper scrollbar appears. */
+.backgroundSkyblue {
+  background: #8bd3fb;
+}
+```
+
+**_All_** the **above** that I **_described_** **now** was **_created_**
+**after** **_figuring out_** which `classes` I needed to **_add_** with
+**which** `CSS` **selectors** in **_corresponding_** **conditions**, and
+**which** **_classes_** I **needed** to **_remove_** in **corresponding
+conditions** in my `JavaScript`. Once I figured **_those logistics_** **out**,
+then I could **_create_** the **necessary** `CSS` **styles** in my **external
+stylesheet**, `main.scss/main.css`. I used `node-sass` for this **project**!
+
+I **_added_** the **following** `JavaScript` in my `main.js` file to make the
+`div` with the `.wrapper` **class** AND its `scrollbar` **toggle** from
+`visible` to `invisible` based on **_certain_** **conditions** which
+**_included_** `CSS in JS`:
+
+```javascript
+/* main.js Need to be able to query the body element, and the wrapper div with a class of ".wrapper". */
+
+const body = document.querySelector('body')
+const wrapper = document.querySelector('.wrapper')
+```
+
+**_Resulting_** `if/else if/else` **statement**:
+
+```javascript
+if (body.className !== 'backgroundSkyblue') {
+  body.classList.add('backgroundSkyblue')
+  wrapper.classList.add('show-scrollbar')
+} else if (body.className === 'backgroundSkyblue') {
+  body.classList.remove('backgroundSkyblue')
+  body.style.backgroundColor = '#f08850'
+  wrapper.style.display = 'none'
+  wrapper.classList.remove('.show-scrollbar')
+} else {
+  body.classList.add('backgroundSkyblue')
+  wrapper.style.display = 'block'
+  wrapper.classList.add('.show-scrollbar')
+}
+```
+
+The **_initial_** if statement states that if the `body` **element** does NOT
+**_initially_** have a `className` of `backgroundSkyblue` (which it does NOT),
+**_add_** the **class** `backgroundSkyblue` to the `body` **element**, and
+**_add_** the **class** `.show-scrollbar` to the `div` with the **class**
+`.wrapper`.
+
+The **_following_** `else if` statement **states** that `if` the `body`
+**element** **_contains_** the `className` `backgroundSkyblue`, **_remove_** the
+`backgroundSkyblue` **class** from the `body` **element**. Then **_add back_**
+the **initial** `background-color` of the `body` **element** that is **_set_**
+**to** the `body` **element** in `main.scss/main.css`. **_Why_** can this be
+**done**? Because **_whenever_** you **add** `CSS` **styling** **_via_**
+`JavaScript`, it **_overrides_** the **values** of the **_corresponding_**
+`css selector(s)` **present** in the `external stylesheet`.
+
+Since I wanted this condition to **_result_** **in** the **hiding** of the `div`
+with the `.wrapper` **class** and its `scrollbar`, I **_added_** the `display`
+**property** on the `div` with the `.wrapper` **class** **_dynamically_**
+**using** the `JavaScript` `style` **property**, and **_setting_** its **value**
+to `none`. **_However_**, as **explained** **_earlier_**, I also had to
+**_add_** `browser-compatibility` **styling** to my `CSS`. **_Therefore_**, I
+had to **remove** the `.show-scrollbar` **class**.
+
+The (final) `else` **statement** is what **_creates_** a `toggle` between
+**_initial_** `invisibility` of the `div` with the `.wrapper` **class** and the
+**_subsequent_** `visibility` of the `div` with the `.wrapper` **class**.
+**_Sometimes_** when you want to `toggle` between `one condition` and `another`,
+if the **_required_** **conditions** are **_more complex_**, an `if/else`
+statement **_won't necessarily_** **suffice**. You **_end up with_** an
+`if/else if/else` **statement** **_instead_**. That way you are able to
+**_cover_** all your **bases** and create a `circular condition` that
+**persists** **_indefinitely_**! In **_this case_**, the `else` **statement** is
+**_saying_**, otherwise, just **_add_** the `.backgroundSkyblue` **class** to
+the `div` with the `.wrapper` class, set the `display` **property** on the `div`
+with the `.wrapper` **class** to `block`, because in the `else/if`
+**_statement_**, I set the `display` **property** of the `div` with the
+`.wrapper` **class** to `none`. **_Lastly_**, I needed to **_add back_** the
+`.show-scrollbar` **class** to the `div` with the `.wrapper` **class**, because
+I **_added back_** the **class** `.backgroundSkyblue` to **_it_**, **signaling**
+that **_not only_** should the `div` with the `.wrapper` **class** be `visible`,
+but the `scrollbar` for the `div` with the `.wrapper` **class** should be
+`visible` as **_well_**.
+
+To **_view_** this **application** in **_action_**, please **_visit_** the
+`Free Geo IP` **application** on `Github gh-pages`. To **_view_** the
+`source code`, please **_visit_** the `geo-ip-app` **repository** on `Github`.
+
+I will be embedding this episode of **Plugging in The Holes** along with a
+**_transcript_** in the form of a **post** on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/) for your
+**_hearing_** and **_reading_** pleasure. I will be including the related
+resource links mentioned in the podcast of course. Always do. Bye for now!
+
+## Related Resources
+
+- [scrollbar on CSS Tricks](https://css-tricks.com/almanac/properties/s/scrollbar/)
+
+- [Geo Ip App Source Code on Github](https://github.com/interglobalmedia/geo-ip-app)
+
+- [Geo Ip App Site on Github gh-pages](https://interglobalmedia.github.io/geo-ip-app/)

@@ -1,0 +1,121 @@
+---
+title: Multer, Amazon S3 and AWS Amplify
+date: 2019-08-02T16:11:36.027Z
+lastmod: '2022-07-02'
+tags: ['aws s3', 'multer', 'file upload']
+categories: ['aws', 'post']
+draft: false
+summary: The pitfalls of using the npm package multer-s3 for uploading files onto Amazon Simple Storage Service (aka S3) and what might be viable alternatives.
+images: ['/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2019-08-02-multer-amazon-s3-and-aws-amplify
+---
+
+- [Link to the Multer, Amazon S3 and AWS Amplify podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/Multer--Amazon-S3-and-AWS-Amplify-e4qqmr)
+
+So many of us that were first introduced to file and image uploads using
+[Nodejs](https://nodejs.org/en/), a backend database, probably
+[Expressjs](https://expressjs.com/) and deploying to
+[Heroku](https://www.heroku.com/), for example, used the npm package
+[multer](https://www.npmjs.com/package/multer) to enable us to upload images
+locally via the client. We soon found out that that alone was not a viable
+solution on [Heroku](https://www.heroku.com/). We needed to supplement the
+[multer](https://www.npmjs.com/package/multer) npm package for local uploads
+with the [multer-s3](https://www.npmjs.com/package/multer-s3) npm package for
+uploading images to
+[Amazon Simple Storage Service (aka S3)](https://aws.amazon.com/s3/) for storing
+files on remote.
+
+But it gets better. No one ever seems to mention, but only experience (by
+checking), the fact that [multer-s3](https://www.npmjs.com/package/multer-s3),
+when configured to delete files, only deletes them locally. The remote file on
+**S3** remains.
+
+One can upload and replace images, but the replaced images are not deleted on
+remote. I found that out the hard way when I had created a user authenticated
+blog using [multer](https://www.npmjs.com/package/multer),
+[multer-s3](https://www.npmjs.com/package/multer-s3),
+[MongoDB](https://www.mongodb.com/), [Nodejs](https://nodejs.org/en/),
+[Expressjs](https://expressjs.com/) , and hosting it on
+[Heroku](https://www.heroku.com/). I verified the information by visiting the
+issues tab for [multer-s3](https://www.npmjs.com/package/multer-s3) on
+[Github](https://github.com/). In addition, If you read through the
+documentation very carefully, you will notice there is no reference to deleting
+files or images. Only uploads.
+
+So I started a quest on how I could successfully implement multipart file
+uploads (which is required) in which files and images could be uploaded on
+**S3** AND deleted permanently via client interface as well. There is nothing
+worse than a platform that seems to delete a user's image when the user hits the
+delete button, but it only is deleted locally and on the client, but not on
+remote hosting. Not good for the user because they wanted it removed, and not
+good for the owner of the site who does not want to pay extra for unwanted
+files.
+
+I think I may have just come across at least the **_beginning_** of my answer
+using **AWS Amplify**, **S3 storage** via **Amplify**, and **React** for the
+frontend. The post is entitled
+[GraphQL Tutorial - How to Manage Image & File Uploads & Downloads with AWS AppSync & AWS Amplify](https://dev.to/dabit3/graphql-tutorial-how-to-manage-image-file-uploads-downloads-with-aws-appsync-aws-amplify-hga)
+by **Nader Dabit**, **Twitter** handle [@dabit3](https://twitter.com/dabit3),
+**developer advocate** at **AWS Cloud**. It does **_not cover_** **dynamically
+deleting** a **file** from **_S3_**, but I do know that there is a way of doing
+so. The post I came across at least gets me started and bypasses the use of
+[multer-s3](https://www.npmjs.com/package/multer-s3), which is the root of my
+and many others' original problem.
+
+When I went into the [Amplify docs](https://amplify.aws/community/) under the
+**Storage** section, there were sections on **PUT**, **GET**, and **REMOVE**
+requests for **_uploading_**, **_getting_**, and **_removing_** files. There are
+also **Amplify UI components** one can use with **React** or **Angular**, as
+well as a section on customizing the image upload path. To learn more, visit the
+[Amplify Javascript - Storage](https://aws-amplify.github.io/docs/js/storage)
+documentation. It will take more experimentation on my part to achieve this
+multipart dynamic file deletion goal on **AWS**. I am just in the beginning
+stages.
+
+Then one has to beg the question, "If I am using **AWS Amplify** along with
+**serverless**, and therefore also hosting there, perhaps I should look into
+where using the **Amazon** native database
+[DynamoDB](https://aws.amazon.com/dynamodb/) would work for my application as
+well instead of [MongoDB](https://www.mongodb.com/) (in such a use case)?" It
+might and might not be the right fit in every situation, but it is worth
+comparing the two.
+
+Whichever platform one chooses to use, one has to weigh the pros and cons of it
+compared to other comparable platforms, and the pros should outweigh the cons.
+As I discussed with some people at a serverless event at the
+[AWS Loft NYC](https://aws.amazon.com/start-ups/loft/ny-loft/) last night, no
+solution is perfect. The question is, "Which platform, given the compromises any
+may entail, will most encompass the **fulfillment** of one's **needs** and
+**budget**?".
+
+The event I attended last night was a [Jamstack](https://jamstack.org/) event
+entitled
+[Serverless with Gatsby and AWS AppSync + Serverless with Vue JS](https://www.meetup.com/JAMstack-nyc/events/261268213/)
+at the [AWS Loft NYC](https://aws.amazon.com/start-ups/loft/ny-loft/). **Nader
+Dabit** spoke about [GatsbyJS](gatsbyjs.org/) and
+[AWS AppSync](https://aws.amazon.com/appsync/), and **Divya Sasidharan**,
+**Twitter handle** [@shortdiv](https://twitter.com/shortdiv) and **_developer
+advocate_** at [@Netlify](https://twitter.com/Netlify), spoke about
+**Serverless**, **Vuejs**, and hosting on
+[@Netlify](https://twitter.com/Netlify).
+
+I will be embedding this **_episode_** of **Plugging in The Holes** along with a
+**_transcript_** in the form of a **post** on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/) for your
+**_hearing_** and **_reading_** pleasure. I will be including the related
+resource links mentioned in the podcast of course. Always do. Bye for now!
+
+## Related Resources
+
+- [Jamstack NYC Meetup](https://www.meetup.com/JAMstack-nyc/)
+
+- [Serverless NYC Meetup](https://www.meetup.com/Serverless-NYC/)
+
+- [Netlify](https://www.netlify.com/)
+
+- [AWS Amplify](https://aws-amplify.github.io/docs/js/start)
+
+- [GraphQL Tutorial - How to Manage Image & File Uploads & Downloads with AWS AppSync & AWS Amplify](https://dev.to/dabit3/graphql-tutorial-how-to-manage-image-file-uploads-downloads-with-aws-appsync-aws-amplify-hga)
+
+- [Amplify Javascript - Storage](https://aws-amplify.github.io/docs/js/storage)
