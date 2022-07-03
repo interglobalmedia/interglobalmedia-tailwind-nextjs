@@ -1,0 +1,42 @@
+---
+title: Changing Mac default screenshot file format to jpg
+date: 2021-06-03T21:55:11.869Z
+lastmod: '2022-07-02'
+tags:
+  [
+    'macOs',
+    'screenshots',
+    'screen capture',
+    'image formats',
+    'command line',
+    'compatibility issues',
+  ]
+categories: ['images formats', 'command line', 'post']
+draft: false
+summary: How to change the default format for screenshots created on your Mac.
+images: ['/static/images/posts/img/webp/mathew-schwartz-sb7rurrmac4-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2021-06-03-changing-mac-default-screenshot-file-format-to-jpg
+---
+
+In case if you don’t already know, `OS X` screenshots **_created_** with the `Shift + Command + 5` **keys** are `pngs` by **_default_**. However, `pngs` are **_not compatible_** with `GatsbyJS`! And I **_wanted_** to have the `option` of **creating screenshots** for use on `GatsbyJS` **sites**. I thought, there has to be a way of **_changing_** the **default** `screenshot` **format**! And guess what! There is.
+
+If you **want** to **_change_** the `default format` for `screenshots` **_created_** with the `Shift + Command + 5` **keys** on `Big Sur` (or even earlier), **_run_** the following `command` in `Terminal` (`iTerm2` for me) and then **_press_** the `return` **key**:
+
+```shell
+defaults write com.apple.screencapture type jpg;killall SystemUIServer
+```
+
+It is **_required_** that you **run** this `command` in `Terminal` in order to **_implement_** the **change**. Yet **_another reason_** why it is **_so important_** to learn how to use the `Command Line Interface` (`Terminal` program).
+
+I **_found_** this `information` in the post **_entitled_** [How to Change the Screenshot File Format to JPG on Mac](https://www.maketecheasier.com/change-screenshot-file-format-mac/) on the website [maketecheasier.com](https://www.maketecheasier.com/). It **_also covers_** changing the **_default_** `png` **format** to `GIF`, `TIFF`, `PDF`, and **_reverting back_** to the **_original_** `screenshot file format` (`png`). Don’t freak out if you see mention of using the `Command + Shift + 3` **keys** as the `keyboard shortcut`. When you use the `3` **key**, it **_captures_** your **_entire screen_**, which you probably don’t want. The `5` **key** allows you to **_select_** the **part** of your `screen` you **_want_** to **_capture_**, especially if you **_only want_** to **_capture_** the `exact dimensions` of a `browser` **tab/window**. You can also make a `screen recording` with the **_same_** `keyboard shortcut`. **_Instead_** of **_selecting_** `screen capture`, you would **_select_** `screen recording`. I wrote a post **_exactly_** about that **_entitled_** [How to take a screenshot on your Mac (Mojave or later)](https://www.interglobalmedianetwork.com/blog/2020-01-12-how-to-take-a-screenshot-on-your-mac-mojave-or-later/). It **_covers_** how to make `screen recordings` as well.
+
+Happy screen capture!
+
+## Related Resources
+
+- [How to Change the Screenshot File Format to JPG on Mac](https://www.maketecheasier.com/change-screenshot-file-format-mac/)
+
+- [How to take a screenshot on your Mac (Mojave or later)](https://www.interglobalmedianetwork.com/blog/2020-01-12-how-to-take-a-screenshot-on-your-mac-mojave-or-later/)
+
+- [Techopedia Explains Command Line Interface (CLI)](https://www.techopedia.com/definition/3337/command-line-interface-cli)

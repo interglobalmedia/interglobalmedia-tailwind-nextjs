@@ -8,6 +8,7 @@ $discord-charcoal: #23272a;
 $discord-burgundy: #b81111;
 $discord-lilac-lighter: #9eb3e6;
 $french-yellow: #ffe556;
+$inline-code-color-lite-mode: #4D0F0F;
 $main-background: #fee9d7;
 $peppermint-blush-white: #f2ebe3;
 $tailwind-peppermint-green: #14b8a6;
@@ -91,8 +92,6 @@ dd>a.text-primary-500 {
 
     /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
     color: $inline-code-color-lite-mode;
-    font-size: 1.1rem;
-    font-weight: normal;
 }
 
 .prose p>a {
@@ -127,6 +126,10 @@ dd>a.text-primary-500 {
         &:hover {
             color: $discord-burgundy !important;
       }
+    }
+    & li>code {
+        background-color: transparent;
+        color: $inline-code-color-lite-mode;
     }
 }
 
@@ -286,18 +289,8 @@ h2.text-gray-500 {
     color: $peppermint-blush-white;
 }
 
-.dark .dark\:prose-dark>ul {
-    & li {
-        color: $peppermint-blush-white !important;
-
-      &>a {
-          color: $peppermint-blush-white !important;
-      }
-
-      &:hover {
-          color: $tailwind-peppermint-green !important;
-      }
-    }
+.dark .prose ul > li > a {
+    color: $peppermint-blush-white !important;
 }
 
 .dark p {
@@ -315,7 +308,7 @@ h2.text-gray-500 {
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.dark p>a {
+.dark .prose p>a {
     color: $peppermint-blush-white !important;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
@@ -327,10 +320,16 @@ h2.text-gray-500 {
     }
 }
 
-.dark .dark\:prose-dark>p>code {
+.dark .dark\:prose-dark p>code {
     background: transparent;
     color: $tailwind-peppermint-green;
-    font-weight: normal;
+}
+
+.dark .prose>ul {
+    & li>code {
+        background-color: transparent;
+        color: $tailwind-peppermint-green;
+    }
 }
 
 .dark .dark\:prose-dark blockquote>p {
@@ -344,6 +343,10 @@ h2.text-gray-500 {
     & strong>em {
         color: $discord-charcoal;
   }
+}
+
+.dark .prose strong, .dark .prose strong > em {
+    color: $cream;
 }
 
 /* discuss on twitter view on github styling & h2 tag/next/prervious article title styling */
