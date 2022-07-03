@@ -1,0 +1,171 @@
+---
+title: Deploying to gh-pages with git subtree
+date: 2017-08-29T23:28:48-04:00
+lastmod: '2022-07-02'
+tags: ['git', 'git-subtree', 'gh-pages']
+categories: ['git', 'post']
+draft: false
+summary: How to deploy an app or site hosted on a Github repository to Github gh-pages with git subtree.
+images: ['/static/images/posts/img/webp/faye-cornish-512495-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/deploying-to-gh-pages-with-git-subtree
+---
+
+**Note 5.21.19:** Some information here might be a bit outdated, but
+**_deploying to gh-pages with git subtree_** is not. So I decided to bring this
+gem back to the blog here.
+
+So I just completed a todo app the other day using `React.` However, I kept on
+encountering errors in the console using `create-react-app.` Probably some of
+them were due to errors on my part, but some definitely related to
+`create-react-app.` And the thing is, I wasn't able to figure out what the issue
+was without running the eject command to see what was under the hood. And if I
+had done that, there was no going back! Well, that just didn't sit well with me.
+I decided to learn more about `Webpack 2+` so that I could start using the new
+features it had to offer to create my own `React` workflow, thereby only adding
+features that I needed. I love creating my own automation processes for my
+workflows. I have worked hard at creating seamless processes for regular
+`ES6+ JavaScript` applications using `Gulp, templating engines,` and `Webpack.`
+Call me nerdy, but I find it a lot of fun and extremely useful! I am yet to take
+a deep dive into a more complex workflow for `Hugo` (this site is built on it),
+but that will eventually happen as well.
+
+While on this journey during the advent of `Webpack 2+,` I came across a great
+course called "Webpack 2: The Complete Developer's Guide" by Stephen Grider on
+**Udemy**. It didn't cover EVERYTHING, but it definitely provides a solid
+foundation for getting to know `Webpack 2's` new features. These changes were of
+course in response to the great overhaul that took place in `JavaScript` with
+`ES6+`. I was a bit skeptical at first, because I thought that nothing could
+replace the modularity of the `Gulp` workflow. But, after getting to know
+`Webpack 2` better, and getting to know `React` a bit, I came to realize that a
+`Webpack 2+` workflow was much better suited to `React` than a `Gulp` workflow.
+Developers such as Stephen Grider used to use `Gulp` with `React,` and switched
+over to exclusively using `Webpack` when **version 2** was introduced. That says
+something!
+
+So I as I got to know the new `Webpack` and `React` better, I was introduced to
+new `Git` commands as well. I was introduced to a different and more efficient
+way of deploying to **Github's** `gh-pages,` which was awesome!
+
+When I had first started using `gh-pages` a few years ago, I would create a
+`gh-pages` branch, checkout into it, remove the files and folders I didn't need
+or that were preventing successful deployment of the project, and then push the
+project to the remote `gh-pages` branch. Each time I would make a change in my
+master branch, I would go into the `gh-pages` branch, do a `git rebase master`
+to incorporate changes made in master into `gh-pages,` and then push those
+changes to the remote `gh-pages` branch. Then when I started creating much more
+complex `JavaScript` applications, I found this approach to be cumbersome and a
+time waster. I looked for alternatives. That's how I got introduced to `Gulp`.
+When I mastered the `Gulp` workflow using `Webpack` was also when I decided to
+take on `React.` This was around the time when `Webpack 2` was released. Using
+`Webpack` without `Gulp` meant tweaking my deployment to `gh-pages.` With
+`Gulp,` I used the npm package `gulp-gh-pages,` and created a `Gulp` deploy task
+with `deploy.js.` But when I started using `Webpack` without `Gulp` for my
+`React` projects, I had to revisit my approach.
+
+After much research and learning, I came across `git subtree.` I have to say, I
+am really loving it. And it's the fastest deployment process to `gh-pages` I
+have come across so far!
+
+This is the way it works:
+
+First complete your project so that it's production ready for deployment to your
+`gh-pages` site.
+
+Next, run the command `git checkout -b gh-pages`. This will create a new branch
+`gh-pages` and check you out to the new `gh-pages` branch with a single command.
+
+You need to make sure that you push an empty branch to your remote `gh-pages`
+branch. To achieve that, run the `git rm -rf .` command. `rm` means remove, and
+`r` stands for recursive. `f` stands for force. And `.` means everything in
+root. In other words, all your folders in your project and all the files within
+those folders. Sometimes `rm -r` just doesn't cut it, so you have to run
+`rm -rf`.
+
+`rm -rf .` gets rid of everything in a single command.
+
+Next you have to stage and then commit those changes. You can stage and commit
+along with a commit message all in one command:
+
+`git commit -am "First commit to gh-pages branch"`
+
+The `a` in `am` is short for git add, which stages your changes, and the `m` is
+short for `git commit -m`. Also, make sure that you remember to have open and
+closing quotes for your commit message, otherwise you will be held hostage in
+the **Terminal** window. If by any chance that does happen, you can close your
+instance of the **Terminal** window with the command `ctrl + c` on your
+keyboard. It exits the prompt `>` that appears when you haven't added a closing
+quote. However, `Bash/zsh` does allow you to enter the closing quote after the
+`>` prompt. Then hit return. To learn more about exiting your git commit
+message, please visit this **StackOverflow** thread:
+[How do I exit my git commit message?](https://stackoverflow.com/questions/26228848/how-do-i-exit-my-git-commit-message-im-not-in-the-vim-i-used-the-commit-m).
+
+Now you are ready to push these changes to your remote `gh-pages` branch. You
+can do so with `git push origin gh-pages`.
+
+Next we need to establish our `git subtree` in order for the process to work. We
+first have to go back into the master branch. We do that by running the command
+`git checkout master`. The great thing about `git subtree` as with
+`gulp-gh-pages,` is we don't have to be in the `gh-pages` branch in order to
+deploy to remote! Cool, right? And a big time saver. So our crucial `git`
+command which we run next is:
+
+git push origin `git subtree --split --prefix dist gh-pages`:gh-pages --force
+
+(A backtick is needed before `git subtree` and after `dist gh-pages`. Due to
+markdown, it does not show up here. Please refer to the related articles below
+for further clarification if necessary.)
+
+Now what does this all mean? First of all, a `git subtree` allows you to insert
+any repository as a subdirectory of another one. It allows sub-projects to be
+included within a subdirectory of the main project, optionally including the
+sub-project's entire history. In our case here, the subdirectory is the `dist`
+folder being pushed from the master branch to the remote `gh-pages` branch. The
+sub-projects are the files within the `dist` folder. A `subtree` is simply a
+subdirectory that can be committed to, branched, and merged along with your
+project any way you want. That being said, let's look at the rest of the
+command. We are creating a `git subtree` out of our `dist` folder located in the
+root of our project, and `--split` does exactly what it sounds like. It is
+splitting away `dist` from the rest of the project transforming it into a
+subdirectory. `--prefix dist` means that you are signaling that `dist` is the
+directory in your project that has been selected as the folder to be made into
+the subdirectory that is being pushed to the remote `gh-pages` branch. And only
+what is contained in that subdirectory will be pushed to `gh-pages`.
+`:gh-pages --force` means that you are forcing the push of the `gh-pages` branch
+to the `remote gh-pages` branch at `origin`.
+
+Since you are likely to make changes to your project in the future and don't
+want to continuously write a long command like
+`git subtree push --prefix dist origin gh-pages`, you can add a local script in
+your `package.json.` I created the following:
+
+`"deploy": "npm run build && git subtree push --prefix dist origin gh-pages"`
+
+I took it up a notch more. I combined my `build script` with my `deploy script.`
+That way, whenever I make changes to my project, I first run the build command
+which entails deleting the previous `dist` build, replacing it with the
+`current` build, and then pushing it to the remote `gh-pages` branch. This
+ensures that your build is up to date with your latest changes in your project.
+
+So not only has my coding evolved over time, but my devops skills have evolved
+as well. It reflects the need for greater workflow efficiency with more complex
+applications.
+
+However, I cannot stress enough the need to understand every single aspect of
+commands that you implement. You need to know what you are doing, and not
+blindly execute commands focusing on the end goal and ignoring the process.
+Otherwise, you will not grow as a developer! I also can't emphasize enough how
+important it is to master `Git` AND to master the `Command Line` in Terminal.
+`Git` for the distributed version control, and `Command Line` so that you never
+have to leave the Terminal window. A great time saver. Lastly, practice makes
+perfect! Or at least ... nearly so!
+
+Happy coding!
+
+## Related Resources
+
+- [One line deployment of your site to gh-pages](http://www.damian.oquanta.info/posts/one-line-deployment-of-your-site-to-gh-pages.html)
+
+- [The power of Git subtree](https://developer.atlassian.com/blog/2015/05/the-power-of-git-subtree/)
+
+- [Webpack 2: The Complete Developer's Guide](https://www.udemy.com/webpack-2-the-complete-developers-guide/)

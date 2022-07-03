@@ -1,0 +1,584 @@
+---
+title: Nodejs and graphql
+date: 2019-07-30T18:39:08.251Z
+lastmod: '2022-07-02'
+tags: ['backend-development']
+categories: ['graphql', 'nodejs', 'post']
+draft: false
+summary: I first learned about and started using graphql with GatsbyS, and I loved it, but I really got to know more about it when I learned how to use it for the backend with Nodejs.
+images: ['/static/images/posts/img/webp/franki-chamaki-1k6iqsqbizi-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/2019-07-30-nodejs-and-graphql
+---
+
+- [Link to the Node.js and graphql podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/Node-js-and-graphql-e4plvp)
+
+I first learned about and started using [graphql](https://graphql.org/) with
+[GatsbyJS](gatsbyjs.org/). I loved it. But I really got to know more about it
+when I learned how to use it for the backend with
+[Nodejs](https://nodejs.org/en/).
+
+Natively, [graphql](https://graphql.org/) is used as a backend tool to send data
+quickly and seamlessly to the frontend. When used with
+[Nodejs](https://nodejs.org/en/) in the backend, it works somewhat differently
+than when used with [GatsbyJS](gatsbyjs.org/), for example.
+[GatsbyJS](gatsbyjs.org/) does use [Nodejs](https://nodejs.org/en/) behind the
+scenes, and in some ways it may even look similar to the way it is used directly
+with [Nodejs](https://nodejs.org/en/), but there are **_definitely_**
+**differences**. However, I will leave that comparison for another podcast and
+post.
+
+According to [graphql.org](https://graphql.org/),
+
+> GraphQL is a query language for APIs and a runtime for fulfilling those
+> queries with your existing data. GraphQL provides a complete and
+> understandable description of the data in your API, gives clients the power to
+> ask for exactly what they need and nothing more, makes it easier to evolve
+> APIs over time, and enables powerful developer tools.
+
+In addition,
+
+> traditional APIs requiring loading from multiple urls, graphql APIs get all
+> the data one needs in a single request.
+
+For example, in my first [Nodejs](https://nodejs.org/en/),
+[MongoDB](https://www.mongodb.com/), [React](https://reactjs.org/), and
+[graphql](https://graphql.org/) app I just completed recently (with a little
+help!), I got all the data I needed from the backend in the frontend using a
+graphql middleware which I set up via the npm package `express-graphql`. The
+only `"POST"` request made is to a `/graphql` endpoint set up via the
+**middleware** and made possible with the use of `express-graphql` and
+`expressjs`. I will be including the **code** for the **middleware** in the
+**post** I will be **_creating_** of this **episode** of **Plugging in The Holes**
+on [interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/).
+
+```js
+// server.js
+// don't limit to /post request
+app.use(
+  '/graphql',
+  graphqlHttp({
+    schema: graphqlSchema,
+    rootValue: graphqlResolver,
+    graphiql: true,
+    formatError(err) {
+      if (!err.originalError) {
+        return err
+      }
+      const data = err.originalError.data
+      const message = err.message || 'An error occurred.'
+      const code = err.originalError.code || 500
+      return { message: message, status: code, data: data }
+    },
+  })
+)
+```
+
+```js
+// Feed.js (Page in Front End)
+import React, { Component, Fragment } from 'react'
+import Post from '../../components/Feed/Post/Post'
+import Button from '../../components/Button/Button'
+import FeedEdit from '../../components/Feed/FeedEdit/FeedEdit'
+import Input from '../../components/Form/Input/Input'
+import Paginator from '../../components/Paginator/Paginator'
+import Loader from '../../components/Loader/Loader'
+import ErrorHandler from '../../components/ErrorHandler/ErrorHandler'
+import './Feed.css'
+
+class Feed extends Component {
+  state = {
+    isEditing: false,
+    posts: [],
+    totalPosts: 0,
+    editPost: null,
+    status: '',
+    postPage: 1,
+    postsLoading: true,
+    editLoading: false,
+  }
+
+  componentDidMount() {
+    const graphqlQuery = {
+      query: `
+            {
+                user {
+                    status
+                }
+            }
+            `,
+    }
+    fetch('http://localhost:8080/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + this.props.token,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(graphqlQuery),
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .then((resData) => {
+        if (resData.errors) {
+          throw new Error('Fetching user status failed!')
+        }
+        this.setState({ status: resData.data.user.status })
+      })
+      .catch(this.catchError)
+
+    this.loadPosts()
+  }
+  loadPosts = (direction) => {
+    if (direction) {
+      this.setState({ postsLoading: true, posts: [] })
+    }
+    let page = this.state.postPage
+    if (direction === 'older') {
+      page++
+      this.setState({ postPage: page })
+    }
+    if (direction === 'newer') {
+      page--
+      this.setState({ postPage: page })
+    }
+    const graphqlQuery = {
+      query: `
+                query FetchPosts($page: Int) {
+                    posts(page: $page) {
+                        posts {
+                            _id
+                            title
+                            content
+                            imageUrl
+                            creator {
+                                name
+                            }
+                            createdAt
+                        }
+                        totalPosts
+                    }
+                }
+            `,
+      variables: {
+        page: page,
+      },
+    }
+    fetch('http://localhost:8080/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + this.props.token,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(graphqlQuery),
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .then((resData) => {
+        if (resData.errors) {
+          throw new Error('Fetching posts failed!')
+        }
+        this.setState({
+          posts: resData.data.posts.posts.map((post) => {
+            return {
+              ...post,
+              imagePath: post.imageUrl,
+            }
+          }),
+          totalPosts: resData.data.posts.totalPosts,
+          postsLoading: false,
+        })
+      })
+      .catch(this.catchError)
+  }
+
+  statusUpdateHandler = (event) => {
+    event.preventDefault()
+    const graphqlQuery = {
+      query: `
+                mutation UpdateUserStatus($userStatus: String!) {
+                    updateStatus(status: $userStatus) {
+                        status
+                    }
+                }
+            `,
+      variables: {
+        userStatus: this.state.status,
+      },
+    }
+    fetch('http://localhost:8080/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + this.props.token,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(graphqlQuery),
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .then((resData) => {
+        if (resData.errors) {
+          throw new Error('Updating user status failed!')
+        }
+      })
+      .catch(this.catchError)
+  }
+
+  newPostHandler = () => {
+    this.setState({ isEditing: true })
+  }
+
+  startEditPostHandler = (postId) => {
+    this.setState((prevState) => {
+      const loadedPost = { ...prevState.posts.find((p) => p._id === postId) }
+
+      return {
+        isEditing: true,
+        editPost: loadedPost,
+      }
+    })
+  }
+
+  cancelEditHandler = () => {
+    this.setState({
+      isEditing: false,
+      editPost: null,
+    })
+  }
+
+  finishEditHandler = (postData) => {
+    this.setState({
+      editLoading: true,
+    })
+    const formData = new FormData()
+    formData.append('image', postData.image)
+    if (this.state.editPost) {
+      formData.append('oldPath', this.state.editPost.imagePath)
+    }
+    fetch('http://localhost:8080/post-image', {
+      method: 'PUT',
+      headers: {
+        Authorization: 'Bearer ' + this.props.token,
+      },
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((fileResData) => {
+        const imageUrl = fileResData.filePath || 'undefined'
+        let graphqlQuery = {
+          query: `
+                        mutation CreateNewPost($title: String!, $content: String!, $imageUrl: String!) {
+                            createPost(postInput: {title: $title, content: $content, imageUrl: $imageUrl}) {
+                            _id
+                            title
+                            content
+                            imageUrl
+                            creator {
+                                name
+                            }
+                            createdAt
+                            }
+                        }
+                    `,
+          variables: {
+            title: postData.title,
+            content: postData.content,
+            imageUrl: imageUrl,
+          },
+        }
+
+        if (this.state.editPost) {
+          graphqlQuery = {
+            query: `
+                            mutation UpdateExistingPost($postId: ID!, $title: String!, $content: String!, $imageUrl: String!) {
+                                updatePost(id: $postId, postInput: {title: $title, content: $content, imageUrl: $imageUrl}) {
+                                _id
+                                title
+                                content
+                                imageUrl
+                                creator {
+                                    name
+                                }
+                                createdAt
+                                }
+                            }
+                        `,
+            variables: {
+              postId: this.state.editPost._id,
+              title: postData.title,
+              content: postData.content,
+              imageUrl: imageUrl,
+            },
+          }
+        }
+
+        return fetch('http://localhost:8080/graphql', {
+          method: 'POST',
+          body: JSON.stringify(graphqlQuery),
+          headers: {
+            Authorization: 'Bearer ' + this.props.token,
+            'Content-Type': 'application/json',
+          },
+        })
+      })
+      .then((res) => {
+        return res.json()
+      })
+      .then((resData) => {
+        if (resData.errors && resData.errors[0].status === 422) {
+          throw new Error('Validation failed. Not authenticated!')
+        }
+        if (resData.errors && this.state.editPost) {
+          throw new Error('Failed to edit post. Not authorized!')
+        }
+        if (resData.errors) {
+          throw new Error('Validation failed!')
+        }
+        let resDataField = 'createPost'
+        if (this.state.editPost) {
+          resDataField = 'updatePost'
+        }
+        const post = {
+          _id: resData.data[resDataField]._id,
+          title: resData.data[resDataField].title,
+          content: resData.data[resDataField].content,
+          creator: resData.data[resDataField].creator,
+          createdAt: resData.data[resDataField].createdAt,
+          imagePath: resData.data[resDataField].imageUrl,
+        }
+        this.setState((prevState) => {
+          let updatedPosts = [...prevState.posts]
+          let updatedTotalPosts = prevState.totalPosts
+          if (prevState.editPost) {
+            const postIndex = prevState.posts.findIndex((p) => p._id === prevState.editPost._id)
+            updatedPosts[postIndex] = post
+          } else {
+            updatedTotalPosts++
+            if (prevState.posts.length >= 2) {
+              updatedPosts.pop()
+            }
+            updatedPosts.unshift(post)
+          }
+          return {
+            posts: updatedPosts,
+            isEditing: false,
+            editPost: null,
+            editLoading: false,
+            totalPosts: updatedTotalPosts,
+          }
+        })
+      })
+      .catch((err) => {
+        console.log(err)
+        this.setState({
+          isEditing: false,
+          editPost: null,
+          editLoading: false,
+          error: err,
+        })
+      })
+  }
+
+  statusInputChangeHandler = (input, value) => {
+    this.setState({ status: value })
+  }
+
+  deletePostHandler = (postId) => {
+    this.setState({ postsLoading: true })
+    const graphqlQuery = {
+      query: `
+                mutation {
+                    deletePost(id: "${postId}")
+                }
+            `,
+    }
+    fetch('http://localhost:8080/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: 'Bearer ' + this.props.token,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(graphqlQuery),
+    })
+      .then((res) => {
+        return res.json()
+      })
+      .then((resData) => {
+        if (resData.errors) {
+          throw new Error('Deleting post failed!')
+        }
+        this.loadPosts()
+        // this.setState(prevState => {
+        //     const updatedPosts = prevState.posts.filter(p => p._id !== postId);
+        //     return { posts: updatedPosts, postsLoading: false };
+        // });
+      })
+      .catch((err) => {
+        console.log(err)
+        this.setState({ postsLoading: false })
+      })
+  }
+
+  errorHandler = () => {
+    this.setState({ error: null })
+  }
+
+  catchError = (error) => {
+    this.setState({ error: error })
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <ErrorHandler error={this.state.error} onHandle={this.errorHandler} />
+        <FeedEdit
+          editing={this.state.isEditing}
+          selectedPost={this.state.editPost}
+          loading={this.state.editLoading}
+          onCancelEdit={this.cancelEditHandler}
+          onFinishEdit={this.finishEditHandler}
+        />
+        <section className="feed__status">
+          <form onSubmit={this.statusUpdateHandler}>
+            <Input
+              type="text"
+              placeholder="Your status"
+              control="input"
+              onChange={this.statusInputChangeHandler}
+              value={this.state.status}
+            />
+            <Button mode="flat" type="submit">
+              Update
+            </Button>
+          </form>
+        </section>
+        <section className="feed__control">
+          <Button mode="raised" design="accent" onClick={this.newPostHandler}>
+            New Post
+          </Button>
+        </section>
+        <section className="feed">
+          {this.state.postsLoading && (
+            <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+              <Loader />
+            </div>
+          )}
+          {this.state.posts.length <= 0 && !this.state.postsLoading ? (
+            <p style={{ textAlign: 'center' }}>No posts found.</p>
+          ) : null}
+          {!this.state.postsLoading && (
+            <Paginator
+              onPrevious={this.loadPosts.bind(this, 'newer')}
+              onNext={this.loadPosts.bind(this, 'older')}
+              lastPage={Math.ceil(this.state.totalPosts / 2)}
+              currentPage={this.state.postPage}
+            >
+              {this.state.posts.map((post) => (
+                <Post
+                  key={post._id}
+                  id={post._id}
+                  author={post.creator.name}
+                  date={new Date(post.createdAt).toLocaleDateString('en-US')}
+                  title={post.title}
+                  image={post.imageUrl}
+                  content={post.content}
+                  onStartEdit={this.startEditPostHandler.bind(this, post._id)}
+                  onDelete={this.deletePostHandler.bind(this, post._id)}
+                />
+              ))}
+            </Paginator>
+          )}
+        </section>
+      </Fragment>
+    )
+  }
+}
+
+export default Feed
+```
+
+Basically, the **frontend**, or **client**, sends a `request` to the **server**
+(or backend) for data. It fetches that data via the single `/graphql`
+**endpoint** defined on the backend and placed in my case, in a
+`fetchAPI POST request` on the **frontend**. The data is rendered on the
+frontend thanks to `graphql queries` which are **defined** right before each
+related `fetch() request` and then passed into the `React JSX` which does the
+actual rendering of the `graphql data` to the page. For those of you familiar
+with [GatsbyJS](https://www.gatsbyjs.org/), this process would not be unfamiliar
+to you. I will be including examples of `fetch() requests` in React preceded by
+their accompanying `graphql queries` in the post transcript of this **Plugging
+In The Holes** **_episode_** on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/).
+
+There is much more to this than I am discussing today, but my whole point is
+that I am very excited about what [graphql](https://graphql.org/) does for
+**full stack development**. It definitely makes the **backend developer**'s life
+much easier, it makes the **frontend developer**'s life much easier, it makes
+the connection between the **front** and **backend** more seamless because of
+their **independence** from each other, and therefore allows for **development
+decoupling** of the **back** and **frontend**. If done correctly, and everyone
+is on the same page as to what kind of data to define, the **frontend** no
+longer has to wait for the **backend** to develop its code in order to start
+development on the **frontend**, and vice versa.
+
+Last of all, [graphql](https://graphql.org/) has a powerful **developer tool**
+called `graphiql` which is the `in-browser IDE` for **testing** your
+`graphql queries`. That is also the link we are provided with when running
+`npx gatsby develop` with [GatsbyJS](https://www.gatsbyjs.org/) as well. If
+using [GatsbyJS](https://www.gatsbyjs.org/), it would be:
+
+```js
+http://localhost:8000/graphql
+```
+
+In my **app** in `server.js`, I set the property `graphiql: true,` in the
+`express-graphql` **middleware**. It has to be **set** to `true` in order to be
+able to access this `graphql IDE`. Not quite sure how it is done with
+[GatsbyJS](https://graphql.org/), but I am sure that there must be a way of
+finding that out!
+
+Using [GraphQL](https://graphql.org/) with [Nodejs](https://nodejs.org/en/),
+[React](https://reactjs.org/), and a backend database like
+[MongoDB](https://www.mongodb.com/) differs (of course) from the
+[GraphQL](https://graphql.org/) experience in
+[GatsbyJS](https://www.gatsbyjs.org/) since the former is working with
+**_dynamic_**, persistent data retrieved from a backend database and which can
+be added, edited (or updated), and deleted, whereas
+[GatsbyJS](https://www.gatsbyjs.org/) is a **_frontend_** **static site
+generator** which uses `Static Queries` also known by the `<StaticQuery>`
+component, or since [GatsbyJS](https://www.gatsbyjs.org/) version `2.1.0`, the
+`<useStaticQuery>` component. The only way one could **_change_** this static
+data is either by introducing **_new_** static properties to the
+`graphql queries` or removing existing ones! But once added, they do not change,
+because, of course, they are static!
+
+To learn more about pure [graphql](https://graphql.org/) outside of
+[GatsbyJS](https://www.gatsbyjs.org/), visit
+[https://graphql.org](https://graphql.org).
+
+If you want to learn more about [Nodejs](https://nodejs.org/en/), how it works
+with various backend databases, views, traditional REST APIs, and graphql, I
+highly recommend
+[NodeJS The Complete Guide (inc MVC (Model View Controller), REST Apis, and Graphql)](https://www.udemy.com/course/nodejs-the-complete-guide)
+by Maximillian SchwarzMuller, on Udemy. It goes into real depth, **485 videos**
+along with exercises, includes a great section on **backend testing**, and even
+**async await**!, and he will help you learn how to better **organize** and
+**structure** your code. Most of us have heard the term from other developers
+how they like **_"boring code"_**. Well, he is great at teaching how to create
+**_"boring code"_** that would be readable by other developers. The course **Q &
+A** is always active, and a TA, if not Max, will always respond to your
+questions. But he does as well! Students also help each other out all the time.
+
+I will be **_embedding_** this **episode** of **Plugging in The Holes** along
+with a **_transcript_** in the form of a **post** on
+[interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/) for your
+**_hearing_** and **_reading_** pleasure. I will be including the related
+resource links mentioned in the podcast of course. Always do. Bye for now!
+
+## Related Resources
+
+- [NodeJS The Complete Guide (inc MVC (Model View Controller), REST Apis, and Graphql)](https://www.udemy.com/course/nodejs-the-complete-guide)
+
+- [graphql.org](https://graphql.org/)
