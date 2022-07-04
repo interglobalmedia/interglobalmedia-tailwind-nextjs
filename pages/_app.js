@@ -5,8 +5,6 @@ import '@/styles/styles.scss'
 
 import '@fontsource/inter/variable-full.css'
 
-import { motion } from 'framer-motion'
-
 import { ThemeProvider } from 'next-themes'
 import Head from 'next/head'
 
@@ -18,12 +16,6 @@ import { ClientReload } from '@/components/ClientReload'
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
-const variants = {
-  hidden: { opacity: 0, x: -200, y: 0 },
-  enter: { opacity: 1, x: 0, y: 0 },
-  exit: { opacity: 0, x: 0, y: -100 },
-}
-
 export default function App({ Component, pageProps, router }) {
   return (
     <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
@@ -33,15 +25,7 @@ export default function App({ Component, pageProps, router }) {
       {isDevelopment && isSocket && <ClientReload />}
       <Analytics />
       <LayoutWrapper>
-        <motion.main
-          key={router.route}
-          initial="hidden"
-          animate="enter"
-          variants={variants}
-          transition={{ type: 'linear' }}
-        >
-          <Component {...pageProps} />
-        </motion.main>
+        <Component {...pageProps} />
       </LayoutWrapper>
     </ThemeProvider>
   )
