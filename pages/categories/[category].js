@@ -1,4 +1,5 @@
 import { CategorySEO } from '@/components/SEO'
+import ScrollTop from '@/components/ScrollTop'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
@@ -50,6 +51,7 @@ export default function Category({ posts, category }) {
         title={`${category} - ${siteMetadata.author}`}
         description={`${category} categories - ${siteMetadata.author}`}
       />
+      <ScrollTop />
       <ListLayout posts={posts} title={title} />
     </>
   )
