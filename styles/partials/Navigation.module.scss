@@ -50,7 +50,7 @@ $min-992: '(min-width: 992px)';
 
 a.menu-link {
     list-style-type: none;
-    margin: 1.5vh 1.5vw;
+    margin: 1.5vh 0;
 }
 
 .hamburger {
@@ -58,6 +58,8 @@ a.menu-link {
 }
 
 /* End nav styles using Flexbox (screens greater than 899px) */
+
+/* start hamburger svg styling */
 
 .top {
     stroke-dasharray: 60 207;
@@ -80,16 +82,14 @@ a.menu-link {
 /* Custom header styling */
 
 .header {
-  margin-left: 1rem;
-  margin-right: 1rem;
-  width: 100vw;
+  width: 100%;
 }
 
 .brand-wrapper {
-    width: 100%;
+    width: 90%;
     display: flex;
+    justify-content: flex-end;
     max-width: 13rem;
-    margin-left: 0;
 }
 
 .brand-wrapper > a > span {
@@ -100,7 +100,7 @@ a.menu-link {
 .brand {
     display: flex;
     justify-content: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     height: auto;
     padding: 0;
@@ -120,7 +120,9 @@ a.menu-link {
     justify-content: center;
     margin-bottom: 1.5rem;
     margin-right: 6rem;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    width: 100vw;
 }
 
 
@@ -151,14 +153,6 @@ a.menu-link {
     li.menu-link-li {
         margin: 0 0 1.5rem 1.5rem;
     }
-
-    a.menu-link {
-        display: block;
-    }
-
-    // a:hover {
-    //     color: #fd8c00;
-    // }
 
     /* Responsive Hamburger menu styling */
 
@@ -259,12 +253,44 @@ a.menu-link {
         /* needed for me because of my intro box in index.html.
 		Otherwise navigation backgrop would be behind the intro box when opened */
         z-index: 10;
+        /* so that the nav link underlining from framer motion does not span across the width of the main-nav backdrop */
+        & li > a {
+            display: block;
+            width: 6rem;
+        }
+
+        & li:nth-of-type(1) > a {
+            width: 3.5rem;
+        }
+
+        & li:nth-of-type(2) > a {
+            width: 3.5rem;
+        }
+
+        & li:nth-of-type(3) > a {
+            width: 2.75rem;
+        }
+
+        & li:nth-of-type(4) > a {
+            width: 4.75rem;
+        }
+
+        & li:nth-of-type(5) > a {
+            width: 6.5rem;
+        }
+        & li:nth-of-type(6) > a {
+            width: 2.75rem;
+        }
     }
 
     /* stylelint-disable-next-line selector-class-pattern */
     .showNav {
         /* show the menu */
         transform: translateX(0);
+    }
+    /* targets active class of anchor nav link in mobile (smaller) viewports */
+    .menu-link.active, .navigation-underline.active {
+        color: lighten($aussie-blue, 10%);
     }
 }
 
@@ -280,71 +306,46 @@ a.menu-link {
 }
 
 /* for .active link underline styling */
-.menu-link,
-.dark .menu-link {
+
+.navigation-underline,
+.dark .navigation-underline, .menu-link, .dark .menu-link {
     font-weight: 500;
-    font-size: 1.2rem;
+    // font-size: 1.3rem;
     position: relative;
-    padding: 0;
 }
 
-.brand.menu-link.active::after {
-    @media #{$min-992} {
+/* need to replace .menu-link class with navigation-underline class so that underline animation works! */
+.navigation-underline.active {
+    &::after {
         content: "";
         position: absolute;
-        bottom: 0.8rem;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
         background: lighten($aussie-blue, 2.5%);
-        transition: background-color 2s linear;
+        margin-bottom: 0;
+        transition: background-color 3s linear;
     }
 }
 
-.active::after {
-    @media #{$min-992} {
+.dark .navigation-underline.active {
+    &::after {
         content: "";
         position: absolute;
-        bottom: 1rem;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: lighten($aussie-blue, 2.5%);
-        margin-bottom: -1.3rem;
-        transition: background-color 2s linear;
-    }
-}
-
-.dark .brand.menu-link.active::after {
-    @media #{$min-992} {
-        content: "";
-        position: absolute;
-        bottom: 0.8rem;
+        bottom: 0;
         left: 0;
         width: 100%;
         height: 2px;
         background: lighten($tailwind-dark-orange, 3.5%);
-        transition: background-color 2s linear;
-    }
-}
-
-.dark .active::after {
-    @media #{$min-992} {
-        content: "";
-        position: absolute;
-        bottom: 1rem;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: lighten($tailwind-dark-orange, 3.5%);
-        transition: background-color 2s linear;
+        transition: background-color 3s ease-in-out;
     }
 }
 
 /* end .active link underline styling */
 
 .menu-link.active {
-    color: lighten($aussie-blue, 2.5%);
+    color: lighten($aussie-blue, 5%);
     text-shadow: 1px 1px 2px lighten($discord-charcoal, 15%);
     transition: color 0.5s ease-in-out;
 }

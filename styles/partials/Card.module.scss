@@ -44,6 +44,12 @@ h2.mb-1.text-2xl.font-bold.leading-8.tracking-tight a {
     }
 }
 
+.dark .p-6 {
+    & div.project-tags.flex.flex-wrap {
+        color: $discord-magenta;
+    }
+}
+
 .dark div.flex.flex-wrap {
     color: $discord-magenta;
 }
