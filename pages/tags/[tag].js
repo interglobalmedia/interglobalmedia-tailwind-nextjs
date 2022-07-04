@@ -1,4 +1,5 @@
 import { TagSEO } from '@/components/SEO'
+import ScrollTop from '@/components/ScrollTop'
 import siteMetadata from '@/data/siteMetadata'
 import ListLayout from '@/layouts/ListLayout'
 import generateRss from '@/lib/generate-rss'
@@ -49,6 +50,7 @@ export default function Tag({ posts, tag }) {
         title={`${tag} - ${siteMetadata.author}`}
         description={`${tag} tags - ${siteMetadata.author}`}
       />
+      <ScrollTop />
       <ListLayout posts={posts} title={title} />
     </>
   )
