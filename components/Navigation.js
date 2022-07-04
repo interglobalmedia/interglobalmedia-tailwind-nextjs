@@ -67,9 +67,9 @@ const Navigation = () => {
                     {isActiveLink(link.href, router.pathname) && (
                       <motion.div
                         layoutId="navigation-underline"
-                        className="navigation-underline menu-link active"
+                        className="navigation-underline active"
                         animate
-                      />
+                      ></motion.div>
                     )}
                   </Link>
                 </li>
