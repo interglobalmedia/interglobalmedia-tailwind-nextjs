@@ -24,7 +24,7 @@ export default function Home({ posts, hasExtraLink = true }) {
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <ScrollTop />
       <div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
-        <div className="home-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
+        <article className="home-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Hi there!
           </h1>
@@ -63,11 +63,18 @@ export default function Home({ posts, hasExtraLink = true }) {
               </filter>
             </defs>
           </svg>
-        </div>
+        </article>
+        <article className="home-page-newsletter-wrapper">
+          {siteMetadata.newsletter.provider !== '' && (
+            <section className="flex items-center justify-center pt-4">
+              <NewsletterForm />
+            </section>
+          )}
+        </article>
         <article className="blog-page-post-wrapper">
           <h2 className="index-article-latest-header pb-10 text-left text-6xl font-bold">
             <span className="circle-sketch-highlight text-gray-500 dark:text-gray-100">
-              Podcast
+              Latest Podcast
             </span>
           </h2>
           <h3 className="latest-podcast-episode">
@@ -76,40 +83,42 @@ export default function Home({ posts, hasExtraLink = true }) {
             </a>
           </h3>
         </article>
-        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
-          {!posts.length && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug } = frontMatter
-            return (
-              <li key={slug} className="py-12">
-                <Article
-                  {...frontMatter}
-                  images={frontMatter.images[0]}
-                  hasExtraLink={true}
-                  isH2={true}
-                />
-              </li>
-            )
-          })}
-        </ul>
-        {posts.length > MAX_DISPLAY && (
-          <div className="flex justify-end text-base font-medium leading-6">
-            <Link
-              href="/blog"
-              className="text-primary-500 dark:hover:text-primary-400"
-              aria-label="all posts"
-            >
-              All Posts &rarr;
-            </Link>
-          </div>
-        )}
+        <article className="blog-page-post-wrapper">
+          <h2 className="index-post-latest-header text-left text-6xl font-bold">
+            <span className="circle-sketch-highlight text-gray-500 dark:text-gray-100">
+              Latest Post
+            </span>
+          </h2>
+          <ul className="index-latest-posts-wrapper divide-y divide-gray-200 dark:divide-gray-700">
+            {!posts.length && 'No posts found.'}
+            {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
+              const { slug } = frontMatter
+              return (
+                <li key={slug} className="py-12">
+                  <Article
+                    {...frontMatter}
+                    images={frontMatter.images[0]}
+                    hasExtraLink={true}
+                    isH2={true}
+                  />
+                </li>
+              )
+            })}
+          </ul>
+          {posts.length > MAX_DISPLAY && (
+            <div className="flex justify-end text-base font-medium leading-6">
+              <Link
+                href="/blog"
+                className="text-primary-500 dark:hover:text-primary-400"
+                aria-label="all posts"
+              >
+                All Posts &rarr;
+              </Link>
+            </div>
+          )}
+        </article>
         <ServicesSlider />
         <DevTips />
-        {siteMetadata.newsletter.provider !== '' && (
-          <div className="flex items-center justify-center pt-4">
-            <NewsletterForm />
-          </div>
-        )}
       </div>
     </>
   )
