@@ -91,7 +91,8 @@ module.exports = withBundleAnalyzer({
     config.plugins.push(
       new webpack.EnvironmentPlugin(
         'NEXT_PUBLIC_CONVERTKIT_API_URL',
-        'NEXT_PUBLIC_CONVERTKIT_API_KEY'
+        'NEXT_PUBLIC_CONVERTKIT_API_KEY',
+        'NEXT_PUBLIC_CONVERTKIT_FORM_ID'
       )
     )
 

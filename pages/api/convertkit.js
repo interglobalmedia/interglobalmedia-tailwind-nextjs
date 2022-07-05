@@ -7,9 +7,9 @@ export default async (req, res) => {
   }
 
   try {
-    const FORM_ID = process.env.CONVERTKIT_FORM_ID
-    const API_KEY = process.env.CONVERTKIT_API_KEY
-    const API_URL = process.env.CONVERTKIT_API_URL
+    const FORM_ID = process.env.NEXT_PUBLIC_CONVERTKIT_FORM_ID
+    const API_KEY = process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY
+    const API_URL = process.env.NEXT_PUBLIC_CONVERTKIT_API_URL
 
     // Send request to ConvertKit
     const data = { email, api_key: API_KEY }
