@@ -315,7 +315,47 @@ a.menu-link {
 }
 
 /* need to replace .menu-link class with navigation-underline class so that underline animation works! */
-.navigation-underline.active {
+.navigation-underline, .menu-link {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($aussie-blue, 25%);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0rem;
+        left: 0;
+        background-color: lighten($aussie-blue, 25%);
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.navigation-underline.active, .menu-link.active {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($aussie-blue, 25%);
+        visibility: visible;
+        transform: scaleX(1);
+        transition: all 0.3s ease-in-out;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -326,6 +366,9 @@ a.menu-link {
         background: lighten($aussie-blue, 2.5%);
         margin-bottom: 0;
         transition: background-color 3s linear;
+        visibility: visible;
+        transform: scaleX(1);
+        transition: all 1s ease-in-out;
     }
 }
 
@@ -344,7 +387,7 @@ a.menu-link {
 
 /* end .active link underline styling */
 
-.menu-link.active {
+.navigation-underline.active, .menu-link.active {
     color: lighten($aussie-blue, 5%);
     text-shadow: 1px 1px 2px lighten($discord-charcoal, 15%);
     transition: color 0.5s ease-in-out;
@@ -366,6 +409,12 @@ a.menu-link {
         color: lighten($aussie-blue, 15%);
         text-shadow: 1px 1px 2px lighten($discord-charcoal, 15%);
         transition: color 0.5s ease-in-out;
+    }
+
+    &.sm\:p-4 {
+        @media #{$min-992} {
+            padding: 0 1rem;
+        }
     }
 }
 
