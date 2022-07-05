@@ -52,6 +52,10 @@ const securityHeaders = [
   },
 ]
 
+const webpack = require('webpack')
+
+const { parsed: myEnv } = require('dotenv').config({})
+
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
@@ -81,6 +85,8 @@ module.exports = withBundleAnalyzer({
         'react-dom': 'preact/compat',
       })
     }
+
+    config.plugins.push(new webpack.EnvironmentPlugin(myEnv))
 
     return config
   },
