@@ -38,7 +38,7 @@ export default function App({ Component, pageProps, router }) {
           animate="enter"
           exit="exit"
           variants={variants}
-          transition={{ type: 'linear' }}
+          transition={{ duration: 0.5, type: 'tween' }}
         >
           <Component {...pageProps} />
         </motion.div>
