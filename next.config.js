@@ -54,7 +54,9 @@ const securityHeaders = [
 
 const webpack = require('webpack')
 
-const { parsed: myEnv } = require('dotenv').config({})
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
@@ -86,7 +88,12 @@ module.exports = withBundleAnalyzer({
       })
     }
 
-    config.plugins.push(new webpack.EnvironmentPlugin(myEnv))
+    config.plugins.push(
+      new webpack.EnvironmentPlugin(
+        'NEXT_PUBLIC_CONVERTKIT_API_URL',
+        'NEXT_PUBLIC_CONVERTKIT_API_KEY'
+      )
+    )
 
     return config
   },
