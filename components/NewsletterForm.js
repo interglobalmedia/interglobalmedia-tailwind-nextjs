@@ -8,10 +8,13 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
   const [message, setMessage] = useState('')
   const [subscribed, setSubscribed] = useState(false)
 
+  const convertkit_api_url = process.env.NEXT_PUBLIC_CONVERTKIT_API_URL
+  const convertkit_api_key = process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY
+
   const subscribe = async (e) => {
     e.preventDefault()
 
-    const res = await fetch(`/api/${siteMetadata.newsletter.provider}`, {
+    const res = await fetch(`/api/${convertkit_api_url}${convertkit_api_key}`, {
       body: JSON.stringify({
         email: inputEl.current.value,
       }),
