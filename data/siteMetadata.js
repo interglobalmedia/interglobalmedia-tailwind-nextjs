@@ -4,7 +4,7 @@ const siteMetadata = {
   authorNickName: 'interglobalmedia',
   authorFirstName: 'Maria',
   headerTitle: 'Inter-Global Media',
-  description: `And welcome to Inter-Global Media Network. I'm Maria, and I design, develop, and teach experiences that make people's lives simpler.`,
+  description: `Welcome to Inter-Global Media Network. I'm Maria, and I design, develop, and teach experiences that make people's lives simpler.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://interglobalmedia-tailwind-nextjs.vercel.app/',
