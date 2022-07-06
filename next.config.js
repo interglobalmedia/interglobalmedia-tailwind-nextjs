@@ -92,7 +92,10 @@ module.exports = withBundleAnalyzer({
       new webpack.EnvironmentPlugin(
         'NEXT_PUBLIC_CONVERTKIT_API_URL',
         'NEXT_PUBLIC_CONVERTKIT_API_KEY',
-        'NEXT_PUBLIC_CONVERTKIT_FORM_ID'
+        'NEXT_PUBLIC_CONVERTKIT_FORM_ID',
+        'NEXT_PUBLIC_GISCUS_REPO',
+        'NEXT_PUBLIC_GISCUS_REPOSITORY_ID',
+        'NEXT_PUBLIC_GISCUS_CATEGORY'
       )
     )
 
