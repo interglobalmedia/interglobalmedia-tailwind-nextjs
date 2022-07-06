@@ -1,5 +1,23 @@
+/* color variables */
 $discord-charcoal: #23272a;
+/* media query variables */
+$max-359: '(max-width: 359px)';
+$min-600: '(min-width: 600px)';
 
 .newsletter-form-button .w-full.rounded-md.bg-primary-500 {
     background: $discord-charcoal;
+}
+
+section.flex.items-center.justify-center.pt-4 div > form {
+    @media #{$max-359} {
+        width: 97.5%;
+        margin: 0 auto;
+    }
+}
+
+section.flex.items-center.justify-center.pt-4 div > input {
+    @media #{$max-359} {
+        width: 100%;
+        margin: 0 auto;
+    }
 }
