@@ -19,15 +19,15 @@ const Giscus = () => {
     setEnabledLoadComments(false)
 
     const {
-      repo,
-      repositoryId,
-      category,
-      categoryId,
-      mapping,
-      reactions,
-      metadata,
-      inputPosition,
-      lang,
+      repo = process.env.NEXT_PUBLIC_GISCUS_REPO,
+      repositoryId = process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
+      category = process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
+      categoryId = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+      mapping = 'pathname',
+      reactions = '1',
+      metadata = '1',
+      inputPosition = 'top',
+      lang = 'en',
     } = siteMetadata?.comment?.giscusConfig
 
     const script = document.createElement('script')
@@ -41,7 +41,7 @@ const Giscus = () => {
     script.setAttribute('data-emit-metadata', metadata)
     script.setAttribute('data-input-position', inputPosition)
     script.setAttribute('data-lang', lang)
-    script.setAttribute('data-theme', commentsTheme)
+    script.setAttribute('data-theme', 'light')
     script.setAttribute('crossorigin', 'anonymous')
     script.async = true
 
