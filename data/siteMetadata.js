@@ -7,7 +7,7 @@ const siteMetadata = {
   description: `Welcome to Inter-Global Media Network. I'm Maria, and I design, develop, and teach experiences that make people's lives simpler.`,
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://interglobalmedia-tailwind-nextjs.vercel.app/',
+  siteUrl: 'https:www.interglobalmnedianetwork.com',
   siteRepo: 'https://github.com/interglobalmedia/interglobalmedia-tailwind-nextjs',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
