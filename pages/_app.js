@@ -16,8 +16,7 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import { GA_TRACKING_ID, pageview } from '@/lib/gtag'
-import Script from 'next/script'
+import * as gtag from '@/lib/gtag'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -33,7 +32,7 @@ export default function App({ Component, pageProps, router }) {
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      pageview(url, document.title)
+      gtag.pageview(url, document.title)
     }
     pageRouter.events.on('routeChangeComplete', handleRouteChange)
     return () => {
@@ -61,20 +60,6 @@ export default function App({ Component, pageProps, router }) {
           </motion.div>
         </LayoutWrapper>
       </ThemeProvider>
-      <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-      <Script
-        id="gtag"
-        dangerouslySetInnerHTML={{
-          __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-        }}
-      />
     </>
   )
 }
