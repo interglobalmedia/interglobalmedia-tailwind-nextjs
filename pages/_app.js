@@ -28,17 +28,17 @@ const variants = {
 }
 
 export default function App({ Component, pageProps, router }) {
-  const pageRouter = useRouter()
+  router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = (url) => {
       ga.pageview(url)
     }
-    pageRouter.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
-      pageRouter.events.off('routeChangeComplete', handleRouteChange)
+      router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [pageRouter.events])
+  }, [router.events])
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
