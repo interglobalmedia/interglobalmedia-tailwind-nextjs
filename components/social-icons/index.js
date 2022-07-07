@@ -7,6 +7,8 @@ import Twitter from './twitter.svg'
 import Sitemap from './sitemap.svg'
 import Tag from './tag.svg'
 import Category from './category.svg'
+import Reddit from './reddit.svg'
+import HackerNews from './hackernews.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -20,6 +22,8 @@ const components = {
   sitemap: Sitemap,
   tag: Tag,
   category: Category,
+  reddit: Reddit,
+  hackernews: HackerNews,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
