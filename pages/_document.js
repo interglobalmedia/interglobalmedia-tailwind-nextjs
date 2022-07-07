@@ -29,6 +29,7 @@ class MyDocument extends Document {
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID}`}
           />
+          {/* eslint-disable-next-line @next/next/inline-script-id */}
           <script
             dangerouslySetInnerHTML={{
               __html: `
