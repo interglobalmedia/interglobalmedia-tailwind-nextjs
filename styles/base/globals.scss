@@ -1,4 +1,5 @@
 $discord-magenta: #ff73fa;
+$blue: #0000ff;
 
 body {
   --s: 200px; /* control the size */
@@ -14,4 +15,8 @@ body {
   background-size: var(--s) var(--s);
   overflow-x: hidden;
   transition: background 0.3s ease-in-out;
+}
+
+cite {
+  color: $blue;
 }

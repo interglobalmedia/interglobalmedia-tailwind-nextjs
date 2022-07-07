@@ -1,0 +1,156 @@
+---
+title: Why being able to use dotenv with Next.js is so huge
+date: '2022-07-06'
+lastmod: '2022-07-06'
+tags: ['nextjs', 'dotenv']
+categories: ['server side rendering', 'environment variables', 'post']
+draft: false
+summary: Why being able to use dotenv with Next.js is so huge.
+images: ['/static/images/posts/img/webp/kristina-flour-BcjdbyKWquw-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/why-using-dotenv-with-nextjs-is-so-huge
+---
+
+Today I pretty much **_completed_** the `revamp` of this **_website_**. My **_previous build_** had been with `GatsbyJS`, but **_from_** the **_beginning_**, I **_seemed_** to constantly **_encounter_** `issues` with it. I had **_chosen_** it as a `static framework` because of the `image optimization` it **_provided_**. I **_also_** was **_interested_** in `GraphQL` at the time (still am, but **_more_** on the `backend`), so **_that_** is **_why_** I **_went_** with it.
+
+But **_these days_**, there are **_more options_** to **_choose from_**, and which have **_more features_** to **_offer_** out of the box.
+
+I had **_heard_** about `Next.js` for a while, and what **_attracted me_** to it the **_most_** was its `server side rendering` and the **_ability_** to **_tack on_** a `backend`. But **_what_** does `server side rendering` **_mean_**?
+
+**_According_** to [Educative](https://www.educative.io/answers/what-is-server-side-rendering),
+
+> Server-side rendering (SSR), is the ability of an application to contribute by displaying the web-page on the server instead of rendering it in the browser. Server-side sends a fully rendered page to the client; the client’s JavaScript bundle takes over and allows the SPA framework to operate. There is also client-side rendering which slows down the procedure of viewing and interacting with the web page. &mdash; <cite>Educative.io</cite>
+
+But **_why_** is this **_such_** a **_big deal_**, you **_may ask_**.
+
+There are **_great advantages_** to using `SSR`.
+
+- Pages **_load faster_**, which means **_better_** `UX`.
+
+- It **_greatly contributes_** to `Search Engine Optimization` (`SEO`), and **_correctly_** indexes pages. `Google` **_favors_** web pages with **_faster_** `load time`.
+
+- It **_contributes_** to the `loading` of a `user`'s **_page_** when they have a **_slow_** `internet connection`.
+
+`GatsbyJS` **_also_** has `server side rendering`, but **_not_** in the **_same way_** as `Next.JS`. It is **_still_** a **_purel_**y `static`, `frontend framework`. AND `build time` was **_never_** `blazing fast`!
+
+With `Next.js`, there is **_also_** the **_ability_** to **_use_** `environment variables`, which would be **_typically used_** in an `application` with a `backend`. **_Well_**, we **_CAN_** add a `backend` to our `Next.js` **_applications_**! But we **_can also_** use them in our `Next.js` **_static sites_** by **_adding_** the `NEXT_PUBLIC` **_prefix_**.
+
+And **_why_** is the **_ability_** to use `environment variables` **_so huge_**? It means that we can **_hide_** our **_little sensitive secrets_** from the `browser`. With **_purely_** `static`, `frontend` **_applications_**, we **_cannot_** do that, thereby **_exposing_** our **_sensitive data_** to the world within our pages' **_parsed_** `HTML` **_markup_**.
+
+That's **_great_**, you **_may say_**. But **_what_** is the **_big deal_** about **_being able_** to **_use_** `dotenv` with `Next.js`? Doesn't `Next.js` **_already have_** its **_own way_** of **_dealing_** with `environment variables`?
+
+**YES**. It **_does_**. **_However_**, the **_process_** is a bit `"circular"`, and **_not_** as **_simple_** to **_implement_**. Honestly, I **_did not_** even **_try_** to **_learn it_** after **_reading_** about it in **_several places_**. I thought there **_had_** to be an **_easier way_**. And since I **_have used_** `dotenv` since **_learning_** about it some **_years_** ago, I thought there **_had_** to be a **_way_** of **_using_** it in `Next.js`. And there **_sure_** is. **_Above all_**, it is **_SO EASY_** to **_implement_**. **_Why_** would I **_want_** to **_configure_** my `environment variables` in **_ANY OTHER WAY_**?
+
+How did I **_find out_** about it? I **_came across_** an **_article_** on `Medium` entitled [Environmental Variables in Next.js with dotenv](https://medium.com/courtly-intrepid/environmental-variables-in-next-js-with-dotenv-599c5bbfdf74), by `Deepak Surya`, which **_provided_** the **_answer_** to my `question`: "`How can I use dotenv with Next.js?`"
+
+I did make a **_slight modification_** to the `code` Deepak Surya **_presented_** in the `article`, **_making_** the `process` **_even easier_**.
+
+The **_first_** `environment variables` I **_added_** were for my `ConvertKit` **newsletter form** inside the [Next.js Tailwindcss starter blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) I use(d) to **_build_** this `site`. And the **_process_** was the **_following_**:
+
+**_First_**, I **_had_** to **_specifiy_** `convertkit` **_inside_** my `siteMetadata.js` file:
+
+```javascript
+//data/siteMetadata.js
+newsletter: {
+  // supports mailchimp, buttondown, convertkit, klaviyo, revue, emailoctopus
+  // Please add your .env file and modify it according to your selection
+  provider: 'convertkit',
+},
+```
+
+**_Next_**, I **_added_** the `NEXT_PUBLIC` **_prefix_** to the `ConvertKit` **_related variables_** I was **_using_** in `convertkit.js`:
+
+```javascript
+//api/convertkit.js
+const FORM_ID = process.env.NEXT_PUBLIC_CONVERTKIT_FORM_ID
+const API_KEY = process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY
+const API_URL = process.env.NEXT_PUBLIC_CONVERTKIT_API_URL
+```
+
+which **_initially_** was:
+
+```javascript
+const FORM_ID = process.env.CONVERTKIT_FORM_ID
+const API_KEY = process.env.CONVERTKIT_API_KEY
+const API_URL = process.env.CONVERTKIT_API_URL
+```
+
+I **_added_** the `NEXT_PUBLIC` **_prefix_** to **_make_** the `environment variables` **_accessible_** to the `browser`.
+
+But **_none_** of this **_meant anything_** until I **_installed_** the `dotenv` **npm package** in my `Next.js` **_application_** from **_inside_** the **_root_** of the `application`. I **_installed_** it using the **_following_** `npm command`:
+
+```javascript
+npm i dotenv -S
+```
+
+Then I had to **_actually use_** this package **_somewhere_**. It is always used in the `backend` and **_therefore_** is `required` **_instead_** of `imported` **_into_** a **_file_**. So that meant **_requiring_** it **_inside_** the `next.config.js` **_file_** where the `require` **_keyword_** can be **_used_**. It is **_not_** a `JavaScript` **_keyword_**, but a `Node.js` **_keyword_**. It is a **_built-in_** `Node.js` **_function_** whith the **_sole purpose_** of **_loading modules_** such as `dotenv`! So **_right above_** my `module.exports` in `Next.js`, which is **_also used_** in `Node.js` **_instead_** of `JavaScript`'s `export default` or `export const`, for **_example_**, I **_added_** the **_following_**:
+
+```javascript
+const webpack = require('webpack')
+
+const dotenv = require('dotenv')
+
+dotenv.config()
+```
+
+It is essential to require webpack, as done above. Otherwise, an error will be thrown. Something like the following:
+
+```shell
+npm run dev
+
+> tailwind-nextjs-starter-blog@1.5.5 dev
+> next dev
+
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+info  - Loaded env from /Users/mariacam/Development/interglobalmedia-tailwind-nextjs/.env.local
+info  - Loaded env from /Users/mariacam/Development/interglobalmedia-tailwind-nextjs/.env
+info  - Disabled SWC as replacement for Babel because of custom Babel configuration ".babelrc" https://nextjs.org/docs/messages/swc-disabled
+info  - `compiler` options in `next.config.js` will be ignored while using Babel https://nextjs.org/docs/messages/ignored-compiler-options
+ReferenceError: webpack is not defined
+at Object.webpack (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/next.config.js:90:11)
+at Object.webpack (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/@next/bundle-analyzer/index.js:19:29)
+at Object.getBaseWebpackConfig [as default] (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/next/dist/build/webpack-config.js:1176:32)
+at async Promise.all (index 0)
+at async Span.traceAsyncFn (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/next/dist/trace/trace.js:79:20)
+at async Span.traceAsyncFn (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/next/dist/trace/trace.js:79:20)
+at async HotReloader.start (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/next/dist/server/dev/hot-reloader.js:337:25)
+at async DevServer.prepare (/Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/next/dist/server/dev/next-dev-server.js:292:9)
+at async /Users/mariacam/Development/interglobalmedia-tailwind-nextjs/node_modules/next/dist/cli/next-dev.js:127:9
+```
+
+It is **_necessary_** to **_make sure_** it is **_explicitly required_** in the **_file_**, because `process.env` is **_not available_** in `browsers`, but as **_already mentioned_**, `Next.js` **_both runs_** in the `server` as **_well as_** the `browser`.
+
+Then I **_had_** to require `dotenv`. **_THEN_**, **_instead_** of **_what_** Deepak **_states_**, **_all_** we **_have_** to **_do_** is **_add_** `dotenv.config()`. I would **_do_** the **_same_** if **_working solely_** in a `Node.js` **_application_**, and was **_not_** `requiring dotenv` in a `file` **_located_** in the **_root_** of the **_application_**, but **_inside_** another **_subfolder_**. That is **_all_** you have to **_do_** to make it work **_anywhere_**. And **_since_** I had **_placed_** my `.env` file in my **_application_**'s `root folder`, I **_did not_** have to **_set_** the `path` to my `.env` file. In **_fact_**, when **_working_** with `dotenv`, you **_always_** have to **_place_** the `.env` file **_inside_** the `root folder` of your **_application_**.
+
+**_Next_**, inside my `module.exports`, I had to **_add_** the **_following_**:
+
+```javascript
+//next.config.js
+config.plugins.push(
+  new webpack.EnvironmentPlugin(
+    'NEXT_PUBLIC_CONVERTKIT_API_URL',
+    'NEXT_PUBLIC_CONVERTKIT_API_KEY',
+    'NEXT_PUBLIC_CONVERTKIT_FORM_ID'
+  )
+)
+```
+
+I **_already_** was **_using_** `webpac`k inside `next.config.js`, so I did **_not need_** to **_include_** `webpack(config) {}`. `webpack` was **_already there_**. So I **_placed_** the **_above code_** right before the `return config` **_statement_**, which was **_also_** already there. I also **_included_** `environment variables` for `Giscus Github comments`, and `Google Analytics`. The **_process_** is the **_same_**. And **_that_** is **_it_**!
+
+As `Deepak` **_mentions_** in her **_article_**, the `webpack.EnvironmentPlugin()` "parses" the `destructured object` she **_includes_** in her `code`. **_However_**, that is **_not_** a **_good demonstration_** of what **_actually_** should be **_done_**. The **_above_** is the **_correct approach_**. Please **_refer_** to the `webpack documentation` **_regarding_** the `webpack.EnvironmentPlugin()`: [(webpack) EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/).
+
+And **_THAT_** is **_IT_**!
+
+As I **_mention_** in my `Tweet` on `July 4, 2022`,
+
+> @nextjs is a good reason why one ever again should be revealing sensitive data on client side. No excuse. And I am seeing it out there when using Nextjs. No no no!
+>
+> &mdash; <cite>[Maria D. Campbell (@letsbsocial1) - July 4, 2022](https://twitter.com/letsbsocial1/status/1544153765305061378)</cite>
+
+Happy `dotenving`!
+
+## Related Resources
+
+- [Environmental Variables in Next.js with dotenv](https://medium.com/courtly-intrepid/environmental-variables-in-next-js-with-dotenv-599c5bbfdf74) - by **_Deepak Surya_** on [medium.com](https://medium.com/)
+
+- [(webpack) EnvironmentPlugin](https://webpack.js.org/plugins/environment-plugin/) - **_Webpack Documentation_**
