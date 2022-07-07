@@ -19,6 +19,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.0",
     "browser-monads": "^1.0.0",
+    "clsx": "^1.2.1",
     "dotenv": "^16.0.1",
     "esbuild": "^0.13.13",
     "framer-motion": "^6.3.16",

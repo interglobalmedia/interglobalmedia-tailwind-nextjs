@@ -9,6 +9,11 @@ import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import '../styles/partials/PostLayout.module.scss'
+import ShareTweet from '@/components/social-share/ShareTweet'
+import ShareFB from '@/components/social-share/ShareFB'
+import ShareLinkedin from '@/components/social-share/ShareLinkedin'
+import ShareHN from '@/components/social-share/ShareHN'
+import ShareReddit from '@/components/social-share/ShareReddit'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -102,6 +107,36 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
               <div className="prose max-w-none pt-10 pb-8 dark:prose-dark">{children}</div>
+              <div className="share-icons-wrapper">
+                <h1 className="social-share-heading">Social Share:</h1>
+                <div className="social-share-links">
+                  <ShareTweet
+                    className="mt-12"
+                    url={`https://www.interglobalmedianetwork.com${frontMatter.canonicalUrl}`}
+                    title={frontMatter.title}
+                  />
+                  <ShareFB
+                    className="mt-12"
+                    url={`https://www.interglobalmedianetwork.com${frontMatter.canonicalUrl}`}
+                    title={frontMatter.title}
+                  />
+                  <ShareLinkedin
+                    className="mt-12"
+                    url={`https://www.interglobalmedianetwork.com${frontMatter.canonicalUrl}`}
+                    title={frontMatter.title}
+                  />
+                  <ShareHN
+                    className="mt-12"
+                    url={`https://www.interglobalmedianetwork.com${frontMatter.canonicalUrl}`}
+                    title={frontMatter.title}
+                  />
+                  <ShareReddit
+                    className="mt-12"
+                    url={`https://www.interglobalmedianetwork.com${frontMatter.canonicalUrl}`}
+                    title={frontMatter.title}
+                  />
+                </div>
+              </div>
               <div className="pt-6 pb-6 text-base text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
                   {'Discuss on Twitter'}
