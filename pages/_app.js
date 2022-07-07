@@ -39,7 +39,7 @@ export default function App({ Component, pageProps, router }) {
     return () => {
       pageRouter.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [])
+  }, [pageRouter.events])
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
