@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { GA_TRACKING_ID } from '@/lib/gtag'
 
 class MyDocument extends Document {
   render() {
@@ -25,10 +26,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID}`}
-          />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           {/* eslint-disable-next-line @next/next/inline-script-id */}
           <script
             dangerouslySetInnerHTML={{
