@@ -28,17 +28,17 @@ const variants = {
 }
 
 export default function App({ Component, pageProps, router }) {
-  const pageRouter = useRouter()
+  router = useRouter()
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      ga.pageview(url)
+      ga.pageview(url, document.title)
     }
-    pageRouter.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
-      pageRouter.events.off('routeChangeComplete', handleRouteChange)
+      router.events.off('routeChangeComplete', handleRouteChange)
     }
-  }, [pageRouter.events])
+  }, [router.events])
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
@@ -60,6 +60,24 @@ export default function App({ Component, pageProps, router }) {
           </motion.div>
         </LayoutWrapper>
       </ThemeProvider>
+      {/* Global Site Tag (gtag.js) - Google Analytics */}
+      <script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID}`}
+      />
+      {/* eslint-disable-next-line @next/next/inline-script-id */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
     </>
   )
 }
