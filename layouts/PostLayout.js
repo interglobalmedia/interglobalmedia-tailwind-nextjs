@@ -10,8 +10,6 @@ import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import '../styles/partials/PostLayout.module.scss'
 import ShareTweet from '@/components/social-share/ShareTweet'
-import ShareFB from '@/components/social-share/ShareFB'
-import ShareLinkedin from '@/components/social-share/ShareLinkedin'
 import ShareHN from '@/components/social-share/ShareHN'
 import ShareReddit from '@/components/social-share/ShareReddit'
 
@@ -111,16 +109,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <h1 className="social-share-heading">Social Share:</h1>
                 <div className="social-share-links">
                   <ShareTweet
-                    className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
-                    title={frontMatter.title}
-                  />
-                  <ShareFB
-                    className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
-                    title={frontMatter.title}
-                  />
-                  <ShareLinkedin
                     className="mt-12"
                     url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
                     title={frontMatter.title}
