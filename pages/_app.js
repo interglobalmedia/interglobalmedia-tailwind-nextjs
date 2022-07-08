@@ -16,8 +16,6 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import * as ga from '@/lib/ga'
-
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
@@ -28,17 +26,6 @@ const variants = {
 }
 
 export default function App({ Component, pageProps, router }) {
-  router = useRouter()
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      ga.pageview(url, document.title)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
@@ -60,24 +47,6 @@ export default function App({ Component, pageProps, router }) {
           </motion.div>
         </LayoutWrapper>
       </ThemeProvider>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
-      <script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID}`}
-      />
-      {/* eslint-disable-next-line @next/next/inline-script-id */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-        }}
-      />
     </>
   )
 }

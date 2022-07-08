@@ -10,8 +10,6 @@ import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import '../styles/partials/PostLayout.module.scss'
 import ShareTweet from '@/components/social-share/ShareTweet'
-import ShareFB from '@/components/social-share/ShareFB'
-import ShareLinkedin from '@/components/social-share/ShareLinkedin'
 import ShareHN from '@/components/social-share/ShareHN'
 import ShareReddit from '@/components/social-share/ShareReddit'
 
@@ -112,27 +110,17 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <div className="social-share-links">
                   <ShareTweet
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
-                    title={frontMatter.title}
-                  />
-                  <ShareFB
-                    className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
-                    title={frontMatter.title}
-                  />
-                  <ShareLinkedin
-                    className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                   <ShareHN
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                   <ShareReddit
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                 </div>
