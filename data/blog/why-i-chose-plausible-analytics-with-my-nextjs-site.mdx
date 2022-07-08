@@ -1,0 +1,63 @@
+---
+title: Why I chose plausible analytics with my Next.js site
+date: '2022-07-08'
+lastmod: '2022-07-08'
+tags: ['nextjs', 'giscus', 'github', 'google analytics']
+categories: ['privacy', 'open source software', 'post']
+draft: false
+summary: Why I chose plausible analytics with my Next.js site.
+images: ['/static/images/posts/img/webp/jason-dent-JFk0dVyvdvw-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/why-i-chose-plausible-analytics-with-my-nextjs-site
+---
+
+If you have been **_following_** my `site` **_recently_**, you **_already know_** that I just **_revamped_** it. I **_migrated_** from **using** `GatsbyJS` to `Next.js`. **_Best decision_** I have **_ever made_**. Choosing [@Timlrx's](https://github.com/timlrx) [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) as an **_introduction_** to `Next.js` is **_also_** the **_best decision_** I have **_ever made_**. And I am in **_good company_** there! **_Last_** but **_not least_**, **using** `Vercel` (the **_creators_** of `Next.js`) for **_hosting_** is **_absolutely_** the **_best decision_** I have **_ever made_**! I will be **_writing_** a **short post** about that as well.
+
+The **_learning curve_** is **_still there_**, **_especially_** if one **_wants_** to **_master something_**, and **_master_** it **_well_**. And I **_definitely do_**!
+
+My **_latest_**, **_biggest challenge_** was to **_add_** `analytics` to my` site` while **_still_** being able to **_use_** `Giscus Github comments`. This **_ended up_** being a **_bit_** of a `"sticky wicket"`. I **_did_** come up with a `nice solution` **_fairly quickly_**, but it **_took_** a **good deal** of **_persistence_**, **_curiosity_**, and **_tenacity_**! I just **_refused_** to **_give up_**. **_Not_** having **_some sort_** of `tracking` of my `website content` just was **_not_** going to **_be_** an **_option_**. **_Not_** being able to **_use_** `Giscus` on my `Next.js` **_site_** ALSO was **_not_** an **_option_**.
+
+**_First_** I **went** with the **_most obovious_** `choice`: **_implementing_** `Google Analytics` **_simply because_** it is what I **_used_** on the `GatsbyJS` **_implementation_** of my `site`. But **_much_** has **_changed_** since I **_integrated_** `GA` with `GatsbyJS`, and I am **_specifically referring_** to `privacy issues` which are **_continuously_** being **raised** around `Google` **_business practices_**.
+
+In **_order_** for `Google Analytics` to be able to **_track_** ALL `pages/routes` on a `React` **_driven_** `application`, there **_has_** to **_be_** a **_way_** to **_track_** the **_change_** in `state` that **_occur_** when a `visitor` **_switches_** from **_one_** `page/route` to **_another_**.
+
+The [Next.js TailwindCSS starter blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) **_does provide_** `code` for **_implementing_** `Google Analytics` that **_circumvents_** the `script src` **error** which **_arises_** when we **_try_** to **_add_** `script` **tags** to our `_document.js` or `_app.js` `Next.js` **components**. **_Adding_** `Google Analytics` to the `script-src 'self' 'unsafe-eval' 'unsafe-inline'` **properties** as part of the `value` of the `ContentSecurityPolicy` **object** inside the `next.config.js` **file** **_CAN_** make `Google Analytics` **scripts** work **_inside_** `_app.js` and/or `_document.js`, BUT **_then_** `Giscu`s **_stops working_**. It **_becomes_** an `either/or` **_situation_**. **_Either_** you **_keep_** `Google Analytics` and **_drop_** `Giscus`, **_or_** you **_keep_** `Giscus` and **_drop_** `Google Analytics`. I **_went_** with **_dropping_** `Google Analytics`, and **_immmediately_** looked for an **_alternative_**.
+
+**_First_** (and **_last_**) I **_turned_** to the `options` **_presented_** by [@Timlrx's](https://github.com/timlrx) [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog). He **_provides_** us with the **_following_** `choices`, **_available_** for **_viewing_** inside the `data/sitemetadata.js` **file**: [Plausible Analytics](https://plausible.io/), [Simple Analytics](https://www.simpleanalytics.com/pricing), [Umami Analytics](https://umami.is/), and [Google Analytics](https://analytics.google.com/).
+
+I **_already knew_** that `Google Aanalytics` was **_out_** of the **_question_**. I **_checked out_** `Umami Analytics`, but that **_required_** `self hosting`, which is **_free_** and `open source`, but I was **_not ready_** to **_invest_** the `time` that it **_would require_** to `set up`. I simply **_don't have_** that **_luxury_**! I **_chose_** to **check out** `Plausible Analytics`, which in the **_end_**, I **_feel offer_** me **_more_** for `$9/month` (**_after_** a `30 day` **_free_** `trial`) **_than_** `Simple Analytics`. And **_so far_**, I have **_not_** had to **_use_** an `API` **key**, **_either_**. **_It_**, and **_Simple Analytics_**, and **_Umami_**, are **_big_** on `Privac`y, which is a **_great thing_**, and **_probably_** why `Plausible` (and I'm **_sure_** `Simple Analytics` and `Umami`) **_works well_** with `Giscus`.
+
+But I **_skipped_** an **_important step_**! `Plausible` did **_not work_** out of the `tailwind-nextjs-starter-blog` **box**. I **_still_** got the `CSP` **error**. **_What_** was I **_going_** to **_do_**? I **_knew_** there **_had_** to **_be_** some kind of **_solution_**. **_After all_**, `GatsbyJS` **_developers_**, a **_static_** `React` **_framework_**, were **_able_** to **_implement_** `Google Analytics` there with the **_help_** of **_third party_** `GatsbyJS` **_plugins_**!
+
+**_Low_** and **_behold_**, there **_was_** a **_third party_** `Next.js` **_plugin_** which **_solved_** my `Plausible CSP error` **_issue_**. It is **_called_** [next-plausible](https://github.com/4lejandrito/next-plausible) (**_NOT_** `next/plausible`), and you **_have_** to **_install_** it in your` application`. It is **_not included_** `out` of `the box`. it is **_definitely_** worth **_checking out_**. The `Github repository` **_contains_** `clear`, `simple`, and `comprehensive` **_documentation_** regarding **_how_** to **_integrate_** it with your `Next.js` **_application_**. And **_YES_**. It **_covers_** ALL your `site`'s **_routes_**.
+
+The **_only_** other thing you **_have_** to **_do_**, which is **_not mentioned_** on the `next-plausible` **_repository_**, but **_necessary_** if **_using_** `Tim`'s `tailwind-nextjs-starter-blog`, is to **_add_** the **_follwoing_** to your `next.config.js` **file**:
+
+```javascript
+// next.config.js
+// You might need to insert additional domains in script-src if you are using external services
+const ContentSecurityPolicy = `
+  script-src 'self' 'unsafe-eval' 'unsafe-inline'  plausible.io giscus.app;
+  img-src * blob: data:;
+  media-src 'none';
+  connect-src *;
+  font-src 'self';
+  frame-src giscus.app
+`
+```
+
+This is **_also_** where I **_added_** `Google Analytics`, but **_that_** resulted in being **_bumped off_** of `Giscus`! **_Not_** the **_case_** with `Plausible`! **_Bye bye_** `Google Analytics`! There is a **_reason_** so many **_alternatives_** are **_popping up_** all over the place.
+
+**_Happy_** and **_successful_** `site tracking`!
+
+## Related Resources
+
+- [tailwind-nextjs-starter-blog repo on Github](https://github.com/timlrx/tailwind-nextjs-starter-blog): by [timlrx](https://github.com/timlrx)
+
+- [Plausible Analytics](https://plausible.io/)
+
+- [next-plausible repo on Github](https://github.com/4lejandrito/next-plausible)
+
+- [Umami Analytics](https://umami.is/)
+
+- [Simple Analytics](https://www.simpleanalytics.com/)

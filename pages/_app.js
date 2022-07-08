@@ -13,7 +13,7 @@ import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 import { motion } from 'framer-motion'
-import PlausibleProvider from 'next/plausible'
+import PlausibleProvider from 'next-plausible'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
