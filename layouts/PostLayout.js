@@ -112,17 +112,17 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <div className="social-share-links">
                   <ShareTweet
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                   <ShareFB
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                   <ShareLinkedin
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                   <ShareHN
@@ -132,7 +132,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   />
                   <ShareReddit
                     className="mt-12"
-                    url={`https://www.interglobalmedianetwork.com${frontMatter.slug}`}
+                    url={`https://www.interglobalmedianetwork.com/${frontMatter.slug}`}
                     title={frontMatter.title}
                   />
                 </div>
