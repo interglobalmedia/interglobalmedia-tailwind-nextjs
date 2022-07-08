@@ -16,8 +16,6 @@ import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 
-import * as ga from '@/lib/ga'
-
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
 
@@ -28,17 +26,6 @@ const variants = {
 }
 
 export default function App({ Component, pageProps, router }) {
-  router = useRouter()
-
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      ga.pageview(url, document.title)
-    }
-    router.events.on('routeChangeComplete', handleRouteChange)
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
   return (
     <>
       <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
