@@ -13,8 +13,7 @@ import Analytics from '@/components/analytics'
 import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 import { motion } from 'framer-motion'
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import PlausibleProvider from 'next/plausible'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -43,7 +42,9 @@ export default function App({ Component, pageProps, router }) {
             variants={variants}
             transition={{ duration: 0.5, type: 'tween' }}
           >
-            <Component {...pageProps} />
+            <PlausibleProvider domain="interglobalmedianetwork.com">
+              <Component {...pageProps} />
+            </PlausibleProvider>
           </motion.div>
         </LayoutWrapper>
       </ThemeProvider>

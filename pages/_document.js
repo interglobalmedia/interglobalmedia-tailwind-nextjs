@@ -26,11 +26,6 @@ class MyDocument extends Document {
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
         <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
-          <script
-            defer
-            data-domain="interglobalmedianetwork.com"
-            src="https://plausible.io/js/plausible.js"
-          ></script>
           <Main />
           <NextScript />
         </body>
