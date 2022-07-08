@@ -4,8 +4,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.googletagmanager.com *.google-analytics.com;
-  style-src 'self' 'unsafe-inline';
   script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app;
   img-src * blob: data:;
   media-src 'none';
@@ -95,8 +93,7 @@ module.exports = withBundleAnalyzer({
         'NEXT_PUBLIC_CONVERTKIT_FORM_ID',
         'NEXT_PUBLIC_GISCUS_REPO',
         'NEXT_PUBLIC_GISCUS_REPOSITORY_ID',
-        'NEXT_PUBLIC_GISCUS_CATEGORY',
-        'NEXT_PUBLIC_GA_UNIVERSAL_ANALYTICS_TRACKING_ID'
+        'NEXT_PUBLIC_GISCUS_CATEGORY'
       )
     )
 
