@@ -1,0 +1,63 @@
+/* color variables */
+$tailwind-code-pink: #e12860;
+$discord-charcoal: #23272a;
+$cream: #ffe9d6;
+$tailwind-peppermint-green: #14b8a6;
+
+.faqs-heading ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0 1rem;
+
+    & li {
+        margin: 0 0 0 1rem;
+        padding: 0 0 0 1rem;
+        text-indent: -2rem;
+    }
+}
+
+.faqs-page-title-wrapper {
+    margin-top: -1.5rem;
+}
+
+.faqs-heading h2[id^=q]::before, .faqs-heading h2[id^=a]::before {
+    content: ' ';
+    border-left: 2.5px solid;
+    margin-bottom: 0.5rem;
+    margin-left: -0.5rem;
+    position: absolute;
+    display: inline-block;
+}
+
+.faqs-heading h2[id^=q]::before, .faqs-heading h2[id^=q] {
+    color: $tailwind-code-pink;
+}
+
+.faqs-heading h2[id^=q] > b.faqs-b, .faqs-heading h2[id^=a] > b.faqs-b {
+    color: $discord-charcoal;
+    font-weight: normal;
+
+    & code {
+        background: transparent;
+        font-size: 1rem;
+        color: $discord-charcoal;
+    }
+}
+
+.faqs-heading h2[id^=a]::before, .faqs-heading h2[id^=a] {
+    color: darken($discord-charcoal, 12%);
+}
+
+.faqs-heading > blockquote:nth-of-type(odd) {
+    background: lighten(rgba($tailwind-code-pink, 0.7), 25%);
+    border-left-color: $tailwind-code-pink;
+    font-style: normal;
+    margin-bottom: 0;
+}
+
+.faqs-heading > blockquote:nth-of-type(even) {
+    background: lighten(rgba($cream, 0.7), 12%);
+    border-left-color: darken($discord-charcoal, 12%);
+    font-style: normal;
+    margin-bottom: 0;
+}
