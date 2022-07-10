@@ -3,6 +3,8 @@ $discord-charcoal: #23272a;
 $discord-magenta: #ff73fa;
 $gradient-background-blue: #1095c1;
 $cream: #ffe9d6;
+$gradient-background-blue: #1095c1;
+$tailwind-peppermint-green: #14b8a6;
 
 .faqs-heading ul {
     list-style-type: none;
@@ -36,6 +38,14 @@ $cream: #ffe9d6;
 .faqs-heading h2[id^=q] > b.faqs-b, .faqs-heading h2[id^=a] > b.faqs-b {
     color: $discord-charcoal;
     font-weight: normal;
+
+    & > a {
+        color: darken($gradient-background-blue, 20%);
+    }
+
+    & > a:hover {
+        color: lighten($tailwind-peppermint-green, 12%) !important;
+    }
 }
 
 .faqs-heading h2[id^=a]::before, .faqs-heading h2[id^=a] {
