@@ -281,6 +281,9 @@ a.menu-link {
         & li:nth-of-type(6) > a {
             width: 2.75rem;
         }
+        & li:nth-of-type(7) > a {
+            width: 2.75rem;
+        }
     }
 
     /* stylelint-disable-next-line selector-class-pattern */
@@ -350,7 +353,7 @@ a.menu-link {
         height: 2px;
         bottom: 0;
         left: 0;
-        background-color: lighten($aussie-blue, 25%);
+        background-color: lighten($aussie-blue, 3.5%);
         visibility: visible;
         transform: scaleX(1);
         transition: all 0.3s ease-in-out;
@@ -363,7 +366,61 @@ a.menu-link {
         left: 0;
         width: 100%;
         height: 2px;
-        background: lighten($aussie-blue, 2.5%);
+        background: lighten($aussie-blue, 3.5%);
+        margin-bottom: 0;
+        transition: background-color 3s linear;
+        visibility: visible;
+        transform: scaleX(1);
+        transition: all 1s ease-in-out;
+    }
+}
+
+.navigation-underline.active {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: lighten($aussie-blue, 3.5%);
+        transition: background-color 3s ease-in-out;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: lighten($aussie-blue, 3.5%);
+        transition: background-color 3s ease-in-out;
+    }
+}
+
+.dark .navigation-underline.active, .dark .menu-link.active {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: lighten($tailwind-dark-orange, 3.5%);
+        visibility: visible;
+        transform: scaleX(1);
+        transition: all 0.3s ease-in-out;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: lighten($tailwind-dark-orange, 3.5%);
         margin-bottom: 0;
         transition: background-color 3s linear;
         visibility: visible;
@@ -373,6 +430,17 @@ a.menu-link {
 }
 
 .dark .navigation-underline.active {
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background: lighten($tailwind-dark-orange, 3.5%);
+        transition: background-color 3s ease-in-out;
+    }
+
     &::after {
         content: "";
         position: absolute;
