@@ -1,8 +1,8 @@
 /* color variables */
-$tailwind-code-pink: #e12860;
 $discord-charcoal: #23272a;
+$discord-magenta: #ff73fa;
+$gradient-background-blue: #1095c1;
 $cream: #ffe9d6;
-$tailwind-peppermint-green: #14b8a6;
 
 .faqs-heading ul {
     list-style-type: none;
@@ -16,10 +16,6 @@ $tailwind-peppermint-green: #14b8a6;
     }
 }
 
-.faqs-page-title-wrapper {
-    margin-top: -1.5rem;
-}
-
 .faqs-heading h2[id^=q]::before, .faqs-heading h2[id^=a]::before {
     content: ' ';
     border-left: 2.5px solid;
@@ -30,34 +26,50 @@ $tailwind-peppermint-green: #14b8a6;
 }
 
 .faqs-heading h2[id^=q]::before, .faqs-heading h2[id^=q] {
-    color: $tailwind-code-pink;
+    color: darken($discord-magenta, 40%);
+}
+
+.dark .faqs-heading h2[id^=q]::before, .dark .faqs-heading h2[id^=q] {
+    color: $discord-magenta;
 }
 
 .faqs-heading h2[id^=q] > b.faqs-b, .faqs-heading h2[id^=a] > b.faqs-b {
     color: $discord-charcoal;
     font-weight: normal;
-
-    & code {
-        background: transparent;
-        font-size: 1rem;
-        color: $discord-charcoal;
-    }
 }
 
 .faqs-heading h2[id^=a]::before, .faqs-heading h2[id^=a] {
-    color: darken($discord-charcoal, 12%);
+    color: darken($gradient-background-blue, 20%);
+}
+
+.dark .faqs-heading h2[id^=a]::before, .dark .faqs-heading h2[id^=a] {
+    color: lighten($gradient-background-blue, 20%);
 }
 
 .faqs-heading > blockquote:nth-of-type(odd) {
-    background: lighten(rgba($tailwind-code-pink, 0.7), 25%);
-    border-left-color: $tailwind-code-pink;
+    background: rgba($discord-magenta, 0.7);
+    border-left-color: darken($discord-magenta, 40%);
     font-style: normal;
     margin-bottom: 0;
 }
 
+.dark .faqs-heading > blockquote:nth-of-type(odd) {
+    background: rgba($discord-charcoal, 0.7);
+    border-left-color: $discord-magenta;
+}
+
 .faqs-heading > blockquote:nth-of-type(even) {
-    background: lighten(rgba($cream, 0.7), 12%);
-    border-left-color: darken($discord-charcoal, 12%);
+    background: lighten(rgba($gradient-background-blue, 0.5), 5%);
+    border-left-color: darken($gradient-background-blue, 20%);
     font-style: normal;
     margin-bottom: 0;
+}
+
+.dark .faqs-heading > blockquote:nth-of-type(even) {
+    background: rgba($gradient-background-blue, 0.7);
+    border-left-color: lighten($gradient-background-blue, 20%);
+    
+    & b {
+        color: white;
+    }
 }
