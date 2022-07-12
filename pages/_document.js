@@ -39,20 +39,6 @@ class MyDocument extends Document {
 						type="application/rss+xml"
 						href="/feed.xml"
 					/>
-					{typeof window !== 'undefined' &&
-						window.location.hostname === 'johnschmidt.de' && (
-							<script
-								async
-								defer
-								data-domain="interglobalmedianetwork.com"
-								src="https://stats.interglobalmedianetwork.com/js/plausible.js"
-							/>
-						)}
-					<script
-						dangerouslySetInnerHTML={{
-							__html: 'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }',
-						}}
-					/>
 				</Head>
 				<body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
 					<Main />
