@@ -16,7 +16,9 @@ const DisplayViews = ({ slug }) => {
 	// If there's data, display the data
 	return (
 		<div className="flex items-center">
-			<span className="tabular-nums">{data?.views} views</span>
+			<span className="tabular-nums">
+				{data?.views ? `${data?.views} views` : '–'}
+			</span>
 		</div>
 	)
 }
