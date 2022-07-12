@@ -1,5 +1,5 @@
-import { fetcher } from '@/lib/getPlausibleViews'
 import useSWR from 'swr'
+import { fetcher } from '@/lib/fetcher'
 import '../styles/partials/Views.module.scss'
 
 const DisplayViews = ({ slug }) => {
