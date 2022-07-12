@@ -14,7 +14,6 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 import { motion } from 'framer-motion'
 import PlausibleProvider from 'next-plausible'
-import DisplayViews from '@/components/DisplayViews'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -47,7 +46,6 @@ export default function App({ Component, pageProps, router }) {
 						transition={{ duration: 0.5, type: 'tween' }}
 					>
 						<PlausibleProvider domain="interglobalmedianetwork.com">
-							<DisplayViews />
 							<Component {...pageProps} />
 						</PlausibleProvider>
 					</motion.div>
