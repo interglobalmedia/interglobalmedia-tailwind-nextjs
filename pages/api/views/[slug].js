@@ -1,4 +1,5 @@
 import { fetcher } from '@/lib/fetcher'
+
 async function getPlausibleViews(slug) {
 	const now = new Date()
 	const nowDate = now.toISOString().split('T')
