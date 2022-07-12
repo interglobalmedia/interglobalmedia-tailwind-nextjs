@@ -1,5 +1,7 @@
 import { fetcher } from '@/lib/getPlausibleViews'
 import useSWR from 'swr'
+import SocialIcon from '.social-icons/views.svg'
+import '../styles/partials/Views.module'
 
 const DisplayViews = ({ slug }) => {
 	// Fetch the data with the useSWR hook
@@ -13,8 +15,8 @@ const DisplayViews = ({ slug }) => {
 		)
 	// If there's data, display the data
 	return (
-		<div className="flex items-center">
-			{/* maybe place an icon here? */}
+		<div className="views flex items-center">
+			<SocialIcon kind="views" href="#" />
 			<span className="tabular-nums">{data?.views} views</span>
 		</div>
 	)
