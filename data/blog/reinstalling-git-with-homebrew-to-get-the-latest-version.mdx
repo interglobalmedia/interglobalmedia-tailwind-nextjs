@@ -1,0 +1,63 @@
+---
+title: Reinstalling Git with Homebrew to Get the Latest Version
+date: '2022-07-14'
+lastmod: '2022-07-14'
+tags: ['homebrew', 'git', 'reinstalling git', 'latest version']
+categories: ['homebrew', 'git', 'post']
+draft: false
+summary: Reinstalling Git with Homebrew to get the latest version.
+images: ['/static/images/posts/img/webp/pexels-brett-sayles-7146867.webp']
+layout: PostLayout
+canonicalUrl: /blog/reinstalling-git-with-homebrew-to-get-the-latest-version
+---
+
+**Note**: You have to already have `Homebrew` [installed](https://brew.sh/) in
+order to install `Git` with `Homebrew`.
+
+Yesterday I **_updated_** `Xcode` on `macOS Monterey`, and **_found out_** that
+it did **_not include_** the **_latest version_** of `Git`. So I **_decided_**
+to **_re-install_** it with `Homebrew`, if I **_could_**.
+
+I **_could_**, and I **_did_**, but it **_involved_** a **_bit_** of a
+**_hack_**. Since `macOS El Capitan`, we are **_not able_** to **_make
+changes_** to the `bin` **folder** due to `SIP`
+(`System Integration Protection`) on our `Macs`. We have to **_disable_** it and
+then **_re-enable_** it **_after making_** the `changes` we **_need_** to
+`make`. I did **_not want_** to **_have_** to **_go through_** the `process` of
+**_doing this_** if I could **_avoid_** it, and it would **_have meant_** more
+time in **_doing so_**. **_Instead_**, **_before_** I **_re-installed_** `Git`
+with `Homebrew`, I **_created_** an `alias`:
+
+```shell
+alias git='/usr/local/bin/git'
+```
+
+I **_ran_** the **_above_** `command` in `Terminal`. Then I `"re-installed"`
+**Git** with `Homebrew`. I **_came across_** the **_steps_** to **_do so_** in a
+`Github Gist`, and the `alias` **_workaround_** as **_well_**. To **_read
+through_** this `Gist`, please **_visit_**
+[Re-installing Git on Mac OSX with Brew](https://gist.github.com/brandonsimpson/54d9e085c9fde5e6ad3a)
+on `Github`. I **_found_** the `alias` **_suggestion_** from **_within_** the
+`comments`.
+
+The `alias` **_worked_** for me and was **_much quicker_** to **_implement_**,
+so I **_stuck_** with it. I **_ran_** the **_following_** `commands` to
+**_install_** `Git` with `Homebrew`:
+
+```shell
+brew uninstall git
+brew update
+brew install git
+```
+
+The **_first_** `command` did **_nothing_** for me, **_because_** I did
+**_not_** previously install `Git` with `Homebrew`. I **_ran_** the **_second_**
+`command` to **_update_** `Homebrew` (**_always recommended_** before installing
+something with `Homebrew`). And the **_third_** `command` **_actually
+installed_** `Git` with `Homebrew`.
+
+**_Happy_** `distributed version control` with `Git`!
+
+## Related Resources
+
+-   [Re-installing Git on Mac OSX with Brew](https://gist.github.com/brandonsimpson/54d9e085c9fde5e6ad3a)
