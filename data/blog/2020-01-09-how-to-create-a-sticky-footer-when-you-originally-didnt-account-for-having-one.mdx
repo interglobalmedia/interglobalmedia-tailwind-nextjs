@@ -1,19 +1,26 @@
 ---
-title: How to create a sticky footer when you originally didn't account for having one
+title:
+    How to create a sticky footer when you originally didn't account for having
+    one
 date: 2020-01-09T14:42:16.300Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['sticky-footer']
 categories: ['post', 'react', 'nodejs', 'graphql', 'mongodb']
 draft: false
-summary: Creating a sticky footer after having already built the basic infrastructure and code of my Message Me app.
-images: ['/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp']
+summary:
+    Creating a sticky footer after having already built the basic infrastructure
+    and code of my Message Me app.
+images:
+    ['/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2020-01-09-how-to-create-a-sticky-footer-when-you-originally-didnt-account-for-having-one
 ---
 
-- Link to the
-  [How to create a sticky footer when you originally didn't account for having one](https://anchor.fm/maria-campbell/episodes/How-to-create-a-sticky-footer-when-you-originally-didnt-account-for-having-one-ea2vpl)
-  podcast on anchorfm
+![How to create a sticky footer when you originally didn't account for having one](/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp)
+
+-   Link to the
+    [How to create a sticky footer when you originally didn't account for having one](https://anchor.fm/maria-campbell/episodes/How-to-create-a-sticky-footer-when-you-originally-didnt-account-for-having-one-ea2vpl)
+    podcast on anchorfm
 
 For the past couple of weeks I have been working on an app I am calling
 `Message Me`. I think it was partially in reaction to my **_utter_**
@@ -41,31 +48,36 @@ only around the `header`, don't include the main body of the app
 
 ```js
 return (
-  <Fragment>
-    {this.state.showBackdrop && <Backdrop onClick={this.backdropClickHandler} />}
-    <ErrorHandler error={this.state.errorHandler} onHandle={this.errorHandler} />
-    <HeaderLayout
-      header={
-        <Toolbar>
-          <MainNavigation
-            onOpenMobileNav={this.mobileNavHandler.bind(this, true)}
-            onLogout={this.logoutHandler}
-            isAuth={this.state.isAuth}
-          />
-        </Toolbar>
-      }
-      mobileNav={
-        <MobileNavigation
-          open={this.state.showMobileNav}
-          mobile
-          onChooseItem={this.mobileNavHandler.bind(this, false)}
-          onLogout={this.logoutHandler}
-          isAuth={this.state.isAuth}
-        />
-      }
-    />
-    {routes}
-  </Fragment>
+	<Fragment>
+		{this.state.showBackdrop && (
+			<Backdrop onClick={this.backdropClickHandler} />
+		)}
+		<ErrorHandler
+			error={this.state.errorHandler}
+			onHandle={this.errorHandler}
+		/>
+		<HeaderLayout
+			header={
+				<Toolbar>
+					<MainNavigation
+						onOpenMobileNav={this.mobileNavHandler.bind(this, true)}
+						onLogout={this.logoutHandler}
+						isAuth={this.state.isAuth}
+					/>
+				</Toolbar>
+			}
+			mobileNav={
+				<MobileNavigation
+					open={this.state.showMobileNav}
+					mobile
+					onChooseItem={this.mobileNavHandler.bind(this, false)}
+					onLogout={this.logoutHandler}
+					isAuth={this.state.isAuth}
+				/>
+			}
+		/>
+		{routes}
+	</Fragment>
 )
 ```
 
@@ -77,15 +89,15 @@ import './Layout.scss'
 import Footer from '../../Footer/Footer'
 
 const Layout = (props) => (
-  <Fragment>
-    <div className="Site">
-      <header className="main-header">{props.header}</header>
-      {props.mobileNav}
-      <main className="Site-content">
-        <div className="content">{props.children}</div>
-      </main>
-    </div>
-  </Fragment>
+	<Fragment>
+		<div className="Site">
+			<header className="main-header">{props.header}</header>
+			{props.mobileNav}
+			<main className="Site-content">
+				<div className="content">{props.children}</div>
+			</main>
+		</div>
+	</Fragment>
 )
 export default Layout
 ```
@@ -143,102 +155,106 @@ import { required, length, email } from '../../util/validators'
 import Auth from './Auth'
 
 class Login extends Component {
-  state = {
-    loginForm: {
-      email: {
-        value: '',
-        valid: false,
-        touched: false,
-        validators: [required, email],
-      },
-      password: {
-        value: '',
-        valid: false,
-        validators: [required, length({ min: 5 })],
-      },
-      formIsValid: false,
-    },
-  }
+	state = {
+		loginForm: {
+			email: {
+				value: '',
+				valid: false,
+				touched: false,
+				validators: [required, email],
+			},
+			password: {
+				value: '',
+				valid: false,
+				validators: [required, length({ min: 5 })],
+			},
+			formIsValid: false,
+		},
+	}
 
-  inputChangeHandler = (input, value) => {
-    this.setState((prevState) => {
-      let isValid = true
-      for (const validator of prevState.loginForm[input].validators) {
-        isValid = isValid && validator(value)
-      }
-      const updatedForm = {
-        ...prevState.loginForm,
-        [input]: {
-          ...prevState.loginForm[input],
-          valid: isValid,
-          value: value,
-        },
-      }
-      let formIsValid = true
-      for (const inputName in updatedForm) {
-        formIsValid = formIsValid && updatedForm[inputName].valid
-      }
-      return {
-        loginForm: updatedForm,
-        formIsValid: formIsValid,
-      }
-    })
-  }
+	inputChangeHandler = (input, value) => {
+		this.setState((prevState) => {
+			let isValid = true
+			for (const validator of prevState.loginForm[input].validators) {
+				isValid = isValid && validator(value)
+			}
+			const updatedForm = {
+				...prevState.loginForm,
+				[input]: {
+					...prevState.loginForm[input],
+					valid: isValid,
+					value: value,
+				},
+			}
+			let formIsValid = true
+			for (const inputName in updatedForm) {
+				formIsValid = formIsValid && updatedForm[inputName].valid
+			}
+			return {
+				loginForm: updatedForm,
+				formIsValid: formIsValid,
+			}
+		})
+	}
 
-  inputBlurHandler = (input) => {
-    this.setState((prevState) => {
-      return {
-        loginForm: {
-          ...prevState.loginForm,
-          [input]: {
-            ...prevState.loginForm[input],
-            touched: true,
-          },
-        },
-      }
-    })
-  }
+	inputBlurHandler = (input) => {
+		this.setState((prevState) => {
+			return {
+				loginForm: {
+					...prevState.loginForm,
+					[input]: {
+						...prevState.loginForm[input],
+						touched: true,
+					},
+				},
+			}
+		})
+	}
 
-  render() {
-    return (
-      <Auth>
-        <form
-          onSubmit={(e) =>
-            this.props.onLogin(e, {
-              email: this.state.loginForm.email.value,
-              password: this.state.loginForm.password.value,
-            })
-          }
-        >
-          <Input
-            id="email"
-            label="Your E-Mail"
-            type="email"
-            control="input"
-            onChange={this.inputChangeHandler}
-            onBlur={this.inputBlurHandler.bind(this, 'email')}
-            value={this.state.loginForm['email'].value}
-            valid={this.state.loginForm['email'].valid}
-            touched={this.state.loginForm['email'].touched}
-          />
-          <Input
-            id="password"
-            label="password"
-            type="password"
-            control="input"
-            onChange={this.inputChangeHandler}
-            onBlur={this.inputBlurHandler.bind(this, 'password')}
-            value={this.state.loginForm['password'].value}
-            valid={this.state.loginForm['password'].valid}
-            touched={this.state.loginForm['password'].touched}
-          />
-          <Button design="raised" type="submit" loading={this.props.loading}>
-            Login
-          </Button>
-        </form>
-      </Auth>
-    )
-  }
+	render() {
+		return (
+			<Auth>
+				<form
+					onSubmit={(e) =>
+						this.props.onLogin(e, {
+							email: this.state.loginForm.email.value,
+							password: this.state.loginForm.password.value,
+						})
+					}
+				>
+					<Input
+						id="email"
+						label="Your E-Mail"
+						type="email"
+						control="input"
+						onChange={this.inputChangeHandler}
+						onBlur={this.inputBlurHandler.bind(this, 'email')}
+						value={this.state.loginForm['email'].value}
+						valid={this.state.loginForm['email'].valid}
+						touched={this.state.loginForm['email'].touched}
+					/>
+					<Input
+						id="password"
+						label="password"
+						type="password"
+						control="input"
+						onChange={this.inputChangeHandler}
+						onBlur={this.inputBlurHandler.bind(this, 'password')}
+						value={this.state.loginForm['password'].value}
+						valid={this.state.loginForm['password'].valid}
+						touched={this.state.loginForm['password'].touched}
+					/>
+					<Button
+						design="raised"
+						type="submit"
+						loading={this.props.loading}
+					>
+						Login
+					</Button>
+				</form>
+			</Auth>
+		)
+	}
 }
 
 export default Login
@@ -253,25 +269,25 @@ creator of `Flexbox`:
 
 ```scss
 :root {
-  --space: 1.5em 0;
-  --space: 2em 0;
+	--space: 1.5em 0;
+	--space: 2em 0;
 }
 .Site {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 }
 .Site-content {
-  flex: 1 0 auto;
-  padding: var(--space) var(--space) 0;
-  width: 100%;
+	flex: 1 0 auto;
+	padding: var(--space) var(--space) 0;
+	width: 100%;
 }
 .Site-content:after {
-  content: '\00a0';
-  display: block;
-  margin-top: var(--space);
-  height: 0;
-  visibility: hidden;
+	content: '\00a0';
+	display: block;
+	margin-top: var(--space);
+	height: 0;
+	visibility: hidden;
 }
 ```
 
@@ -299,12 +315,12 @@ podcast of course. Always do. Bye for now!
 
 ## Related Resources
 
-- [Sticky Footer](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/)
+-   [Sticky Footer](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/)
 
-- [Message Me app on Github](https://github.com/interglobalmedia/message-docs)
+-   [Message Me app on Github](https://github.com/interglobalmedia/message-docs)
 
-- [Evolution of Design And Development](https://interglobalmedia.github.io/evolution-in-design-and-development/#0)
+-   [Evolution of Design And Development](https://interglobalmedia.github.io/evolution-in-design-and-development/#0)
 
-- [Adding a CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
+-   [Adding a CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/)
 
-- [Adding a Sass Stylesheet](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)
+-   [Adding a Sass Stylesheet](https://create-react-app.dev/docs/adding-a-sass-stylesheet/)

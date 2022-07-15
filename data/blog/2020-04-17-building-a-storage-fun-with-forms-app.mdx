@@ -1,15 +1,20 @@
 ---
 title: Building A Storage Fun With Forms App
 date: 2020-04-17T19:32:28.263Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['color picker', 'local storage', 'event handling', 'try catch']
 categories: ['color picker', 'local storage', 'event handling', 'post']
 draft: false
-summary: Recently I completed an application using localStorage called Storage Fun With Forms. I really wanted to make something fun that my students could  enjoy and learn from as well!
+summary:
+    Recently I completed an application using localStorage called Storage Fun
+    With Forms. I really wanted to make something fun that my students
+    could  enjoy and learn from as well!
 images: ['/static/images/posts/img/webp/jason-leung-xaanw0s0pmk-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2020-04-17-building-a-storage-fun-with-forms-app
 ---
+
+![Building A Storage Fun With Forms App](/static/images/posts/img/webp/jason-leung-xaanw0s0pmk-unsplash.webp)
 
 Recently I **_completed_** an **application** using `localStorage` called
 `Storage Fun With Forms`. I really wanted to make something **_fun_** that my
@@ -62,116 +67,227 @@ My `index.html` **markup** looks something like **_this_**:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>localStorage vs sessionStorage fun Form</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arvo&family=Bitter&family=Dosis&family=Inconsolata&family=Noto+Sans&family=PT+Sans:wght@400,700&family=Quicksand&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles/css/main.css" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <h1 class="title">Storage Fun With Forms</h1>
-      <p class="font-color font-style">
-        Write a note about your experience here and save it to local storage. All the other
-        selections you make here are also being saved to local storage so that you may be reminded
-        of them when you return!
-      </p>
-      <form id="fun-form">
-        <div class="storage-buttons">
-          <a class="clear">Clear Storage</a>
-          <a class="empty">Empty Storage</a>
-        </div>
-        <div id="storage-quota-msg"></div>
-        <div>
-          <label for="bgcolor">Choose Background Color:</label>
-          <div class="inputs">
-            <input name="color" id="bgcolor" value="FF0000" class="jscolor" />
-          </div>
-        </div>
-        <div>
-          <label for="fontcolor">Choose Font Color:</label>
-          <div class="inputs">
-            <input name="color" id="fontcolor" class="jscolor" value="000000" />
-          </div>
-        </div>
-        <div class="select-font">
-          <label for="font">Choose Font Style:</label>
-          <select id="font" name="font">
-            <option value="'Noto Sans', sans-serif">Noto Sans Sans-Serif</option>
-            <option value="'Inconsolata', monospace">Inconsolata Monospace</option>
-            <option value="'Arvo', serif">Arvo Serif</option>
-            <option value="'Dosis', sans-serif">Dosis Sans-Serif</option>
-            <option value="'Quicksand', sans-serif">Quicksand Sans-Serif</option>
-            <option value="'Bitter', serif">Bitter Serif</option>
-            <option value="'PT Sans', sans-serif">PT Sans Sans-Serif</option>
-          </select>
-        </div>
-        <div class="select-image">
-          <label for="image">Select Image:</label>
-          <select id="image" name="image">
-            <option value="images/pinpng.com-boba-png-1646192.png">Boba</option>
-            <option value="images/pinpng.com-cupcake-png-581578.png">Cupcake 1</option>
-            <option value="images/pinpng.com-cupcake-png-582129.png">Cupcake 2</option>
-            <option value="images/pinpng.com-joker-face-png-2302664.png">Joker Face</option>
-            <option value="images/pinpng.com-koi-fish-png-13801.png">Koi Fish 1</option>
-            <option value="images/pinpng.com-palm-tree-leaf-png-281s.png">Palm Tree Leaf</option>
-            <option value="images/pinpng.com-palm-tree-leaf-png-30916.png">Maple Leaf</option>
-            <option value="images/pinpng.com-push-pin-png-104159.png">Push Pin</option>
-            <option value="images/pinpng.com-salt-clipart-png-3375830.png">Koi Fish 2</option>
-            <option value="images/pinpng.com-snowman-clipart-png-652627.png">Snowman</option>
-            <option value="images/pinpng.com-spider-web-png-transparent-61850.png">
-              Spider Web 1
-            </option>
-            <option value="images/pinpng.com-spider-web-png-transparent-370544.png">
-              Spider Web 2
-            </option>
-            <option value="images/pinpng.com-supergirl-png-423021.png">Super Girl</option>
-            <option value="images/pinpng.com-superhero-clipart-png-6134782.png">Super Hero</option>
-            <option value="images/pinpng.com-transparent-rose-png-3604806.png">Roses</option>
-            <option value="images/pinpng.com-spongebob-png-591707.png">Sponge Bob Birthday</option>
-            <option value="images/pinpng.com-pink-roses-png-84631.png">Pink Roses</option>
-            <option value="images/pinpng.com-spongebob-boi-png-5936134.png">Sponge Bob Boi</option>
-            <option value="images/pinpng.com-stacks-of-money-png-6687.png">Stacks of Money</option>
-            <option value="images/pinpng.com-spongebob-house-png-6400047.png">
-              Sponge Bob House
-            </option>
-            <option value="images/pinpng.com-picsart-clipart-png-6120662.png">Bart Simpson</option>
-            <option value="images/pinpng.com-el-principito-png-3895598.png">Little Prince 1</option>
-            <option value="images/pinpng.com-zorro-png-3794942.png">Little Prince 2</option>
-            <option value="images/pinpng.com-lol-png-833532.png">Lol</option>
-            <option value="images/pinpng.com-lol-surprise-png-1961089.png">Lol Surprise</option>
-          </select>
-        </div>
-        <div class="note">
-          <label for="textArea">Type Note:</label>
-          <textarea type="text" id="textArea" name="textArea">Write a note!</textarea>
-        </div>
-        <div class="note-btn-wrapper">
-          <button type="button" id="note-btn">Submit Note</button>
-          <button type="button" id="get-note-btn">Get Note</button>
-        </div>
-        <img class="image" alt="" />
-      </form>
-    </div>
-    <div class="footer-wrapper">
-      <footer class="site-footer">
-        <script>
-          const theDate = new Date()
-          const footer = document.querySelector('.site-footer')
-          footer.style.fontWeight = '600'
-          footer.style.letterSpacing = '0.07rem'
-          footer.style.fontFamily = 'Arimo, sans-serif'
-          footer.innerHTML = `&#10013; © ${theDate.getFullYear()} Maria D. Campbell &#10013;`
-        </script>
-      </footer>
-    </div>
-    <script src="jscolor/jscolor.js"></script>
-    <script src="scripts/js/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>localStorage vs sessionStorage fun Form</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arvo&family=Bitter&family=Dosis&family=Inconsolata&family=Noto+Sans&family=PT+Sans:wght@400,700&family=Quicksand&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/css/main.css" />
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1 class="title">Storage Fun With Forms</h1>
+			<p class="font-color font-style">
+				Write a note about your experience here and save it to local
+				storage. All the other selections you make here are also being
+				saved to local storage so that you may be reminded of them when
+				you return!
+			</p>
+			<form id="fun-form">
+				<div class="storage-buttons">
+					<a class="clear">Clear Storage</a>
+					<a class="empty">Empty Storage</a>
+				</div>
+				<div id="storage-quota-msg"></div>
+				<div>
+					<label for="bgcolor">Choose Background Color:</label>
+					<div class="inputs">
+						<input
+							name="color"
+							id="bgcolor"
+							value="FF0000"
+							class="jscolor"
+						/>
+					</div>
+				</div>
+				<div>
+					<label for="fontcolor">Choose Font Color:</label>
+					<div class="inputs">
+						<input
+							name="color"
+							id="fontcolor"
+							class="jscolor"
+							value="000000"
+						/>
+					</div>
+				</div>
+				<div class="select-font">
+					<label for="font">Choose Font Style:</label>
+					<select id="font" name="font">
+						<option value="'Noto Sans', sans-serif">
+							Noto Sans Sans-Serif
+						</option>
+						<option value="'Inconsolata', monospace">
+							Inconsolata Monospace
+						</option>
+						<option value="'Arvo', serif">Arvo Serif</option>
+						<option value="'Dosis', sans-serif">
+							Dosis Sans-Serif
+						</option>
+						<option value="'Quicksand', sans-serif">
+							Quicksand Sans-Serif
+						</option>
+						<option value="'Bitter', serif">Bitter Serif</option>
+						<option value="'PT Sans', sans-serif">
+							PT Sans Sans-Serif
+						</option>
+					</select>
+				</div>
+				<div class="select-image">
+					<label for="image">Select Image:</label>
+					<select id="image" name="image">
+						<option value="images/pinpng.com-boba-png-1646192.png">
+							Boba
+						</option>
+						<option
+							value="images/pinpng.com-cupcake-png-581578.png"
+						>
+							Cupcake 1
+						</option>
+						<option
+							value="images/pinpng.com-cupcake-png-582129.png"
+						>
+							Cupcake 2
+						</option>
+						<option
+							value="images/pinpng.com-joker-face-png-2302664.png"
+						>
+							Joker Face
+						</option>
+						<option
+							value="images/pinpng.com-koi-fish-png-13801.png"
+						>
+							Koi Fish 1
+						</option>
+						<option
+							value="images/pinpng.com-palm-tree-leaf-png-281s.png"
+						>
+							Palm Tree Leaf
+						</option>
+						<option
+							value="images/pinpng.com-palm-tree-leaf-png-30916.png"
+						>
+							Maple Leaf
+						</option>
+						<option
+							value="images/pinpng.com-push-pin-png-104159.png"
+						>
+							Push Pin
+						</option>
+						<option
+							value="images/pinpng.com-salt-clipart-png-3375830.png"
+						>
+							Koi Fish 2
+						</option>
+						<option
+							value="images/pinpng.com-snowman-clipart-png-652627.png"
+						>
+							Snowman
+						</option>
+						<option
+							value="images/pinpng.com-spider-web-png-transparent-61850.png"
+						>
+							Spider Web 1
+						</option>
+						<option
+							value="images/pinpng.com-spider-web-png-transparent-370544.png"
+						>
+							Spider Web 2
+						</option>
+						<option
+							value="images/pinpng.com-supergirl-png-423021.png"
+						>
+							Super Girl
+						</option>
+						<option
+							value="images/pinpng.com-superhero-clipart-png-6134782.png"
+						>
+							Super Hero
+						</option>
+						<option
+							value="images/pinpng.com-transparent-rose-png-3604806.png"
+						>
+							Roses
+						</option>
+						<option
+							value="images/pinpng.com-spongebob-png-591707.png"
+						>
+							Sponge Bob Birthday
+						</option>
+						<option
+							value="images/pinpng.com-pink-roses-png-84631.png"
+						>
+							Pink Roses
+						</option>
+						<option
+							value="images/pinpng.com-spongebob-boi-png-5936134.png"
+						>
+							Sponge Bob Boi
+						</option>
+						<option
+							value="images/pinpng.com-stacks-of-money-png-6687.png"
+						>
+							Stacks of Money
+						</option>
+						<option
+							value="images/pinpng.com-spongebob-house-png-6400047.png"
+						>
+							Sponge Bob House
+						</option>
+						<option
+							value="images/pinpng.com-picsart-clipart-png-6120662.png"
+						>
+							Bart Simpson
+						</option>
+						<option
+							value="images/pinpng.com-el-principito-png-3895598.png"
+						>
+							Little Prince 1
+						</option>
+						<option value="images/pinpng.com-zorro-png-3794942.png">
+							Little Prince 2
+						</option>
+						<option value="images/pinpng.com-lol-png-833532.png">
+							Lol
+						</option>
+						<option
+							value="images/pinpng.com-lol-surprise-png-1961089.png"
+						>
+							Lol Surprise
+						</option>
+					</select>
+				</div>
+				<div class="note">
+					<label for="textArea">Type Note:</label>
+					<textarea type="text" id="textArea" name="textArea">
+Write a note!</textarea
+					>
+				</div>
+				<div class="note-btn-wrapper">
+					<button type="button" id="note-btn">Submit Note</button>
+					<button type="button" id="get-note-btn">Get Note</button>
+				</div>
+				<img class="image" alt="" />
+			</form>
+		</div>
+		<div class="footer-wrapper">
+			<footer class="site-footer">
+				<script>
+					const theDate = new Date()
+					const footer = document.querySelector('.site-footer')
+					footer.style.fontWeight = '600'
+					footer.style.letterSpacing = '0.07rem'
+					footer.style.fontFamily = 'Arimo, sans-serif'
+					footer.innerHTML = `&#10013; © ${theDate.getFullYear()} Maria D. Campbell &#10013;`
+				</script>
+			</footer>
+		</div>
+		<script src="jscolor/jscolor.js"></script>
+		<script src="scripts/js/main.js"></script>
+	</body>
 </html>
 ```
 
@@ -180,189 +296,189 @@ My `main.css`, **_transformed_** to `css` from `scss`, looks something like
 
 ```css
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 html {
-  height: 100vh;
+	height: 100vh;
 }
 html,
 body {
-  margin: 0;
+	margin: 0;
 }
 body {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: flex;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  justify-content: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  align-items: center;
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	box-align: center;
+	justify-content: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	box-pack: center;
+	align-items: center;
 }
 body > .wrapper {
-  width: 90%;
-  max-width: 800px;
-  background-color: #fafafa;
-  padding: 2rem;
-  position: relative;
-  border: 6px solid black;
-  margin-top: 9rem;
-  margin-bottom: 22vh;
-  display: flex;
-  flex-direction: column;
+	width: 90%;
+	max-width: 800px;
+	background-color: #fafafa;
+	padding: 2rem;
+	position: relative;
+	border: 6px solid black;
+	margin-top: 9rem;
+	margin-bottom: 22vh;
+	display: flex;
+	flex-direction: column;
 }
 /* body wrapper and div for label and selects styling */
 body > div > div {
-  width: 300px;
+	width: 300px;
 }
 /* h1 styling */
 h1.title {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  left: 0;
-  top: -1.25rem;
-  letter-spacing: 0.06rem;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fafafa;
-  text-shadow: 1px 1px 0 black, 2px 2px 0 black;
-  font-size: 1.3rem;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	top: -1.25rem;
+	letter-spacing: 0.06rem;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fafafa;
+	text-shadow: 1px 1px 0 black, 2px 2px 0 black;
+	font-size: 1.3rem;
 }
 @media (min-width: 384px) {
-  h1.title {
-    font-size: 1.5rem;
-    top: -1.5rem;
-  }
+	h1.title {
+		font-size: 1.5rem;
+		top: -1.5rem;
+	}
 }
 @media (min-width: 480px) {
-  h1.title {
-    font-size: 2rem;
-    top: -1.9rem;
-  }
+	h1.title {
+		font-size: 2rem;
+		top: -1.9rem;
+	}
 }
 @media (min-width: 600px) {
-  h1.title {
-    font-size: 2.5rem;
-    top: -2.25rem;
-  }
+	h1.title {
+		font-size: 2.5rem;
+		top: -2.25rem;
+	}
 }
 @media (min-width: 800px) {
-  h1.title {
-    font-size: 3.25rem;
-    top: -3rem;
-  }
+	h1.title {
+		font-size: 3.25rem;
+		top: -3rem;
+	}
 }
 /* form styling by id (more specific) */
 #fun-form {
-  width: 100%;
-  margin: 0 auto;
+	width: 100%;
+	margin: 0 auto;
 }
 /* general label styling */
 label {
-  margin: 0.75rem 0 0.25rem;
-  font-family: 'PT Sans', sans-serif;
-  font-weight: 400;
+	margin: 0.75rem 0 0.25rem;
+	font-family: 'PT Sans', sans-serif;
+	font-weight: 400;
 }
 /* textarea styling */
 .note {
-  margin-top: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	margin-top: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 /* font color input div styling */
 .inputs {
-  display: flex;
+	display: flex;
 }
 /* styling for both font and background color inputs */
 input[name='color'] {
-  width: 100%;
-  width: 250px;
-  height: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+	width: 100%;
+	width: 250px;
+	height: 1.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 /* Styling for select tags */
 form > div > select {
-  display: block;
+	display: block;
 }
 select {
-  margin-top: 0.5rem;
-  width: 200px;
+	margin-top: 0.5rem;
+	width: 200px;
 }
 select:first-of-type {
-  margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 /* textarea styling */
 textarea {
-  width: 100%;
-  max-width: 250px;
-  height: 3rem;
-  resize: none;
-  outline: none;
-  overflow-y: auto;
-  padding: 0.5rem;
-  letter-spacing: 0.09rem;
-  font-size: 1rem;
-  margin-top: 0.25rem;
+	width: 100%;
+	max-width: 250px;
+	height: 3rem;
+	resize: none;
+	outline: none;
+	overflow-y: auto;
+	padding: 0.5rem;
+	letter-spacing: 0.09rem;
+	font-size: 1rem;
+	margin-top: 0.25rem;
 }
 /* image tag styling */
 img {
-  position: absolute;
-  top: 42.5em;
-  right: 0;
+	position: absolute;
+	top: 42.5em;
+	right: 0;
 }
 @media (min-width: 360px) {
-  img {
-    top: 40rem;
-  }
+	img {
+		top: 40rem;
+	}
 }
 @media (min-width: 480px) {
-  img {
-    top: 37rem;
-  }
+	img {
+		top: 37rem;
+	}
 }
 @media (min-width: 600px) {
-  img {
-    top: 34rem;
-  }
+	img {
+		top: 34rem;
+	}
 }
 @media (min-width: 680px) {
-  img {
-    top: 13rem;
-    right: 5rem;
-  }
+	img {
+		top: 13rem;
+		right: 5rem;
+	}
 }
 /* image size styling by class (more specific) */
 .image {
-  width: 100%;
-  height: 100%;
-  width: 200px;
-  height: 200px;
+	width: 100%;
+	height: 100%;
+	width: 200px;
+	height: 200px;
 }
 .note-btn-wrapper,
 .storage-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 250px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 250px;
 }
 .storage-buttons {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 /* clear and empty storage buttons styling */
 .clear,
 .empty {
-  font-size: 1rem;
-  font-family: 'PT Sans', sans-serif;
+	font-size: 1rem;
+	font-family: 'PT Sans', sans-serif;
 }
 .clear:focus,
 .clear:hover,
@@ -370,37 +486,37 @@ img {
 .empty:focus,
 .empty:hover,
 .empty:active {
-  color: #d86262;
-  text-decoration: none;
+	color: #d86262;
+	text-decoration: none;
 }
 /* submit note and get note button styling */
 #note-btn,
 #get-note-btn {
-  width: 90px;
-  outline: none;
-  padding: 5px;
-  font-size: 1rem;
-  background: black;
-  color: #fafafa;
+	width: 90px;
+	outline: none;
+	padding: 5px;
+	font-size: 1rem;
+	background: black;
+	color: #fafafa;
 }
 /* Footer styling loosely based on Philip Walton's Sticky Footer used with CSS Flexbox */
 .site-footer {
-  height: 50vh;
-  width: 100%;
-  font-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+	height: 50vh;
+	width: 100%;
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 }
 @media (min-width: 411px) {
-  .site-footer {
-    font-size: 120%;
-  }
+	.site-footer {
+		font-size: 120%;
+	}
 }
 @media (min-width: 600px) {
-  .site-footer {
-    font-size: 130%;
-  }
+	.site-footer {
+		font-size: 130%;
+	}
 }
 ```
 
@@ -487,7 +603,7 @@ the **complete function** looks **something** like **_this_**:
 
 ```js
 function localStorageSupport() {
-  return typeof Storage !== 'undefined'
+	return typeof Storage !== 'undefined'
 }
 ```
 
@@ -529,9 +645,9 @@ selecting a `background color`, or **_any other_** selections, at **any given**
 
 ```js
 if (!localStorage.getItem('bgcolor')) {
-  populateStorage()
+	populateStorage()
 } else {
-  setStyles()
+	setStyles()
 }
 ```
 
@@ -540,14 +656,14 @@ But then it **_dawned_** on me that the `scope` of this **_condition_** was
 
 ```js
 if (
-  !localStorage.getItem('bgcolor') ||
-  !localStorage.getItem('fontfamily') ||
-  !localStorage.getItem('image') ||
-  !localStorage.getItem('fontcolor')
+	!localStorage.getItem('bgcolor') ||
+	!localStorage.getItem('fontfamily') ||
+	!localStorage.getItem('image') ||
+	!localStorage.getItem('fontcolor')
 ) {
-  populateStorage()
+	populateStorage()
 } else {
-  setStyles()
+	setStyles()
 }
 ```
 
@@ -571,28 +687,44 @@ the `paragraph`, or a **_fun_** `png` to **spruce up** the `form/page`, the
 ```js
 /* populate storage using the setItem() method. Also check for localStorage support and storage quota. */
 function populateStorage() {
-  // run detection with inverted expression
-  if (!localStorageSupport) {
-    // change value to inform visitor of no session storage support
-    storageQuotaMsg.innerHTML = 'Sorry. No HTML5 session storage support here.'
-  } else {
-    try {
-      localStorage.setItem('bgcolor', document.getElementById('bgcolor').value)
-      localStorage.setItem('fontfamily', document.getElementById('font').value)
-      localStorage.setItem('image', document.getElementById('image').value)
-      localStorage.setItem('fontcolor', document.querySelector('#fontcolor').value)
-      localStorage.setItem('note', document.querySelector('#textArea').value)
-      setStyles()
-    } catch (domException) {
-      domException = new DOMException()
-      if (
-        domException.name === 'QUOTA_EXCEEDED_ERR' ||
-        domException.name === 'NS_ERROR_DOM_QUOTA_REACHED'
-      ) {
-        storageQuotaMsg.innerHTML = 'Local Storage Quota Exceeded!'
-      }
-    }
-  }
+	// run detection with inverted expression
+	if (!localStorageSupport) {
+		// change value to inform visitor of no session storage support
+		storageQuotaMsg.innerHTML =
+			'Sorry. No HTML5 session storage support here.'
+	} else {
+		try {
+			localStorage.setItem(
+				'bgcolor',
+				document.getElementById('bgcolor').value,
+			)
+			localStorage.setItem(
+				'fontfamily',
+				document.getElementById('font').value,
+			)
+			localStorage.setItem(
+				'image',
+				document.getElementById('image').value,
+			)
+			localStorage.setItem(
+				'fontcolor',
+				document.querySelector('#fontcolor').value,
+			)
+			localStorage.setItem(
+				'note',
+				document.querySelector('#textArea').value,
+			)
+			setStyles()
+		} catch (domException) {
+			domException = new DOMException()
+			if (
+				domException.name === 'QUOTA_EXCEEDED_ERR' ||
+				domException.name === 'NS_ERROR_DOM_QUOTA_REACHED'
+			) {
+				storageQuotaMsg.innerHTML = 'Local Storage Quota Exceeded!'
+			}
+		}
+	}
 }
 ```
 
@@ -612,8 +744,9 @@ parts_**.
 ```js
 // run detection with inverted expression
 if (!localStorageSupport) {
-  // change value to inform visitor of no session storage support
-  storageQuotaMsg.innerHTML = 'Sorry. No HTML5 session       storage support here.'
+	// change value to inform visitor of no session storage support
+	storageQuotaMsg.innerHTML =
+		'Sorry. No HTML5 session       storage support here.'
 }
 ```
 
@@ -734,21 +867,21 @@ The `setStyles()` **function** looks **_something_** like **this**:
 ```js
 /* Set styles of body background color, font style, image selection, and paragraph font color using the getItem() method to retrieve their values from local storage. */
 function setStyles() {
-  let currentBgColor = localStorage.getItem('bgcolor')
-  let currentFont = localStorage.getItem('fontfamily')
-  let currentImage = localStorage.getItem('image')
-  let currentFontColor = localStorage.getItem('fontcolor')
+	let currentBgColor = localStorage.getItem('bgcolor')
+	let currentFont = localStorage.getItem('fontfamily')
+	let currentImage = localStorage.getItem('image')
+	let currentFontColor = localStorage.getItem('fontcolor')
 
-  document.getElementById('bgcolor').value = currentBgColor
-  document.getElementById('font').value = currentFont
-  document.getElementById('image').value = currentImage
-  document.getElementById('fontcolor').value = currentFontColor
-  document.querySelector('.font-color').value = currentFontColor
+	document.getElementById('bgcolor').value = currentBgColor
+	document.getElementById('font').value = currentFont
+	document.getElementById('image').value = currentImage
+	document.getElementById('fontcolor').value = currentFontColor
+	document.querySelector('.font-color').value = currentFontColor
 
-  htmlElem.style.backgroundColor = '#' + currentBgColor
-  pElem.style.fontFamily = currentFont
-  fontStyleElem.style.color = '#' + currentFontColor
-  imageElem.setAttribute('src', currentImage)
+	htmlElem.style.backgroundColor = '#' + currentBgColor
+	pElem.style.fontFamily = currentFont
+	fontStyleElem.style.color = '#' + currentFontColor
+	imageElem.setAttribute('src', currentImage)
 }
 ```
 
@@ -763,9 +896,9 @@ what the `clearStorage()` **function** is **_for_**. It looks **something** like
 ```js
 // clear storage function. Only clears the note local storage.
 function clearStorage() {
-  let note = document.querySelector('#textArea')
-  note.value = ''
-  localStorage.removeItem('note', note.value)
+	let note = document.querySelector('#textArea')
+	note.value = ''
+	localStorage.removeItem('note', note.value)
 }
 ```
 
@@ -805,9 +938,9 @@ subdomains share the same parent domain, as is the case with `Github` `gh-pages`
 ```js
 // empty local storage, meaning everything.
 function emptyStorage() {
-  let note = document.querySelector('#textArea')
-  note.value = ''
-  localStorage.clear()
+	let note = document.querySelector('#textArea')
+	note.value = ''
+	localStorage.clear()
 }
 ```
 
@@ -839,7 +972,7 @@ can **click** on the `Submit Note` **button**. The `.addEventListener()`
 ```js
 // save textarea text to local storage on click
 noteBtn.addEventListener('click', () => {
-  localStorage.setItem('note', document.querySelector('#textArea').value)
+	localStorage.setItem('note', document.querySelector('#textArea').value)
 })
 ```
 
@@ -859,8 +992,8 @@ so as to **_re-populate_** the `textarea` **box** with the **_latest_**
 ```js
 // get note local storage value and save it to value of textarea text
 getNoteBtn.addEventListener('click', () => {
-  localStorage.getItem('note', document.querySelector('#textArea').value)
-  document.querySelector('#textArea').value = localStorage.getItem('note')
+	localStorage.getItem('note', document.querySelector('#textArea').value)
+	document.querySelector('#textArea').value = localStorage.getItem('note')
 })
 ```
 
@@ -1014,12 +1147,12 @@ What the **_completed_** **application** looks like:
 
 ## Related Resources
 
-- [Storage Fun With Forms on Github gh-pages](https://interglobalmedia.github.io/local-storage-session-storage-fun-form/)
+-   [Storage Fun With Forms on Github gh-pages](https://interglobalmedia.github.io/local-storage-session-storage-fun-form/)
 
-- [Storage Fun With Forms Github Repository](https://github.com/interglobalmedia/local-storage-session-storage-fun-form)
+-   [Storage Fun With Forms Github Repository](https://github.com/interglobalmedia/local-storage-session-storage-fun-form)
 
-- [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+-   [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
 
-- [Sticky Footers in the age of coronavirus: It always comes down to FlexBox, just the implementation may vary](https://www.interglobalmedianetwork.com/blog/2020-04-09-sticky-footers-in-the-age-of-coronavirus-it-always-comes-down-to-flexbox-just-the-implementation-may-vary/)
+-   [Sticky Footers in the age of coronavirus: It always comes down to FlexBox, just the implementation may vary](https://www.interglobalmedianetwork.com/blog/2020-04-09-sticky-footers-in-the-age-of-coronavirus-it-always-comes-down-to-flexbox-just-the-implementation-may-vary/)
 
-- [The really cool jscolor color picker](https://www.interglobalmedianetwork.com/blog/2020-04-09-the-really-cool-jscolor-color-picker/)
+-   [The really cool jscolor color picker](https://www.interglobalmedianetwork.com/blog/2020-04-09-the-really-cool-jscolor-color-picker/)
