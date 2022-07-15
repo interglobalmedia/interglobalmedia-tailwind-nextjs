@@ -1,19 +1,24 @@
 ---
 title: Sticky Footers in the age of coronavirus
 date: 2020-04-09T18:04:41.066Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['viewport', 'vh', 'local-storage', 'web-storage-api']
 categories: ['sticky-footer', 'flexbox', 'post']
 draft: false
-summary: A new way that I implemented Flexbox to achieve a sticky footer in the new application I created for my students called "Storage Fun With Forms".
-images: ['/static/images/posts/img/webp/markus-winkler-zew4bp2gwva-unsplash.webp']
+summary:
+    A new way that I implemented Flexbox to achieve a sticky footer in the new
+    application I created for my students called "Storage Fun With Forms".
+images:
+    ['/static/images/posts/img/webp/markus-winkler-zew4bp2gwva-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2020-04-09-sticky-footers-in-the-age-of-coronavirus-it-always-comes-down-to-flexbox-just-the-implementation-may-vary
 ---
 
-- link to
-  [Sticky Footers in the age of coronavirus: It always comes down to FlexBox, just the implementation may vary](https://anchor.fm/maria-campbell/episodes/Sticky-Footers-in-the-age-of-coronavirus-It-always-comes-down-to-FlexBox--just-the-implementation-may-vary-ecj6ubb)
-  podcast on anchorfm
+![Sticky Footers in the age of coronavirus](/static/images/posts/img/webp/markus-winkler-zew4bp2gwva-unsplash.webp)
+
+-   link to
+    [Sticky Footers in the age of coronavirus: It always comes down to FlexBox, just the implementation may vary](https://anchor.fm/maria-campbell/episodes/Sticky-Footers-in-the-age-of-coronavirus-It-always-comes-down-to-FlexBox--just-the-implementation-may-vary-ecj6ubb)
+    podcast on anchorfm
 
 I just **_completed_** a little `local storage form` **application** for **_my
 students_**. I felt we **needed** something **_fun_** and **_silly_** to
@@ -39,28 +44,28 @@ my **_applications_**:
 ```css
 // Sticky Footer Styling
 :root {
-  --space: 1.5em 0;
-  --space: 2em 0;
+	--space: 1.5em 0;
+	--space: 2em 0;
 }
 
 .Site {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 .Site-content {
-  flex: 1 0 auto;
-  padding: var(--space) var(--space) 0;
-  width: 100%;
+	flex: 1 0 auto;
+	padding: var(--space) var(--space) 0;
+	width: 100%;
 }
 
 .Site-content:after {
-  content: '\00a0';
-  display: block;
-  margin-top: var(--space);
-  height: 0;
-  visibility: hidden;
+	content: '\00a0';
+	display: block;
+	margin-top: var(--space);
+	height: 0;
+	visibility: hidden;
 }
 ```
 
@@ -70,46 +75,55 @@ application's `index.html` when implementing the `sticky footer` **css**:
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Note App: LocalStorage vs SessionsStorage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles/css/main.css" />
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Note App: LocalStorage vs SessionsStorage</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="styles/css/main.css" />
+	</head>
 
-  <body class="Site">
-    <div class="Site-content">
-      <div class="note-taker">
-        <h1 class="title">Note Taker To Session Storage App</h1>
-        <div class="storage-buttons">
-          <a class="clear">Clear Storage</a>
-          <a class="empty">Empty Storage</a>
-        </div>
-        <div id="storage-quota-msg"></div>
-        <div class="file-save-button">
-          <a id="save">Save Text To File for Download</a>
-        </div>
-        <div class="textarea-wrapper">
-          <textarea name="text" class="session-storage" id="textArea" cols="50" rows="10">
+	<body class="Site">
+		<div class="Site-content">
+			<div class="note-taker">
+				<h1 class="title">Note Taker To Session Storage App</h1>
+				<div class="storage-buttons">
+					<a class="clear">Clear Storage</a>
+					<a class="empty">Empty Storage</a>
+				</div>
+				<div id="storage-quota-msg"></div>
+				<div class="file-save-button">
+					<a id="save">Save Text To File for Download</a>
+				</div>
+				<div class="textarea-wrapper">
+					<textarea
+						name="text"
+						class="session-storage"
+						id="textArea"
+						cols="50"
+						rows="10"
+					>
 Hello! I love JavaScript, and I prefer sessionStorage. How about you? 👍</textarea
-          >
-          <button type="button" id="save-text">Save Text</button>
-        </div>
-      </div>
-    </div>
-    <footer class="site-footer">
-      <script>
-        const theDate = new Date()
-        const footer = document.querySelector('.site-footer')
-        footer.style.fontWeight = '600'
-        footer.style.letterSpacing = '0.07rem'
-        footer.style.fontFamily = 'Arimo, sans-serif'
-        footer.innerHTML = `&#10013; © ${theDate.getFullYear()} Maria D. Campbell &#10013;`
-      </script>
-    </footer>
-    <script src="scripts/js/main.js"></script>
-  </body>
+					>
+					<button type="button" id="save-text">Save Text</button>
+				</div>
+			</div>
+		</div>
+		<footer class="site-footer">
+			<script>
+				const theDate = new Date()
+				const footer = document.querySelector('.site-footer')
+				footer.style.fontWeight = '600'
+				footer.style.letterSpacing = '0.07rem'
+				footer.style.fontFamily = 'Arimo, sans-serif'
+				footer.innerHTML = `&#10013; © ${theDate.getFullYear()} Maria D. Campbell &#10013;`
+			</script>
+		</footer>
+		<script src="scripts/js/main.js"></script>
+	</body>
 </html>
 ```
 
@@ -157,20 +171,20 @@ This is what my `footer` **styling** looked like at first:
 
 ```css
 site-footer {
-  height: 32vh;
-  width: 100%;
-  font-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+	height: 32vh;
+	width: 100%;
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 
-  @media #{$min-411} {
-    font-size: 120%;
-  }
+	@media #{$min-411} {
+		font-size: 120%;
+	}
 
-  @media #{$min-600} {
-    font-size: 130%;
-  }
+	@media #{$min-600} {
+		font-size: 130%;
+	}
 }
 ```
 
@@ -184,20 +198,20 @@ the css to the following:
 
 ```css
 site-footer {
-  height: 50vh;
-  width: 100%;
-  font-size: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+	height: 50vh;
+	width: 100%;
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
 
-  @media #{$min-411} {
-    font-size: 120%;
-  }
+	@media #{$min-411} {
+		font-size: 120%;
+	}
 
-  @media #{$min-600} {
-    font-size: 130%;
-  }
+	@media #{$min-600} {
+		font-size: 130%;
+	}
 }
 ```
 
@@ -216,7 +230,7 @@ For the `height` of `2560px` (derived from `responsive mode` in `Safari`), I
 
 ```css
 .site-footer {
-  height: 67vh;
+	height: 67vh;
 }
 ```
 
@@ -231,7 +245,7 @@ the `>` greater than symbol indicating that the `div` with the `.wrapper`
 
 ```css
 body > .wrapper {
-  margin-top: 9rem;
+	margin-top: 9rem;
 }
 ```
 
@@ -239,7 +253,7 @@ and
 
 ```css
 body > .wrapper {
-  margin-bottom: 22vh;
+	margin-bottom: 22vh;
 }
 ```
 
@@ -263,11 +277,11 @@ I also use `vh` in my **_regular_** `sticky footer` **css**. My `.Site`
 
 ```css
 .Site {
-  display: flex;
+	display: flex;
 
-  flex-direction: column;
+	flex-direction: column;
 
-  min-height: 100vh;
+	min-height: 100vh;
 }
 ```
 
@@ -285,11 +299,11 @@ of `type color`:
 
 ```css
 input[name='color'] {
-  width: 100%;
+	width: 100%;
 
-  max-width: calc(250px - 0px);
+	max-width: calc(250px - 0px);
 
-  height: 1.5rem;
+	height: 1.5rem;
 }
 ```
 
@@ -303,11 +317,11 @@ following `css` for my `color inputs`:
 
 ```css
 input[name='color'] {
-  width: 100%;
-  width: 200px;
-  height: 1.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+	width: 100%;
+	width: 200px;
+	height: 1.5rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 ```
 
@@ -331,12 +345,12 @@ I **_ended up_** with the **following** `css` for the `select` **element**:
 
 ```css
 select {
-  margin-top: 0.5rem;
+	margin-top: 0.5rem;
 
-  width: 200px;
-  &:first-of-type {
-    margin-bottom: 0.5rem;
-  }
+	width: 200px;
+	&:first-of-type {
+		margin-bottom: 0.5rem;
+	}
 }
 ```
 
@@ -361,24 +375,24 @@ I will be embedding this episode of **Plugging in The Holes** along with a
 
 ## Related Resources
 
-- [Storage Fun With Forms on Github gh-pages](https://interglobalmedia.github.io/local-storage-session-storage-fun-form/)
+-   [Storage Fun With Forms on Github gh-pages](https://interglobalmedia.github.io/local-storage-session-storage-fun-form/)
 
-- [Storage Fun With Forms Github Repository](https://github.com/interglobalmedia/local-storage-session-storage-fun-form)
+-   [Storage Fun With Forms Github Repository](https://github.com/interglobalmedia/local-storage-session-storage-fun-form)
 
-- [Web Storage API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
+-   [Web Storage API on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API)
 
-- [Free Collection of Amazing PNGs](https://www.pinpng.com/)
+-   [Free Collection of Amazing PNGs](https://www.pinpng.com/)
 
-- [What are -moz- and -webkit-? [duplicate] ](https://stackoverflow.com/questions/18083056/what-are-moz-and-webkit)
+-   [What are -moz- and -webkit-? [duplicate] ](https://stackoverflow.com/questions/18083056/what-are-moz-and-webkit)
 
-- [Understand ‘+’, ‘>’ and ‘~’ symbols in CSS Selector](https://techbrij.com/css-selector-adjacent-child-sibling)
+-   [Understand ‘+’, ‘>’ and ‘~’ symbols in CSS Selector](https://techbrij.com/css-selector-adjacent-child-sibling)
 
-- [CSS Viewport Units: A Quick Start](https://www.sitepoint.com/css-viewport-units-quick-start/)
+-   [CSS Viewport Units: A Quick Start](https://www.sitepoint.com/css-viewport-units-quick-start/)
 
-- [How to use CSS calc() with an element's height ](https://stackoverflow.com/questions/33776171/how-to-use-css-calc-with-an-elements-height)
+-   [How to use CSS calc() with an element's height ](https://stackoverflow.com/questions/33776171/how-to-use-css-calc-with-an-elements-height)
 
-- [How to calculate a number and turn it into vw or vh?](https://stackoverflow.com/questions/55751502/how-to-calculate-a-number-and-turn-it-into-vw-or-vh)
+-   [How to calculate a number and turn it into vw or vh?](https://stackoverflow.com/questions/55751502/how-to-calculate-a-number-and-turn-it-into-vw-or-vh)
 
-- [Fun with Viewport Units](https://css-tricks.com/fun-viewport-units/)
+-   [Fun with Viewport Units](https://css-tricks.com/fun-viewport-units/)
 
-- [Units in CSS (em, rem, pt, px, vw, vh, vmin, vmax, ex, ch, ...)](https://dev.to/fullstack_to/units-in-css-em-rem-pt-px-vw-vh-vmin-vmax-ex-ch-53l0)
+-   [Units in CSS (em, rem, pt, px, vw, vh, vmin, vmax, ex, ch, ...)](https://dev.to/fullstack_to/units-in-css-em-rem-pt-px-vw-vh-vmin-vmax-ex-ch-53l0)

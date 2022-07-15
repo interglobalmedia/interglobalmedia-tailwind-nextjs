@@ -1,19 +1,24 @@
 ---
 title: Hiding a "N/A" value of a src attribute  of an img tag from an API
 date: 2020-09-02T20:36:42.199Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['onerror', 'altext-image', 'src-attribute', 'api']
 categories: ['api', 'error-handling', 'post']
 draft: false
-summary: How one can hide the default alternate placeholder image both when an image does not exist or the link passed to the value of its src attribute is broken.
+summary:
+    How one can hide the default alternate placeholder image both when an image
+    does not exist or the link passed to the value of its src attribute is
+    broken.
 images: ['/static/images/posts/img/webp/usgs-k7wetnday6a-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2020-09-02-hiding-a-n-a-value-of-a-src-attribute-of-an-img-tag-from-an-api
 ---
 
-- Link to
-  [Hiding an "N/A" value of a src attribute of an img tag from an API](https://anchor.fm/maria-campbell/episodes/Hiding-an-NA-value-of-a-src-attribute-of-an-img-tag-from-an-API-ej1g1i)
-  podcast on anchorfm
+![Hiding a "N/A" value of a src attribute  of an img tag from an API](/static/images/posts/img/webp/usgs-k7wetnday6a-unsplash.webp)
+
+-   Link to
+    [Hiding an "N/A" value of a src attribute of an img tag from an API](https://anchor.fm/maria-campbell/episodes/Hiding-an-NA-value-of-a-src-attribute-of-an-img-tag-from-an-API-ej1g1i)
+    podcast on anchorfm
 
 Don't you **_hate_** it when you **receive** an **image** from an `API` and the
 `value` of the `src` **attribute** is `"N/A"` (or some other similar value)?
@@ -37,7 +42,7 @@ your `CSS`:
 
 ```css
 [src='N/A'] {
-  display: none;
+	display: none;
 }
 ```
 
@@ -54,11 +59,11 @@ your `CSS`:
 ```js
 // remove img src broken links
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('img').forEach(function (img) {
-    img.onerror = function () {
-      this.style.display = 'none'
-    }
-  })
+	document.querySelectorAll('img').forEach(function (img) {
+		img.onerror = function () {
+			this.style.display = 'none'
+		}
+	})
 })
 ```
 
@@ -126,6 +131,6 @@ a **transcript** in the **form** of a **post** on
 
 ## Related Resources
 
-- [jQuery/JavaScript to replace broken images](https://stackoverflow.com/questions/92720/jquery-javascript-to-replace-broken-images)
-- [How to hide image broken Icon using only CSS/HTML?](https://stackoverflow.com/questions/22051573/how-to-hide-image-broken-icon-using-only-css-html)
-- [GlobalEventHandlers.onerror](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror)
+-   [jQuery/JavaScript to replace broken images](https://stackoverflow.com/questions/92720/jquery-javascript-to-replace-broken-images)
+-   [How to hide image broken Icon using only CSS/HTML?](https://stackoverflow.com/questions/22051573/how-to-hide-image-broken-icon-using-only-css-html)
+-   [GlobalEventHandlers.onerror](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onerror)

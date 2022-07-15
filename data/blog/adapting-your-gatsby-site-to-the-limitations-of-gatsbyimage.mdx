@@ -1,7 +1,7 @@
 ---
 title: Adapting your gatsby site to the limitations of gatsby-image
 date: '2019-06-01'
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['site performance', 'lighthouse audits', 'gatsby image']
 categories: ['image optimization', 'post']
 draft: false
@@ -10,6 +10,8 @@ images: ['/static/images/posts/img/webp/nathan-dumlao-553945-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/adapting-your-gatsby-site-to-the-limitations-of-gatsby-image
 ---
+
+![Adapting your gatsby site to the limitations of gatsby-image](/static/images/posts/img/webp/nathan-dumlao-553945-unsplash.webp)
 
 Among other things, I am a digital photographer. I love photos, and I love using
 imagery on my web sites. In fact, that is the primary reason I originally
@@ -133,20 +135,22 @@ created the following query with `graphql`:
 
 ```js
 export const query = graphql`
-  query workflowQuery {
-    workflowImage: file(relativePath: { eq: "martin-w-kirst-1175656-unsplash.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1026) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
+	query workflowQuery {
+		workflowImage: file(
+			relativePath: { eq: "martin-w-kirst-1175656-unsplash.jpg" }
+		) {
+			childImageSharp {
+				fluid(maxWidth: 1026) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+		site {
+			siteMetadata {
+				title
+			}
+		}
+	}
 `
 ```
 
@@ -155,14 +159,14 @@ dev-workflows page (pages/dev-workflows/index.js):
 
 ```jsx
 const DevWorkFlows = (props) => {
-  const { data } = props
-  return (
-    <Img
-      fluid={props.data.cliImage.childImageSharp.fluid}
-      style={{ marginBottom: '1.5rem' }}
-      alt={devFlowStrats.title}
-    />
-  )
+	const { data } = props
+	return (
+		<Img
+			fluid={props.data.cliImage.childImageSharp.fluid}
+			style={{ marginBottom: '1.5rem' }}
+			alt={devFlowStrats.title}
+		/>
+	)
 }
 ```
 
@@ -184,32 +188,35 @@ Then using `StaticQuery`,
 
 ```jsx
 const FeaturedPost1 = () => {
-  return (
-    <StaticQuery
-      query={featuredPost1Query}
-      render={(data) => {
-        return (
-          <li>
-            <a href={featuredPost1Data.path} target="_new">
-              {featuredPost1Data.title}
-            </a>
-            <Image fluid={data.postImageOne.childImageSharp.fluid} alt={featuredPost1Data.title} />
-            {featuredPost1Data.excerpt} ...
-            <br />
-            <Link to="/tags">
-              <span>tagged in:</span>
-            </Link>{' '}
-            {featuredPost1Data.tagNames}
-            <br />
-            <Link to="/categories">
-              <span>categorized under:</span>
-            </Link>{' '}
-            {featuredPost1Data.catNames}
-          </li>
-        )
-      }}
-    />
-  )
+	return (
+		<StaticQuery
+			query={featuredPost1Query}
+			render={(data) => {
+				return (
+					<li>
+						<a href={featuredPost1Data.path} target="_new">
+							{featuredPost1Data.title}
+						</a>
+						<Image
+							fluid={data.postImageOne.childImageSharp.fluid}
+							alt={featuredPost1Data.title}
+						/>
+						{featuredPost1Data.excerpt} ...
+						<br />
+						<Link to="/tags">
+							<span>tagged in:</span>
+						</Link>{' '}
+						{featuredPost1Data.tagNames}
+						<br />
+						<Link to="/categories">
+							<span>categorized under:</span>
+						</Link>{' '}
+						{featuredPost1Data.catNames}
+					</li>
+				)
+			}}
+		/>
+	)
 }
 
 export default FeaturedPost1
@@ -219,15 +226,17 @@ And lastly, querying the data using `graphql`,
 
 ```js
 export const featuredPost1Query = graphql`
-  query featuredPost1Query {
-    postImageOne: file(relativePath: { eq: "fredy-jacob-764477-unsplash.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1026) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
+	query featuredPost1Query {
+		postImageOne: file(
+			relativePath: { eq: "fredy-jacob-764477-unsplash.jpg" }
+		) {
+			childImageSharp {
+				fluid(maxWidth: 1026) {
+					...GatsbyImageSharpFluid
+				}
+			}
+		}
+	}
 `
 ```
 
@@ -253,8 +262,8 @@ and will write about **_that_** in my next post.
 
 ## Related Resources:
 
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
 
-- [Gatsbyjs](https://www.gatsbyjs.org/)
+-   [Gatsbyjs](https://www.gatsbyjs.org/)
 
-- [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
+-   [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)

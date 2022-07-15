@@ -1,17 +1,24 @@
 ---
 title: Gatsby, gatsby-image, and Netlify CMS
 date: 2019-07-10T22:32:28.554Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['source-maps', 'terser']
 categories: ['gatsbyjs', 'netlify-cms', 'post']
 draft: false
-summary: I talked about how I have been trying to add Netlify CMS to interglobalmedianetwork.com, my business website.  I just completed implementing it a little while ago today.
-images: ['/static/images/posts/img/webp/pawel-czerwinski-knx8h8schdk-unsplash.webp']
+summary:
+    I talked about how I have been trying to add Netlify CMS to
+    interglobalmedianetwork.com, my business website.  I just completed
+    implementing it a little while ago today.
+images:
+    ['/static/images/posts/img/webp/pawel-czerwinski-knx8h8schdk-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2019-07-10-gatsby-gatsby-image-and-netlify-cms
 ---
 
-- Link to [Gatsby, gatsby-image, and Netlify CMS podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/Gatsby--gatsby-image--and-Netlify-CMS-e4j887)
+![Gatsby, gatsby-image, and Netlify CMS](/static/images/posts/img/webp/pawel-czerwinski-knx8h8schdk-unsplash.webp)
+
+-   Link to
+    [Gatsby, gatsby-image, and Netlify CMS podcast on anchorfm](https://anchor.fm/maria-campbell/episodes/Gatsby--gatsby-image--and-Netlify-CMS-e4j887)
 
 In my
 [previous podcast](https://anchor.fm/maria-campbell/episodes/Gatsby--terser--and-source-maps-e4ip7k),
@@ -73,13 +80,13 @@ view the code snippet.
 ```js
 //turn off sourcemaps in production build no longer works
 exports.onCreateWebpackConfig = ({ actions, stage }) => {
-  // If production JavaScript and CSS build
-  if (stage === 'build-javascript') {
-    // Turn off source maps
-    actions.setWebpackConfig({
-      devtool: false,
-    })
-  }
+	// If production JavaScript and CSS build
+	if (stage === 'build-javascript') {
+		// Turn off source maps
+		actions.setWebpackConfig({
+			devtool: false,
+		})
+	}
 }
 ```
 
@@ -180,18 +187,18 @@ resource links** mentioned in the podcast of course. Always do. Bye for now!
 
 ## Related Resources
 
-- [Gatsby, terser, and sourcemaps](https://www.interglobalmedianetwork.com/blog/gatsby-terser-sourcemaps/)
+-   [Gatsby, terser, and sourcemaps](https://www.interglobalmedianetwork.com/blog/gatsby-terser-sourcemaps/)
 
-- [Gatsby and Netlify CMS](https://www.netlifycms.org/docs/gatsby/)
+-   [Gatsby and Netlify CMS](https://www.netlifycms.org/docs/gatsby/)
 
-- [Cool Image Loading With GatsbyJS v2 and Netlify CMS v2](https://blog.rousek.name/2018/08/10/cool-image-loading-with-gatsbyjs-v2-and-netlify-cms-v2/)
+-   [Cool Image Loading With GatsbyJS v2 and Netlify CMS v2](https://blog.rousek.name/2018/08/10/cool-image-loading-with-gatsbyjs-v2-and-netlify-cms-v2/)
 
-- [NPM peerDependencies](https://blog.angularindepth.com/npm-peer-dependencies-f843f3ac4e7f)
+-   [NPM peerDependencies](https://blog.angularindepth.com/npm-peer-dependencies-f843f3ac4e7f)
 
-- [peerDependencies](https://docs.npmjs.com/files/package.json#peerdependencies)
+-   [peerDependencies](https://docs.npmjs.com/files/package.json#peerdependencies)
 
-- [Gatsby Plugin Netlify CMS Paths](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms-paths/)
+-   [Gatsby Plugin Netlify CMS Paths](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms-paths/)
 
-- [interglobalmedia repo on Github](https://github.com/interglobalmedia/interglobalmedia)
+-   [interglobalmedia repo on Github](https://github.com/interglobalmedia/interglobalmedia)
 
-- [Gatsby Remark Relative Images on Github](https://github.com/danielmahon/gatsby-remark-relative-images)
+-   [Gatsby Remark Relative Images on Github](https://github.com/danielmahon/gatsby-remark-relative-images)

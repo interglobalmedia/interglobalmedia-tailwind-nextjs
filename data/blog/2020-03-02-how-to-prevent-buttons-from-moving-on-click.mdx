@@ -1,19 +1,24 @@
 ---
 title: How to prevent buttons from moving on click
 date: 2020-03-02T21:37:47.020Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['geolocation', 'apis', 'browser scrollbars']
 categories: ['cross-browser compatibility', 'post']
 draft: false
-summary: How I solved the issue of moving buttons on click, and what the side effects were of that move!
-images: ['/static/images/posts/img/webp/olivier-miche-skva4bc_bsg-unsplash.webp']
+summary:
+    How I solved the issue of moving buttons on click, and what the side effects
+    were of that move!
+images:
+    ['/static/images/posts/img/webp/olivier-miche-skva4bc_bsg-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2020-03-02-how-to-prevent-buttons-from-moving-on-click
 ---
 
-- Link to
-  [How to prevent buttons from moving on click](https://anchor.fm/maria-campbell/episodes/How-to-prevent-buttons-from-moving-on-click-eb71ic)
-  podcast on anchorfm
+![How to prevent buttons from moving on click](/static/images/posts/img/webp/olivier-miche-skva4bc_bsg-unsplash.webp)
+
+-   Link to
+    [How to prevent buttons from moving on click](https://anchor.fm/maria-campbell/episodes/How-to-prevent-buttons-from-moving-on-click-eb71ic)
+    podcast on anchorfm
 
 Recently I just finished a `geo ip api` **_application_** as a project for the
 `JavaScript` **course** I am teaching, and I **_couldn't_** get my **buttons**
@@ -32,7 +37,7 @@ Setting the body element to
 
 ```css
 body {
-  overflow-y: scroll;
+	overflow-y: scroll;
 }
 ```
 
@@ -81,57 +86,57 @@ First I did the **_following_** in my `main.scss/main.css` **file(s)**:
 
 ```css
 body {
-  /* So that there is always a browser window scrollbar to make sure that the find me and refresh me buttons do not move on click. */
-  overflow-y: scroll;
+	/* So that there is always a browser window scrollbar to make sure that the find me and refresh me buttons do not move on click. */
+	overflow-y: scroll;
 }
 
 .wrapper {
-  /* Set a height to .wrapper div that is shorter than the actual wrapper div height when the data is rendered to the page, to ensure that there will always be overflow on the Y axis when the data renders to the page. */
-  height: 350px;
-  /* This is to make sure that a scrollbar appears when there is overflow on the Y axis. */
-  overflow-y: auto;
+	/* Set a height to .wrapper div that is shorter than the actual wrapper div height when the data is rendered to the page, to ensure that there will always be overflow on the Y axis when the data renders to the page. */
+	height: 350px;
+	/* This is to make sure that a scrollbar appears when there is overflow on the Y axis. */
+	overflow-y: auto;
 }
 
 /* Scrollbar related styling */
 /* Needed for scrollbar styling without -webkit pseudo-class to ensure that the scrollbar-thumb styling is applied to the .wrapper div */
 .scrollbar-thumb {
-  background-color: #16174b;
-  outline: 1px solid slategrey;
-  border-radius: 15px;
+	background-color: #16174b;
+	outline: 1px solid slategrey;
+	border-radius: 15px;
 }
 
 /* end scrollbar styling without -webkit pseudo-class*/
 /* Default/starting state of -webkit-scrollbar styling when there is no data on the page - hides the scrollbar */
 .wrapper::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+	width: 0px;
+	background: transparent;
 }
 
 /* .show-scrollbar class added when .backgroundSkyblue class added - shows the scrollbar for the .wrapper class */
 .show-scrollbar::-webkit-scrollbar {
-  width: 1rem;
-  background: white;
+	width: 1rem;
+	background: white;
 }
 
 /* ::-webkit-scrollbar-track-piece is the top-most layer of the progress bar not covered by the draggable scrolling element (thumb). */
 .show-scrollbar::-webkit-scrollbar-track-piece {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 /* The -webkit-scrollbar-track styling addressed the albeit small but empty apace below the scrollbar progress bar. */
 .show-scrollbar::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
 }
 
 .show-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #16174b;
-  outline: 1px solid slategrey;
-  border-radius: 15px;
+	background-color: #16174b;
+	outline: 1px solid slategrey;
+	border-radius: 15px;
 }
 
 /* the .backgroundSkyblue class added to div with .wrapper class in if/else statement if there is no .backgroundSkyblue class present. Causes switch from initial default orange background color to sky blue background color. And when the background is sky blue, the div.wrapper scrollbar appears. */
 .backgroundSkyblue {
-  background: #8bd3fb;
+	background: #8bd3fb;
 }
 ```
 
@@ -159,17 +164,17 @@ const wrapper = document.querySelector('.wrapper')
 
 ```javascript
 if (body.className !== 'backgroundSkyblue') {
-  body.classList.add('backgroundSkyblue')
-  wrapper.classList.add('show-scrollbar')
+	body.classList.add('backgroundSkyblue')
+	wrapper.classList.add('show-scrollbar')
 } else if (body.className === 'backgroundSkyblue') {
-  body.classList.remove('backgroundSkyblue')
-  body.style.backgroundColor = '#f08850'
-  wrapper.style.display = 'none'
-  wrapper.classList.remove('.show-scrollbar')
+	body.classList.remove('backgroundSkyblue')
+	body.style.backgroundColor = '#f08850'
+	wrapper.style.display = 'none'
+	wrapper.classList.remove('.show-scrollbar')
 } else {
-  body.classList.add('backgroundSkyblue')
-  wrapper.style.display = 'block'
-  wrapper.classList.add('.show-scrollbar')
+	body.classList.add('backgroundSkyblue')
+	wrapper.style.display = 'block'
+	wrapper.classList.add('.show-scrollbar')
 }
 ```
 
@@ -228,8 +233,8 @@ resource links mentioned in the podcast of course. Always do. Bye for now!
 
 ## Related Resources
 
-- [scrollbar on CSS Tricks](https://css-tricks.com/almanac/properties/s/scrollbar/)
+-   [scrollbar on CSS Tricks](https://css-tricks.com/almanac/properties/s/scrollbar/)
 
-- [Geo Ip App Source Code on Github](https://github.com/interglobalmedia/geo-ip-app)
+-   [Geo Ip App Source Code on Github](https://github.com/interglobalmedia/geo-ip-app)
 
-- [Geo Ip App Site on Github gh-pages](https://interglobalmedia.github.io/geo-ip-app/)
+-   [Geo Ip App Site on Github gh-pages](https://interglobalmedia.github.io/geo-ip-app/)
