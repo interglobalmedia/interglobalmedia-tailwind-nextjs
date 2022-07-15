@@ -1,19 +1,22 @@
 ---
 title: The window object, React hooks, and GatsbyJS
 date: 2019-12-29T20:25:39.817Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['browser-monads', 'window-object', 'media-queries']
 categories: ['gatsbyjs', 'post', 'react']
 draft: false
 summary: Adding media queries to a React element's inline styles.
-images: ['/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp']
+images:
+    ['/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2019-12-29-the-window-object-react-hooks-and-gatsbyjs
 ---
 
-- Link to
-  [The window object, React hooks, and GatsbyJS](https://anchor.fm/maria-campbell/episodes/The-window-object--React-hooks--and-GatsbyJS-e9t7ks)
-  podcast on anchorfm
+![The window object, React hooks, and GatsbyJS](/static/images/posts/img/webp/stanislav-kondratiev-123540-unsplash.webp)
+
+-   Link to
+    [The window object, React hooks, and GatsbyJS](https://anchor.fm/maria-campbell/episodes/The-window-object--React-hooks--and-GatsbyJS-e9t7ks)
+    podcast on anchorfm
 
 This past Friday I added a Crisp chat box to
 [interglobalmedianetwork.com](https://www.interglobalmedianetwork.com/).
@@ -32,7 +35,7 @@ queries** to those styles easily and in the same way as I would in **CSS** or
 I started googling for answers, and came across the following very interesting
 solution:
 
-- [React inline styles and media queries using a custom React Hook](https://medium.com/@ttennant/react-inline-styles-and-media-queries-using-a-custom-react-hook-e76fa9ec89f6)
+-   [React inline styles and media queries using a custom React Hook](https://medium.com/@ttennant/react-inline-styles-and-media-queries-using-a-custom-react-hook-e76fa9ec89f6)
 
 I haven't had the time or chance to get too much into **React hooks**, so I
 found this opportunity to use them in this instance very exciting!
@@ -46,15 +49,15 @@ import { useEffect, useState } from 'react'
 import { window } from 'browser-monads'
 
 export const useMediaQuery = (query) => {
-  const mediaMatch = window.matchMedia(query)
-  const [matches, setMatches] = useState(mediaMatch.matches)
+	const mediaMatch = window.matchMedia(query)
+	const [matches, setMatches] = useState(mediaMatch.matches)
 
-  useEffect(() => {
-    const handler = (e) => setMatches(e.matches)
-    mediaMatch.addListener(handler)
-    return () => mediaMatch.removeListener(handler)
-  })
-  return matches
+	useEffect(() => {
+		const handler = (e) => setMatches(e.matches)
+		mediaMatch.addListener(handler)
+		return () => mediaMatch.removeListener(handler)
+	})
+	return matches
 }
 ```
 
@@ -206,7 +209,7 @@ using **React hooks**. I don't remember the exact words I used this time, but
 this was the only time I ended up with the right search result. This is what I
 came up with:
 
-- [Use document and window with Gatsby](https://medium.com/@Jense5_/use-document-and-window-with-gatsby-e9a92ee31f36)
+-   [Use document and window with Gatsby](https://medium.com/@Jense5_/use-document-and-window-with-gatsby-e9a92ee31f36)
 
 **Jensen Bernard** writes about the `npm package` he **_created_** called
 `browser-monads` in response to this error he also received in **GatbsyJS**.
@@ -233,10 +236,10 @@ resource links mentioned in the podcast of course. Always do. Bye for now!
 
 ## Related Resources
 
-- [React inline styles and media queries using a custom React Hook](https://medium.com/@ttennant/react-inline-styles-and-media-queries-using-a-custom-react-hook-e76fa9ec89f6)
+-   [React inline styles and media queries using a custom React Hook](https://medium.com/@ttennant/react-inline-styles-and-media-queries-using-a-custom-react-hook-e76fa9ec89f6)
 
-- [Use document and window with Gatsby](https://medium.com/@Jense5_/use-document-and-window-with-gatsby-e9a92ee31f36)
+-   [Use document and window with Gatsby](https://medium.com/@Jense5_/use-document-and-window-with-gatsby-e9a92ee31f36)
 
-- [browser-monads on npm.js](https://www.npmjs.com/package/browser-monads)
+-   [browser-monads on npm.js](https://www.npmjs.com/package/browser-monads)
 
-- [Debugging HTML Builds](https://www.gatsbyjs.org/docs/debugging-html-builds/)
+-   [Debugging HTML Builds](https://www.gatsbyjs.org/docs/debugging-html-builds/)

@@ -1,31 +1,62 @@
 ---
 title: Windows CMD basics and Commands By Example
 date: 2021-09-05T12:32:06.980Z
-lastmod: '2022-07-02'
+lastmod: '2022-07-15'
 tags: ['windows', 'command-prompt', 'unix', 'terminal']
 categories: ['windows', 'command-prompt', 'post']
 draft: false
-summary: Lately the opportunity arose to demonstrate how the Windows Command Prompt (aka CMD, acronym for Windows Command Processor) works and how to get around one’s Windows computer.
+summary:
+    Lately the opportunity arose to demonstrate how the Windows Command Prompt
+    (aka CMD, acronym for Windows Command Processor) works and how to get around
+    one’s Windows computer.
 images: ['/static/images/posts/img/webp/sydney-rae-gem5lzdj4iw-unsplash.webp']
 layout: PostLayout
 canonicalUrl: /blog/2021-09-05-windows-cmd-basics-and-commands-by-example
 ---
 
-Lately the **opportunity** arose to **_demonstrate_** how the `Windows` (`10`) `Command Prompt` (aka `CMD`, **acronym** for `Windows Command Processor`) **works** and how to **get around** one’s `Windows` computer. `CMD` is a `command line interface`, and a **way** of **_interacting_** with a `computer` **_directly_** using `text commands`.
+![Windows CMD basics and Commands By Example](/static/images/posts/img/webp/sydney-rae-gem5lzdj4iw-unsplash.webp)
 
-**_Early_** `PC operating systems`, like `MS-DOS`, operated only through `command-line interfaces`. There was **_no_** `mouse`, `window management`, or `graphical user interface` (`GUI`) elements like we take for granted today.
+Lately the **opportunity** arose to **_demonstrate_** how the `Windows` (`10`)
+`Command Prompt` (aka `CMD`, **acronym** for `Windows Command Processor`)
+**works** and how to **get around** one’s `Windows` computer. `CMD` is a
+`command line interface`, and a **way** of **_interacting_** with a `computer`
+**_directly_** using `text commands`.
 
-`CMD` is also a `shell`. A `shell` **_allows_** the **user** to give `commands` to the `computer`. **_Early versions_** of `Windows` ran `commands` through the `MS-DOS Prompt`, which was the **name** for `Command Prompt` then.
+**_Early_** `PC operating systems`, like `MS-DOS`, operated only through
+`command-line interfaces`. There was **_no_** `mouse`, `window management`, or
+`graphical user interface` (`GUI`) elements like we take for granted today.
 
-**_Starting_** with `Windows XP`, `Windows` **_broke away_** from `MS-DOS`. **_However_**, as is even indicated **_here_**, we can **still use** the `Command Prompt` to **_interface_** with our `computers` **directly** instead of **_clicking_** through various menus. The `Command Prompt` can also run batch files, which are a great way to **_automate tasks_**. We `control` **_both_** our `Windows` and `Mac` computers via the `Command Prompt/Terminal`.
+`CMD` is also a `shell`. A `shell` **_allows_** the **user** to give `commands`
+to the `computer`. **_Early versions_** of `Windows` ran `commands` through the
+`MS-DOS Prompt`, which was the **name** for `Command Prompt` then.
 
-What is **_great_** about **using** the `Command Prompt` (or `Terminal` on a `Mac`) is that it **_cuts down_** the **steps/time** it **takes** to **_complete_** a `task`. The `Command Prompt` can **_complete_** a **_task_** with a **_few_** `key strokes`, whereas it would take **_quite a few_** `clicks` in the `GUI` (`Graphical User Interface`).
+**_Starting_** with `Windows XP`, `Windows` **_broke away_** from `MS-DOS`.
+**_However_**, as is even indicated **_here_**, we can **still use** the
+`Command Prompt` to **_interface_** with our `computers` **directly** instead of
+**_clicking_** through various menus. The `Command Prompt` can also run batch
+files, which are a great way to **_automate tasks_**. We `control` **_both_**
+our `Windows` and `Mac` computers via the `Command Prompt/Terminal`.
 
-If you are the **_only user_** on your `computer`, you probably are the `Admin` (`Administrator`) of that `computer`. `Administrator accounts` are **_privileged_**, meaning they can `perform` **_any action_** on the `system`, with **_minimal restriction_** (usually **requiring** a `password` for **confirmation**).
+What is **_great_** about **using** the `Command Prompt` (or `Terminal` on a
+`Mac`) is that it **_cuts down_** the **steps/time** it **takes** to
+**_complete_** a `task`. The `Command Prompt` can **_complete_** a **_task_**
+with a **_few_** `key strokes`, whereas it would take **_quite a few_** `clicks`
+in the `GUI` (`Graphical User Interface`).
 
-A `Windows` **user** does **_not_** have `Administrator` rights **_inside_** the `VS Code Integrated Terminal`. So they are **_restricted_** in what `content` they can **_modify_** in the **_current_** `project folder` they are in. But this can be **_fixed_**. In order **_give yourself_** `Administrator` **rights** in the `VS Code Integrated Terminal`, **_follow_** these steps:
+If you are the **_only user_** on your `computer`, you probably are the `Admin`
+(`Administrator`) of that `computer`. `Administrator accounts` are
+**_privileged_**, meaning they can `perform` **_any action_** on the `system`,
+with **_minimal restriction_** (usually **requiring** a `password` for
+**confirmation**).
 
-`Right-click` on the `VS Code shortcut` on your `desktop` and **_select_** `Properties` ub the dropdown that appears.
+A `Windows` **user** does **_not_** have `Administrator` rights **_inside_** the
+`VS Code Integrated Terminal`. So they are **_restricted_** in what `content`
+they can **_modify_** in the **_current_** `project folder` they are in. But
+this can be **_fixed_**. In order **_give yourself_** `Administrator` **rights**
+in the `VS Code Integrated Terminal`, **_follow_** these steps:
+
+`Right-click` on the `VS Code shortcut` on your `desktop` and **_select_**
+`Properties` ub the dropdown that appears.
 
 **_Next_**, `select` the `Compatibility` tab.
 
@@ -33,25 +64,47 @@ A `Windows` **user** does **_not_** have `Administrator` rights **_inside_** the
 
 **_Next_**, click `Ok`.
 
-**_Then_**, when you **open up** `VS Code` the **_next time_**, you will be asked if you **allow** `VS Code` to **make changes** to `content` on your `computer`. **Select** `Yes`. This will **_enable_** you to **become** an `administrator` **_inside_** the `VS Code Integrated Terminal`. When I **_set this up_**, I was **able** to **_start_** `deleting folders` inside `VS Code’s Integrated Terminal` with my **_local_** `clean script` **inside** my `package.json`. **_However_**, one **_should note_** that when I **run** the `clean script` which entails **_deleting_** a `folder` inside my `project` called `dist`, I am **prompted** the **_following_** in the `Integrated Terminal`:
+**_Then_**, when you **open up** `VS Code` the **_next time_**, you will be
+asked if you **allow** `VS Code` to **make changes** to `content` on your
+`computer`. **Select** `Yes`. This will **_enable_** you to **become** an
+`administrator` **_inside_** the `VS Code Integrated Terminal`. When I **_set
+this up_**, I was **able** to **_start_** `deleting folders` inside
+`VS Code’s Integrated Terminal` with my **_local_** `clean script` **inside** my
+`package.json`. **_However_**, one **_should note_** that when I **run** the
+`clean script` which entails **_deleting_** a `folder` inside my `project`
+called `dist`, I am **prompted** the **_following_** in the
+`Integrated Terminal`:
 
 rmdir /s dist && mkdir distdist, Are your sure (Y/N)?
 
-Make sure that you **_type_** a `capital Y` and **_not_** a `lowercase y`. You **_won’t_** throw an error, but you also **_won’t_** delete the contents of the `dist` **folder**. **_Only_** when you **press** the `Shift key` + `Y key will the folder(s) be ***deleted***. My `clean script` **consists** of the **_following_**:
+Make sure that you **_type_** a `capital Y` and **_not_** a `lowercase y`. You
+**_won’t_** throw an error, but you also **_won’t_** delete the contents of the
+`dist` **folder**. **_Only_** when you **press** the `Shift key` +
+`Y key will the folder(s) be ***deleted***. My `clean script` **consists** of
+the **_following_**:
 
 ```json
 “script”: “rmdir /s dist && mkdir dist”
 ```
 
-To **_remove_** the step `dist, Are your sure (Y/N)?`, you can **_add_** `/q` **_after_** `/s`. So:
+To **_remove_** the step `dist, Are your sure (Y/N)?`, you can **_add_** `/q`
+**_after_** `/s`. So:
 
 ```json
 “script”: “rmdir /s /q dist && mkdir dist”
 ```
 
-**_Adding_** `/s` (for `Windows XP` and **_later_**) after `rmdir` **_removes_** all `directories` and `files` in the **_specified directory_** in **_addition_** to the `directory` **itself**. **_Adding_** `/q` after `/s` (for `Windows XP` and **_later_**) enables `Quiet mode`, so you are **_not_** asked if it is `ok` to **_remove_** a `directory tree` with `/s`.
+**_Adding_** `/s` (for `Windows XP` and **_later_**) after `rmdir` **_removes_**
+all `directories` and `files` in the **_specified directory_** in **_addition_**
+to the `directory` **itself**. **_Adding_** `/q` after `/s` (for `Windows XP`
+and **_later_**) enables `Quiet mode`, so you are **_not_** asked if it is `ok`
+to **_remove_** a `directory tree` with `/s`.
 
-The `mkdir dist` command that **_follows_** simply **creates** an empty `dist` folder. The `&&` **_in between_** simply **enables** the **_execution_** of two commands **_instead_** of **just one**. **_More_** than one **instance** of `&&` is **_possible_**, as will be **demonstrated** in my `createDirs` and `build` scripts.
+The `mkdir dist` command that **_follows_** simply **creates** an empty `dist`
+folder. The `&&` **_in between_** simply **enables** the **_execution_** of two
+commands **_instead_** of **just one**. **_More_** than one **instance** of `&&`
+is **_possible_**, as will be **demonstrated** in my `createDirs` and `build`
+scripts.
 
 **_After_** the `clean script` in `package.json` comes the `createDirs script`:
 
@@ -59,7 +112,22 @@ The `mkdir dist` command that **_follows_** simply **creates** an empty `dist` f
 “createDirs”: “cd dist && mkdir \”styles/css\” && mkdir  \”scripts/js\””
 ```
 
-Because I **_can’t_** create the `styles/css` and `scripts/js` **directory trees** at the **_same time_** that I **delete** and **re-create** the `dist` folder, I **_create_** a **separate** `createDirs script`. The **_first_** `command` in the `script` is to `cd` into (`c`hange `d`irectories) the `dist` folder, **_followed by_** the `&&` (`double and`), then the `mkdir` command **_followed by_** `\”styles/css\”`, which **results** in the **_creation_** of a `styles` folder and then a `css` subfolder. The **_reason why_** I **wrap** `styles/css` with `back slashes` (`\`) **_followed by_** `double quotes` (`“`) is because I **_need_** to **write** the `path` for the `styles/css` with a `forward slash` (`/`) in `package.json`, but the `Command Prompt` **_only recognizes_** `\`. This way, we are **regexing** `styles/css` by wrapping it in two backslashes. This results in the replacement of `styles\css` with `styles/css`. One `\` at the **_beginning_** of the `regex`, and one `\` at the **_end_**. This makes it **possible** to use a `value` that `CMD` **normally** would **_not_** recognize and **_throw_** an `error` as a result. Same with `scripts/js` when creating the `\”scripts/js\”` directory tree.
+Because I **_can’t_** create the `styles/css` and `scripts/js` **directory
+trees** at the **_same time_** that I **delete** and **re-create** the `dist`
+folder, I **_create_** a **separate** `createDirs script`. The **_first_**
+`command` in the `script` is to `cd` into (`c`hange `d`irectories) the `dist`
+folder, **_followed by_** the `&&` (`double and`), then the `mkdir` command
+**_followed by_** `\”styles/css\”`, which **results** in the **_creation_** of a
+`styles` folder and then a `css` subfolder. The **_reason why_** I **wrap**
+`styles/css` with `back slashes` (`\`) **_followed by_** `double quotes` (`“`)
+is because I **_need_** to **write** the `path` for the `styles/css` with a
+`forward slash` (`/`) in `package.json`, but the `Command Prompt` **_only
+recognizes_** `\`. This way, we are **regexing** `styles/css` by wrapping it in
+two backslashes. This results in the replacement of `styles\css` with
+`styles/css`. One `\` at the **_beginning_** of the `regex`, and one `\` at the
+**_end_**. This makes it **possible** to use a `value` that `CMD` **normally**
+would **_not_** recognize and **_throw_** an `error` as a result. Same with
+`scripts/js` when creating the `\”scripts/js\”` directory tree.
 
 **_Next_** comes the `build script`. It **looks** like the **_following_**:
 
@@ -67,7 +135,21 @@ Because I **_can’t_** create the `styles/css` and `scripts/js` **directory tre
 "build": "xcopy \"styles/css\" \"dist/styles/css\" && xcopy \"scripts/js\" \"dist/scripts/js\" && copy index.html dist"
 ```
 
-Here, I am **using** the `xcopy` command to **_copy_** the **contents** of the `\"styles/css\"` directory tree **inside** the `root` of the `project` into `\"dist/styles/css\”`, which was **created** with the `createDirs` command. This is **_followed by_** a `double and` (`&&`), then **_another_** `xcopy` command **_followed by_** `\"scripts/js\”`. This `command` **_copies_** the `scripts/js` directory tree **_inside_** the `root` of the `project` into `\"dist/scripts/js\”`, which **also** was **_created_** with the `createDirs` script. Finally we are left with the `command` that **_copies_** the `index.html` at the `root` of the `project` into the `dist` folder. Here we simply **use** the `copy` command **_followed by_** the **name** of the `file` we want to **_copy_**, and then the `destination directory` (where we want to **copy** the `file` **_into_**), which is the `dist` folder. And **_here_**, as well as in the `createDirs` script, we have **_more_** than one `double and` (`&&`) going on. This simply means that the `script` should **_only_** run if **all** the `commands` **_chained_** by `double ands` (`&&`) are **_executed_**.
+Here, I am **using** the `xcopy` command to **_copy_** the **contents** of the
+`\"styles/css\"` directory tree **inside** the `root` of the `project` into
+`\"dist/styles/css\”`, which was **created** with the `createDirs` command. This
+is **_followed by_** a `double and` (`&&`), then **_another_** `xcopy` command
+**_followed by_** `\"scripts/js\”`. This `command` **_copies_** the `scripts/js`
+directory tree **_inside_** the `root` of the `project` into
+`\"dist/scripts/js\”`, which **also** was **_created_** with the `createDirs`
+script. Finally we are left with the `command` that **_copies_** the
+`index.html` at the `root` of the `project` into the `dist` folder. Here we
+simply **use** the `copy` command **_followed by_** the **name** of the `file`
+we want to **_copy_**, and then the `destination directory` (where we want to
+**copy** the `file` **_into_**), which is the `dist` folder. And **_here_**, as
+well as in the `createDirs` script, we have **_more_** than one `double and`
+(`&&`) going on. This simply means that the `script` should **_only_** run if
+**all** the `commands` **_chained_** by `double ands` (`&&`) are **_executed_**.
 
 **_Finally_**, I have a `deploy` script for my `gh-pages` **npm package**:
 
@@ -75,24 +157,44 @@ Here, I am **using** the `xcopy` command to **_copy_** the **contents** of the `
 “deploy”: “gh-pages -d dist”
 ```
 
-This is the **_same_** `command` I **use** either on `Unix` (`Mac OS`) `Terminal` or `Windows Command Prompt`. This simply **_deploys_** the `dist` folder, which we first have to `push` to our `origin master` (`remote master`) branch, and then `run` the `npm run deploy` local script in the `Command prompt/Integrated Terminal` so that the `dist` folder **_and_** its contents are **_pushed_** to a `remote branch` on `origin` called `gh-pages`, **_creating_** the `gh-pages` branch for us at the **_same time_**. Once the `local commit` has been **_pushed_** to `Github`, where `gh-pages` **_resides_**, we can **visit** our **_new_** `gh-pages` site there. This is **_free_** `static hosting` that `Github` **_provides_** for our `static` (`front end`) `repositories` **_hosted_** there.
+This is the **_same_** `command` I **use** either on `Unix` (`Mac OS`)
+`Terminal` or `Windows Command Prompt`. This simply **_deploys_** the `dist`
+folder, which we first have to `push` to our `origin master` (`remote master`)
+branch, and then `run` the `npm run deploy` local script in the
+`Command prompt/Integrated Terminal` so that the `dist` folder **_and_** its
+contents are **_pushed_** to a `remote branch` on `origin` called `gh-pages`,
+**_creating_** the `gh-pages` branch for us at the **_same time_**. Once the
+`local commit` has been **_pushed_** to `Github`, where `gh-pages`
+**_resides_**, we can **visit** our **_new_** `gh-pages` site there. This is
+**_free_** `static hosting` that `Github` **_provides_** for our `static`
+(`front end`) `repositories` **_hosted_** there.
 
-There are definitely certain things that the `Windows Command Prompt` **shares** with `Terminal` on `Mac` (`Unix`). For example, when one **_opens_** it from the `search bar` to the **_right_** of the `Windows icon` in the **_lower left_** `corner` of the `computer screen`, it **_points_** to the `computer`’s `home directory`, which is the `Windows user` **_top_** `directory`. On a `Mac`, when one **_first_** opens `Terminal`, it **_also_** takes you to the user's `home` directory.
+There are definitely certain things that the `Windows Command Prompt` **shares**
+with `Terminal` on `Mac` (`Unix`). For example, when one **_opens_** it from the
+`search bar` to the **_right_** of the `Windows icon` in the **_lower left_**
+`corner` of the `computer screen`, it **_points_** to the `computer`’s
+`home directory`, which is the `Windows user` **_top_** `directory`. On a `Mac`,
+when one **_first_** opens `Terminal`, it **_also_** takes you to the user's
+`home` directory.
 
-For example, on **_my_** `Mac`, when I **open** a **_new_** instance of `Terminal` (`iTerm2` for me), The **_following_** is **_printed_** out in the `Terminal` window:
+For example, on **_my_** `Mac`, when I **open** a **_new_** instance of
+`Terminal` (`iTerm2` for me), The **_following_** is **_printed_** out in the
+`Terminal` window:
 
 ```shell
 Last login: Sat Sep  4 23:17:34 on ttys000
 Marias-MacBook-Pro ॐ  ~:
 ```
 
-If I **run** the `pwd` (`p`rint `w`orking `d`irectory) command to **_get_** the **actual path** of the **_current_** `directory`, I **get** the **_following_**:
+If I **run** the `pwd` (`p`rint `w`orking `d`irectory) command to **_get_** the
+**actual path** of the **_current_** `directory`, I **get** the **_following_**:
 
 ```shell
 /Users/mariacam
 ```
 
-When I **_initially_** open a **_new_** instance of the `Command Prompt` on `Windows`, the **_following_** is **returned**:
+When I **_initially_** open a **_new_** instance of the `Command Prompt` on
+`Windows`, the **_following_** is **returned**:
 
 ```shell
 Microsoft Windows [Version 10.0.15063]
@@ -101,20 +203,45 @@ Microsoft Windows [Version 10.0.15063]
 C:\Users\inter>
 ```
 
-`Unix` (`OS X`) **uses** `forward slashes` (`/`) for `paths`. `Windows` **uses** `backslashes` (`\`). But **_both_** `point` to the **_equivalent place_** on the `computer`.
+`Unix` (`OS X`) **uses** `forward slashes` (`/`) for `paths`. `Windows` **uses**
+`backslashes` (`\`). But **_both_** `point` to the **_equivalent place_** on the
+`computer`.
 
-When I **_open up_** a `directory` in `VS Code` from the `Command Line` **using** the `code .` command, and then **_execute_** various commands such as `creating directories` (`mkdir newfoldername`) or **_deleting_** directories (`rm -rf folder name`) from **_within_** the `VS Code Integrated Terminal`, I have **_no_** problems.
+When I **_open up_** a `directory` in `VS Code` from the `Command Line`
+**using** the `code .` command, and then **_execute_** various commands such as
+`creating directories` (`mkdir newfoldername`) or **_deleting_** directories
+(`rm -rf folder name`) from **_within_** the `VS Code Integrated Terminal`, I
+have **_no_** problems.
 
-**_However_**, when I **try** to **_delete_** directories or make other **_modifications_** to **content** on my `Windows` computer from **_within_** the `VS Code Integrated Terminal`, by **_default_**, I am **restricted** as to what I can do. These `restrictions` are **_removed_** when I make myself `Administrator` from **_within_** the `VS Code Integrated Terminal`, as I **explained** **_earlier_**.
+**_However_**, when I **try** to **_delete_** directories or make other
+**_modifications_** to **content** on my `Windows` computer from **_within_**
+the `VS Code Integrated Terminal`, by **_default_**, I am **restricted** as to
+what I can do. These `restrictions` are **_removed_** when I make myself
+`Administrator` from **_within_** the `VS Code Integrated Terminal`, as I
+**explained** **_earlier_**.
 
-For me, in the **_past_**, the `Windows Command Prompt` seemed **confusing** and **un-masterable**. But **_these days_**, there is **_more_** and **_better_** documentation than before. I believe it has to do with `Windows` **_improving_** its `OS user interface`, **_more people_** who used to be on `Mac` **_switching over_**, and the fact that the `pandemic` **_transformed us_** into more of a `DIY` (`Do It Yourself`) **society**. I also **came** to **_realize_** that I should **_not only_** be `mistress` of my `Mac` computer, but my `Windows` computer **_as well_**. **_Especially_** since I **teach others** who may **_either be_** on `Mac` OR on `Windows`.
+For me, in the **_past_**, the `Windows Command Prompt` seemed **confusing** and
+**un-masterable**. But **_these days_**, there is **_more_** and **_better_**
+documentation than before. I believe it has to do with `Windows` **_improving_**
+its `OS user interface`, **_more people_** who used to be on `Mac` **_switching
+over_**, and the fact that the `pandemic` **_transformed us_** into more of a
+`DIY` (`Do It Yourself`) **society**. I also **came** to **_realize_** that I
+should **_not only_** be `mistress` of my `Mac` computer, but my `Windows`
+computer **_as well_**. **_Especially_** since I **teach others** who may
+**_either be_** on `Mac` OR on `Windows`.
 
-To **_view_** the `package.json` of the project I **_refer_** to in this **post**, please **_visit_** the [package.json](https://github.com/mariadorothea/arithmetic-forms/blob/master/package.json) on `Github`. To **view** the **_entire_** `project repository`, please **_visit_** the [Arithmetic Forms](https://github.com/mariadorothea/arithmetic-forms) `repository` on `Github`.
+To **_view_** the `package.json` of the project I **_refer_** to in this
+**post**, please **_visit_** the
+[package.json](https://github.com/mariadorothea/arithmetic-forms/blob/master/package.json)
+on `Github`. To **view** the **_entire_** `project repository`, please
+**_visit_** the
+[Arithmetic Forms](https://github.com/mariadorothea/arithmetic-forms)
+`repository` on `Github`.
 
 ## Related Resources
 
-- [configuring package.json on windows](https://stackoverflow.com/questions/50696920/configuring-package-json-on-windows?utm_source=pocket_mylist)
+-   [configuring package.json on windows](https://stackoverflow.com/questions/50696920/configuring-package-json-on-windows?utm_source=pocket_mylist)
 
-- [MS-DOS and Windows command line rd and rmdir commands](https://www.computerhope.com/rmdirhlp.htm)
+-   [MS-DOS and Windows command line rd and rmdir commands](https://www.computerhope.com/rmdirhlp.htm)
 
-- [Shx npm package](https://github.com/shelljs/shx)
+-   [Shx npm package](https://github.com/shelljs/shx)
