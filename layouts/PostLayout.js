@@ -1,5 +1,4 @@
 import Link from '@/components/Link'
-import Head from 'next/head'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
@@ -35,7 +34,7 @@ export default function PostLayout({
 	prev,
 	children,
 }) {
-	const { slug, fileName, date, lastmod, title, categories, tags, images } =
+	const { slug, fileName, date, lastmod, title, categories, tags } =
 		frontMatter
 
 	return (
@@ -44,11 +43,7 @@ export default function PostLayout({
 				url={`${siteMetadata.siteUrl}/blog/${slug}`}
 				authorDetails={authorDetails}
 				{...frontMatter}
-				title={`${title} | Posts`}
 			/>
-			<Head>
-				<meta name="twitter:image" content={images[0]} />
-			</Head>
 			<ScrollTopAndComment />
 			<article>
 				<div className="xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700">
