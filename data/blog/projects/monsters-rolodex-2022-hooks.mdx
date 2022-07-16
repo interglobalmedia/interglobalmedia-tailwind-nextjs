@@ -1,26 +1,68 @@
 ---
 title: Monsters Rolodex 2022 (Hooks)
 date: '2022-07-01'
-lastmod: '2022-07-01'
-tags: ['api error handling', 'react functional components', 'react hooks', 'create-react-app']
+lastmod: '2022-07-16'
+tags:
+    [
+        'api error handling',
+        'react functional components',
+        'react hooks',
+        'create-react-app',
+    ]
 categories: ['project', 'react 18', 'yarn']
 draft: false
-summary: This version of the Monsters API app utilizes React 18, functional components, AND hooks.
+summary:
+    This version of the Monsters API app utilizes React 18, functional
+    components, AND hooks.
 images: ['/static/images/projects/img/webp/monsters-rolodex-2022-app.webp']
 layout: PostLayout
 canonicalUrl: /blog/projects/monsters-rolodex-2022-hooks
 ---
 
+<Interglobalmedia
+	src="/static/images/projects/img/webp/monsters-rolodex-2022-app.webp"
+	author="Maria D. Campbell"
+	alt="Monsters Rolodex 2022 (Hooks)"
+	srcUrl="/static/images/projects/img/webp/monsters-rolodex-2022-app.webp"
+	authorUrl="/about"
+/>
+
 ## Description
 
-I **_recently upgraded_** this `project` to `React 18` using `functional React components` AND `hooks`.
+I **_recently upgraded_** this `project` to `React 18` using
+`functional React components` AND `hooks`.
 
-For `state` I **_use_** the `useState` **_hook_**, for `side effects` the `useEffect Hook`, and the `useCallback hook` to **_prevent_** `infinite function calls` to the `function` **_created_** to `fetch` the `data` from the `JSONPlaceholder API`. A `call` to **_this_** `function` is **_passed_** to the `useEffect hook` and a **_reference_** to it is **_passed_** to its `array` of `dependencies`.
+For `state` I **_use_** the `useState` **_hook_**, for `side effects` the
+`useEffect Hook`, and the `useCallback hook` to **_prevent_**
+`infinite function calls` to the `function` **_created_** to `fetch` the `data`
+from the `JSONPlaceholder API`. A `call` to **_this_** `function` is
+**_passed_** to the `useEffect hook` and a **_reference_** to it is **_passed_**
+to its `array` of `dependencies`.
 
-I **_use_** `object destructuring assignment` for **_passing down_** `props`. I **_use_** the `react-lazy-load-image-component` **_package_** to **_implement_** `lazy loading` of my `Robohash images` **_fetched_** from the `Robohash API`, **_some_** of **_which_** sometimes did **_not load immediately_** and **_left_** an `image placeholder`. Then I would **_literally_** have to **_manually_** `clear` the `browser cache` and **_reload_** the `page` to **_fetch_** those **_straggler images_** from the `API.` With the `react-lazy-load-image-component` **_package_**, `images` are **_loaded_** from the `top down` **_instead_** of the **_other way around_**, and this **_resulted_** in **_much faster_** and **_successful loading_** of **_all_** the **_images_** from the `API`. **_In addition_**, I **_use_** `yarn`, `create-react-app`, `try catch` for `error handling`, `async/await`, `scss modules` **_using_** `dart sass`, and **_hosted_** the `project` on `gh-pages`.
+I **_use_** `object destructuring assignment` for **_passing down_** `props`. I
+**_use_** the `react-lazy-load-image-component` **_package_** to **_implement_**
+`lazy loading` of my `Robohash images` **_fetched_** from the `Robohash API`,
+**_some_** of **_which_** sometimes did **_not load immediately_** and
+**_left_** an `image placeholder`. Then I would **_literally_** have to
+**_manually_** `clear` the `browser cache` and **_reload_** the `page` to
+**_fetch_** those **_straggler images_** from the `API.` With the
+`react-lazy-load-image-component` **_package_**, `images` are **_loaded_** from
+the `top down` **_instead_** of the **_other way around_**, and this
+**_resulted_** in **_much faster_** and **_successful loading_** of **_all_**
+the **_images_** from the `API`. **_In addition_**, I **_use_** `yarn`,
+`create-react-app`, `try catch` for `error handling`, `async/await`,
+`scss modules` **_using_** `dart sass`, and **_hosted_** the `project` on
+`gh-pages`.
 
 ### Project Includes
 
-`apis`, `api error handling`, `create-react-app`, `css grid`, `css in js`, `(dart) sass`, `fetch api`, `flexbox`, `javascript object`, `manipulating the dom`, `mobile friendly`, `modern javascript`, `npx`, `react 18`, `react event handlers`, `react image lazy loading`, `react virtual dom`, `useState() method`, `template string literal interpolation`, `yarn`
+`apis`, `api error handling`, `create-react-app`, `css grid`, `css in js`,
+`(dart) sass`, `fetch api`, `flexbox`, `javascript object`,
+`manipulating the dom`, `mobile friendly`, `modern javascript`, `npx`,
+`react 18`, `react event handlers`, `react image lazy loading`,
+`react virtual dom`, `useState() method`,
+`template string literal interpolation`, `yarn`
 
-- [View Monsters Rolodex 2022 (Hooks) on Github GH Pages](https://interglobalmedia.github.io/monsters-rolodex-2022/)
+-   [View Monsters Rolodex 2022 (Hooks) on Github GH Pages](https://interglobalmedia.github.io/monsters-rolodex-2022/)
+
+-   [View Monsters Rolodex 2022 (Hooks) Repository on Github](https://github.com/interglobalmedia/monsters-rolodex-2022-functional-components-hooks)
