@@ -8,6 +8,7 @@ import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
 import Pexels from './Pexels'
 import Unsplash from './Unsplash'
+import Interglobalmedia from './Interglobalmedia'
 
 export const MDXComponents = {
 	Image,
@@ -17,6 +18,7 @@ export const MDXComponents = {
 	BlogNewsletterForm: BlogNewsletterForm,
 	Pexels: Pexels,
 	Unsplash: Unsplash,
+	Interglobalmedia: Interglobalmedia,
 	wrapper: ({ components, layout, ...rest }) => {
 		const Layout = require(`../layouts/${layout}`).default
 		return <Layout {...rest} />
