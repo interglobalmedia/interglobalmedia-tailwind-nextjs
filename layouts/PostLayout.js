@@ -34,7 +34,7 @@ export default function PostLayout({
 	prev,
 	children,
 }) {
-	const { slug, fileName, date, lastmod, title, categories, tags } =
+	const { slug, fileName, date, lastmod, title, categories, tags, images } =
 		frontMatter
 
 	return (
