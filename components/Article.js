@@ -24,7 +24,7 @@ const Article = ({
 					alt={title}
 					src={images}
 					width={1280}
-					height={960}
+					height={853}
 					layout="intrinsic"
 				/>
 			)}

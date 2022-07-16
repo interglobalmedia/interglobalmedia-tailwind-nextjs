@@ -1,0 +1,9 @@
+/* media query variables */
+$min-1280: '(min-width: 1280px)';
+
+.figure {
+    margin-top: -2rem;
+    @media #{$min-1280} {
+        margin-top: 0;
+    }
+}
