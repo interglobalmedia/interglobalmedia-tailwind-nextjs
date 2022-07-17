@@ -12,6 +12,7 @@ import '../styles/partials/PostLayout.module.scss'
 import ShareTweet from '@/components/social-share/ShareTweet'
 import ShareHN from '@/components/social-share/ShareHN'
 import ShareReddit from '@/components/social-share/ShareReddit'
+import ShareFB from '@/components/social-share/ShareFB'
 
 const editUrl = (fileName) =>
 	`${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
@@ -43,6 +44,7 @@ export default function PostLayout({
 				url={`${siteMetadata.siteUrl}/blog/${slug}`}
 				authorDetails={authorDetails}
 				{...frontMatter}
+				twImage={images.url}
 			/>
 			<ScrollTopAndComment />
 			<article>
@@ -142,6 +144,11 @@ export default function PostLayout({
 									Social Share:
 								</h1>
 								<div className="social-share-links">
+									<ShareFB
+										className="mt-12"
+										url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
+										title={frontMatter.title}
+									/>
 									<ShareTweet
 										className="mt-12"
 										url={`https://www.interglobalmedianetwork.com/blog/${frontMatter.slug}`}
