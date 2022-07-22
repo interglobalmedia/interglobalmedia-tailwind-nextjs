@@ -35,7 +35,7 @@ export default function PostLayout({
 	prev,
 	children,
 }) {
-	const { slug, fileName, date, lastmod, title, categories, tags, images } =
+	const { slug, fileName, date, lastmod, title, categories, tags } =
 		frontMatter
 
 	return (
@@ -44,7 +44,6 @@ export default function PostLayout({
 				url={`${siteMetadata.siteUrl}/blog/${slug}`}
 				authorDetails={authorDetails}
 				{...frontMatter}
-				twImage={images.url}
 			/>
 			<ScrollTopAndComment />
 			<article>
@@ -167,10 +166,6 @@ export default function PostLayout({
 								</div>
 							</div>
 							<div className="pt-6 pb-6 text-base text-gray-700 dark:text-gray-300">
-								<Link href={discussUrl(slug)} rel="nofollow">
-									{'Discuss on Twitter'}
-								</Link>
-								{` • `}
 								<Link href={editUrl(fileName)}>
 									{'View on GitHub'}
 								</Link>
