@@ -1,0 +1,104 @@
+---
+title: Installing the Latest Version of MongoDB on macOS Monterey
+date: '2022-07-23'
+lastmod: '2022-07-23'
+tags: ['mongodb', 'nosql', 'databases', 'homebrew', 'macos', 'monterey']
+categories: ['mongodb', 'homebrew', 'post']
+draft: false
+summary: Installing the latest version of MongoDB on macOS Monterey.
+images:
+    ['/static/images/posts/img/webp/rubaitul-azad-cijiWIwsMB8-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/installing-the-latest-version-of-mongodb-on-macos-monterey
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/rubaitul-azad-cijiWIwsMB8-unsplash.webp"
+	author="Rubaitul Azad"
+	alt="Installing the Latest Version of MongoDB on macOS Monterey"
+	srcUrl="https://unsplash.com/photos/cijiWIwsMB8"
+	authorUrl="https://unsplash.com/@rubaitulazad"
+/>
+
+It has been a while since I installed `MongoDB` on my `Mac`. In fact, the
+version that I had installed was `Mongo 4.2.8`. **_However_**, now things are
+done a **_bit differently_**. It is also **_highly encouraged_** to **_only
+install_** `MongoDB` with `Homebrew`.
+
+If you are like me and have **_not installed_** `MongoDB` on your `macOS` for a
+while, and **_even_** have a `version` of `MongoDB` **_below_** `4.4`, **_a
+lot_** has `changed` for us **_since then_**.
+
+There **_no longer_** is `MongoDB` to **_install_** with `Homebrew`.
+**_According_** to
+[stackoverflow](https://stackoverflow.com/questions/57856809/installing-mongodb-with-homebrew),
+there **_no longer_** is a `mongodb formula` in `homebrew-core`:
+
+> To our users: if you came here because mongodb stopped working for you, we
+> have removed it from the Homebrew core formulas since it was migrated to a non
+> open-source license.
+
+`MongoDB` now is a `NON open-source license`. Imagine **_that_**.
+
+I **_used_** to **_download_** `MongoDB` using the `.tgz tarball`. And we had a
+**_whole bunch_** of `steps` to **_go through_** in **_order_** to **_place
+it_** in the **_right folder_** on our `macOS`. NOW,
+[MongoDB suggests](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/)
+`avoiding` **_that_** `route`:
+
+> While MongoDB can be installed manually via a downloaded .tgz tarball as
+> described in this document, it is recommended to use the brew package manager
+> on your system to install MongoDB if possible. Using a package manager
+> automatically installs all needed dependencies, provides an
+> example mongod.conf file to get you started, and simplifies future upgrade and
+> maintenance tasks.
+
+It has **_always_** been a **no-brainer** for **_me_** to go the `Homebrew`
+**route** when **_installing packages_** on `macOS`, so I **_immediately_**
+`complied`. **_However_**, the `sequence` of `commands` is a **_bit different_**
+now as a **_result_** of the `“non open-source license”` **change**.
+
+I **_did not_** previously install `MongoDB` with `Homebrew`, so I **_did not_**
+have to do the **_following_** (and **_neither_** does it **_work_** anymore):
+
+```shell
+# If you still have the old mongodb installed from homebrew-core
+brew services stop mongodb
+brew uninstall homebrew/core/mongodb
+```
+
+This was **_first posted_** `Sep 11, 2019` on `stackoverflow`, and then
+**_updated_** with a [link](https://github.com/mongodb/homebrew-brew) to
+[mongodb/homebrew-brew repository](https://github.com/mongodb/homebrew-brew) on
+`Github` September 28, 2021. The link **_takes you_** to the **_new_**
+[MongoDB Homebrew Tap](https://github.com/mongodb/homebrew-brew) on `Github`. It
+**_takes you_** through the **_steps_** to **_install_** the `MongoDB`
+**community version** **_as opposed to_** the **_premium_**
+`Enterprise Edition`.
+
+I **_did_** the **_following_**:
+
+```shell
+# Use the migrated distribution from custom tap
+brew tap mongodb/brew
+brew update (always recommended before installing something new)
+brew install mongodb-community
+brew services start mongodb-community
+```
+
+And I was **_good_** to **_go_**! I **_still_** have the **_old_** `Mongo 4.2.8`
+**version** **_installed_** on my OS, but it **_does not work_**. It is
+**_obsolete_**. This will be the **_next thing_** to **figure out**. **_How_**
+do I **_uninstall_** it, **_if_** at all **_possible_**?
+
+## Related Resources
+
+-   [mongodb/homebrew-brew](https://github.com/mongodb/homebrew-brew):
+    repository on Github
+-   [Installing MongoDB with Homebrew](https://stackoverflow.com/questions/57856809/installing-mongodb-with-homebrew):
+    stack overflow
+-   [Can’t install MongoDB 6.0 on macOS with Homebrew](https://www.mongodb.com/community/forums/t/cant-install-mongodb-6-0-on-macos-with-homebrew/176180):
+    MongoDB Developer Community
+-   [Install MongoDB Community Edition](https://www.mongodb.com/docs/manual/administration/install-community/):
+    mongodb.com
+-   [Latest Product Announcements](https://www.mongodb.com/new): mongodb.com
