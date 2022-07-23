@@ -1,0 +1,135 @@
+---
+title: Narrowly Escaping the Need to Remove Giscus
+date: '2022-07-23'
+lastmod: '2022-07-23'
+tags: ['giscus', 'nextjs', 'static tweets', 'tweet embeds']
+categories: ['page performance', 'post']
+draft: false
+summary: Narrowly escaping the need to remove Giscus.
+images:
+    ['/static/images/posts/img/webp/raphael-biscaldi-XvnpKTPOplg-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/narrowly-escaping-the-need-to-remove-giscus
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/raphael-biscaldi-XvnpKTPOplg-unsplash.webp"
+	author="Raphael Biscaldi"
+	alt="Narrowly Escaping the Need to Remove Giscus"
+	srcUrl="https://unsplash.com/photos/XvnpKTPOplg"
+	authorUrl="https://unsplash.com/@les_photos_de_raph"
+/>
+
+`Two` of my `posts`, one from several years ago, and one very recent,
+**_contain_** `tweets`. However, I was **_not_** initially **_able_** to
+`embed tweets` due to the `CSP` **_defined_** in my `next.config.js` file.
+**_Initially_**, it **consisted** of the **_following_** (and **_still does_**):
+
+```js
+const ContentSecurityPolicy = `
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' plausible.io giscus.app;
+  img-src * blob: data:;
+  media-src 'none';
+  connect-src *;
+  font-src 'self';
+  frame-src giscus.app;
+`
+```
+
+But I **_wanted_** to **be able** to `embed tweets` using
+`platform.twitter.com/widjets.js`. Because of `CSP`, I was **_not able_** to do
+so **_out of_** the **_box_**. I **_had heard_** that `tweet embeds` did
+**_not_** perform well with `Next.js` (and **_in general_**), and I **_wanted_**
+to **_see_** for **myself** what that **_entailed_**, **_before_** I went down
+**_another route_**.
+
+It **_took_** some **_trial_** and **_error_** to **figure out** how to
+**_enable_** `tweet embeds` using `platform.twitter.com/widjets.js`, but I
+**_did_** end up **_being successful_**. This **_meant_**, **however**, that I
+**_had_** to **_remove_** `Giscus` from my `site` **_as well_**. My `CSP`
+**config** ended up (**_temporarily_**) being the **_following_**:
+
+```js
+const ContentSecurityPolicy = `
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' plausible.io platform.twitter.com;
+  img-src * blob: data:;
+  media-src 'none';
+  connect-src *;
+  font-src 'self';
+  frame-src platform.twitter.com;
+`
+```
+
+The `performance` of my `Twitter` **_tweet embeds_** was `terrible`, just as I
+had heard. Originally I had **_styled_** the `text` and `links` with a
+`blockquote`, and that is **_also_** the `markup` for the` Twitter` **_tweet
+embeds_**. So when I would **_land_** on a `post` that **_contained_** a
+`tweet embed`, it **_looked like_** one of **_my blockquotes_** and **_not_** a
+`Twitter` **tweet embed**! I had to **_reload_** the `page` in order for the
+`embed` to **_render_**. **_What_** was the **_point_** in **_sacrificing_**
+`Giscus` for a `tweet embed` that **_looked exactly_** `like` my `hack`?
+
+I **_reverted back_** to my **_original_** `CSP` **config**. Then I **_went
+on_** to **_research_** my `tweet embed` **_issue_** further.
+
+After some research, I `came across` **_another solution_**: to **_add tweets_**
+to my `mdx` **posts** in the **_form_** of `static tweets`: `tweets`
+**_without_** the **use** of `JavaScript`, or **_more precisely_**, **_inline_**
+`script tags` **_inside_** my `mdx` **posts**.
+
+**_First_** I **came across** an **approach** in which I would **_basically_**
+be **_creating_** the **_equivalent_** of **_my own_** `static tweet`
+**plugin**, which **_also happened_** to be **_built_** with `Typescript`, which
+I do NOT use in my `Next.js` **site**. I **_tried_** to **_refactor_** the
+`Typescript React` into `JavasScript React`, but **_hit_** a **_wall_** at one
+point. **_In addition_**, the `structural approach` of `Maxime Heckel`’s `site`
+**_differed somewhat_** from **_mine_**, so it would have taken **_even
+longer_** to **_decipher_**. Were **_authentic looking_** `tweet embeds` THAT
+IMPORTANT to me to **_spend_** so much time on **_at this point_** in the
+**game**? Honestly, **_no_**. I also had **_too many_** other **_things_** on
+**_my plate_** to **_deal with_**. I was **_going_** to **_leave_** that
+`implementation` to **_another_** and **_more propitious_** `time`.
+
+But **_then_** I came across an `npm module` called `‘react-static-tweets’`, and
+**_decided_** to **give it** a **_shot_**. It DOES work. On **_initial load_**,
+in a `post` that contains **_only one_** `tweet embed`, the `tweet` takes a
+**_half_** a **_second_** to a **_full second_** to **load**. After that, it
+will **_always appear_** during the **_current_** `site visit`. **_However_**,
+on the `post` in which I have **_several_** `tweet embeds`, for **_all_** of
+**_them_** to **load**, it **_takes longer_** on **_first load_**. After that,
+they **_always appear_** for the **_current_** `site visit`. The **_same_**
+delayed process **_occurs_** with **_each_** `site visit` for **_multiple_**
+`tweet embeds` on **_one page_**.
+
+No, it is **_not perfect_**. Yes, I **_will have_** to **mention** something
+about it in my `FAQs` **page**. Will I be **_revisiting_** this? Yes. When
+`tweet embeds`**_become_** more `predominant/important` on my `site`. But **_for
+now_**, this **approach** will **_have_** to **_do_**. And the `performance` of
+the **_single_** `tweet embed` in the **_recent post_** is **_quick enough_**. I
+am **_glad_**, however, that I did **_not_** have to **_give up_** `Giscus` for
+**_actual_** `Twitter` **_tweet embeds_** using
+`platform.twitter.com/widgets.js`, **which have** such **_poor performance_**!
+
+**Note**: It **_will_** be worth **_revisiting_** Maxime’s `code`, because his
+`tweets` are **_already rendered_** to the **page** when you **_land_** on it.
+There is **_no delay_** whatsoever. He really **_did do_** a **beautiful job**
+of **_creating_** `static tweets`.
+
+`react-static-tweets` **_also provides_** an `SSR` (`server side rendering`)
+**approach**, which **_might_** be worth **_testing out_**.
+
+## Related Resources
+
+-   [Static Tweets with MDX and Next.js](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/):
+    by **_Maxime Heckel_**
+
+-   [react-static-tweets](https://www.npmjs.com/package/react-static-tweets): on
+    the **_NPM Registry_**
+
+-   [Why You Should Use the NPKill Node Module](/blog/why-you-should-use-the-npkill-node-module):
+    by **_interglobalmedia_**
+
+-   [Specialization and the Importance of Not Spreading Oneself Too Thin](/blog/2019-09-03-specialization-the-importance-of-not-spreading-oneself-too-thin):
+    by **_interglobalmedia_**
+
+-   [Embedded tweets take a toll on your website performances!](https://www.indiehackers.com/post/embedded-tweets-take-a-toll-on-your-website-performances-df0515e807)
