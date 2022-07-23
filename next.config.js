@@ -4,12 +4,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 // You might need to insert additional domains in script-src if you are using external services
 const ContentSecurityPolicy = `
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.mobile.twitter.com/manifest.json plausible.io giscus.app;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' plausible.io giscus.app;
   img-src * blob: data:;
   media-src 'none';
   connect-src *;
   font-src 'self';
-  frame-src giscus.app
+  frame-src giscus.app;
 `
 
 const securityHeaders = [
@@ -58,6 +58,9 @@ dotenv.config()
 
 module.exports = withBundleAnalyzer({
 	reactStrictMode: true,
+	images: {
+		domains: ['pbs.twimg.com'],
+	},
 	pageExtensions: ['js', 'jsx', 'md', 'mdx'],
 	eslint: {
 		dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],

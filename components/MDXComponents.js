@@ -9,6 +9,7 @@ import { BlogNewsletterForm } from './NewsletterForm'
 import Pexels from './Pexels'
 import Unsplash from './Unsplash'
 import Interglobalmedia from './Interglobalmedia'
+import { Tweet } from 'react-static-tweets'
 
 export const MDXComponents = {
 	Image,
@@ -19,6 +20,7 @@ export const MDXComponents = {
 	Pexels: Pexels,
 	Unsplash: Unsplash,
 	Interglobalmedia: Interglobalmedia,
+	Tweet: Tweet,
 	wrapper: ({ components, layout, ...rest }) => {
 		const Layout = require(`../layouts/${layout}`).default
 		return <Layout {...rest} />
