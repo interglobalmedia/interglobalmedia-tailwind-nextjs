@@ -1,5 +1,6 @@
 /* color variables */
 $white: #fff;
+$twitter-blue: #3b94d9;
 
 .static-text-tweet-article {
     background: $white;
@@ -15,8 +16,8 @@ $white: #fff;
 
 .static-text-tweet-blockquote {
     font-style: normal;
-    position: relative;
     padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+    position: relative;
 
     & a.text-gray-500 {
         margin-left: auto;
@@ -25,24 +26,25 @@ $white: #fff;
 
 .static-text-tweet-header {
     display: flex;
+
     & a.text-gray-500 svg {
-        fill: lighten(#3b94d9, 5%);
+        fill: lighten($twitter-blue, 5%);
     }
 }
 
 .static-text-tweet-header-author {
     display: flex;
     flex-direction: column;
-    text-decoration: none;
     margin-top: -0.5rem;
+    text-decoration: none;
 
     & .static-text-tweet-name {
         color: #000;
         font-weight: bold;
     }
 
-    & .static-tweet-text-handle-name {
-        color: var(--tweet-color-gray);
+    & span:nth-of-type(2) {
+        color: darken(#aaa, 15%);
     }
 }
 
