@@ -1,6 +1,6 @@
-import Image from './Image'
-import Link from './Link'
-import '../styles/partials/Card.module.scss'
+import Image from '../Image'
+import Link from '../Link'
+import '../../styles/partials/Card.module.scss'
 
 const Card = ({ title, summary, imgSrc, href, tags }) => {
 	return (

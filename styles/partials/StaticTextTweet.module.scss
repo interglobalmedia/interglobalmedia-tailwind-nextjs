@@ -1,0 +1,94 @@
+/* color variables */
+$white: #fff;
+
+.static-text-tweet-article {
+    background: $white;
+    border-radius: 0.5rem;
+    border: 1px solid lighten(#ccc, 5%);
+    display: block;
+    margin: 0 auto;
+}
+
+.static-text-tweet-div {
+    overflow: hidden;
+}
+
+.static-text-tweet-blockquote {
+    font-style: normal;
+    position: relative;
+    padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+
+    & a.text-gray-500 {
+        margin-left: auto;
+    }
+}
+
+.static-text-tweet-header {
+    display: flex;
+    & a.text-gray-500 svg {
+        fill: lighten(#3b94d9, 5%);
+    }
+}
+
+.static-text-tweet-header-author {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    margin-top: -0.5rem;
+
+    & .static-text-tweet-name {
+        color: #000;
+        font-weight: bold;
+    }
+
+    & .static-tweet-text-handle-name {
+        color: var(--tweet-color-gray);
+    }
+}
+
+.static-text-tweet-avatar {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    margin-top: 0;
+    margin-right: 0.75rem;
+}
+
+.static-text-tweet-text {
+    /* Will break line on \n and wrap text according to parent width. */
+    white-space: pre-wrap;
+}
+
+.static-text-tweet-text::before, .static-text-tweet-text::after {
+    content: '';
+}
+
+.static-text-tweet-info > a:first-of-type {
+    margin-right: 1rem;
+}
+
+.static-text-tweet-info > a {
+    text-decoration: none;
+}
+
+.static-text-tweet-publish-date, .static-text-tweet-device {
+    font-weight: normal;
+}
+
+.static-text-tweet-intents {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.static-text-tweet-intents > a {
+    text-decoration: none;
+
+    & b {
+        font-weight: normal;
+    }
+}
+
+.static-text-tweet-replies-icon, .static-text-tweet-retweets-icon, .static-text-tweet-likes-icon {
+    display: flex;
+}
