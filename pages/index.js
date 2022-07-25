@@ -1,13 +1,13 @@
 import Image from 'next/image'
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Article from '@/components/Article'
+import Article from '@/components/mdx/Article'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import NewsletterForm from '@/components/NewsletterForm'
-import ServicesSlider from '@/components/ServicesSlider'
-import DevTips from '@/components/DevTips'
-import ScrollTop from '@/components/ScrollTop'
+import ServicesSlider from '@/components/sliders/ServicesSlider'
+import DevTips from '@/components/sliders/DevTips'
+import ScrollTop from '@/components/buttons/ScrollTop'
 import '../styles/partials/Index.module.scss'
 
 const MAX_DISPLAY = 1
