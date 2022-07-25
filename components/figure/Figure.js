@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import '../styles/partials/Figure.module.scss'
+import '../../styles/partials/Figure.module.scss'
 
 const Figure = ({ alt, src, srcUrl, author, authorUrl, host, hostUrl }) => {
 	if (!alt || !src || !author || !authorUrl || !host || !hostUrl) {

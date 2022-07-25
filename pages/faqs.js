@@ -1,6 +1,6 @@
 import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { getFileBySlug } from '@/lib/mdx'
-import ScrollTop from '@/components/ScrollTop'
+import ScrollTop from '@/components/buttons/ScrollTop'
 
 const DEFAULT_LAYOUT = 'FaqsLayout'
 
