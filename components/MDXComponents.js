@@ -6,10 +6,12 @@ import CustomLink from './Link'
 import TOCInline from './TOCInline'
 import Pre from './Pre'
 import { BlogNewsletterForm } from './NewsletterForm'
-import Pexels from './Pexels'
-import Unsplash from './Unsplash'
-import Interglobalmedia from './Interglobalmedia'
+import Pexels from './figure/Pexels'
+import Unsplash from './figure/Unsplash'
+import Interglobalmedia from './figure/Interglobalmedia'
 import { Tweet } from 'react-static-tweets'
+import StaticTextTweet from './static-tweet/StaticTextTweet'
+import TextTweetEmbed from './static-tweet/TextTweetEmbed'
 
 export const MDXComponents = {
 	Image,
@@ -20,6 +22,8 @@ export const MDXComponents = {
 	Pexels: Pexels,
 	Unsplash: Unsplash,
 	Interglobalmedia: Interglobalmedia,
+	StaticTextTweet: StaticTextTweet,
+	TextTweetEmbed: TextTweetEmbed,
 	Tweet: Tweet,
 	wrapper: ({ components, layout, ...rest }) => {
 		const Layout = require(`../layouts/${layout}`).default

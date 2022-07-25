@@ -1,5 +1,5 @@
 import { PageSEO } from '@/components/SEO'
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/containers/SectionContainer'
 import siteMetadata from '@/data/siteMetadata'
 import '../styles/partials/Faqs.module.scss'
 
