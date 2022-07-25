@@ -1,9 +1,9 @@
 import Link from '@/components/Link'
 import Image from 'next/image'
-import Tag from '@/components/Tag'
-import Category from '@/components/Category'
+import Tag from '@/components/mdx/Tag'
+import Category from '@/components/mdx/Category'
 import formatDate from '@/lib/utils/formatDate'
-import '../styles/partials/Article.module.scss'
+import '../../styles/partials/Article.module.scss'
 
 const Article = ({
 	slug,
