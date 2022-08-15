@@ -1,0 +1,229 @@
+---
+title: Removing unstaged changes to your individual files in Git
+date: '2022-08-15'
+lastmod: '2022-08-15'
+tags: ['git', 'git checkout', 'git staging', 'git index']
+categories: ['git', 'post']
+draft: false
+summary: Removing unstaged changes to your individual files in Git.
+images:
+    [
+        '/static/images/posts/img/webp/praveen-thirumurugan-KPAQpJYzH0Y-unsplash.webp',
+    ]
+layout: PostLayout
+canonicalUrl: blog/removing-unstaged-changes-to-your-individual-files-in-git
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/praveen-thirumurugan-KPAQpJYzH0Y-unsplash.webp"
+	author="Praveen Thirumurugan"
+	alt="Removing unstaged changes to your individual files in Git"
+	srcUrl="https://unsplash.com/photos/KPAQpJYzH0Y"
+	authorUrl="https://unsplash.com/@praveentcom"
+/>
+
+Have you **_ever worked_** on **_project files_**, made **_changes_** which you
+have **_not_** yet **_committed_**, and then **_wanted_** to **_revert back_**
+to the **_version_** of the `file` **_before_** you **_had made_** those
+**_changes_**? I **_know_** I **_have_**!
+
+**_Removing_** the `unstaged changes` to your **_individual files_** is actually
+a **_simple process_**. Because **_perhaps_** you **_don’t want_** to
+`git reset` **_all_** your **_modified files_**. Perhaps you **_just want_** to
+**_revert_** the files **_individually_**.
+
+Let’s say I **_made changes_** in a project, and I **_wanted_** to **_revert
+back_** to the **_latest version_** of a file **_before_** I **_had mad_**e**_
+the _**current changes**_ to it, and my _**targeted**_ `file name` is
+`index.html`, and it is _**located**_ at the _**root**_ of my _**project**_,
+which we _**can call**_ `example-portfolio-site-namecheap`. I _**make**_ some
+_**markup changes**_ to `index.html`, and _**get**_ the _**following**_ back in
+the `Terminal console` _**after making**_ the _**changes\*\*\*:
+
+```shell
+git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+```
+
+Then, **_before_** actually `staging` that **_file_** or `committing` those
+**_changes_**, I **_want_** to **_revert back_** to its **_previous state_**
+(**_before making_** those **_changes_**). I **_would_** simply do the
+**_following command_**:
+
+```shell
+git checkout index.html
+```
+
+And the **_following_** would be **_returned_** in the `Terminal console` after
+**_running_** the **_command_**:
+
+```shell
+Updated 1 path from the index
+```
+
+And when I go to **_check_** the **_file_** to **_see_** if it **_reverted
+back_** to its **_previous state_**, it **_did_**! And when I **_run_** the
+**git command** `git status`, I **_get_** the **_following back_** in the
+`Terminal console`:
+
+```shell
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+```
+
+If I **_made changes_** in **_several_** files, and **_wanted_** to **_revert
+back_** to the **_previous state_** of **_more_** than **_one_** of those
+**_files_**, I could do the following:
+
+```shell
+git checkout index.html join.html
+
+And I get back the following in the Terminal console:
+
+Updated 2 paths from the index
+```
+
+**_Here_**, I am **_removing_** the **_unstated changes_** from the files called
+`index.html` and `join.html` **_all_** at **_once_**.
+
+But**_what_** does `Updated 2 paths from the index` **_mean_**? There actually
+is **_something_** called a **Git** `index`, and it is a **_binary file_**
+(**_usually residing_** in `.git/index`), **_containing_** a **_sorted list_**
+of `path names`, **_each_** with `permissions` and the `SHA1` of a **_blob
+object_** (file). For **_example_**, in my **_local_** (and **_remote_**)
+**_repository_** called `example-portfolio-site-namecheap`, I have the
+**_following content_** inside my `.git` **_folder_**:
+
+```shell
+.              HEAD           description    info           refs
+..             ORIG_HEAD      hooks          logs
+COMMIT_EDITMSG config         index          objects
+```
+
+As you **_can see_**, the `.git` folder **_contains_** a **_file_** called
+`index` (`.git/index`). And if you **_want_** to **_view_** the **_contents_**
+of the `index` in a **_human-readable way_**, you **_would run_** the
+`git ls-files` command. `git ls-files` **_simply outputs_** the **_file names_**
+of the **_project_**. Fo **_example_**, `git ls-files` **_outputs_** the
+**_following_** for my `example-portfolio-site-namecheap` **index**:
+
+```shell
+git ls-files
+.gitignore
+.stylelintrc
+about.html
+favicon.ico
+images/alexander-stanishev-lT5QahSnruU-unsplash.webp
+images/aman-jakhar-vakM4byYz2Y-unsplash.webp
+images/boxed-water-is-better-6aZp4_KfXT8-unsplash.webp
+images/boxed-water-is-better-km8IZ4xX9vA-unsplash.webp
+images/bryan-garces-IXUM4cJynP0-unsplash.webp
+images/burst-aoN3HWLbhdI-unsplash.webp
+images/caleb-jones-J3JMyXWQHXU-unsplash.webp
+images/cedric-vt-ILffJKYd1eA-unsplash.webp
+images/clark-van-der-beken-chcyjyRQV74-unsplash.webp
+images/daniel-roe-lpjb_UMOyx8-unsplash.webp
+images/daniil-komov-0LHKGHV982w-unsplash.webp
+images/dorothea-oldani-aIdp1RsXeaQ-unsplash.webp
+images/dorothea-oldani-taPsJHnNJ_8-unsplash.webp
+images/eberhard-grossgasteiger-y2azHvupCVo-unsplash.webp
+images/hans-veth-ZtsoAKpbsjk-unsplash.webp
+images/james-wainscoat-0mV5Vqs9BB8-unsplash.webp
+images/jason-leung-wHddViTmSvA-unsplash.webp
+images/john-spofford-CDODVpRt3K0-unsplash.webp
+images/joshua-daniel-6904Y06M2R4-unsplash.webp
+images/joshua-earle-ZMcLVBi9xx4-unsplash.webp
+images/meric-tuna-DpbFm4N2BXs-unsplash.webp
+images/patrice-bouchard-OeYUyI7jWwc-unsplash.webp
+images/peter-lloyd-M-7eSVirG54-unsplash.webp
+images/richard-lee-IB1nXa8ASuk-unsplash.webp
+images/saeed-lajami-5Lh-mrpbXZk-unsplash.webp
+images/sebastian-pichler-sblp4evk2gs-unsplash.webp
+images/sneha-cecil-o6is0IIEXnY-unsplash.webp
+images/steve-harrris-kAmNlU_b1G4-unsplash.webp
+images/vincent-van-zalinge-vUNQaTtZeOo-unsplash.webp
+index.html
+join.html
+package-lock.json
+package.json
+portfolio.html
+resume.html
+scripts/hamburger.js
+scripts/hover.js
+scripts/lazy-load.js
+scripts/link-highlight.js
+styles/join.css
+styles/main.css
+styles/portfolio.css
+styles/quote-cloud.css
+styles/resume.css
+```
+
+The `index` **_lists_** what is being **_tracked_** in the **_repository_**
+(**_project_**). And the git command `git ls-files -s` lists **_all_** files
+**_tracked_**, **_including_** `object name`, `mode bits`, and `stage number` in
+the **_output_**. For **_example_**:
+
+```shell
+100644 e86d016a35847caa2d33f921aa78d1b4d6b18f6c 0       .gitignore
+```
+
+The **_number_** `100644` is the `mode bit`,
+`e86d016a35847caa2d33f921aa78d1b4d6b18f6c` is the **_latest_** `SHA1`
+(`commit hash`) that the `.gitignore` file is **_part of_**, `0` is the
+`stage number`, and `.gitignore` is the `file` (`object`) `name`.
+
+There are **_two_** `mode bits` in `Git`. **_One_** is **_represented_** by
+`644`, and the **_other_** by `755`. They **_represent_** `unix permissions`.
+**_Just like_** we have **_permissions_** for **_users_** on our `macOS` with
+**_these values_**. `644` **_means_** the **_owner_** (of the file) **_can_**
+`read/write`, **_group/others_** can `read only`, and `755`  **_means_** `read`
+and `execute` **_access_** for **_everyone_** and **_also_** `write`
+**_access_** for the **_owner_** of the **_file_**. In **_my project_**, I have
+**_all_** `644` **_permissions_**.
+
+The `stage numbers`, \***_represented here_** by `0`, are **_used_** for
+**_handling_** `merge conflicts`. **_According_** to the **_article_**
+[Git: Understanding the Index File](https://mincong.io/2018/04/28/git-index/) by
+**_Mincing Huang_** (this **_information_** was **_very difficult_** to
+**_find_**),
+
+```markdown
+-   Slot 0: “normal”, un-conflicted, all-is-well entry.
+-   Slot 1: “base”, the common ancestor version.
+-   Slot 2: “ours”, the target (HEAD) version.
+-   Slot 3: “theirs”, the being-merged-in version.
+```
+
+So a `stage number` of `0` is **_good_**!
+
+And `.gitignore` is **_self-explanatory_**. The **_name_** of the **_file_**.
+
+And **_that_** is **_it_**!
+
+## Related Resources
+
+[What does the git index contain EXACTLY?](https://stackoverflow.com/questions/4084921/what-does-the-git-index-contain-exactly):
+**_stackoverflow.com_**
+
+[Git: Understanding the Index File](https://mincong.io/2018/04/28/git-index/):
+**_mincing.io_**
+
+[git-lis-files](https://git-scm.com/docs/git-ls-files): **_git-scm.com_**
+
+[Understanding File Permissions](https://www.multacom.com/faq/password_protection/file_permissions.htm):
+**_MULTACOM_**
+
+[File permission with six bytes in git. What does it mean?](https://unix.stackexchange.com/questions/450480/file-permission-with-six-bytes-in-git-what-does-it-mean):
+**_stackoverflow.com_**
+
+[Git - finding the SHA1 of an individual file in the index](https://stackoverflow.com/questions/460297/git-finding-the-sha1-of-an-individual-file-in-the-index):
+**_stackoverflow.com_**
