@@ -1,0 +1,487 @@
+---
+title:
+    Applying how I created a Figure element component to creating a Static Text
+    Tweet component
+date: '2022-08-25'
+lastmod: '2022-08-25'
+tags:
+    [
+        'static tweets',
+        'figure element',
+        'image attribution',
+        'photographer attribution',
+        'nextjs',
+        'react',
+        'jsx spread attributes',
+        'function as prop component',
+    ]
+categories: ['react', 'nextjs', 'post']
+draft: false
+summary:
+    Applying how I created a Figure (element) component to creating a Static
+    Text Tweet component.
+images:
+    ['/static/images/posts/img/webp/camilo-jimenez-0yLmwcXLwLw-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/applying-how-i-created-a-figure-element-component-to-creating-a-static-text-tweet-component
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/camilo-jimenez-0yLmwcXLwLw-unsplash.webp"
+	author="Camilo Jimenez"
+	alt="Applying how I created a Figure element component to creating a Static Text Tweet component"
+	srcUrl="https://unsplash.com/photos/0yLmwcXLwLw"
+	authorUrl="https://unsplash.com/@camstejim"
+/>
+
+In a **_previous_** post **_entitled_**
+[How to Create New Lines Inside Text Prop Values in Next.js and JavaScript in General](https://www.interglobalmedianetwork.com/blog/how-to-create-new-lines-inside-text-prop-values-in-nextjs-and-javascript-in-general),
+I **_discuss_** how I **_came_** to **_create_** a static text tweet component.
+It was **_inspired_** by a `figure` (`element`) component I had **_previously
+created_** which I **_use_** for my **post images** where I **_want_** to give
+**_attribution_** to the `image` and the `image`’s **_photographer_**.
+
+I **_have_** to **_say_** that this `Figure` (`element`) component was
+**_inspired_** by the `Recipe Blog` called
+[“Tambouille”](https://github.com/aloisdg/tambouille), **_created_** by
+`Github handle` [@aloisdg](https://github.com/aloisdg) (Aloïs de Gouvello),
+where `Alois` **_created_** a `Figure` component to **_give attribution_** to
+HIS **_recipe post_** `images` and their `photographers`. I **_teach_** about
+the `figure element` and **_using_** it so as to elegantly **_give
+attribution_** to `images` and their `photographers`, so when I saw him do that
+on his `Recipe Blog`, it **_caught_** my **_attention_**. To **_check out_** the
+`Tambouille` **_repository_** on `Github`, please **_visit_**
+[aloisdg/tambouille](https://github.com/aloisdg/tambouille).
+
+It **_all started_** with the `Figure` component, aka
+`function as prop component`, in which I **_use_** `props destructuring`, of the
+`props` I **_wanted_** to **_pass_** to the **_parent_** `Interglobalmedia`
+component, and which **_returns_** a `figure element` and **_associated_**
+`figcaption element` in the **_returned_** `JSX` of the **_component_**. This is
+**_considered_** the `child` component. I **_also use_** the `Next.js` `Image`
+component for **_image optimization_**, **_instead_** of the **_default_**
+`img element` there. So:
+
+```jsx
+import Image from 'next/image'
+import '../../styles/partials/Figure.module.scss'
+
+const Figure = ({ alt, src, srcUrl, author, authorUrl, host, hostUrl }) => {
+	if (!alt || !src || !author || !authorUrl || !host || !hostUrl) {
+		return null
+	}
+	// eslint-disable-next-line @next/next/no-img-element
+	let image = (
+		<Image
+			src={src}
+			className="figure-image"
+			alt={alt}
+			width={1280}
+			height={853}
+			layout="intrinsic"
+		/>
+	)
+	let caption = (
+		<figcaption className="figcaption">
+			Photo by{' '}
+			<a href={authorUrl} title={`See the profile of ${author}`}>
+				{author}
+			</a>{' '}
+			on{' '}
+			<a href={hostUrl} title={`Open ${host}`}>
+				{host}
+			</a>
+		</figcaption>
+	)
+	return (
+		<figure className="figure relative flex flex-col items-center">
+			{srcUrl ? (
+				<a className="w-full" href={srcUrl} title="See image">
+					{image}
+				</a>
+			) : (
+				{ image }
+			)}
+			{caption}
+		</figure>
+	)
+}
+
+export default Figure
+```
+
+But it does **_not_** stop there. Then, I **_created_** three
+`parent components`, one **_called_** `Interglobalmedia`, which **_gives
+attribution_** to my **_own_** `screenshots/images` I **_use_** in my
+**_posts_**, one **_called_** `Pexels`, which **_gives attribution_** to
+`images` I **_use_** from `Pexels`, and one **_called_** `Unsplash`, which
+**_gives attribution_** to `images` I **_use_** from `Unsplash`. The
+`Interglobalmedia` component:
+
+```jsx
+import Figure from './Figure'
+
+const Interglobalmedia = (interglobalmediaProps) => {
+	const props = {
+		...interglobalmediaProps,
+		host: 'Interglobalmedia',
+		hostUrl: '/',
+	}
+	return <Figure {...props} />
+}
+
+export default Interglobalmedia
+```
+
+This **_makes_** for a **_very flexible_** `parent` component! I **_pass in_** a
+`param` called `interglobalmediaProps`, which I **_pass in_** and **_spread
+out_** with `spread syntax` in an `object literal` **_represented_** by the
+`const variable` called `props`. In `React` **_jargon_**,
+`...interglobalmediaProps` is **_referred_** to as `JSX spread attributes`.
+There is `spread syntax` in **_vanilla_** `JS`, but
+[JSX spread attributes](https://reactpatterns.js.org/docs/jsx-spread-attributes/),
+which is a `JSX` **_feature_**, is a `syntax` for **_passing all_** of an
+`object`’s **_properties_** as `JSX attributes`. The **_properties_** of the
+`object` I **_pass in_** are **_copied_** onto the component’s **_props_**. And
+then I **_set_** two `key value` **_pairs_** which I would (**_perhaps_**)
+**_expect_** in all `Interglobalmedia` component **_instances_**. The
+**_process_** is the **_same_** for the `Pexels` and `Unsplash` components.
+
+If we **_don’t know_** all the **_properties_** which we **_want_** to **_set_**
+on a `component`, we **_might want_** to **_add_** them on to the `object`
+**_later_**. So in **_that case_**, we can **_use_** `JSX spread attributes`
+**_instead_** of **_explicitly_** `defining` which **_attributes_** we
+**_want_** **_pass_** to the component! And **_then_**, in **_my case_** in
+`Interglobalmedia` (and `Pexels` and `Unsplash`), I **_define_** only the **_two
+attributes_** and their **_values_** I want (**_perhaps_**) to be **_present_**
+in ALL my `Interglobalmedia` components, for **_example_**.
+
+An **_example_** of an `Interglobalmedia` component I **_use_** on the
+**_site_**:
+
+```jsx
+<Interglobalmedia
+	src="/static/images/projects/img/webp/audio-visual-slider-app.webp"
+	author="Maria D. Campbell"
+	alt="Audio Visual Slider"
+	srcUrl="/static/images/projects/img/webp/audio-visual-slider-app.webp"
+	authorUrl="/about"
+/>
+```
+
+I **_followed_** the `attributes` (`props`) I **_used_** for `Pexels` and
+`Unsplash`. I **_ignored_** `host` and `hostUrl`. I probably **_won’t_** ever
+**_use_** `host` and `hostUrl`, but I **_will keep_** those `props` in the
+`parent` component **_for now_**.
+
+I had been **_researching_** how I was going to **_embed_** `static tweets` on
+here, and **_only_** came up with some **_very complex_** solutions.
+**_Packages_** I **_came across_** did **_not work_**, because they
+**_basically_** were **_still using_** `JS scripts` **_under_** the **_hood_**,
+and that **_meant_** that **_virtually_** all of the time the **_embedded
+tweet_** would **_only_** show up on **_page reload_**. And that **_makes_** for
+**_very bad_** `UX`.
+
+Then I **_came across_** **Maxime Heckel’s** `Next.js` **_blog_**, where he
+**_wrote_** a **_beautiful_** post **_entitled_**
+[Static Tweets with MDX and Next.js](https://blog.maximeheckel.com/posts/static-tweets-with-mdx-nextjs/),
+in which he **_went through_** the **_steps_** he **_took_** to **_successfully
+create_** a `static tweet` component. But I **_found_** it to be **_too
+complex_** given the **_end goal_**, and he **_also used_** `Typescript`, which
+I have **_not yet_** mastered. **_However_**, the **_basic idea_** is
+**_there_**. Perhaps he was **_just_** a bit more `“formal”` about his
+`key value` **_pairs_**!
+
+And **_one day_**, it **_dawned_** on me that **_all_** I really **_had_** to
+**_do_** was **_take_** the `code` and `structure` I **_created_** for my
+`Figure` element component and **_apply_** it to the **_creation_** of a
+`static text tweet`. I was **_only interested_** in `tweets` that
+**_essentially_** only **_contained_** `text`, so **_that_** is **_why_**
+`StaticTextTweet`. So I **_ended up_** doing the **_following_**:
+
+```jsx
+import SocialIcon from '../social-icons'
+import '../../styles/partials/StaticTextTweet.module.scss'
+
+const StaticTextTweet = ({
+	avatar,
+	author,
+	name,
+	handleUrl,
+	handleName,
+	text,
+	repliesUrl,
+	replies,
+	retweetsUrl,
+	retweets,
+	likesUrl,
+	likes,
+	statusUrl,
+	publishDate,
+	twitterDeviceUrl,
+	twitterDevice,
+}) => {
+	return (
+		<article className="static-text-tweet-article">
+			<div className="static-text-tweet-div">
+				<blockquote className="static-text-tweet-blockquote">
+					<div className="static-text-tweet-header">
+						<a
+							className="static-text-tweet-avatar-link"
+							href={handleUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								className="static-text-tweet-avatar"
+								src={avatar}
+								alt={author}
+							/>
+						</a>
+						<a
+							href={handleUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="static-text-tweet-header-author"
+						>
+							<span className="static-text-tweet-name">
+								{name}
+							</span>
+
+							<span className="static-text-tweet-handle-name text-sm">
+								{handleName}
+							</span>
+						</a>
+						<SocialIcon
+							className="static-text-tweet-brand-icon"
+							kind="twitter"
+							href={statusUrl}
+							size="5"
+						/>
+					</div>
+					<div className="static-text-tweet-text-wrapper">
+						<p className="static-text-tweet-text">{text}</p>
+					</div>
+					<div className="static-text-tweet-info">
+						<a
+							href={statusUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<b className="static-text-tweet-publish-date">
+								{publishDate}
+							</b>
+						</a>
+						<a
+							href={twitterDeviceUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<b className="static-text-tweet-device">
+								{twitterDevice}
+							</b>
+						</a>
+					</div>
+					<div className="static-text-tweet-intents">
+						<a
+							href={repliesUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="static-text-tweet-replies-icon"
+						>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+							>
+								<path d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.045.286.12.403.143.225.385.347.633.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.368-3.43-7.788-7.8-7.79zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.334-.75-.75-.75h-.395c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path>
+							</svg>
+							<b className="static-text-tweet-replies">
+								{replies}
+							</b>
+						</a>
+						<a
+							href={retweetsUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+							className="static-text-tweet-retweets-icon"
+						>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+							>
+								<path d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z"></path>
+							</svg>
+							<b className="static-text-tweet-retweets">
+								{retweets}
+							</b>
+						</a>
+						<a
+							className="static-text-tweet-likes-icon"
+							href={likesUrl}
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 24 24"
+								fill="currentColor"
+							>
+								<path d="M12 21.638h-.014C9.403 21.59 1.95 14.856 1.95 8.478c0-3.064 2.525-5.754 5.403-5.754 2.29 0 3.83 1.58 4.646 2.73.813-1.148 2.353-2.73 4.644-2.73 2.88 0 5.404 2.69 5.404 5.755 0 6.375-7.454 13.11-10.037 13.156H12zM7.354 4.225c-2.08 0-3.903 1.988-3.903 4.255 0 5.74 7.035 11.596 8.55 11.658 1.52-.062 8.55-5.917 8.55-11.658 0-2.267-1.822-4.255-3.902-4.255-2.528 0-3.94 2.936-3.952 2.965-.23.562-1.156.562-1.387 0-.015-.03-1.426-2.965-3.955-2.965z"></path>
+							</svg>{' '}
+							<b className="static-text-tweet-likes">{likes}</b>
+						</a>
+					</div>
+				</blockquote>
+			</div>
+		</article>
+	)
+}
+
+export default StaticTextTweet
+```
+
+**_Basically_**, this **_set_** the **_properties_** I was **_going_** to
+**_use_** via `destructuring` in the `parent` component. And then I
+**_created_** a `parent` component **_called_** `TextTweetEmbed`, and it
+**_looked like_** the **_following_**:
+
+```jsx
+mport StaticTextTweet from './StaticTextTweet'
+
+const TextTweetEmbed = (textTweetEmbedProps) => {
+	const props = {
+		...textTweetEmbedProps,
+	}
+	return <StaticTextTweet {...props} />
+}
+
+export default TextTweetEmbed
+```
+
+So **_all_** the **_hard work_** was in **_finding_** the **_appropriate data_**
+for the `prop` **_values_**, and in the **_styling_**. My **_styling_** for the
+`static tweet` was the **_following_**:
+
+```scss
+/* color variables */
+$white: #fff;
+$twitter-blue: #3b94d9;
+
+.static-text-tweet-article {
+	background: $white;
+	border-radius: 0.5rem;
+	border: 1px solid lighten(#ccc, 5%);
+	display: block;
+	margin: 0 auto;
+}
+
+.static-text-tweet-div {
+	overflow: hidden;
+}
+
+.static-text-tweet-blockquote {
+	font-style: normal;
+	padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+	position: relative;
+
+	& a.text-gray-500 {
+		margin-left: auto;
+	}
+}
+
+.static-text-tweet-header {
+	display: flex;
+
+	& a.text-gray-500 svg {
+		fill: lighten($twitter-blue, 5%);
+	}
+}
+
+.static-text-tweet-header-author {
+	display: flex;
+	flex-direction: column;
+	margin-top: -0.5rem;
+	text-decoration: none;
+
+	& .static-text-tweet-name {
+		color: #000;
+		font-weight: bold;
+	}
+
+	& span:nth-of-type(2) {
+		color: darken(#aaa, 15%);
+	}
+}
+
+.static-text-tweet-avatar {
+	border-radius: 50%;
+	width: 36px;
+	height: 36px;
+	margin-top: 0;
+	margin-right: 0.75rem;
+}
+
+.static-text-tweet-text {
+	/* Will break line on \n and wrap text according to parent width. */
+	white-space: pre-wrap;
+}
+
+.static-text-tweet-text::before,
+.static-text-tweet-text::after {
+	content: '';
+}
+
+.static-text-tweet-info > a:first-of-type {
+	margin-right: 1rem;
+}
+
+.static-text-tweet-info > a {
+	text-decoration: none;
+}
+
+.static-text-tweet-publish-date,
+.static-text-tweet-device {
+	font-weight: normal;
+}
+
+.static-text-tweet-intents {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1.5rem;
+}
+
+.static-text-tweet-intents > a {
+	text-decoration: none;
+
+	& b {
+		font-weight: normal;
+	}
+}
+
+.static-text-tweet-replies-icon,
+.static-text-tweet-retweets-icon,
+.static-text-tweet-likes-icon {
+	display: flex;
+}
+```
+
+So it should **_not_** always be about **_showing off_** how much we **_know_**
+in our `code`, but **_achieving_** the **_same goal_** with the **_most
+readable_** and **_effective_** `code` that **_perhaps_** is **_even simpler_**
+to **_create_**. And **_that_** is what I **_did_** here.
+
+**_Happy tweeting_**!
+
+## Related Resources
+
+-   [Function as Prop Component](https://reactpatterns.js.org/docs/function-as-prop-component/):
+    **_react patterns_**
+-   [JSX Spread Attributes](https://reactpatterns.js.org/docs/jsx-spread-attributes/):
+    **_react patterns_**
+-   [Recipe Blog Tambouille repository on Github](https://github.com/aloisdg/tambouille):
+    **_tambouille recipe blog_**
