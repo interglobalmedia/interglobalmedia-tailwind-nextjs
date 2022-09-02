@@ -6,6 +6,7 @@ const headerNavLinks = [
 	{ href: '/categories', title: 'Categories' },
 	{ href: '/tags', title: 'Tags' },
 	{ href: '/faqs', title: 'Faqs' },
+	{ href: '/skills', title: 'Skills' },
 ]
 
 export default headerNavLinks

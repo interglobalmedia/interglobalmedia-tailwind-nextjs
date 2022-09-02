@@ -12,6 +12,7 @@ import Interglobalmedia from './figure/Interglobalmedia'
 import { Tweet } from 'react-static-tweets'
 import StaticTextTweet from './static-tweet/StaticTextTweet'
 import TextTweetEmbed from './static-tweet/TextTweetEmbed'
+import Skills from './Skills'
 
 export const MDXComponents = {
 	Image,
@@ -25,6 +26,7 @@ export const MDXComponents = {
 	StaticTextTweet: StaticTextTweet,
 	TextTweetEmbed: TextTweetEmbed,
 	Tweet: Tweet,
+	Skills: Skills,
 	wrapper: ({ components, layout, ...rest }) => {
 		const Layout = require(`../layouts/${layout}`).default
 		return <Layout {...rest} />

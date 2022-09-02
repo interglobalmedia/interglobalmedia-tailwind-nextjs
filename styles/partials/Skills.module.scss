@@ -1,0 +1,105 @@
+/* media query variables */
+$min-740: '(min-width: 740px)';
+
+/* color variables */
+$aussie-blue: #80d0ff;
+$bright-coral: #f57070;
+$sand: #f9bf8f;
+
+
+/* Ability */
+
+.skills-content {
+    color: $main-black;
+    margin: 0 auto;
+    text-transform: lowercase;
+    width: 100%;
+    @media #{$min-740} {
+        font-size: 1.25rem;
+    }
+}
+
+.abilities {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    list-style: none;
+    margin-left: -3rem;
+    text-align: left;
+    transform: scaleX(1);
+    width: 100%;
+
+    & li {
+        color: $chocolate;
+        margin: 0 0 1.25rem 2.5rem;
+        width: 100%;
+    }
+}
+
+
+/* Anything that starts with class of .ability */
+
+[class^="ability"] {
+    position: relative;
+    transform: scaleX(1.1);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+    }
+
+    &::before {
+        color: lighten($aussie-blue, 10%);
+        margin-left: -2.3em;
+        text-align: right;
+        top: 0;
+    }
+
+    &::after {
+        background: $bright-coral;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 0;
+        z-index: -1;
+    }
+}
+
+[class^="ability-digital-photography"],
+[class^="ability-keynote"] {
+    &::before {
+        margin-left: -3em;
+    }
+}
+
+
+/* create a map variable for abilities. this is so we can have a key and a value pair. */
+
+$abilities: ('command-line': 80, 'css3': 90, 'ejs': 75, 'express': 65, 'git': 80, 'html5': 90, 'jira': 50, 'js': 80, 'markdown': 90, 'mongodb': 60, 'nextjs': 40, 'nodejs': 65, 'npm': 90, 'react': 60, 'sass': 90, 'sql': 60, 'vscode': 70, 'wordpress': 70);
+
+/* create animation for each ability for width */
+
+@each $ability,
+$score in $abilities {
+    @keyframes show-ability-#{$ability} {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: $score * 1%;
+        }
+    }
+    .ability-#{$ability} {
+        &::before {
+            content: '#{$score}%';
+            left: $score * 1%;
+        }
+
+        &::after {
+            animation: show-ability-#{$ability} ease-in-out 02s 0.5s 1;
+            animation-fill-mode: forwards;
+        }
+    }
+}
