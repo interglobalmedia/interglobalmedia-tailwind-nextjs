@@ -1,0 +1,108 @@
+---
+title: Updating the Node architecture on MacBook Pro Silicon
+date: '2022-09-25'
+lastmod: '2022-09-25'
+tags: ['macbook pro silicon', 'nodejs', 'nvm', 'rosetta']
+categories: ['macbook pro silicon', 'post']
+draft: false
+summary: Updating the Node architecture on MacBook Pro Silicon.
+images:
+    ['/static/images/posts/img/webp/christian-perner-fYO1T495QCM-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/updaating-the-node-architecture-on-macbook-pro-silicon
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/christian-perner-fYO1T495QCM-unsplash.webp"
+	author="Christian Perner"
+	alt="Updating the Node architecture on MacBook Pro Silicon"
+	srcUrl="https://unsplash.com/photos/fYO1T495QCM"
+	authorUrl="https://unsplash.com/@christianperner"
+/>
+
+**_Yesterday_** I **_purchased_** a **_new_** `Silicon MacBook Pro 16 inch`,
+`2021` **_with_** an `M1 Max Chip`. I had **_some software_** to
+**_update/refactor_** on my `MacBook Pro` **_since_** I h**_ad migrated_** from
+an **_older_** `Intel MacBook Pro` (late 2015). I
+[**_successfully re-installed_** `Homebrew`](/blog/reinstalling-homebrew-on-macbook-pro-silicon-2021),
+but **_when_** I **_started_** to **_work_** on my `Next.js` **_driven_**
+`business site` (**_this site_**), I **_got_** the **_following error_**:
+
+```shell
+zsh: bad CPU type in executable: node
+```
+
+I **_researched_** how to **_fix_** the **_issue_**. It is **_very easy_** to
+**_fix_**, as **_long as_** you **_know_** HOW to **_fix_** it. I **_found_** a
+**_thread_** on
+[stackoverflow.com](https://stackoverflow.com/questions/71122488/zsh-bad-cpu-type-in-executable-node/71133725#71133725)
+called
+[zsh: bad CPU type in executable: node](https://stackoverflow.com/questions/71122488/zsh-bad-cpu-type-in-executable-node/71133725#71133725).
+I **_found_** it **_very quickly_** because **_those were_** the **_exact
+words_** I **_used_** to **_find_** my `solution` when **_conducting_** my
+`Google search`!
+
+**_Indeed_**, it wass a `CPU` **_related issue_** that **_occurs_** on
+`macOS Silicon` when you **_have migrated_** your **_content_** from a
+`macOS Intel`.
+
+The **_one_** (and **_accepted_**) **_answer_** there **_stated_** that I
+**_needed_** to **_update_** the `Node version architecture` on `NVM`. And I
+**_do use_** `NVM` to **_install_** different **_versions_** of `Node.js`!
+**_According_** to the **_answer there_**, I **_had_** to **_run_** the
+**_following command_** in `Terminal`:
+
+```shell
+softwareupdate —install-rosetta
+```
+
+**_According_** to the `NVM docs` on `Github` **_regarding_**
+`M1 troubleshooting`,
+
+> **_Experimental support_** for the `M1 architecture` was **_added_** in
+> `node.js v15.3` and **_full support_** was **_added_** in `v16.0`.
+> **_Because_** of **_this_**, if you **_try_** to **_install_**
+> `older versions` of `node` **_as usual_**, you will **_probably experience_**
+> either **_compilation errors_** when **_installing node_** or **_out-of-memory
+> errors_** while **_running_** your **_code_**.
+
+I **_am_** (and **_was_**) **_running_** `Node version 16.17.0`, so **_errors_**
+regarding **_older versions_** of `Node.js` **_itself_** did **_not apply_**!
+But the **_older version_** of `MacBook Pro` **_with_** the `Intel Chip` was
+**_also applicable_** to **_such_** an **_error_**. So **_that_** is **_why_** I
+**_had_** to **_run_** the **_command_** `softwareupdate --install-rosetta`.
+
+So
+`“how will a M1 Mac know to use Rosetta for a version of node compiled for an Intel chip?”`.
+
+If an `executable` **_contains only_** `Intel instructions`, `macOS` will
+**_automatically use_** `Rosetta` to **_translate_** the **_instructions_**.
+
+There is **_other information_** regarding **_migrating_** from `Intel macOS` to
+`Silicon macOS` **_Node installations_**, but **_what_** I **_am sharing_** here
+**_fixed_** the **_problem_** for **_me_**!
+
+The `NVM documentation` on `Github` **_also showed_** how one could **_check_**
+to **_make sure_** that the `architecture` has been **_corrected_** for
+`macOS Silicon` by **_running_** the **_following command_** in `Terminal`:
+
+```shell
+node -p process.arch
+```
+
+And **_for me_**, the **_following_** was **_returned_** in `Terminal`:
+
+```shell
+x64
+```
+
+Which is **_exactly_** what **_should_** be **_returned_** if the
+`NVM architecture` has been **_corrected_** for `macOS Silicon`!
+
+## Related Resources
+
+-   [zsh: bad CPU type in executable: node](https://stackoverflow.com/questions/71122488/zsh-bad-cpu-type-in-executable-node/71133725#71133725):
+    **_stackoverflow.com_**
+
+-   [nvm repository on Github](https://github.com/nvm-sh/nvm#macos-troubleshooting):
+    **_nvm on Github_**
