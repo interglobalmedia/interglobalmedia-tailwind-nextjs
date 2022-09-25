@@ -1,0 +1,154 @@
+---
+title: Re-installing Homebrew on Macbook Pro Silicon 2021
+date: '2022-09-24'
+lastmod: '2022-09-24'
+tags: ['macbook pro silicon', 'homebrew', 'brewfile', 'monterey']
+categories: ['macbook pro silicon', 'post']
+draft: false
+summary: Re-installing Homebrew on MacBook Pro Silicon (16-inch, 2021).
+images:
+    ['/static/images/posts/img/webp/kristian-hunt-LqC2McpuvxA-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/re-installing-homebrew-on-macbook-pro-silicon-2021
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/kristian-hunt-LqC2McpuvxA-unsplash.webp"
+	author="Kristian Hunt"
+	alt="Re-installing Homebrew on Macbook Pro Silicon 2021"
+	srcUrl="https://unsplash.com/photos/LqC2McpuvxA"
+	authorUrl="https://unsplash.com/@krihun"
+/>
+
+**_Recently_** I had **_updated_** my `MacBook Pro Late 2015` to
+`Monterey 12.6`, and it **_wreaked havoc_** on my `MacBook Pro`. Not that
+**_things were_** so **_fantastic_** to **_begin with_** (it is **_almost_**
+`8 years old` after all), but **_updating_** to `12.6` **_drained down_** my
+`battery` **_very quickly_** and **_ate up_** my `memory`. And the `laptop`
+started getting **_very hot_** again as a **_result_**. **_a year ago_**,
+**_right before_** my `Apple Care` **_expired_**, the `battery` **_swelled_**,
+**_screwed up_** the `indexing` so that it **_thought_** I had **_no more
+space_** on my **_internal_** `Hard Drive`, so I had to **_very quickly_** get
+the `battery` **_replaced_**. I **_went_** to the `iStore`, an `Apple partner`,
+and had the `work` **_done there_**. Well, it **_barely lasted_** me a `year`.
+**_Barely_**. And the **_job_** was **_really subpar_**. **_Never_** going back
+**_there again_**. When they **_first opened_**, it was **_another set_** of
+**_guys_**, and they were GREAT. But by `2021`, it was a **_completely
+different_** `management` and/or `ownership`. **_At least_** in the `NYC store`.
+
+I **_knew_** I had to **_get over_** to the `Apple Store` at `Grand Central` and
+**_get_** a **_new_** `laptop` ASAP, **_before_** things got **_precarious_**.
+And I **_did_**! I **_got_** a `MacBook Pro 16 inch`, `2021`, with an
+`Apple M1 Max chip`,` 64GB` of `RAM` (a **_dream_**!), and `4TB` **_internal
+HD_**. **_However_**, when I **_migrated_** things from my `Intel Mac` over to
+the `Silicon M1 Max Chip`, I **_had_** to **_do_** some **_reconfiguration_**!
+
+**_One thing_** which was **_critical_** to me I had to **_re-install_**,
+because it is **_installed_** into a new path in `MacBook Pros` on `Monterey`
+with the `M1/M1 Max Chip` on `Silicon`. **_At first_** I **_thought_** it was
+going to be a **_major deal_**. That I would **_have_** to **_install_** each
+`Homebrew package` **_individually_**, and that it would take a **_long time_**
+to **_complete_**. But I **_found out_** that **_that_** is NOT the **_case_**!
+
+I **_did_** some **_research_** on **_how_** to **_migrate_** my
+`Homebrew configuration` on my **_old_** `MacBook Pro Intel`, and **_came
+across_** an **_article_** which **_provided_** the `command` for
+**_re-installing_** `Homebrew` on my **_new_** `Mac`, **_fixing_** the path to
+the new `/opt/homebrew/bin/brew` path (instead of `/usr/local/bin/brew` as it
+was **_previously installed_** on my `MacBook Pro Intel`).
+
+**_First_** I **_had_** to **_re-install_** `Homebrew`. In **_addition_**, I
+could **_not uninstall_** my **_previous install_** that was **_migrated_** from
+my `Intel MacBook Pro`. `macOS` (naturally) could **_not find_** it. I
+**_re-installed_** `Homebrew` with the **_following command_**:
+
+```shell
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+**_Next_**, **_after_** the **_install completed_**, I **_got_** something like
+the **_following_** back in `Terminal`:
+
+```shell
+==> Next steps:
+- Run these two commands in your terminal to add Homebrew to your PATH:
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/mariacam/.zshrc
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+```
+
+**_First_** I **_ran_** the `command`:
+
+```shell
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/mariacam/.zshrc
+```
+
+And **_then_** I **_ran_** the `command`
+
+```shell
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+And this **_set up_** my `Homebrew install` in `/opt/homebrew/bin`.
+
+But **_then_** I **_had_** to **_make sure_** to **_install_** all those
+**_packages_** I **_depended_** on in my `Intel MacBook Pro`. This **_same
+article_** explained **_how_** I could **_do it_** in **_one fell swoop_**!
+
+**_Next_**, I **_had_** to **_create_** a **_list_** of the `Homebrew packages`
+I **_had installed_** on my `Intel MacBook Pro`. So **_there_**, I **_created_**
+a `Brewfile` that **_listed_** all the **_packages_** I had **_installed_** with
+`Homebrew` by **_running_** the **_following command_** in `Terminal`:
+
+```shell
+brew bundle install --file ~/desktop/Homebrew/Brewfile
+```
+
+You **_have_** to **_make sure_** to **_run_** the `command` in the
+**_directory_** you **_want_** the `file` to **_appear in_**. I **_created_** a
+`Homebrew folder` and **_then_** I **_ra888 the _**above command**_. The
+`folder` was for the _**sake**_ of _**ease**_ of `file sharing` from the
+_**old**_ `MacBook Pro` to the _**new one**_. `brew bundle install` _**lists**_
+all the `Homebrew packages` I _**had installed**_ on the _**old laptop**_ and
+_**printed them**_ to the `Brewfile` that was _**created\*\*\* within the
+`Homebrew folder` on my `desktop`.
+
+**_Next_**, I **_had_** to **_make sure_** that I could **_transfer over_** the
+`Brewfile` **_from_** my `Intel MacBook Pro` to my **_new_**
+`Silicon MacBook Pro`. So I **_first_** went into `File Sharing` on my
+`Intel Mac`, and **_selected_** the `Homebrew folder` **_there_** `located` on
+my `desktop` and then **_selected myself_** as the `user` for `sharing access`
+to **_that folder_**.
+
+**_Then_** I **_went into_** my `Silicon Mac` into `File Sharing` **_where_** I
+**_selected_** my `public folder`, and the `Homebrew folder` **_appeared_** on
+my `Silicon Mac` **_desktop_**. And then **_all_** I **_needed_** to **_do_**
+was to **_run_** the `brew bundle install --file ~/desktop/Homebrew/Brewfile`
+**_command_** on my `Silicon Mac`. And **_all_** the **_packages_** were
+**_installed immediately_**. I **_had_** to **_remove one_** that would **_not
+install_**, and that **_initially resulted_** in a **_failed attempt_** to
+**_install_** all **_the packages_**. But **_after_** I **_removed it_** (it was
+**_highlighted_** in `red` **_as well_**), I was **_able_** to **_successfully
+install_** all the **_other packages_**.
+
+This **_definitely_** made **_re-installing_** `Homebrew` on my **_new_**
+`MacBook Pro` with a **_completely different_** `chip` from my **_previous_**
+`MacBook Pro` **_very easy_**! I **_highly recommend_** `reading` the
+**_article_** I came across **_entitled_**
+[Using Homebrew on M1 Mac](https://earthly.dev/blog/homebrew-on-m1/), as it
+**_goes into_** the **_background_** and **_reasons_** for **_all_** these
+`Homebrew` **_changes_** on the **_new_** `MacBook Pro` with the `M1 Max Chip`
+and on `macOS Monterey`.
+
+There is **_still_** a **_lot more_** to **_do_**, but this **_definitely_** was
+an **_excellent start_**. **_Especially_** since I **_got_** my **_latest
+version_** of `Git` **_back_** (version 2.37.3), **_among other things_**!
+
+## Related Resources
+
+-   [Using Homebrew on M1 Mac](https://earthly.dev/blog/homebrew-on-m1/):
+    **_earthly.dev_**
+-   [Nine ways to transfer files from one Mac to another](https://www.macworld.com/article/210934/filetransfer.html):
+    **_macworld_**
