@@ -1,0 +1,70 @@
+---
+title: Making the Git pre-commit hook work on macOS
+date: '2022-10-12'
+lastmod: '2022-10-12'
+tags: ['git', 'hooks', 'husky', 'development workflow', 'mascos', 'silicon']
+categories: ['git', 'hooks', 'macos', 'silicon', 'post']
+draft: false
+summary: Making the Git pre-commit hook work on macOS.
+images: ['/static/images/posts/img/webp/pexels-glauber-torquato-2219195.webp']
+layout: PostLayout
+canonicalUrl: /blog/making-the-git-pre-commit-hook-work-on-macos
+---
+
+<Pexels
+	src="/static/images/posts/img/webp/pexels-glauber-torquato-2219195.webp"
+	author="Glauber Forquato"
+	alt="Making the Git pre-commit hook work on macOS"
+	srcUrl="https://www.pexels.com/photo/close-up-photo-of-gold-wedding-rings-2219195/"
+	authorUrl="https://www.pexels.com/@glauber-torquato-1161877/"
+/>
+
+I was **_setting up_** `husky` for a **_project_** I am **_working on_**, and
+for **_some reason_**, my `husky` **_pre-commit_** `hook` was `“not executable”`
+by **_default_**. When I **_made_** a `commit`, I **_got_** the **_following
+back_** in my `VS Code Integrated Terminal`:
+
+```shell
+hint: The '.husky/pre-commit' hook was ignored because it's not set as executable.
+hint: You can disable this warning with git config advice.ignoredHook false.
+```
+
+I **_don’t remember_** ever **_having had_** that **_problem_** in the
+**_past_**, but **_apparently_** this is a **_very old_** `issue`. In the
+**_thread_** on the
+[husky repository on Github](https://github.com/typicode/husky/issues/1177),
+someone **_shared_** the **_following solution_**:
+
+```shell
+chmod ug+x .husky/*
+```
+
+I **_delved deeper_** into **_this issue_**, and actually **_found_** the
+**_person’s solution_** on
+[stackoverflow](https://stackoverflow.com/questions/8598639/why-is-my-git-pre-commit-hook-not-executable-by-default/73330791#73330791).
+
+So far **_everything_** `works beautifully`. If **_anything_** does
+**_change_**, I will **_update_** this `post`. I **_think_** I **_did_** the
+**_same thing_** as **_someone_** within the `stackoverflow thread` did. It is
+the **_following_**:
+
+```md
+I got my solution. I added pre-commit file manually so it was not
+executable(644). I removed pre-commit file and added using this command yarn
+husky add .husky/pre-commit that makes pre-commit file executable(755) and works
+fine (on) any new branch.
+
+So, to solve this type of issue, we have to avoid adding manual hook file and
+use this command yarn husky add .husky/<hookname> to add.
+```
+
+I **_used_** `npm`, so if you are **_also using_** `npm`, **_replace_**
+`yarn add` with `npm i`. - **_refer_** to
+[Husky needs to make executable for every new branch](https://stackoverflow.com/questions/68367259/husky-needs-to-make-executable-for-every-new-branch)
+
+## Related Resources
+
+-   [Husky needs to make executable for every new branch ](https://stackoverflow.com/questions/68367259/husky-needs-to-make-executable-for-every-new-branch)
+
+-   [Adding husky to your development workflow](/blog/adding-husky-to-your-development-workflow):
+    **_maria d. campbell, interglobalmedianetwork.com_**
