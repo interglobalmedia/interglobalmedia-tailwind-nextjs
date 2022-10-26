@@ -40,3 +40,8 @@ body {
     width: 100%;
     margin: 0 auto;
 }
+
+/* Targets the color of the inline code and code elements in light mode and dark mode. */
+.prose :where(code):not(:where([class~="not-prose"] *)) {
+  color: #fbdd12;
+}
