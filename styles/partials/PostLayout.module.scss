@@ -153,7 +153,7 @@ dd>a.text-primary-500 {
     }
 
     & code {
-        background: $main-background;
+        background: transparent;
     }
 }
 
@@ -342,7 +342,8 @@ h2.text-gray-500 {
     color: $discord-charcoal !important;
 
     & code {
-        background: $main-background;
+        // background: $main-background;
+        background: transparent;
     }
 
     & strong,
@@ -352,7 +353,7 @@ h2.text-gray-500 {
 }
 
 .dark .prose strong, .dark .prose strong > em {
-    color: $cream;
+    color: $white;
 }
 
 /* discuss on twitter view on github styling & h2 tag/next/prervious article title styling */
@@ -461,4 +462,9 @@ h2.text-gray-500 {
         border-style: solid;
         border-bottom-width: 1px;
     }
+}
+
+/* Remove the dark background color of code element in dark mode */
+.dark .dark\:prose-dark :where(code):not(:where([class~="not-prose"] *)) {
+    background-color: transparent;
 }
