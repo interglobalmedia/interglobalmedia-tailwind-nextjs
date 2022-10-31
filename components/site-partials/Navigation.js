@@ -21,11 +21,11 @@ const Navigation = () => {
 		const navbar = document.querySelector('.main-nav')
 		const ham = document.querySelector('.hamburger')
 		if (mobileNavOpen) {
-			navbar.classList.add('showNav')
-			ham.classList.add('showClose')
+			navbar.classList.add('show-nav')
+			ham.classList.add('show-close')
 		} else {
-			navbar.classList.remove('showNav')
-			ham.classList.remove('showClose')
+			navbar.classList.remove('show-nav')
+			ham.classList.remove('show-close')
 		}
 	}
 
