@@ -1,0 +1,196 @@
+---
+title: The sticky footer and Next.js 13
+date: '2022-10-31'
+lastmod: '2022-10-31'
+tags: ['nextjs', 'sticky footer', 'v13']
+categories: ['nextjs', 'post']
+draft: false
+summary: The sticky footer and Next.js 13.
+images: ['/static/images/posts/img/webp/pexels-skitterphoto-9271.webp']
+layout: PostLayout
+canonicalUrl: /blog/the-sticky-footer-and-nextjs-13
+---
+
+<Pexels
+	src="/static/images/posts/img/webp/pexels-skitterphoto-9271.webp"
+	author="skitterphoto"
+	alt="The sticky footer and Next.js 13"
+	srcUrl="https://www.pexels.com/photo/nature-hand-animal-glass-9271/"
+	authorUrl="https://www.pexels.com/@skitterphoto/"
+/>
+
+I have **_talked about_** the `sticky footer` in **_various scenarios_**, and
+**_now_** I am going to **_talk about_** it in `Next.js 13`.
+
+I **_just updated_** an `events app` I am **_working on_** to `Next.js 13`. And
+one **_really_** `cool thing` about **_that version_** is that we **_no
+longer_** `have` to `use` the `class based Document component` **_there_**. We
+**_can use_** a `function component`!
+
+My **_business site_** (**_this one_**), is **_not yet_** on `Next.js 13`. I
+`actually use` a **_starter blog_** for it, but am **_starting_** to **_think_**
+that **_maybe_** I **_want_** to **_re-create_** my site **_from scratch_**.
+**_Not using_** `Tailwind.css`. But **_creating_** my **_own thing_**. It’s time
+I do that. But it **_won’t start_** until **_towards_** the **_end_** of the
+**_year_**. **_Here_**, I am **_using_** `12.1.4`. **_Not too shabby_**, but I
+**_want_** to **_use_** `13`! And **_not have_** to **_deal with_** the `hassle`
+of a **_framework-like_** `structure` which has **_so many things_** that
+**_need_** to be **_updated_** in `conjunction` with **_each other_**, and could
+**_also cause_** `conflicts`. It **_won’t be_** that **_crazy_**, but it **_will
+take_** a **_bit_** of `time` and `patience` to **_refactor_**.
+
+But let’s **_get back_** to the `topic` **_at hand_**! So **_previously_**,
+`pre-Next.js 13`, we **_defined_** our `_document.js` **file** in **_something
+like_** the **_following way_**:
+
+```jsx
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
+
+class MyDocument extends Document {
+	render() {
+		return (
+			<Html lang="en" className="scroll-smooth">
+				<Head>
+					<link
+						rel="apple-touch-icon"
+						sizes="76x76"
+						href="/static/favicons/apple-touch-icon.png"
+					/>
+					<link
+						rel="icon"
+						type="image/png"
+						sizes="32x32"
+						href="/static/favicons/favicon-32x32.png"
+					/>
+					<link
+						rel="icon"
+						type="image/png"
+						sizes="16x16"
+						href="/static/favicons/favicon-16x16.png"
+					/>
+					<link
+						rel="manifest"
+						href="/static/favicons/site.webmanifest"
+					/>
+					<link
+						rel="mask-icon"
+						href="/static/favicons/safari-pinned-tab.svg"
+						color="#5bbad5"
+					/>
+					<meta name="msapplication-TileColor" content="#000000" />
+					<meta name="theme-color" content="#000000" />
+					<link
+						rel="alternate"
+						type="application/rss+xml"
+						href="/feed.xml"
+					/>
+				</Head>
+				<body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+					<Main />
+					<NextScript />
+				</body>
+			</Html>
+		)
+	}
+	static async getInitialProps(ctx) {
+		const sheet = new ServerStyleSheet()
+		const originalRenderPage = ctx.renderPage
+
+		try {
+			ctx.renderPage = () =>
+				originalRenderPage({
+					enhanceApp: (App) => (props) =>
+						sheet.collectStyles(<App {...props} />),
+				})
+
+			const initialProps = await Document.getInitialProps(ctx)
+			return {
+				...initialProps,
+				styles: (
+					<>
+						{initialProps.styles}
+						{sheet.getStyleElement()}
+					</>
+				),
+			}
+		} finally {
+			sheet.seal()
+		}
+	}
+}
+
+export default MyDocument
+```
+
+**_Now_**, we **_create it_** in the **_following way_** (**_different app_**):
+
+```jsx
+import { Html, Head, Main, NextScript } from 'next/document'
+
+function Document() {
+	return (
+		<Html lang="en">
+			<Head />
+			<body>
+				<div className="site-content-wrapper">
+					<Main />
+				</div>
+				<footer class="site-credits">
+					<p>© 2022 InterEvents</p>
+				</footer>
+				<NextScript />
+			</body>
+		</Html>
+	)
+}
+
+export default Document
+```
+
+I like **_this approach_**, **_because_** I
+**_prefer_**` functional components`, and it also **_keeps things_** even
+**_visually consistent_**. And **_because_** we can **_do_** this `kind` of
+`thing` in `_document.js` (we **_could add_** other `HTML elements`
+**_before_**), it **_makes_** it **_easy_** to **_add_** `sticky footer`
+**_styling_** using `Flexbox` here **_as well_**. And the **_following_** is
+**_all_** I **_needed_** to **_add_** to my `globals.css` file **_inside_** my
+`styles folder` to **_create_** a `sticky footer`:
+
+```css
+body {
+	margin: 0;
+	font-family: 'Open Sans', 'Lato', sans-serif;
+	color: #414141;
+	background-color: #e4f1f1;
+	/* sticky footer styling related */
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+/* sticky footer styling related */
+.site-content-wrapper {
+	flex: 1;
+	width: 100%;
+}
+```
+
+And **_of course_** I **_made sure_** to **_add_** the **_following_** `reset`
+to the **_top_** of the `file`:
+
+```css
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+```
+
+Only `box-sizing: border-box;` was there **_by default_**. If I had **_not
+added_** the `margin` and `padding` **_properties_**, the `footer` would
+**_not_** `completely stick` to the **_bottom_** as I **_wanted_**, **_due_** to
+the **_extra_** `margin` and `padding` **_added_** by the
+`user agent stylesheet`.
+
+**_Happy_** `sticky footering` with `Next.js 13`!
