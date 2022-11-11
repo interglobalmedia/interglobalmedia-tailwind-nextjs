@@ -9,7 +9,6 @@ import { BlogNewsletterForm } from './NewsletterForm'
 import Pexels from './figure/Pexels'
 import Unsplash from './figure/Unsplash'
 import Interglobalmedia from './figure/Interglobalmedia'
-import { Tweet } from 'react-static-tweets'
 import StaticTextTweet from './static-tweet/StaticTextTweet'
 import TextTweetEmbed from './static-tweet/TextTweetEmbed'
 import Skills from './Skills'
@@ -25,7 +24,6 @@ export const MDXComponents = {
 	Interglobalmedia: Interglobalmedia,
 	StaticTextTweet: StaticTextTweet,
 	TextTweetEmbed: TextTweetEmbed,
-	Tweet: Tweet,
 	Skills: Skills,
 	wrapper: ({ components, layout, ...rest }) => {
 		const Layout = require(`../layouts/${layout}`).default

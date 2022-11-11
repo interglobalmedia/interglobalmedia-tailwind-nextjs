@@ -878,6 +878,34 @@ const projectsData = [
 		],
 		more: 'https://interglobalmedia.github.io/monsters-rolodex-2022/',
 	},
+	{
+		id: 23,
+		title: 'Mobile first responsive HTML5 resume',
+		repository:
+			'https://github.com/interglobalmedia/responsive-html5-resume',
+		website:
+			'https://interglobalmedia.github.io/example-portfolio-site-namecheap/resume.html',
+		summary:
+			'During this final COMD2451 Web Design 1 class I am teaching/taught at the New York City College of Technology ( aka CityTech) in Brooklyn, I finally took out the time to refactor the CSS code for a mobile first HTML5 resume we built for our professional portfolio sites and make it a 100% mobile first deigned HTML5 page. I had originally refactored a responsive HTML5 resume I had found on Codepen, and made it as "dry" as possible within my time constraints. But since this was going to be my last class I was teaching at CityTech, I thought a great way of "wrapping things up" and "tying up loose ends" would be to make the design 100% "mobile first". Because the original CSS code was NOT. It was a great and challenging refactoring experience, and I also updated the slide deck for the class session to reflect those changes. It was also a great experience and take way for the students!',
+		imgSrc: '/static/images/projects/img/webp/pexels-ready-made-3850512.webp',
+		href: '/blog/projects/mobile-first-responsive-html5-resume',
+		tags: [
+			'html5',
+			', ',
+			'semantic html',
+			', ',
+			'seo',
+			', ',
+			'responsive design',
+			', ',
+			'mobile first design',
+			', ',
+			'stylelint',
+			', ',
+			'husky',
+		],
+		more: 'https://interglobalmedia.github.io/responsive-html5-resume/responsive-html5-resume.html#/',
+	},
 ]
 
 export default projectsData
