@@ -1,7 +1,7 @@
 import '@/styles/tailwind.scss'
 import '@/styles/prism.scss'
 import 'katex/dist/katex.css'
-import 'react-static-tweets/styles.css'
+// import 'react-static-tweets/styles.css'
 import '@/styles/styles.scss'
 
 import '@fontsource/inter/variable-full.css'
