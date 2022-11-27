@@ -1,0 +1,99 @@
+---
+title:
+    Connecting to MongoDB Compass to access local MongoDB databases via the new
+    mongosh shell
+date: '2022-11-27'
+lastmod: '2022-11-27'
+tags:
+    [
+        'mongodb community version 6',
+        'mongo legacy shell',
+        'mongosh shell',
+        'macOS ventura',
+    ]
+categories: ['databases', 'post']
+draft: false
+summary:
+    Connecting to MongoDB Compass to access local MongoDB databases via the new
+    mongosh shell.
+images: ['/static/images/posts/img/webp/pexels-pixabay-276502.webp']
+layout: PostLayout
+canonicalUrl: /blog/connecting-to-mongodb-compass-to-access-local-mongodb-databases-via-the-new-mongosh-shell
+---
+
+<Pexels
+	src="/static/images/posts/img/webp/pexels-pixabay-276502.webp"
+	author="Pixabay"
+	alt="Connecting to MongoDB Compass to access local MongoDB databases via the new mongosh shell"
+	srcUrl="https://www.pexels.com/photo/abstract-close-up-cobweb-connection-276502/"
+	authorUrl="https://www.pexels.com/@pixabay/"
+/>
+
+It is **_very simple_** to **_connect_** to one’s **_local_**
+`MongoDB databases` **_using_** `MongoDB Compass`. All you **_need_** to do is
+**_connect_** to your (new) `mongosh shell` **_via_** `Terminal`. I
+**_installed_** my **_instance_** of the `mongoldb-community`’s **_latest
+version_** (`6.0.1`) **_using_** `Homebrew`. So to **_start_** the
+`mongoldb-community service` with `Homebrew`, I **_first run_** the **_following
+command_**:
+
+```shell
+brew services start mongodb-community
+```
+
+**_Next_**, I **_run_** the **_following command_**:
+
+```shell
+mongosh
+```
+
+**_Then_** I **_run_** the **_following command_** to **_see_** what `databases`
+I **_have locally_**:
+
+```shell
+show dbs
+```
+
+**_Then_** I **_use_** the **_following command_** to **_switch_** to the
+`database` I **_want_** to **_use_**:
+
+```shell
+use bookit
+```
+
+In **_my case_**, I **_switch_** to a `database` called `bookit`.
+
+**_Then_**, I **_go into_** `MongoDB Compass` **_intalled_** on my `computer`,
+and I **_start_** a **_new connection_**. When I **_open up_** `Compass``, it
+**_looks like_** the **_following_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/mongodb-compass-new-connection.webp"
+	author="Interglobalmedia"
+	alt="Making a new connection to MongoDB Compass using the new mongosh shell"
+	srcUrl="/static/images/posts/img/webp/mongodb-compass-new-connection.webp"
+	authorUrl="/about"
+/>
+
+And, as you can **_see_** within the `screenshot`, I have **_entered_** my
+`localhost url`, so **_all_** I **_have_** to **_do_** is **_click_** on the
+`Connect button`. And **_when_** I **_do so_**, the **_following appears_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/mongodb-compass-connected.webp"
+	author="Interglobalmedia"
+	alt="Connected to MongoDB Compass"
+	srcUrl="/static/images/posts/img/webp/mongodb-compass-connected.webp"
+	authorUrl="/about"
+/>
+
+**_Then_**, I **_just click_** on the `database`` of **_my choice_** in the
+**_sidebar_** to the **_left_**. And **_that_** is **_it!_**
+
+**_Happy MongoDB Compassing!_**
+
+## Related Resources
+
+-   [MongoDB Compass](https://www.mongodb.com/products/compass)
