@@ -1,0 +1,185 @@
+---
+title: The new MongoDB shell, mongosh
+date: '2022-11-27'
+lastmod: '2022-11-27'
+tags:
+    [
+        'mongodb community version 6',
+        'mongo legacy shell',
+        'mongosh shell',
+        'macOS ventura',
+        'nextjs',
+    ]
+categories: ['databases', 'post']
+draft: false
+summary:
+    About the new MongoDB shell, mongosh, which replaces the legacy mongo shell.
+images: ['/static/images/posts/img/webp/pexels-oleksandr-pidvalnyi-322483.webp']
+layout: PostLayout
+canonicalUrl: /blog/the-new-mongodb-shell-mongosh
+---
+
+<Pexels
+	src="/static/images/posts/img/webp/pexels-oleksandr-pidvalnyi-322483.webp"
+	author="Oleksandr Pidvalnyi"
+	alt="The new MongoDB shell, mongosh"
+	srcUrl="https://www.pexels.com/photo/opened-coconut-on-sands-322483/"
+	authroUrl="https://www.pexels.com/@freestockpro/"
+/>
+
+With the (**_relatively_**) **_new_** `MongoDB community version 6.0+` (`6.0.1`)
+**_installed_** with `Homebrew` on `macOS` (I **_run_** on `Ventura`), the
+**_old_** (**_legacy_**) `mongo shell` has been **_deprecated_** and
+**_replaced_** with the **_new_** `mongosh shell`. It is **_important_** to
+**_use_** this **_new shell_** with `versions 6.0+`, because **_otherwise_** we
+**_get_** the **_following error/warning_**:
+
+```shell
+MongoDB shell version v4.2.8
+connecting to: mongodb://127.0.0.1:27017/db?compressors=disabled&gssapiServiceName=mongodb
+2022-11-27T08:40:29.390-0500 I  CONTROL  [js] machdep.cpu.extfeatures unavailable
+Implicit session: session { "id" : UUID("96aa8ae3-59f9-4b64-a72c-2582b799f251") }
+MongoDB server version: 6.0.1
+WARNING: shell and server versions do not match
+
+But if I run mongosh instead, I get the following:
+
+mongosh db
+Current Mongosh Log ID:	6383690f53b99d4afd657571
+Connecting to:		mongodb://127.0.0.1:27017/db?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0
+Using MongoDB:		6.0.1
+Using Mongosh:		1.6.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-11-27T08:26:32.193-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+db>
+```
+
+**_Currently_** I am **_using_** `MongoDB` with `Next.js`, and there are **_some
+things_** that we **_have_** to **_do differently_** when **_using_** `Mongoose`
+with `Next.js`. I will **_talk_** about **_that_** in a **_later post_**. But
+the **_point_** is that I **_installed_** the **_latest version_** of the
+`MongoDB community version` as I **_previously did_** with `Homebrew`, but
+**_updated_** to this **_latest version_** now. And **_then_** I **_had_** to
+**_find out_** what was **_going on_** with there **_being_** a `shell/server`
+**_mismatch_**. And **_that_** is **_when_** I **_found out_** from the
+`MongoDB docs` that the **_legacy (mongo) shell_** has been **_deprecated_**,
+and that there now is a new one **_called_** `mongosh`.
+
+For **_example_**, to **_start_** `mongosh`, which was **_installed_** with
+`Homebrew` on `macOS`, I **_run_** the **_following command_**:
+
+```shell
+mongosh
+```
+
+This **_starts_** the `mongosh shell`, and **_initially returns_** the
+**_following_** in the `Terminal console`:
+
+```shell
+mongosh
+Current Mongosh Log ID:	63836d06a08906465f1a64e6
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0
+Using MongoDB:		6.0.1
+Using Mongosh:		1.6.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-11-27T08:58:28.615-05:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test>
+```
+
+So **_by default_**, it **_takes me_** into a (`local`) `db` **_called_**
+`“test”`. I can **_check this_** by **_running_** the **_following command_**:
+
+```shell
+db
+```
+
+and `“test”` is **_returned_**. But **_let’s say_** I **_wanted_** to
+**_switch_** to **_another_**
+` database``, but I am ***not sure*** which  `databases` I **_have_** at **_this
+time_**. **_First_** I **_run_**:
+
+```shell
+show dbs
+```
+
+And it **_returns_**:
+
+```shell
+admin   40.00 KiB
+bookit  72.00 KiB
+config  72.00 KiB
+local   72.00 KiB
+```
+
+So **_those_** are my **_current_** `local dbs` on **_my computer_**.
+
+Then **_let’s say_** that I **_want_** to **_switch_** into the `bookit db`. I
+**_run_** the **_following command_**:
+
+```shell
+use bookit
+```
+
+And the **_following_** is **_returned_** in the `Terminal console`:
+
+```shell
+switched to db bookit
+bookit>
+```
+
+And if I **_want_** to **_get out_** of
+` mongosh``, I ***use*** the ***keyboard shortcut***  `control key + D
+key`, which ***takes*** me ***out of*** the `mongosh shell`. And **_then_** I
+**_run_**
+
+```shell
+brew services stop mongodb-community
+```
+
+to **_stop_** the `mongoldb-community service` **_altogether_**.
+
+**_Happy mongoshing!_**
+
+## Related Resources
+
+-   [The MongoDB Shell versus the Legacy mongo Shell](https://www.mongodb.com/docs/mongodb-shell/):
+    MongoDB documentation
+
+[Run (mongosh) Commands](https://www.mongodb.com/docs/mongodb-shell/run-commands/):
+MongoDB documentation
