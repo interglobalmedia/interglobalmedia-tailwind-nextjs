@@ -1,0 +1,110 @@
+---
+title: Fixing MDX linting errors in Next.js using eslint-plugin-mdx
+date: '2022-12-09'
+lastmod: '2022-12-09'
+tags:
+    [
+        'eslint-plugin-mdx',
+        'mdx',
+        'eslint',
+        'husky',
+        'lint-staged',
+        'prettier',
+        'linting',
+        'git hooks',
+        'pre-commit hook',
+        'nextjs',
+    ]
+categories: ['nextjs', 'linting', 'git hooks', 'post']
+draft: false
+summary: Fixing MDX  Linting Errors in Next.js using eslint-plugin-mdx.
+images: ['/static/images/posts/img/webp/pexels-polina-zimmerman-3747132.webp']
+layout: PostLayout
+canonicalUrl: /blog/fixing-mdx-linting-errors-in-nextjs-using-eslint-plugin-mdx
+---
+
+<Pexels
+	src="/static/images/posts/img/webp/pexels-polina-zimmerman-3747132.webp"
+	author="Polina Zimmerman"
+	alt="Fixing MDX linting errors in Next.js using eslint-plugin-md"
+	srcUrl="https://www.pexels.com/photo/black-smartphone-on-table-3747132/"
+	authorUrl="https://www.pexels.com/@polina-zimmerman/"
+/>
+
+**_Recently_** I was **_getting_** `mdx Eslint linting errors` in my `mdx files`
+where I **_write_** my **_posts_**. And a `red squiggly line` **_appears_** at
+the `top` of my `mdx files` where I had the **_starting_** `—--` **_triple
+hyphens_** which **_indicate_** the `start` of the `frontmatter data block` of
+the `file`. I **_needed_** to let `ESLint` **_know_** of such
+`mdx frontmatter syntax` so that it would **_not throw_** a `linting error`,
+thereby **_resulting_** in a `commit failure`.
+
+**_After_** a **_bit_** of **_research_**, I **_came across_** an `issue` on the
+`eslint-mdx` **_Github repository_** which **_provided_** the `configuration` I
+**_need_** to **_add_** to my `.eslintrc.js file`:
+
+```js
+module.exports = {
+	extends: [
+		'eslint:recommended',
+		'plugin:mdx/recommended',
+		'plugin:prettier/recommended',
+		'next',
+		'next/core-web-vitals',
+	],
+
+	settings: {
+		'mdx/code-blocks': true,
+		'mdx/language-mapper': {},
+	},
+}
+```
+
+In the `extends array`, I added `'plugin:mdx/recommended'`, **_because_** I
+**_wanted_** `ESLint` to **_recognize_** that I **_do indeed_** have
+`eslint-plugin-mdx npm` package **_installed_**. And I **_added_** the
+`settings object` **_because_** I **_wanted_** to `lint code blocks` at the
+**_same time_** (optional) by **_adding_** `'mdx/code-blocks': true`. And for
+the **_sake_** of **_future potential additions_** or **_overrides_**, I
+**_added_** `'mdx/language-mapper': {}` **_where_** I could **_disable_** the
+`language mapper` **_inside_** the `mapper object`. And in my `next.config.js`
+file, I **_already_** had **_added_**:
+
+```js
+module.exports = withBundleAnalyzer({
+	pageExtensions: ['js', 'jsx', 'md', 'mdx'],
+})
+```
+
+**_Now_**, when I `git commit` my **_changes_**, I **_don’t get_** a
+`linting error` because of the **_unrecognized frontmatter_** `---` **_data
+definition_** in my `post files` **_due to_** my `husky pre-commit hook`
+**_associated with_** my lint-staged configuration, which then meant that I
+would be able to achieve a **_successful commit_**.
+
+To **_recap_**, `ESLint` is a `parser` for **_inspecting code_**, **_reporting
+bugs_**, **_coding mistakes_**, or **_typos_**. It is **_opinionated_**, so
+**_sometimes_** we **_have_** to **_disable rules_** in **_order_** to **_be
+able_** to **_make commits_**.
+
+`lint-staged` is a `package` **_used_** to **_run_** a `linter` (in **_this
+case_** `ESLInt` and `Prettier`) on `staged git files` and **_prevent them_**
+from **_committing_** `buggy code`.
+
+`Husky`, as mentioned in **_other posts_** here (you can look up `“Husky”` in
+the `Tags page`), is a `tool` that **_works_** with `Git hooks` such as the
+`pre-commit hook`.
+
+`Prettier` is a `tool` for **_formatting code_** based on its `configuration`
+**_defined_** in its `config file` (mine is called `prettier.config.js`, but it
+can **_also be_** a `json file` called `.prettierrc.json`).
+
+**_Happy linting_** and **_successful pre-committing!_**
+
+## Related Resources
+
+-   [MDX Frontmatter](https://mdxjs.com/guides/frontmatter/)
+
+-   [eslint-mdx on Github](https://github.com/mdx-js/eslint-mdx#notice)
+
+-   [Automate and Keep Your Code Consistent Using ESLint, Prettier, Lint-Staged, and Husky](https://levelup.gitconnected.com/automate-and-keep-your-code-consistent-using-eslint-prettier-lint-staged-and-husky-3e186977d7eb)
