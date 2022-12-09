@@ -1,0 +1,207 @@
+---
+title: Safari Web Inspector vs Chrome Developer Tools vs Firefox Browser Tools
+date: '2022-12-08'
+lastmod: '2022-12-08'
+tags:
+    [
+        'browser developer tools',
+        'chrome',
+        'safari',
+        'firefox',
+        'developer experience',
+    ]
+categories: ['developer tools', 'post']
+draft: false
+summary:
+    Comparing Safari Web Inspector vs Chrome Developer Tools vs Firefox Browser
+    Tools.
+images:
+    ['/static/images/posts/img/webp/pexels-mehmet-turgut-kirkgoz-11744124.webp']
+layout: PostLayout
+canonicalUrl: /blog/safari-web-inspector-vs-chrome-developer-tools-vs-firefox-browser-tools
+---
+
+<Pexels
+	src="/static/images/posts/img/webp/pexels-mehmet-turgut-kirkgoz-11744124.webp"
+	author="Mehmet Turgut Kirkgoz"
+	alt="Safari Web Inspector vs Chrome Developer Tools vs Firefox Browser Tools"
+	srcUrl="https://www.pexels.com/photo/blacksmith-at-work-11744124/"
+	authorUrl="https://www.pexels.com/@tkirkgoz/"
+/>
+
+I **_just found_** out **_why_** `some developers` **_prefer working_** with
+`Chrome Developer Tools`, **_some prefer_** working with
+`Firefox Browser Tools`, and **_some prefer_** `Safari Web Inspector`. And it is
+**_not necessarily_** for the **_“obvious” reasons_**.
+
+Until **_very recently_**, I **_preferred working_** with
+`Chrome Developer Tools`, because I **_considered_** the `DX`
+(`developer experience`) the **_most intuitive_**. In **_that sense_**, it
+**_still is_**. **_However_**, I have **_also_** very **_recently_** been
+getting `“unknown” notifications` from `Chrome`, which I **_absolutely know_**
+**_must be_** from `“phishing” sites`. And that is **_NOT good_** and **_NOT
+secure_**.
+
+**_Below_** is a `screenshot` of `Chrome Developer Tools` when I **_go in_**
+`using` the `Option + Command + J` **_short cut_** and **_select_** the
+`Sources tab`:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/chrome_sources_tab.webp"
+	author="Interglobalmedia"
+	alt="Chrome Developer Tools Sources tab"
+	srcUrl="/static/images/posts/img/webp/chrome_sources_tab.webp"
+	authorUrl="/about"
+/>
+
+**_Then_** I **_started using_** `Firefox`. That **_definitely_** is **_more
+secure_** and **_private_**, but the `DX` is **_not_** the **_best_** as far as
+their `browser tools` go. AND there is **_no_** `Chrome Sources tab`
+**_equivalent_**. Which just did **_not seem_** to **_initially work_** for
+**_me_**.
+
+**_Then_** I **_checked out_** `Safari`. They are **_much better_** than they
+**_used_** to **_be_**, and they DO have a `Chrome Sources tab`
+**_equivalent_**. I **_think_** I will be `working` **_between_** `Firefox` and
+`Safari`. `Chrome` **_has_** to **_go_**, **_except_** for when **_testing_**
+for `cross-browser compatibilities`. AND when I **_use_** `Safari` or `Firefox`
+to **_land_** on `sites` which are `asset heavy`, i.e. **_lots_** of
+**_images_** that have `lazy-loading` **_implemented_**, the `Lighthouse audit`
+in `Firefox` is **_double_** the `score` of `Chrome`, and `load time` **_in
+general_** is **_very quick_** in `Safari`. That is **_because_** of **_all
+those_** `Chrome background trackers` and `plugins` that **_exist_** in the
+`browser`, and which can **_severely damage_** `site performance`.
+
+This is **_what_** `Safari Web Inspector` **_looks like_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/safari_web_inspector.webp"
+	author="Interglobalmedia"
+	alt="The Safari Web Inspector"
+	srcUrl="/static/images/posts/img/webp/safari_web_inspector.webp"
+	authorUrl="/about"
+/>
+
+What I **_do like_** about `Safari` is that `ALL ASSETS` **_used_** on a `page`
+are **_listed_** and can be **_fully inspected_**, **_including_** things like
+`Google Fonts`, **_for example_**. The `screenshot` **_above_** is the
+`home page` of the `example site` I **_created_** for my `Web Design 1` class
+(my **_last class_** `teaching` it will be **_next_** `Wednesday`,
+`December 14`, `2022`, **_freeing myself_** for a **_next “adventure”_**), and
+on **_that page_** I **_have_** a `background image`, `Google Font`(s),
+**_two_** `JavaScript files` which **_reside_** in a `scripts folder`, a
+`main.css` file which **_resides_** in a `styles folder`, and then a `CSS2` file
+for my `Google Font`. And **_all this_** `appears` **_under_** the
+`Web Inspector Sources tab`, the **_equivalent_** of the
+`Chrome Developer Tools Sources tab`. But perhaps **_even better_**, because the
+`Web Inspector` also **_opens up_** in a **_new_** `window`, which makes
+**_working inside_** the `Inspector` **_much easier!_** What is ALSO **_very
+cool_** is that `Safari` **_also has_** a `Graphics tab`:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/safari_empty_graphics.webp"
+	author="Interglobalmedia"
+	alt="Safari empty graphics tab"
+	srcUrl="/static/images/posts/img/webp/safari_empty_graphics.webp"
+	authorUrl="/about"
+/>
+
+**_Of course_** my `Graphics tab` does **_not show anything_** on the
+`Home page` of **_this site_** because there is **_nothing_** going on
+**_animation-wise_** there. **_However_**, when I **_go_** to the `about.html`
+page of the **_site_**, it is a **_different story_**. **_There_**, I **_have
+added_** (3) `animation layers`:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/safari_active_graphics_tab.webp"
+	author="Interglobalmedia"
+	alt="Safari active Graphics tab"
+	srcUrl="/static/images/posts/img/webp/safari_active_graphics_tab.webp"
+	authorUrl="/about"
+/>
+
+And it **_even states_** `where` the `animation` is **_defined_** in the
+`HTML markup`, and the **_name_** of the `animation` in the `CSS code`. How
+**_cool_** is **_that_**?
+
+**_Now_** let’s **_take_** a **_look_** at `Firefox`. The `DX` **_there_** is
+**_not_** as **_intuitive_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/firefox_browser_tools_style_editor.webp"
+	author="Interglobalmedia"
+	alt="Firefox Browser Tools Style Editor tab"
+	srcUrl="/static/images/posts/img/webp/firefox_browser_tools_style_editor.webp"
+	authorUrl="/about"
+/>
+
+I actually **_had_** to **_look up_** how to **_find_** the `JavaScript files`
+**_driving_** a `page`:
+[Introduction to Firefox Debugger](https://mozilladevelopers.github.io/playground/debugger/).
+
+I **_went into_** the `Firefox Browser Tools`, and then **_selected_** the
+`Debugger tab`. Then I **_opened up_** `“Main Thread”` by **_clicking_** on its
+`dropdown arrow`, and **_inside_** was the **_link_** to the **_page_** I was
+on:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/firefox_browser_tools_debugger_tab.webp"
+	author="Interglobalmedia"
+	alt="FThe Firefox Browser Tools Debugger tab"
+	srcUrl="/static/images/posts/img/webp/firefox_browser_tools_debugger_tab.webp"
+	authorUrl="/about"
+/>
+
+Then I **_clicked_** on the **_site url_**, and the **_following appeared_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/firefox_browser_tools_main_thread_scripts_folder.webp"
+	author="Interglobalmedia"
+	alt="The Firefox Browser Tools Main Thread Scripts Folder"
+	srcUrl="/static/images/posts/img/webp/firefox_browser_tools_main_thread_scripts_folder.webp"
+	authorUrl="/about"
+/>
+
+My `scripts folder` **_containing_** the `JavaScript files` which were **_being
+used_** on the **_active page_** with the **_help_** of `script tags` located
+**_right above_** the **_closing_** `body tag` in the `HTML markup`. And when I
+**_clicked_** on **_one_** of the **_files_**, the **_following appeared_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/firefox_browser_tools_main_thread_javascript_files.webp"
+	author="Interglobalmedia"
+	alt="The Firefox Bfrowser Tools Main Thread JavaScript Files"
+	srcUrl="/static/images/posts/img/webp/firefox_browser_tools_main_thread_javascript_files.webp"
+	authorUrl="/about"
+/>
+
+So **_yes_**, we **_can_** get to the **_same places_** in **_all three_**
+`browsers`, but the `paths` and `experiences` **_getting there_** are
+**_dramatically different_**. After **_better acquainting_** myself with
+`Firefox` and `Safari`, I **_could see_** `using both`. And `device mode`
+(**_responsive design mode_**) in `Firefox` **_definitely_** `competes well`
+**_against_** `Chrome`. It **_might_** be **_even better!_**
+
+**_Sometimes_** we **_stick_** with `tools` which **_may not_** be the
+**_safest_** or **_not_** the **_best_** for `site performance` **_because_** we
+**_don’t know_** any better or we are **_resistant_** to **_change_**. But if we
+**_just take_** a **_bit_** of **_time_** to **_get_** to **_know_** the
+**_competition_**, we just **_might find_** `happiness` in **_switching_**!
+
+**_Happy Developer Tooling across browsers!_**
+
+## Related Resources
+
+-   [Introduction to Firefox Debugger](https://mozilladevelopers.github.io/playground/debugger/)
+
+-   [Web development tools: Safari](https://developer.apple.com/safari/tools/)
+
+-   [Why is Chrome So Slow? 9 Ways To Fix](https://www.technewstoday.com/why-is-chrome-so-slow/)
