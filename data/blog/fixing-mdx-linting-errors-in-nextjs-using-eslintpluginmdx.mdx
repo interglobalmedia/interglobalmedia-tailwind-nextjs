@@ -101,6 +101,38 @@ can **_also be_** a `json file` called `.prettierrc.json`).
 
 **_Happy linting_** and **_successful pre-committing!_**
 
+**Note 12.9.22**: The `red squiggly line` **_still shows up_** at the
+**_beginning_** of the beginning of the frontmatter data block represented by
+the `---` triple hyphens, but as mentioned in an `esint-plugin-markdown` issue
+**_entitled_**
+[ Parsing error: Invalid left-hand side in prefix operation in mdx frontmatter #150](https://github.com/eslint/eslint-plugin-markdown/issues/150)
+on their `Github repository`,
+
+> That parse error suggests that it's trying to parse the --- in the first line
+> of the file as a -- prefix unary decrement operator. That normally wouldn't
+> happen. Is there something in your config that might cause ESLint to parse a
+> .mdx file as JS?
+>
+> I explained a bit in
+> [MDX support #134 (comment)](https://github.com/eslint/eslint-plugin-markdown/issues/134#issuecomment-662231531),
+> but I don't expect this plugin would work with MDX syntax currently since it's
+> so different from Markdown. Based on a skim of the MDX docs, it shouldn't
+> crash on the syntax, and in fact it shouldn't do anything. The plugin works by
+> looking for ```js fenced code blocks, and since MDX doesn't need those, it
+> shouldn't find any code to pass to ESLint in the first place. My guess is it
+> should treat all the embedded JSX as regular text and ignore it like it
+> ignores all the rest of the file outside of fenced code blocks.
+>
+> You're probably **_best using_**
+> [https://github.com/mdx-js/eslint-mdx](https://github.com/mdx-js/eslint-mdx)
+> to lint `.mdx files` since it's **_maintained_** by the `MDX team`. -
+> <cite>btmills commented on Jul 22, 2020</cite>
+
+And **_because_** of the line `'mdx/code-blocks': true,` in the
+`ESLint config file`, `Eslint` **_lints_** `code blocks` in my **_posts_**. So
+they **_literally_** have to be `error free`! **_Which is_** actually **_really
+good_**!
+
 ## Related Resources
 
 -   [MDX Frontmatter](https://mdxjs.com/guides/frontmatter/)
