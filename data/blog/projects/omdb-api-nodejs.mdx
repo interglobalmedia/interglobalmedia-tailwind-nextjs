@@ -1,9 +1,18 @@
 ---
-title: OMDB API NodeJS
+title: OMDB API NextJS
 date: '2022-07-01'
 lastmod: '2022-07-16'
-tags: ['async await', 'dotenv', 'ejs', 'got', 'heroku', 'omdb api']
-categories: ['nodejs', 'project']
+tags:
+    [
+        'async await',
+        'dotenv',
+        'fetch api',
+        'nextjs',
+        'omdb api',
+        serverless',
+        'vercel',
+    ]
+categories: ['nextjs', 'project']
 draft: false
 summary:
     An app which implements the OMDB API Using Nodejs, protects your API key,
@@ -21,26 +30,90 @@ canonicalUrl: /blog/projects/omdb-api-nodejs
 	authorUrl="/about"
 />
 
-## Building a Node.js Back End Server for the OMDB API
+## Building a Next.js Serverless Application for the OMDB API (Formerly Building a Node.js Back End Server for the OMDB API)
 
 ### Description
 
-An app which **_implements_** the `OMDB API` Using `Nodejs`, **_protects_** your
-`API key`, and **_deploys_** to `Heroku`. It uses the `Got` HTTP library, which
-**_replaces_** the **_deprecated_** `Request` library, and which **_supports_**
-`async/await` (among other things!). It **_also includes_**
+An app which formerly **_implemented_** the `OMDB API` Using `Nodejs`, still
+**_protects_** your `API key`, and **_deployed_** to `Heroku`. It used the `Got`
+HTTP library, which **_replaced_** the **_deprecated_** `Request` library, and
+which **_supports_** `async/await` (among other things!). It **_also includes_**
 `stacktrace error handling` in `development`, `invalid movie search keywords` in
 `production`, and **_setting_** the `required boolean attribute` on the
 `search input field` for `empty submission handling` in `production`, as well as
 `animated scroll` **_down_** and `scroll up` buttons on the `y axis`.
 
-### Project Includes
+### Project Formerly Included
 
 `async await`, `css animation`, `dotenv`, `ejs`, `ejs lint`, `eslint`,
 `express`, `got`, `heroku`, `local scripts`, `modern javascript`, `nodejs`,
 `node modules`, `nodemon`, `node sass`, `omdb api`, `pagination`,
 `required boolean attribute`, `scss`, `scroll down button`, `scroll up button`
 
--   [View OMDB API NodeJS on Heroku](https://omdb-api-nodejs.herokuapp.com/)
+### Updated Description
 
--   [View OMDB API NodeJS Repository on Github](https://github.com/interglobalmedia/omdb-api-nodejs)
+I **_recently_** stopped using `Heroku` **_because_** it had been **_attacked_**
+by `hackers` **_too many times_** over the course of the `COVID pandemic`.
+`Salesforce` **_took over_** `Heroku` in `2010`, but I **_did not_** even
+**_hear_** of the `acquisition` until **_much later_**. **_Suffice_** it **_to
+say_**, the `workflow` one **_uses_** on `Heroku`, which has **_not_** really
+**_changed_** in **_years_**, is **_somewhat outdated_** (AND **_expensive_**),
+and the `load time` for `apps` can sometimes **_take_** a **_while_**. I
+**_already_** was **_having_** `this issue` with my `GatsbyJS` **_projects_**
+(which I **_no longer use_**), and was **_looking_** for a `framework` that
+would **_still_** be **_built_** on `React` AND `Node.js`, but **_also_**
+(**_perhaps_**) be `"serverless"`. `Next.js` **_fit all_** the **_criteria_**.
+AND, the **_best thing_** is the **_speed_** with which `Next.js applications`
+are **_deployed_** to `vercel.com` (the **_creators_** of `Next.js`).
+
+`Next.js routing` is `file based`, which is **_really awesome_**, but I **_must
+admit_**, **_even though_** I had **_already been introduced_** to the
+**_concept_** with `GatsebyJS`, I am **_still wrapping_** my **_head around_**
+that `concept`. **_Especially_** when I **_had_** to `refactor` a
+**_traditional_** `Node.js/Express.js/EJS` **project** into a `Next.js`
+**project**! But I **_do_** `like it` and am **_building_** a **_lot_** of
+**_apps_** right now with it so that I can **_truly understand_** and
+**_master_** it. I **_love_** `functional React`, and `Next.js` is **_all about
+that_** and `hooks` **_too_**. One can **_also build_**
+`full stack applications` with it **_using_** `databases`. **_Right now_** I am
+**_building_** a **_couple_** of **_apps_** which use `MongoDB` and the
+`MongoDB Atlas Cloud`.
+
+It was **_interesting_**, **_fun_**, and a **_bit challenging_** to
+**_refactor_** `this project`, **_espeacailly_** because I **_chose_** to
+**_stay_** with the **_purely_** `query based` **_approach_** to **_getting
+data_** from the `OMDB API`. This **_meant_** being able to **_get_**
+`all movies` **_associated_** with a **_particular_** (`search`) `query`,
+**_instead_** of **_simply getting_** `one movie title` **_at_** a **_time_**,
+as I had **_initially_** started with on the `client side`.
+
+To **_view_** and **_read about_** `that project` **_here_**, **_please visit_**
+the [OMDB API JS App](/blog/projects/omdb-api-js-app) **_post_**.
+
+By **_all appearances_** and **_functionality_**, there is **_no change_**
+`between` the **_former implementation_** of `this application`. it just **_was
+built_** and `coded` **_somewhat differently_**! It **_still_** has the same
+kind of error handling in production, same kind of scroll up and
+`scroll buttons`, and the **_same conditional_**, **_dynamic styling_**
+`on pointerdown` for the `submit buttons` on **_both_** the `home` (`/`) and
+`results` (`/results`) `page`. `Search` on **_both pages_** and `pagination` on
+the `results page` **_works_** the **_same_** as **_well_**.
+
+### Project Now Includes
+
+`async-await`, `css animation`, `custom next.js _error.js page`, `dotenv`,
+`environment variables`, `eslint`, `fetch api`, `husky`,
+`invalid search keywords error handling production`, `lint-staged`,
+`local scripts`, `modern javascript`, `next.js`, `next/router hooks`, `node.js`,
+`node modules`, `omdb api`, `pagination`, `prettier`, `react hooks`,
+`required boolean attribute`, `sass`, `scss`, `scroll-down button`,
+`scroll-up button`, `server side rendering`,
+`stacktrace error-handing development`, `stylelint`, `vercel.com`
+
+-   [View OMDB API Next.js on Vercel](https://omdb-api-nextjs.vercel.app/)
+
+-   [View OMDB API Next.js Repository on Github](https://github.com/interglobalmedia/omdb-api-nextjs)
+
+### Related Resources
+
+-   [The decline of Heroku](https://www.infoworld.com/article/3614210/the-decline-of-heroku.html)
