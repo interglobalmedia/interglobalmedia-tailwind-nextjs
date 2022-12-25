@@ -1,6 +1,76 @@
 const projectsData = [
 	{
 		id: 1,
+		title: 'OMDB API Next.js',
+		repository: 'https://github.com/interglobalmedia/omdb-api-nextjs',
+		website: 'https://omdb-api-nextjs.vercel.app/',
+		summary:
+			'An app which implements the OMDB API Using Next.js, protects your API key, and deploys to vercel.com.',
+		imgSrc: '/static/images/projects/img/webp/omdb-api-nodejs-app.webp',
+		href: '/blog/projects/omdb-api-nodejs',
+		tags: [
+			'async-await',
+			', ',
+			'css animation',
+			', ',
+			'custom next.js _error.js page',
+			', ',
+			'dotenv',
+			', ',
+			'environment variables',
+			', ',
+			'eslint',
+			', ',
+			'fetch api',
+			', ',
+			'husky',
+			', ',
+			'invalid search keywords error handling production',
+			', ',
+			'lint-staged',
+			', ',
+			'local scripts',
+			', ',
+			'modern javascript',
+			', ',
+			'next.js',
+			', ',
+			'next/router hooks',
+			', ',
+			'node.js',
+			', ',
+			'node modules',
+			', ',
+			'omdb api',
+			', ',
+			'pagination',
+			', ',
+			'prettier',
+			', ',
+			'react hooks',
+			', ',
+			'required boolean attribute',
+			', ',
+			'sass',
+			', ',
+			'scss',
+			', ',
+			'scroll-down button',
+			', ',
+			'scroll-up button',
+			', ',
+			'server side rendering',
+			', ',
+			'stacktrace error-handing development',
+			', ',
+			'stylelint',
+			', ',
+			'vercel',
+		],
+		more: 'https://github.com/interglobalmedia/omdb-api-nodejs',
+	},
+	{
+		id: 2,
 		title: 'Welcome To The Groove',
 		repository: 'https://github.com/interglobalmedia/jukebox',
 		website: 'https://interglobalmedia.github.io/jukebox/',
@@ -25,7 +95,7 @@ const projectsData = [
 		more: `https://github.com/interglobalmedia/jukebox`,
 	},
 	{
-		id: 2,
+		id: 3,
 		title: 'Rockin Synth',
 		repository: 'https://github.com/interglobalmedia/rockin-synth',
 		website: 'https://interglobalmedia.github.io/rockin-synth/',
@@ -59,7 +129,7 @@ const projectsData = [
 		more: 'https://github.com/interglobalmedia/rockin-synth',
 	},
 	{
-		id: 3,
+		id: 4,
 		title: 'Cat Whisperer',
 		repository: 'https://github.com/interglobalmedia/the-cat-whisperer',
 		website: 'https://interglobalmedia.github.io/the-cat-whisperer/',
@@ -81,7 +151,7 @@ const projectsData = [
 		more: 'https://github.com/interglobalmedia/the-cat-whisperer',
 	},
 	{
-		id: 4,
+		id: 5,
 		title: 'Trump Talks',
 		repository: `https://github.com/interglobalmedia/trump-talks-nextjs`,
 		website: `https://trump-talks-nextjs.vercel.app/`,
@@ -103,7 +173,7 @@ const projectsData = [
 		more: `https://trump-talks-nextjs.vercel.app/`,
 	},
 	{
-		id: 5,
+		id: 6,
 		title: 'Web Audio API AJAX',
 		repository: 'https://github.com/interglobalmedia/web-audio-api-ajax',
 		website: 'https://interglobalmedia.github.io/web-audio-api-ajax/',
@@ -151,7 +221,7 @@ const projectsData = [
 		more: 'https://github.com/interglobalmedia/web-audio-api-ajax',
 	},
 	{
-		id: 6,
+		id: 7,
 		title: 'Custom HTML5 Video Player',
 		repository:
 			'https://github.com/interglobalmedia/custom-html5-video-player',
@@ -183,7 +253,7 @@ const projectsData = [
 		more: 'https://www.interglobalmedianetwork.com/blog/2017-01-04-creating-a-custom-html5-video-player-and-the-shadow-dom/',
 	},
 	{
-		id: 7,
+		id: 8,
 		title: 'Making Music in the Browser',
 		repository:
 			'https://github.com/interglobalmedia/making-music-in-the-browser',
@@ -221,7 +291,7 @@ const projectsData = [
 		more: 'https://github.com/interglobalmedia/making-music-in-the-browser',
 	},
 	{
-		id: 8,
+		id: 9,
 		title: 'Guess the Keys',
 		repository: 'https://github.com/interglobalmedia/guess-the-keys',
 		website: 'https://interglobalmedia.github.io/guess-the-keys/',
@@ -280,7 +350,7 @@ const projectsData = [
 		more: 'https://www.mariadcampbell.com/blog/guess-the-keys/',
 	},
 	{
-		id: 9,
+		id: 10,
 		title: 'LetsBCoding WordPress',
 		repository: 'https://github.com/interglobalmedia/letsbcoding',
 		website: 'https://letsbcoding.com',
@@ -330,7 +400,7 @@ const projectsData = [
 		more: 'https://letsbcoding.com',
 	},
 	{
-		id: 10,
+		id: 11,
 		title: 'Dragging Bubbles',
 		repository: 'https://github.com/interglobalmedia/dragging-bubbles',
 		website: 'https://interglobalmedia.github.io/dragging-bubbles/',
@@ -378,7 +448,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/dragging-bubbles/',
 	},
 	{
-		id: 11,
+		id: 12,
 		title: 'Canvas 2D Breakout Game',
 		repository: 'https://github.com/interglobalmedia/2d-breakout-game-mdn',
 		website: 'https://interglobalmedia.github.io/2d-breakout-game-mdn/',
@@ -410,7 +480,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/2d-breakout-game-mdn/',
 	},
 	{
-		id: 12,
+		id: 13,
 		title: 'Wikipedia Viewer',
 		repository: 'https://github.com/interglobalmedia/wikipedia-viewer',
 		website: 'https://interglobalmedia.github.io/wikipedia-viewer/',
@@ -450,7 +520,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/wikipedia-viewer/',
 	},
 	{
-		id: 13,
+		id: 14,
 		title: 'Poke API App',
 		repository: 'https://github.com/interglobalmedia/pokemon-api',
 		website: 'https://interglobalmedia.github.io/pokemon-api/',
@@ -512,7 +582,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/pokemon-api/',
 	},
 	{
-		id: 14,
+		id: 15,
 		title: 'Monsters API App',
 		repository: 'https://github.com/interglobalmedia/monsters-api',
 		website: 'https://interglobalmedia.github.io/monsters-api/',
@@ -552,7 +622,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/monsters-api/',
 	},
 	{
-		id: 15,
+		id: 16,
 		title: 'Audio Visual Slider',
 		repository:
 			'https://github.com/interglobalmedia/basic-audio-visual-slider',
@@ -594,7 +664,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/basic-audio-visual-slider/',
 	},
 	{
-		id: 16,
+		id: 17,
 		title: 'OMDB API JS App',
 		repository: 'https://github.com/interglobalmedia/omdb-api-js',
 		website: 'https://interglobalmedia.github.io/omdb-api-js/',
@@ -636,7 +706,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/omdb-api-js/',
 	},
 	{
-		id: 17,
+		id: 18,
 		title: 'Monsters Rolodex 2022 (Classes)',
 		repository: 'https://github.com/interglobalmedia/monsters-rolodex-2022',
 		website: 'https://interglobalmedia.github.io/monsters-rolodex-2022/',
@@ -694,7 +764,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/monsters-rolodex-2022/',
 	},
 	{
-		id: 18,
+		id: 19,
 		title: 'Monsters Rolodex 2022 (Hooks)',
 		repository: 'https://github.com/interglobalmedia/monsters-rolodex-2022',
 		website:
@@ -747,7 +817,7 @@ const projectsData = [
 		more: 'https://interglobalmedia.github.io/monsters-rolodex-2022/',
 	},
 	{
-		id: 19,
+		id: 20,
 		title: 'Mobile first responsive HTML5 resume',
 		repository:
 			'https://github.com/interglobalmedia/responsive-html5-resume',
