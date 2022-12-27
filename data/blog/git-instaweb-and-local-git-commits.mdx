@@ -1,0 +1,241 @@
+---
+title: Git instaweb and local Git commits
+date: '2022-12-27'
+lastmod: '2022-12-27'
+tags:
+    [
+        'git instaweb',
+        'gitweb',
+        'homebrew',
+        'lighttpd',
+        'git',
+        'local git repositories',
+        'web based visualizer',
+    ]
+categories: ['git', 'post']
+draft: false
+summary: Git Instaweb and local Git commits.
+images: ['/static/images/posts/img/webp/git-branch.webp']
+layout: PostLayout
+canonicalUrl: /blog/git-instaweb-and-local-git-commits
+---
+
+<Interglobalmedia
+	src="/static/images/posts/img/webp/git-branch.webp"
+	author="Maria D. Campbell"
+	alt="Git instaweb and local Git commits"
+	srcUrl="/static/images/posts/img/webp/git-branch.webp"
+	authorUrl="/about"
+/>
+
+I **_recently_** came across `“git instaweb”`. I had **_never_** `heard` of it
+**_before_**, and **_wanted_** to **_learn more_** about it. I **_first
+learned_** that it **_permits me_** to **_browse_** my `local repositories` on a
+`localhost` **_via_** something called `GitWeb`.
+
+**_In order_** to **_be able_** to **_use_** `git instaweb` **_successfully_**
+on `macOS` (**_currently_** I am on `macOS Ventura`, and **_what_** I was
+**_on_** when **_trying_** to **_implement_** `git instaweb`), you **_have_** to
+**_have_** `lighttpd` **_installed_** as well. It **_can_** be **_installed_**
+`using` the `Homebrew` **_package manager_** for `macOS`, and **_luckily_**, I
+**_already had_** it **_installed_** and have **_installed_** `many` a `package`
+on my `MacBook Pro` **_via_** `Homebrew`.
+
+But **_what_** IS `lighttpd`? It is
+
+> A secure, fast compliant, and very flexible web server that has been optimized
+> for high-performance environments. lighttpd uses memory and CPU efficiently
+> and has lower resource use than other popular web servers. Its advanced
+> feature-set (FastCGI, CGI, Auth, Output-Compression, URL-Rewriting and much
+> more) make lighttpd the perfect web server for all systems, small and large.
+> lighttpd is released under the Open Source revised BSD license. -
+> <cite>[the LIGHTTPD docs](https://www.lighttpd.net/)</cite>
+
+**_In order_** to **_install_** `lighttpd` **_with_** `Homebrew`, **_run_** the
+**_command_** `brew install lighttpd`. **_Once_** you **_have_** it
+**_installed_**, you **_will be able_** to **_successfully run_** the
+`git instaweb` **_command_** in `Terminal` (or in **_my case_**, `iTerm2`). If
+you **_do not_** have `Homebrew` **_installed_** on your `Mac`, **_please
+visit_** the [Homebrew website](https://brew.sh/) for **_installation
+instructions_**.
+
+`git instaweb` **_lets you_** `browse` your `working repository` in `GitWeb`. It
+is a **_simple_** `script/command` to **_set up_** `GitWeb` and a `web server`
+**_inside_** your `local repository` so that you can **_browse it_**. `GitWeb`
+is **_also known as_** `“Git on the Server”`, and it is a **_simple_**
+`web-based` **_visualizer_**. `Git` **_comes_** with this **_feature_**, and
+`GitWeb` is a `CGI` (`Common Gateway Interface`) `script` which **_enables_**
+`web-based visualization`.
+
+A `CGI`, **_aka_**
+[Common Gateway Interface](https://en.wikipedia.org/wiki/Common_Gateway_Interface),
+
+> is an interface specification that enables web servers to execute an external
+> program, typically to process user requests. Such programs are often written
+> in a scripting language and are commonly referred to as CGI scripts.
+>
+> A typical use case occurs when a web user submits a web form on a web page
+> that uses CGI. The form’s data is sent to the web server within an HTTP
+> request with a URL denoting a CGI script. The web server then launches the CGI
+> script in a new computer process, passing the form data to it. This output of
+> the CGI script, usually in the form of HTML, is returned by the script to the
+> Web server, and the server relays it back to the browser as its response to
+> the browser’s request.>Developed in the early 1990s, CGI was the earliest
+> common method available that allowed a web page to be interactive. -
+> <cite>[Common Gateway Interface on Wikipedia](https://en.wikipedia.org/wiki/Common_Gateway_Interface)</cite>
+
+We are **_not dealing_** with **_traditional_** `HTTP requests` in **_this_**
+`particular scenario` or `HTML forms`, but the `above information` **_still_**
+gives you an **_idea_** of **_what_** a `CGI script` is. And **_with_** the
+**_help_** of `git instaweb` and `lighttpd`, there are a **_number_** of
+**_options_**, **_including_** an `--httpd daemon command line` that **_can_**
+be **_executed_**.
+
+And **_what_** does `daemon` **_mean_**? According to a thread entitled
+`"Why should I create a daemon instead of a command line tool?"` on
+[stackoverflow](https://stackoverflow.com/questions/17491136/why-should-i-create-a-daemon-instead-of-a-command-line-tool),
+
+> A daemon is typically a background process, so if you want your program to sit
+> in the background and monitor something (e.g. report log file size increase
+> every 5 minutes the last hour) and then report the results when someone
+> watches a web page, a deamon is the correct choice.
+>
+> If you instead want to do something that can be done immediately (e.g. report
+> current log file size), a command line tool is easier to create and maintain.
+
+So **_that_** is **_why_** we **_would use_** a `daemon` **_which would_** be
+**_triggered_** by a `Git command` in the `Command Line Interface` (**_aka_**
+`Terminal`) on `macOS`.
+
+**_This all_** is **_so fascinating_**, and I **_did not realize_** `until now`
+that we **_could surf_** our `local repositories` **_as if_** we **_were_** on a
+`remote server` **_such as_** `github.com`!
+
+**_For example_**, if I **_go into_** my `local repository` **_called_**
+`example-portfolio-site-github` and **_run_** the **_Git command_**
+`git instaweb`, the **_following_** is **_returned_**:
+
+```shell
+2022-12-27 10:12:59: (network.c.540) can't bind to socket: 0.0.0.0:1234: Address already in use
+Could not execute http daemon lighttpd -f.
+```
+
+**_However_**, if I **_run_** the **_Git command_** `git instaweb -p 4321`,
+**_for example_**, **_defining_** a `specific port`, `4321` in **_this case_**,
+a `web browser instance` **_opens up_** in my **_default browser_**, and **_for
+me_**, my `example-portfolio-site-github` **_local repo_** `looked like` the
+**_following_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/git-instaweb.webp"
+	author="Maria D. Campbell"
+	alt="Git instaweb"
+	srcUrl="/static/images/posts/img/webp/git-instaweb.webp"
+	authorUrl="/about"
+/>
+
+The **_above page_** `lists` the `remote branches` **_associated_** with the
+`local repository` **_via_** `SSH`. There is a **_remote_** `main branch` and a
+**_remote_** `gh-pages branch` on `Github`.
+
+If I **_click on_** the `“summary” link` to the **_right_** of `“Last Change”`,
+it **_looks like_** the **_following_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/git-instwaweb-summary.webp"
+	author="Maria D. Campbell"
+	alt="Git instaweb summary"
+	srcUrl="/static/images/posts/img/webp/git-instwaweb-summary.webp"
+	authorUrl="/about"
+/>
+
+`“summary”` **_contains_** the `shortlog` of the **_latest commits_** I
+**_made_** to the `local repository` under `“shortlog”`, and the
+`local branches` **_associated_** with the `local repo` are **_listed under_**
+`“heads”`. **_That_** is **_because_** a `Git “head”` **_refers_** to the
+`branches` that `have been` **_checked out_** in the `history` of the
+`local repository`. If I **_run_** the **_command_** `git branch`, **_which
+lists_** `all` the `branches` **_associated_** with my `local repository`, in
+the **_case_** of **_this repository_**, I **_get back_** the **_following_**:
+
+```shell
+hamburger-icon-from-scratch
+main
+refactor-app-to-match-namecheap-version
+```
+
+And **_this_** `is what` it **_looks like_** in `VS Code`’s
+`Integrated Terminal`:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/git-branch.webp"
+	author="Maria D. Campbell"
+	alt="Git branch"
+	srcUrl="/static/images/posts/img/webp/git-branch.webp"
+	authorUrl="/about"
+/>
+
+`“remotes”` **_refers to_** the `remote repository` **_associated with_** the
+`local repository`. **_Here_**, `“origin”` is **_listed_**, and the `url` which
+is **_associated_** with `origin` on `Github`, is
+`git@github.com:interglobalmedia/example-portfolio-site-github.git`. If I **_go
+into_** `this repository` on `Github`, and **_select_** the **_green_**
+`“Code” button`, I **_get_** the **_following_**:
+
+<br />
+<Interglobalmedia
+	src="/static/images/posts/img/webp/github-ssh-repo-url.webp"
+	author="Maria D. Campbell"
+	alt="Github SSH repo url"
+	srcUrl="/static/images/posts/img/webp/github-ssh-repo-url.webp"
+	authorUrl="/about"
+/>
+
+**_Since_** I **_use_** `SSH` when **_pushing_** `local commits` to my
+`remote origin branch` on `Github`, my `SSH url` is **_associated_** with my
+`git push origin main` **_commands_**. **_How_** do I **_know that_**?
+**_Because_** when I **_push_** my `first commit` to my `remote branch` on
+`Github`, I **_run_** the **_Git command_**
+` git remote add origin git@github.com:interglobalmedia/example-portfolio-site-github.git```. This is the git remote add origin `
+**_command_** I **_ran_** for **_this particular_** `local repository`, so that
+it `would become` **_associated with_** its `remote url` **_created_** by
+`Github` **_when_** I **_created_** the `remote repository` **_there_**.
+
+**_When_** I **_actually pushed_** the `changes` to `remote origin` for the
+**_first time_**, I **_ran_** the **_command_** `git push -u origin main`.
+**_What_** does the `-u` **_stand for_**? `-u` is short for `upstream remote`,
+and it is **_used_** to **_set_** `origin` as the `upstream remote` in your
+`git config`. So **_when_** you **_push_** your `local branch commits` with the
+`git push -u option`, **_that_** `local branch` is **_linked_** with the
+`remote branch` **_automatically_**. The **_advantage_** to this is that you
+**_may use_** `git pull` **_without_** any `arguments`. **_This means_** that
+you **_can run_** the `git pull command` **_without_** the **_need_** to
+**_add_** the `remote repository url` as an `argument`!
+
+**_Happy GitWebbing!_**
+
+## Related Resources
+
+-   [LIGHTTPD (fly light)](https://www.lighttpd.net/): **_lighttpd.net_**
+
+-   [Git on the Server - GitWeb](https://git-scm.com/book/en/v2/Git-on-the-Server-GitWeb):
+    **_git-scm.com_**
+
+-   [git-instaweb](https://git-scm.com/docs/git-instaweb): **_git-scm.com_**
+
+-   [Common Gateway Interface: Wikipedia](https://en.wikipedia.org/wiki/Common_Gateway_Interface):
+    **_wikipedia_**
+
+-   [Why should I create a daemon instead of a command line tool?](https://stackoverflow.com/questions/17491136/why-should-i-create-a-daemon-instead-of-a-command-line-tool):
+    **_stackoverflow_**
+
+-   [What is "HEAD" in Git?](https://www.git-tower.com/learn/git/glossary/head):
+    **_git-tower.com_**
+
+-   [The importance and advantage of git push -u](https://www.interglobalmedianetwork.com/blog/2020-02-15-the-importance-and-advantage-of-git-push-u):
+    **_interglobalmedianetwork.com_**
+
+-   [Homebrew](https://brew.sh/): **_brew.sh_**
