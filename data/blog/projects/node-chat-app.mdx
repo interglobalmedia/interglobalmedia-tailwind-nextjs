@@ -2,92 +2,141 @@
 title: Node Chat App
 date: '2022-07-01'
 lastmod: '2022-07-16'
-tags: ['express', 'geolocation api', 'google maps api maps url', 'websockets']
+tags: ['express', 'heroku', 'nodejs', 'react', 'socketio', 'websockets']
 categories: ['nodejs', 'project', 'socket.io']
 draft: false
 summary:
     A real time communications app built with websockets/socket.io websocket
     library, Node.js, and Express.
-images: ['/static/images/projects/img/webp/chatterbox.webp']
+images: ['/static/images/projects/img/webp/chattr.webp']
 layout: PostLayout
 canonicalUrl: /blog/projects/node-chat-app
 ---
 
 <Interglobalmedia
-	src="/static/images/projects/img/webp/chatterbox.webp"
+	src="/static/images/projects/img/webp/chattr.webp"
 	author="Maria D. Campbell"
 	alt="Node Chat App"
-	srcUrl="/static/images/projects/img/webp/chatterbox.webp"
+	srcUrl="/static/images/projects/img/webp/chattr.webp"
 	authorUrl="/about"
 />
 
 ## chattrbox
 
-## Built with websockets library socket.io, Node.js, and Express
+## Built with websockets library socket.io, Node.js, and Express, and React
 
 ### What is it for?
 
 -   For friends, family, and/or colleagues to connect in real time and
-    communicate with each other. Messages are **timestamped**. **chattrbox**
-    also uses the
+    communicate with each other. Messages were **timestamped**. **chattrbox**
+    used to also use the
     [geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation)
     and
     [Google Maps API Maps Url](https://developers.google.com/maps/documentation/urls/guide).
-    The **geolocation API** allows users to provide their location IF they want
+    The **geolocation API** allowed users to provide their location IF they want
     to. They can always choose to **DENY** access to their location. For privacy
-    reasons, the user is asked permission to report location information when
-    clicking on the **Send Location** button. **chattrbox** uses the **Google
-    Maps API** along with the **geolocation API** so that a user not only shares
+    reasons, the user was asked permission to report location information when
+    clicking on the **Send Location** button. **chattrbox** used the **Google
+    Maps API** along with the **geolocation API** so that a user not only shared
     his/her **latitude** and **longitude**, but an actual **Google Map** with
-    his/her exact **location** and **directions** how to get there. That is
+    his/her exact **location** and **directions** how to get there. That was
     possible because of the implementation of **Google Maps API** **dir**
-    (directions) mode as opposed to **search** mode, which is a bit less
+    (directions) mode as opposed to **search** mode, which was a bit less
     **accurate**.
+
+    **_However_**, in this **_current iteration_** of the `application`, I
+    **_chose not_** to **_add_** the `Google Maps API` and `geolocation API`
+    features because of the **_increased awareness_** and **_global support_**
+    of `individuals' privacy` on the `web`. `Messages` are also **_no longer_**
+    `timestamped` for the **_same reason_**.
 
 ### Are chats private?
 
--   Chats in each chat room that is created by a user when he/she logs in,
-    **are** private.
+-   It **_used_** to **_be_** that `chats` in **_each_** `chat room` that was
+    **_created_** by a `user` when `he/she` **_logged in_**, **were** `private`
+    **_within_** the **_confines_** of that `room`. **_However_**, **_now_**
+    there are **_no longer_** `private chat rooms`, but `private chats`
+    **_between_** `two users` at a `time`.
 
-### If every user can create their own private chat room, how can people chat with each other?
+### If every user can create their own private chat, how does that work?
 
--   By sharing the name of the chat room with those they want to communicate
-    with in real time. It is important to note, however, that when filling out
-    the input field for the name of the room, all characters must be lowercase
-    and with no spaces. In addition, the spelling must be exactly the same,
-    otherwise a new chat room will be created.
+-   **_Each socket_** in `Socket.io` is **_identified_** by a `random`,
+    `unguessable`, **_unique identifier_** `Socket#id`. Therefore, each socket
+    automatically joins a `"room"` **_identified by_** its `own id`. This
+    **_makes_** it **_easy_** to **_create_** `private messages` **_between_**
+    `two users/browser window (tab) instances`. I **_found this_** to be a
+    **_better use_** of **_thi_**s**_ `Socket.io` _**feature**_ than
+    _**creating**_ a `room` that `multiple users` can _**join**_. _**As**_ a
+    _**result**_, one can _**create**_ `either` a `public chat` in which the
+    `messages` are _**shared**_ with `everyone` _**everywhere**_, or
+    _**create**_ a `private chat` _**with**_ `one user` _**at**_ a
+    _**time\*\*\*.
 
-## How can I invite others to chat with me?
+### How can I tell whether I am creating a private or public message?
+
+-   **_Once_** you have **_entered_** your `name` in the `input field`
+    **_containing_** the `placeholder text` `"Enter name"` and **_hit_** the
+    `return/enter key` on your `device's keyboard`, your `name` **_appears_**
+    among the `list` of `users` who have **_also joined_** `Chattr`, **_if_**
+    `there are` **_any_**. If there is **_at least_** `one other user`
+    **_present_**, you can `click` on their `name`, and you will be
+    **_directed_** to an `input field` **_containing_** the `placeholder text`
+    `"Type your message (private)"`. **_In addition_**, when you `click` on the
+    `user` you **_want_** to **_have_** a `private chat` with, their `name`
+    **_will become_** `underlined`, **_indicating_** they are the `current`
+    (`selected`) `user` you are **_chatting_** with **_privately_**. An
+    `input field` **_with_** the `placeholder text`
+    `"Type your message (public)"` also **_appears_** when you **_first_**
+    `input` your `name` in the `input field` **_with_** the `placeholder text`
+    `"Enter name"`, which is **_present_** when you **_first land_** on the
+    `application`.
+    <br />
+    <Interglobalmedia
+    	src="/static/images/projects/img/webp/chattr-public-message-input.webp"
+    	author="Maria D. Campbell"
+    	alt="Chattr public message input field"
+    	srcUrl="/static/images/projects/img/webp/chattr-public-message-input.webp"
+    	authorUrl="/about"
+    />
+    <br />
+    <Interglobalmedia
+    	src="/static/images/projects/img/webp/chattr-public-private-message-inputs.jpg"
+    	author="Maria D. Campbell"
+    	alt="Chattr public and private message input fields"
+    	srcUrl="/static/images/projects/img/webp/chattr-public-private-message-inputs.jpg"
+    	authorUrl="/about"
+    />
+
+### How can I invite others to chat with me?
 
 -   By sharing the link to the site.
 
-### Are chats, locations, and timestamps saved anywhere?
+### Are chats persistent?
 
--   The beauty of native **websockets** (and socket.io) is that they take place
-    in real time BUT data transmitted via the sockets is NOT persistent by
-    default. Only if saved to a database. **chattrbox** does not save anything
-    to a database. On page refresh, everything in an individual user's chat
-    disappears. Whatever that user transmitted to the room remains as long as
-    other users keep their browser/socket instance open and don't refresh their
-    page. When they close their window/instance, the information which they
-    transmitted and was transmitted to them, is gone. That does not mean that
-    everything that was transmitted to a room is gone **everywhere**. Everything
-    is gone only when all users who have joined a room have left.
-
-### Are rooms persistent?
-
--   No. But you can re-use a room name if you like and share it with others so
-    that they can join you there.
+-   **_No_**. **_Once_** a `browser tab` or `window` is **_closed_**, the `user`
+    **_associated with_** that `tab` or `window instance` is **_erased_** along
+    with **_any_** `messages` **_associated with_** the `user`. But you can
+    **_re-use_** the `link` to the `application` on `Heroku` i**_f you like_**
+    and **_share_** it **_with others_** so that they can **_join you_** there.
 
 ### Will the url always remain the same?
 
-**NO**. I will change it **frequently** at my **discretion** so as to prevent
-abuse of the site for potentially nefarious reasons or for profit. I will share
-the url only with those that i would like to share the space with.
+**It could**, but I **_might_** change it **from time to time** at my
+**_discretion_** so as to **_prevent abuse_** of the `site` for
+**_potentially_** `nefarious reasons` or `for profit`. I **_will share_** the
+`url` **_only_** `with those` that I **_would like_** to **_share_** the `space`
+**_with_**.
 
 ### Project Includes
 
-`express`, `geolocation api`, `google maps api maps url`, `nodejs`, `socket.io`,
-`websockets`
+`create-react-app`, `eslint`, `express`, `heroku`, `heroku cli`, `homebrew`,
+`husky`, `git`, `git hooks`, `nodejs`, `prettier`, `react`, `sass`, `socket.io`,
+`stylelint`, `websockets`
 
--   [View Node Chat App Repository on Github](https://github.com/interglobalmedia/node-chat-app)
+-   [View Node Chat App live on Heroku](https://socketio-realtime-node-chat.herokuapp.com/):
+    **_maria d. campbell_**
+
+-   [Socket.io Rooms](https://socket.io/docs/v3/rooms/): **_socket.io docs_**
+
+-   [Private messaging - Part I](https://socket.io/get-started/private-messaging-part-1/):
+    **_socket.io docs_**
