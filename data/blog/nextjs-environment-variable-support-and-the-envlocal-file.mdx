@@ -1,0 +1,180 @@
+---
+title: Next.js Environment Variable Support and the .env.local File
+date: '2023-02-20'
+lastmod: '2023-02-21'
+tags: ['nextjs', 'environment variables', 'fullstack development']
+categories: ['post']
+draft: false
+summary: Next.js environment variable support and the .env.local file.
+images: ['/static/images/posts/img/webp/neil-thomas-SIU1Glk6v5k-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/nextjs-environment-variable-support-and-the-envlocal-file
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/neil-thomas-SIU1Glk6v5k-unsplash.webp"
+	author="Neil Thomas"
+	alt="Tree supported by large wooden hand"
+	srcUrl="https://unsplash.com/photos/SIU1Glk6v5k"
+	authorUrl="https://unsplash.com/@finleydesign"
+/>
+
+This **_post_** was **_first published_** on my `Next Blog`
+[mariadcampbell.com](https://www.mariadcampbell.com/posts/nextjs-environment-variable-support-and-the-envlocal-file)
+on **_Sunday, February 19, 2023_**.
+
+**_Previously_**, I had **_written_** a `post` about **_using_** `dotenv` with
+`Next.js`, and **_also adding_** the `NEXT_PUBLIC` **_prefix_** in **_front_**
+of `environment variable` **_names_**. **_Adding_** `NEXT_PUBLIC` and then
+**_placing_** `process.env` **_in front_** of the `environment variable`
+**_name_** and **_using_** it **_directly_** like that in your code will
+**_expose_** it to the `browser`. And you **_have_** to **_add_** `NEXT_PUBLIC`
+in **_order_** for **_that_** to **_happen_**. So **_something_** like the
+**_following_**:
+
+```js
+const data = { email, api_key: process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY }
+```
+
+would be **_exposed_** to the `browser`. **_However_**, the **_following_**:
+
+```js
+const API_KEY = process.env.NEXT_PUBLIC_CONVERTKIT_API_KEY
+const data = { email, api_key: API_KEY }
+```
+
+**_would not_**, **_because_** it is **_saved_** as the `value` of a `variable`.
+And **_that_** is the **_way_** I have **_always_** **_approached_** my
+`environment variables`, **_especially_** when using `dotenv`. **_Which_** is
+**_what_** I **_do_** in the **_case_** of my `business site`.
+
+**_However_**, I **_found out_** later, that **_this_** is `redundant` with
+`Next.js`. It is **_not necessary_** to **_use_** `dotenv` in **_order_** to
+**_be able_** to **_extract_** one’s `environment variable` **_values_** from
+the `.env.local` **_file_**.
+
+It is **_important_** to **_note_** that you **_have_** to **_save_** your
+`environment variables` in your `.env.local` **_file_**. **_That_** is
+**_where_** `Next.js` **_expects_** you to **_keep_** your `secrets`.
+
+It is **_also_** (**_most_**) **_important_** to **_note_** that you **_have_**
+to **_add_** your `.env.local` **_file_** to your `.gitignore` **_file_**
+**_immediately_** `upon creation` of your **_project_** **_before_** having
+`committed` and `pushed` any **_changes_** to **_remote_**. This is **_both_**
+so you **_don't forget_** to do so **_later_**, and to **_ensure_** that your
+`sensitive information` **_stored_** as the `values` of your `variables` are
+**_never exposed_** on `Github` or **_wherever else_**. `Next.js'`
+`create-next-app` **_does create_** a `.gitignore` **_file_** for you, and
+**_does include_** the `.env*.local` file **_there_** for you **_already_**,
+**_but_** if you are **_new_** to **_all this_**, it is **_good practice_** to
+**_double check_** the **_file_**. The `.env` **_file_** is NOT **_added
+there_**. That is **_meant_** for **_non-sensitive_**, **_default_** `env var`
+**_values_**, and **_therefore_** does **_not need_** to be **_included_** in
+`.gitignore`.
+
+**_Below_** is **_what_** I **_have_** in my `next.config.js` **_file_** for my
+`Next Blog` which I am **_in_** the **_process_** of **_building_**, and **_in
+which_** I **_have_** set up **_both_** `environment variables` for
+`development` and `production`:
+
+```js
+const webpack = require('webpack')
+
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+
+	webpack: (config, { dev, isServer }) => {
+		config.module.rules.push({
+			test: /\.svg$/,
+			use: ['@svgr/webpack'],
+		})
+
+		if (!dev && !isServer) {
+			// Replace React with Preact only in client production build
+			Object.assign(config.resolve.alias, {
+				'react/jsx-runtime.js': 'preact/compat/jsx-runtime',
+				react: 'preact/compat',
+				'react-dom/test-utils': 'preact/test-utils',
+				'react-dom': 'preact/compat',
+			})
+		}
+
+		if (isServer) {
+			require('./scripts/generate-sitemap')
+		}
+		if (!isServer) {
+			require('./scripts/compose')
+		}
+
+		return config
+	},
+})
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+	/* Configure pageExtensions to include md and mdx */
+	pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+	/* Optionally, add any other Next.js config below */
+	reactStrictMode: true,
+}
+
+module.exports = withBundleAnalyzer(nextConfig)
+```
+
+**_No evidence_** of `env vars`. **_No evidence_** of `dotenv`.
+
+By **_default_**, `Next.js` **_provides_** us with **_3 different_**
+`environments`. The `environments` **_available_** through `Next.js` by
+**_default_** are `development`, `production`, and `test`.
+
+The **_way_** that I can **_differentiate between_** and even **_use_** both
+`development` and `production` `environments` **_locally_** , is I **_create_**
+an `.env.development.local` **_file_** for my `development` **_env vars_**
+(**_short_** for `environment variables`), **_and_** an `.env.production.local`
+**_file_** for my `production` **_env vars_**. I **_do this_** to **_test_** my
+`production` environment/build **_before_** I `push` to `remote` to **_avoid_**
+`unexpected surprises`.
+
+**_However_**, and this is `very important`, I **_keep_** the `env var`
+**_names_** the **_same across_** `environments` **_and_** in the `code`.
+**_Otherwise_**, **_only one_** `environment`, the one **_defined_** in the
+`code` **_using_** ONE SET of `env vars`, **_will work_**.
+
+AND, **_also_** `very important`, the `env var` **_names_** have to `match` on
+`vercel.com` **_as well_**. So if I **_name_** my `env var` for my
+`MongoDB database` `MONGODB_DATABASE` in the `code`, then it **_has_** to be
+**_defined_** as `MONGODB_DATABASE` in **_both_** the `.env.development.local`
+**_file_** AND the `.env.production.local` **_file_**. **_Just_** the `values`
+are **_different_**. And **_these_** `two files` are what I **_use_** on my
+`local machine` to **_switch between_** `development` and `production`.
+
+When I **_run_** `npm run dev`, the `env vars` in `.env.development.local` are
+**_extracted_**. And when I **_run_** `npm start` AFTER running `npm run build`
+to `build` my `application`'s `production code`, then tbe `env vars` in
+`.env.production.local` are **_extracted_**.
+
+**_Lastly_**, I have to **_add_** my `env vars` to my `project` on `vercel.com`.
+**_There_**, I **_also have_** to `name` the `env var` `MONGODB_DATABASE`, and
+**_add_** the `value` I **_want_** for `production` there. THEN **_everything
+works_** as **_expected_** both on my `local machine` AND on my `remote server`.
+
+**_No need_** to `require` and `call` `dotenv` as I **_had done_** in the
+**_past_**. This was **_not wrong_**, but it means **_one less dependency_** to
+**_include_**, which is good for `application optimization`.
+
+The `Next.js` **_documentation_** regarding `support` for
+`environment variables` is **_pretty good_**, and if you **_already_** have been
+**_using_** `environment variables` with `dotenv` in your `Node.js`
+**_projects_** in the **_past_**, it will be **_fairly easy_** to **_follow_**.
+I will be **_including_** `reference` to the `Next.js` **_documentation_** at
+the **_end_** of the `post` **_under_** `Related Resources`.
+
+**_Happy Next.js developing with env vars!_**
+
+## Related Resources
+
+-   [How to use different .env files with nextjs?](https://stackoverflow.com/questions/59462614/how-to-use-different-env-files-with-nextjs/61750672#61750672):
+    **_stackoverflow_**
+
+-   [Environment Variables](https://nextjs.org/docs/basic-features/environment-variables):
+    **_Next.js docs_**
