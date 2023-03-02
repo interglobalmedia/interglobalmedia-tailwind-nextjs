@@ -1,0 +1,313 @@
+---
+title: React Portal in Next.js and the Sticky Footer
+date: '2023-03-02'
+lastmod: '2023-03-02'
+tags: ['sticky footer', 'nextjs', 'react', 'react portal']
+categories: ['nextjs', 'post']
+draft: false
+summary: React Portal in Next.js and the Sticky Footer.
+images: ['/static/images/posts/img/webp/ivan-aleksic-16YxCJSoAek-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/react-portal-in-nextjs-and-the-sticky-footer
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/ivan-aleksic-16YxCJSoAek-unsplash.webp"
+	author="Ivan Aleksic"
+	alt="Portal in Belgrade Fortress, Serbia"
+	srcUrl="https://unsplash.com/photos/16YxCJSoAek"
+	authorUrl="https://unsplash.com/@ivalex"
+/>
+
+**_Anyone_** who has been **_following_** my `posts` **_knows_** that I
+**_have_** a **_thing_** about `sticky footers`, and that I have **_applied_**
+`various techniques` **_over_** the **_years_** in **_various situations_**.
+Well, I **_came across_** a **_new situation_** working with `Next.js`.
+
+For my **_revamp_** of my **_personal site_**
+[mariadcampbell.com](https://www.maridcampbell.com), I created a `React Portal`
+for my `notification` component which **_sends_** a `message` regarding the
+`status` of their `contact form` **_submission_**. There, I **_place_** the
+`notification` component **_below_** the `contact form` **_element_** inside the
+`contact-form.js` file of the `ContactForm` component. The `notification` markup
+**_consists_** of the **_following_**:
+
+```jsx
+return (
+	<div className={cssClasses}>
+		<h2>{title}</h2>
+		<p>{message}</p>
+	</div>
+)
+```
+
+And the **_returned_** `jsx` of the `ContactForm` **_component_** is the
+**_following_**:
+
+```jsx
+<section className={`contact ${classes.contact}`}>
+	<h1>How can I help you?</h1>
+	<form className={classes.form} onSubmit={sendMessageHandler}>
+		<div className={classes.controls}>
+			<div className={classes.control}>
+				<label className={`label`} htmlFor="name">
+					Your Name
+				</label>
+				<input
+					type="text"
+					id="name"
+					required
+					value={enteredName}
+					onChange={(event) => setEnteredName(event.target.value)}
+				/>
+			</div>
+			<div className={classes.control}>
+				<label className={`label`} htmlFor="twitter-handle">
+					Your TwitterHandle
+				</label>
+				<input
+					type="text"
+					id="twitter-handle"
+					required
+					value={enteredTwitterHandle}
+					onChange={(event) =>
+						setEnteredTwitterHandle(event.target.value)
+					}
+				/>
+			</div>
+			<div className={classes.control}>
+				<label className={`label`} htmlFor="linkedin-handle">
+					Your Linkedin Handle
+				</label>
+				<input
+					type="text"
+					id="linkedin-handle"
+					required
+					value={enteredLinkedinHandle}
+					onChange={(event) =>
+						setEnteredLinkedinHandle(event.target.value)
+					}
+				/>
+			</div>
+			<div className={classes.control}>
+				<label className={`label`} htmlFor="github-handle">
+					Your Github Handle
+				</label>
+				<input
+					type="text"
+					id="github-handle"
+					required
+					value={enteredGithubHandle}
+					onChange={(event) =>
+						setEnteredGithubHandle(event.target.value)
+					}
+				/>
+			</div>
+		</div>
+		<div className={classes.control}>
+			<label className={`label`} htmlFor="message">
+				Your Message
+			</label>
+			<textarea
+				type="text"
+				id="message"
+				rows="5"
+				required
+				value={enteredMessage}
+				onChange={(event) => setEnteredMessage(event.target.value)}
+			></textarea>
+		</div>
+		<div className={classes.actions}>
+			<button className={`contact-btn-submit`} type="submit">
+				Send Message
+			</button>
+		</div>
+	</form>
+	{notification && (
+		<DynamicNotification
+			status={notification.status}
+			title={notification.title}
+			message={notification.message}
+		/>
+	)}
+</section>
+```
+
+This `markup` is **_not_** `quite right` as far as `HTML` **_structure_** goes.
+I **_ended up_** getting `hydration` **_errors_** as a **_result_**. So to
+**_avoid_** this, I **_created_** a `React Portal` for my `Notification`
+**_component_**. **_Like_** the **_following_**:
+
+```jsx
+import { createPortal } from 'react-dom'
+
+import classes from '../../styles/notifications.module.scss'
+
+function Notification(props) {
+	const { title, message, status } = props
+
+	let statusClasses = ''
+
+	if (status === 'success') {
+		statusClasses = classes.success
+	}
+
+	if (status === 'error') {
+		statusClasses = classes.error
+	}
+
+	const cssClasses = `${classes.notification} ${statusClasses}`
+
+	return createPortal(
+		<div className={cssClasses}>
+			<h2>{title}</h2>
+			<p>{message}</p>
+		</div>,
+		document.getElementById('notifications'),
+	)
+}
+
+export default Notification
+```
+
+But **_THEN_**, **_when_** I **_wanted_** to **_add_** my `sticky footer` as I
+**_did_** in the **_past_**, I **_ended up_** getting a `hydration` **_error_**
+in `development`. Please **_visit_** my `post` **_entitled_**
+[The sticky footer and Next.js 13](https://www.interglobalmedianetwork.com/blog/the-sticky-footer-and-nextjs-13)
+to **_learn more_**. So I **_created_** a `React Portal` for my `Footer`
+**_component_**. I **_did_** the **_following_**:
+
+```jsx
+function Footer() {
+	const { data: session, status } = useSession()
+
+	if (typeof document === 'object') {
+		return createPortal(
+			<footer className={`footer ${classes.footer}`}>
+				{status === `authenticated` && <DynamicFooterNavigation />}
+				{status === `unauthenticated` && (
+					<p>
+						You need to sign in to access the Contact and Guestbook
+						pages.
+					</p>
+				)}
+				{status === `authenticated` && (
+					<div
+						className={`provider-button ${classes['provider-button']}`}
+					>
+						<button onClick={() => signOut()}>Sign out</button>
+					</div>
+				)}
+				{status === `unauthenticated` && (
+					<div
+						className={`provider-button ${classes['provider-button']}`}
+					>
+						<button onClick={() => signIn()}>
+							Sign in with Github
+						</button>
+					</div>
+				)}
+				<h2 className={`${classes.follow} ${oswald.variable}`}>
+					Follow
+				</h2>
+				<div className={`${classes['svg-wrapper']}`}>
+					<div className={`footer-email ${classes['footer-email']}`}>
+						<DynamicSocialIcon
+							name="email"
+							href={`mailto:${siteMetadata.email}`}
+							size="6"
+						/>
+					</div>
+					<div
+						className={`footer-github ${classes['footer-github']}`}
+					>
+						<DynamicSocialIcon
+							name="github"
+							href={siteMetadata.github}
+							size="6"
+						/>
+					</div>
+					<div
+						className={`footer-twitter ${classes['footer-twitter']}`}
+					>
+						<DynamicSocialIcon
+							name="twitter"
+							href={siteMetadata.twitter}
+							size="6"
+						/>
+					</div>
+					<div
+						className={`footer-linkedin ${classes['footer-linkedin']}`}
+					>
+						<DynamicSocialIcon
+							name="linkedin"
+							href={siteMetadata.linkedin}
+							size="6"
+						/>
+					</div>
+					<div
+						className={`footer-sitemap ${classes['footer-sitemap']}`}
+					>
+						<DynamicSocialIcon
+							name="sitemap"
+							href={siteMetadata.sitemap}
+							size="6"
+						/>
+					</div>
+				</div>
+				<p>
+					{`© ${new Date().getFullYear()}`} {` • `}{' '}
+					{siteMetadata.author} {` • `}
+					<Link href="/">{siteMetadata.title}</Link>
+				</p>
+			</footer>,
+			document.getElementById('footer'),
+		)
+	} else {
+		return null
+	}
+}
+
+export default Footer
+```
+
+**_Why_** the `if` **_check_**? Because **_sometimes_** the `React Portal` does
+**_not behave_** as **_expected_** when there is **_more_** than **_one_**
+`React Portal`. And **_since_** we **_use_** `document.getElementById()` when
+**_creating_** a `React Portal`, I **_added_** the `if` **_check_** to
+**_check_** whether or **_not_** the `document object` **_exists_**. This
+**_fixed_** the **_issue_** for me!
+
+**_Then_**, **_inside_** `Next.js`’ `_document.js`, I **_did_** the
+**_following_**:
+
+```jsx
+import { Html, Head, Main, NextScript } from 'next/document'
+
+export default function Document() {
+	return (
+		<Html lang="en">
+			<Head />
+			<body>
+				<div className="site-content">
+					<Main />
+					<NextScript />
+					<div id="notifications"></div>
+				</div>
+				<div id="scroll-step"></div>
+				<div id="scroll-top"></div>
+				<div id="footer"></div>
+			</body>
+		</Html>
+	)
+}
+```
+
+I **_got away_** with my **_previous_** `implementation` of the `sticky footer`
+by simply **_manipulating_** `_document.js`, but **_here_**, **_and_** in the
+**_future_**, I **_will create_** a `React Portal` for the `sticky footer` so as
+to **_avoid_** `hydration` **_issues_** and have **_clean_** `React JSX`
+**_markup_**. **_All_** the **_other_** `divs` **_containing_** `ids`
+**_point_** to `React Portals` **_as well_**.
+
+**_Happy React Portaling!_**
