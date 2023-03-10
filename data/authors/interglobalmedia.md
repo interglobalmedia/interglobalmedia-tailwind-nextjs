@@ -11,6 +11,23 @@ github: https://github.com/interglobalmedia
 
 # My Philosophy, Mission and Goals
 
+I am a **_self taught_** `developer` who got into `web development` **_early
+on_** out of **_need_**. At the time, i **_could not find_** anyone to
+**_build_** what I **_wanted built_**, so I **_taught myself_** to do it.
+**_Much later_**, with the **_advent_** of `Bootcamps` and `"Coding Schools"`, I
+**_went back_** to **_further_** my **_knowledge_** and **_skills_**.
+
+My `path` is **_not_** a **_traditional one_**. I have a **_background_** in
+`Graphic Design`, `Video`, and `Digital Photography`. **_Now_** I **_build
+things_** for the `Web` and **_teach others_** how to **_do_** the **_same_**. I
+**_also_** `acquaint people` with their `OS`, `Git`, `Command Line`,
+`Digital Software` **_programs_** on `macOS`, and **_show them_** how to
+**_effectively_** `collaborate` **_remotely_** with others **_using_** those
+**_tools_**. If **_nothing else_**, the `Pandemic` **_revealed_** the
+**_importance_** of being **_being able_** to **_communicate remotely_** with
+others **_using_** various forms of **_technology_**. And **_also_** the
+**_importance_** of **_some form_** of `COMMUNITY` **_for all_**.
+
 I `have built` and `taught` **_all things_** `JavaScript`, `HTML`, and `CSS`.
 
 I am **_passionate_** about **_all things_** `Git` and `Command Line`.
@@ -40,7 +57,7 @@ to **_foster_** it in my `teaching` **_and_** `building`.
 **_about_** their `computers` **_too_**. I **_have found_** `senior students`
 **_CAN_** be **_very eager_** and **_quick_** to `learn`.
 
-> `Teaching` is **_great_**, but there is **_nothing like_**
+> `Teaching` is **_great_**, but there is **_nothing like_** >
 > `building applications`, **_especially_** as `part` of a `team`, or **_helping
 > others_** `find solutions` to their **_technological issues_**, which are
 > **_useful_** to **_them_** and **_contribute_** to **_bettering_** and/or
