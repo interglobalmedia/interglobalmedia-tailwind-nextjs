@@ -18,6 +18,7 @@ body {
   background-size: var(--s) var(--s);
   overflow-x: hidden;
   transition: background 0.3s ease-in-out;
+  letter-spacing: 0.07em;
 }
 /* this is so that footer sticks to the bottom - right now the background shows up and is empty, but that is better than a footer that does not stick. and it will be quickly populated anyway. */
 .mx-auto {
