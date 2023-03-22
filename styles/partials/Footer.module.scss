@@ -17,3 +17,13 @@ $min-1280: '(min-width: 1280px)';
         border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
     }
 }
+
+.site-footer {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+svg.social-icon {
+    height: 2rem;
+    width: 2rem;
+}
