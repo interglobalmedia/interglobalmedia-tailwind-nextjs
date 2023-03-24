@@ -4,7 +4,6 @@ $cream: #ffe9d6;
 $discord-burgundy: #b81111;
 $discord-charcoal: #23272a;
 $french-yellow: #ffe556;
-$french-yellow-darker: #fbce07;
 $steal-magenta: #c90076;
 $tailwind-dark-orange: rgb(249 115 22 / 100%);
 $tailwind-lighter-orange: #f93;
@@ -195,4 +194,12 @@ b.intro-highlight:nth-of-type(2) {
     font-weight: 600;
     margin-top: 2.5rem;
     margin-bottom: -2.5rem;
+}
+
+.home-personal-website {
+    text-decoration: underline;
+}
+
+.home-personal-website-para {
+    margin-top: 0.5rem;
 }
