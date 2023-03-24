@@ -28,7 +28,7 @@ export default function Home({ posts, hasExtraLink = true }) {
 			<ScrollTop />
 			<div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
 				<article className="home-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
-					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 md:text-6xl md:leading-14 sm:text-4xl sm:leading-10">
 						Hi there!
 					</h1>
 					<p className="home-page-description text-lg leading-7 text-gray-500 dark:text-gray-400">
@@ -125,6 +125,29 @@ export default function Home({ posts, hasExtraLink = true }) {
 							</Link>
 						</div>
 					)}
+				</article>
+				<article className="blog-page-post-wrapper">
+					<h2 className="index-post-latest-header text-left text-6xl font-bold">
+						<span className="circle-sketch-highlight text-gray-500 dark:text-gray-100">
+							Personal Website
+						</span>
+					</h2>
+					<ul className="index-latest-posts-wrapper divide-y divide-gray-200 dark:divide-gray-700">
+						<li className="py-12">
+							<a
+								className={`home-personal-website`}
+								href="https://www.mariadcampbell.com"
+							>
+								MARIADCAMPBELL.COM
+							</a>
+							:
+							<p className={`home-personal-website-para`}>
+								Where I blog about fullstack development as well
+								as macOS, Command Line, Git, and ethics in
+								technology.
+							</p>
+						</li>
+					</ul>
 				</article>
 				<ServicesSlider />
 				<DevTips />
