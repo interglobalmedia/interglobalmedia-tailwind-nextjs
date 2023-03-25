@@ -92,6 +92,8 @@ dd>a.text-primary-500 {
 
     /* replaced previous choice(s) with this color because of color contrast issues (accessibility) */
     color: $inline-code-color-lite-mode;
+    font-size: 1rem;
+    font-weight: 600;
     word-break: break-all;
 }
 
