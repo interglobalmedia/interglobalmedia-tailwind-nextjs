@@ -1,0 +1,95 @@
+---
+title:
+    What "Bypassed rule violations" means when pushing changes to Github remote
+date: '2023-03-30'
+lastmod: '2023-03-30'
+tags: ['github', 'branch protection', 'bypassed rule violations', 'git push']
+categories: ['github', 'post']
+draft: false
+summary:
+    What "Bypassed rule violations" means when pushing changes to Github.remote.
+images: ['/static/images/posts/img/webp/kyle-glenn-dGk-qYBk4OA-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/what-bypassed-rule-violations-means-when-pushing-changes-to-github-remote
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/kyle-glenn-dGk-qYBk4OA-unsplash.webp"
+	author="Kyle Glenn"
+	alt="Do not enter sign"
+	srcUrl="https://unsplash.com/photos/dGk-qYBk4OA"
+	authorUrl="https://unsplash.com/@kylejglenn"
+/>
+
+A **_while back_**, when `Github` **_started adding_**
+`branch protection rules`, I **_wanted_** to **_make sure_** that **_not just_**
+`anyone` could **_try_** to **_make_** `pull requests`, `merges`, or `push` to
+`remote origin` on my **_public repositories_**. So I **_made sure_** at the
+**_very least_** to **_lock_** my `main branch` (or `master` with **_older
+repositories_**). **_That way_** it was `“read only”` for **_everyone_**
+`except` **_myself_**. **_Later_**, I **_even added_** this `protection` to
+`private repositories` **_in case_** if I **_temporarily_** made them `public`
+for **_whatever reason_**.
+
+But I **_never remember_** getting **_any messages_** referring to these
+`branch protection rules` **_until_** `Friday, March 24, 2023`, **_when_**
+`someone` at `Github` had **_accidentally published_** `Github`'s **_private_**
+`SSH key` on a `public repository`. And I **_thought_**,
+`“What is going on? Why am I receiving this message, and what does it mean? Because I have admin access to all my repos. I should be able to do whatever I want!”`.
+And
+`“Why am I not getting this message when I was pushing to another repository around the same time?”`
+I had **_not_** set up `branch protection` on **_that branch_** because it was a
+`private repository`.
+
+**_Now_** I am **_adding_** at the **_very least_** this **_one_**
+`branch protection rule`, **_whether_** the `repository` is **_private_** or
+**_not_**!
+
+I **_got back_** the **_following_** in `Terminal` **_after running_** the
+`git push origin main` **_command_** to `push` my `local repo commits` to
+`remote origin` for a **_repository_** in which I **_turned on_**
+`“locked branch: read only”` for my `main` (`production`) **_branch_**:
+
+```shell
+git push origin main
+Enumerating objects: 21, done.
+Counting objects: 100% (21/21), done.
+Delta compression using up to 10 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 2.71 KiB | 925.00 KiB/s, done.
+Total 14 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), completed with 7 local objects.
+remote: Bypassed rule violations for refs/heads/main:
+remote:
+remote: - Cannot change this locked branch
+remote:
+To github.com:interglobalmedia/inter-jobs-api.git
+   177ab81..48ba239  main -> main
+```
+
+I **_got_** the `message` `“Bypassed rule violations for refs/heads/main”` and
+`“remote: - Cannot change this locked branch”` **_because_** I **_had
+selected_**
+`“Lock branch Branch is read-only. Users cannot push to the branch.”`
+**_within_** the **_repository_** `Settings` for **_Branches_** under
+`Branch Protection Rules`. I **_suppose_**` Git` was **_updated_** to
+**_include_** those **_reminders_** to us as to **_which_** `protection(s)` we
+have **_turned on_** in our **_remote repositories_**, thereby **_letting_** us
+**_know_** that **_it knows_**, and `Github` **_knows_** and **_recognizes_**
+that **_those_** `protections` are **_indeed_** in **_place_** and
+**_working_**.
+
+So **_why weren't_** `protections` **_working_** for `Github` on
+`Friday, March 24, 2023`? Or **_whenever_** their `transgression` **_actually_**
+took **_place_**?
+
+There are **_many other_** `protections` one can **_turn on_**. I will be
+**_talking about_** a **_specific one_** that **_could have related_** to
+**_what happened_** on `March 24, 2023` in **_another post_**.
+
+**_Happy Git pushing to Github remote!_**
+
+## Related Resources
+
+[Client can bypass branch protection with pushed commits #16146](https://github.com/desktop/desktop/issues/16146):
+**_desktop/desktop (Github desktop)_**
