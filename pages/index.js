@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Link from '@/components/Link'
+import Link from 'next/link'
 import { PageSEO } from '@/components/SEO'
 import Article from '@/components/mdx/Article'
 import siteMetadata from '@/data/siteMetadata'
@@ -27,7 +27,7 @@ export default function Home({ posts, hasExtraLink = true }) {
 			/>
 			<ScrollTop />
 			<div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
-				<article className="home-page-title-wrapper space-y-2 pt-6 pb-8 md:space-y-5">
+				<article className="home-page-title-wrapper space-y-2 pb-8 pt-6 md:space-y-5">
 					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 md:text-6xl md:leading-14 sm:text-4xl sm:leading-10">
 						Hi there!
 					</h1>

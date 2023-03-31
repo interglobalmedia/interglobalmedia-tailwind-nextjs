@@ -30,6 +30,7 @@ const StaticTextTweet = ({
 							target="_blank"
 							rel="noopener noreferrer"
 						>
+							{/* eslint-disable-next-line @next/next/no-img-element */}
 							<img
 								className="static-text-tweet-avatar"
 								src={avatar}
