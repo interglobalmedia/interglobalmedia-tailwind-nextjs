@@ -1,4 +1,4 @@
-import Link from '../Link'
+import Link from 'next/link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import Tooltip from '@/components/site-partials/tooltip/Tooltip'

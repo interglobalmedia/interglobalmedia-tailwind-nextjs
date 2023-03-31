@@ -1,4 +1,4 @@
-import Link from '@/components/Link'
+import Link from 'next/link'
 import Image from 'next/image'
 import Tag from '@/components/mdx/Tag'
 import Category from '@/components/mdx/Category'
