@@ -3,7 +3,7 @@ import { motion, AnimateSharedLayout } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { document } from 'browser-monads'
-import Link from '../Link'
+import Link from 'next/link'
 import useIsMounted from '../../hooks/useIsMounted'
 import headerNavLinks from '@/data/headerNavLinks'
 import { isActiveLink } from '@/lib/utils/activeLink'
@@ -47,6 +47,7 @@ const Navigation = () => {
 		<header className="header">
 			<nav className="navbar">
 				<div className="brand-wrapper">
+					{/* eslint-disable-next-line @next/next/link-passhref */}
 					<Link
 						href="/"
 						className="brand"

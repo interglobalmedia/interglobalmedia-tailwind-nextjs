@@ -1,4 +1,4 @@
-import Link from '@/components/Link'
+import Link from 'next/link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/containers/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
@@ -85,7 +85,7 @@ export default function PostLayout({
 						className="divide-y divide-gray-200 pb-8 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6 xl:divide-y-0"
 						style={{ gridTemplateRows: 'auto 1fr' }}
 					>
-						<dl className="pt-6 pb-10 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
+						<dl className="pb-10 pt-6 xl:border-b xl:border-gray-200 xl:pt-11 xl:dark:border-gray-700">
 							<dt className="sr-only">Authors</dt>
 							<dd>
 								<ul className="flex justify-center space-x-8 sm:space-x-12 xl:block xl:space-x-0 xl:space-y-8">
@@ -97,10 +97,10 @@ export default function PostLayout({
 											{author.avatar && (
 												<Image
 													src={author.avatar}
-													width="120px"
-													height="120px"
+													width={120}
+													height={120}
 													alt="avatar"
-													className="h-10 w-10 rounded-full"
+													className="h-32 w-32 rounded-full"
 												/>
 											)}
 											<dl className="whitespace-nowrap text-sm font-medium leading-5">
@@ -135,7 +135,7 @@ export default function PostLayout({
 							</dd>
 						</dl>
 						<div className="divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0">
-							<div className="prose max-w-none pt-10 pb-8 dark:prose-dark">
+							<div className="prose max-w-none pb-8 pt-10 dark:prose-dark">
 								{children}
 							</div>
 							<div className="share-icons-wrapper">
@@ -165,7 +165,7 @@ export default function PostLayout({
 									/>
 								</div>
 							</div>
-							<div className="pt-6 pb-6 text-base text-gray-700 dark:text-gray-300">
+							<div className="pb-6 pt-6 text-base text-gray-700 dark:text-gray-300">
 								<Link href={editUrl(fileName)}>
 									{'View on GitHub'}
 								</Link>
