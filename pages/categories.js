@@ -5,7 +5,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { getAllCategories } from '@/lib/categories'
 import kebabCase from '@/lib/utils/kebabCase'
 import ScrollTop from '@/components/buttons/ScrollTop'
-import '../styles/partials/CategoriesList.module.scss'
+import '@/styles/partials/CategoriesList.module.scss'
 
 export async function getStaticProps() {
 	const categories = await getAllCategories('blog')
@@ -27,7 +27,7 @@ export default function Categories({ categories }) {
 			<ScrollTop />
 			<div className="flex flex-col items-start justify-start divide-y divide-gray-200 dark:divide-gray-700 md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6 md:divide-y-0">
 				<div className="space-x-2 pb-8 pt-6 md:space-y-5">
-					<h1 className="category-page-title text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:border-r-2 md:px-6 md:text-6xl md:leading-14 sm:text-4xl sm:leading-10">
+					<h1 className="category-page-title text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:border-r-2 md:px-6 md:text-6xl md:leading-14">
 						Cats
 					</h1>
 				</div>
