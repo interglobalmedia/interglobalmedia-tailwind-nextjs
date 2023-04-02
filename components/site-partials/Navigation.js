@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
-import { motion, AnimateSharedLayout } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useTheme } from 'next-themes'
 import { useRouter } from 'next/router'
 import { document } from 'browser-monads'
-import Link from 'next/link'
+import Link from '@/components/Link'
 import useIsMounted from '../../hooks/useIsMounted'
 import headerNavLinks from '@/data/headerNavLinks'
 import { isActiveLink } from '@/lib/utils/activeLink'
 import siteMetadata from '@/data/siteMetadata'
-import '../../styles/partials/Navigation.module.scss'
+import '@/styles/partials/Navigation.module.scss'
 
 const Navigation = () => {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false)
