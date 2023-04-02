@@ -8,20 +8,15 @@ module.exports = {
 	},
 	extends: [
 		'eslint:recommended',
-		'plugin:mdx/recommended',
 		'plugin:prettier/recommended',
 		'next',
 		'next/core-web-vitals',
 	],
 	rules: {
-		'prettier/prettier': 0,
+		'prettier/prettier': 'off',
 		'react/react-in-jsx-scope': 'off',
 		'react/prop-types': 0,
 		'no-unused-vars': 0,
 		'react/no-unescaped-entities': 0,
-	},
-	settings: {
-		'mdx/code-blocks': true,
-		'mdx/language-mapper': {},
 	},
 }

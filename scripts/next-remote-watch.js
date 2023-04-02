@@ -4,7 +4,6 @@
 // A copy of next-remote-watch with an additional ws reload emitter.
 // The app listens to the event and triggers a client-side router refresh
 // see components/ClientReload.js
-/* eslint-disable mdx/no-unused-expressions */
 
 const chalk = require('chalk')
 const chokidar = require('chokidar')
