@@ -3,105 +3,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/about</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/blog</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/faqs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/heroimagesection</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/projects</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/skills</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/ajax</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/apis</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/api</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/apple-music</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/async-await</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/aws</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -110,7 +103,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/binary-image-data</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/aws</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -119,21 +119,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/blackboard-collaborate-ultra</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/catalina</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/canvas-2d</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/catalina</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -142,7 +142,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/changing-web-hosts</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -151,7 +151,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/code-editors</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -160,7 +160,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/color-picker</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -169,7 +169,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/color-pickers</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -178,7 +178,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/command-line</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -187,23 +187,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/command-prompt</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/databases</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc
-			>https:www.interglobalmnedianetwork.com/categories/cross-browser-compatibility</loc
-		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -212,7 +196,23 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/computer-repair-services</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc
+			>https:www.interglobalmnedianetwork.com/categories/cross-browser-compatibility</loc
+		>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/databases</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -221,7 +221,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/decentralization</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -230,7 +230,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/developer-tools</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -239,14 +239,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/distributed-version-control</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/email-apps</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -255,14 +248,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/environment-variables</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/eprinting</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<loc>https:www.interglobalmnedianetwork.com/categories/email-apps</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -271,7 +264,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/error-handling</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/eprinting</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -280,7 +280,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/es6-javascript</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/es6-modules</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/express</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -289,21 +303,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/event-handling</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/es6-modules</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/express</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -312,14 +312,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/featured-tweets</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/flexbox</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -328,7 +328,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/frontend-development</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -337,42 +337,42 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/game-development</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/gatsbyjs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/gh-</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/git</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/git-hooks</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/github</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -381,7 +381,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/github-authentication</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -390,42 +390,42 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/google-search</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/graphql</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/homebrew</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/hp-smart</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/hooks</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/hp-smart</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/htm5-audio</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -434,35 +434,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/html-5-video</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/html5</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/html5-audio</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/html5-video</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/hugo</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -471,7 +471,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/hydration-errors</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -480,7 +480,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/image-optimization</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -489,28 +489,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/images-formats</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/javascript</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/jira</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/linting</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -519,14 +519,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/live-code-collaboration</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/live-share</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -535,7 +535,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/local-storage</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -544,7 +544,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/macbook-pro-silicon</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -553,14 +553,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/macbook-pros</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/macos</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -569,16 +569,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/macos-dictation</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc
-			>https:www.interglobalmnedianetwork.com/categories/macos-storage</loc
-		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -587,7 +578,16 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/manipulating-the-dom</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc
+			>https:www.interglobalmnedianetwork.com/categories/macos-storage</loc
+		>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -596,7 +596,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/mobile-first-design</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -605,70 +605,70 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/modern-javascript</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/mongodb</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/monterey</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/mongodb</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/murray-hill</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/netlify-cms</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/nextjs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/new-lines</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/nextjs</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/node-canvas</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/nodejs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/npm-audit</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -677,7 +677,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/npm-packages</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -686,14 +686,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/npm-plugin-compatibility</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/oop</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -702,7 +702,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/open-source-software</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -711,7 +711,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/page-performance</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -720,49 +720,49 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/personal-access-token</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/post</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/privacy</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/project</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/python3</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/react</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/react-18</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -771,14 +771,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/responsive-design</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/rest-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/search</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -787,28 +794,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/screen-sharing</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/search</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/security</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/shadow-dom</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -817,14 +810,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/server-side-rendering</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/shadow-dom</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/silicon</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/socketio</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -833,14 +840,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/site-performance</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/socketio</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -849,28 +849,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/sticky-footer</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/technology</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/unicode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/ventura</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -879,14 +872,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/video-conferencing</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/ventura</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/vscode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -895,7 +895,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/vscode-extensions</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -904,7 +904,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/web-audio-api</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -913,7 +913,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/web-browsers</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -922,7 +922,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/web-development</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -931,14 +931,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/web-development-workflows</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/web-hosting</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -947,7 +947,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/web-security</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -956,28 +956,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/web-speech-recognition-api</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/webpack</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/categories/websockets</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/windows</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/categories/websockets</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -986,21 +986,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/categories/wirelress-printers</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/wordpress</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/categories/yarn</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1009,28 +1009,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/advanced-custom-fields</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ajax</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/altext-image</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1039,63 +1039,63 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/api-error-handling</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/apis</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/apple-ids</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/apple-m1-max-chip</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/apple-music</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/async-await</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/audio-sharing</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/auto-completion</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/audio-web-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/auto-completion</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1104,28 +1104,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/automated-security-fixes</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/automation</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/aws-s3</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/babel</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1134,56 +1134,49 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/backend-development</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/bash</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/binary-image-data</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/boilerplate-code</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/book</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/branch-protection</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/branching</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/brewfile</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1192,7 +1185,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/browser-compatibility</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1201,14 +1194,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/browser-developer-tools</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/brewfile</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/browser-monads</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1217,7 +1217,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/browser-scrollbars</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1226,14 +1226,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/browser-software-vulnerabilities</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/browser-wars</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1242,14 +1242,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/bypassed-rule-violations</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/canvas-2d</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1258,35 +1258,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/cascading-stylesheets</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/catalina</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/chrome</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/click-event</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/clt</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1295,35 +1295,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/code-vulnerabilities</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/collaboration</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/color-picker</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/command-line</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/command-prompt</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1332,14 +1332,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/compatibility-issues</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/composer</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1348,21 +1348,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/computer-repair-services</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/computer-repairs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/confetti-js</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/computer-repairs</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1371,21 +1371,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/create-document-fragment-method</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/create-element</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/create-react-app</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1394,28 +1394,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/cross-browser-issues</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/css-attr</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/css-animation</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/css-attr</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/css-in-js</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/css-transforms</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1424,23 +1431,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/css-in-js-animation</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/css-transforms</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc
-			>https:www.interglobalmnedianetwork.com/tags/customn-mu-plugins</loc
-		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1449,35 +1440,44 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/custom-wordpress-themes</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc
+			>https:www.interglobalmnedianetwork.com/tags/customn-mu-plugins</loc
+		>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/dart-sass</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/data-backup</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/data-recovery</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/databases</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1486,7 +1486,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/developer-experience</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1495,7 +1495,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/development-workflow</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1504,7 +1504,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/development-workflows</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1513,21 +1513,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/distributed-version-control</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/dns</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/do-it-yourself</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1536,7 +1529,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/dns-information-groping</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/do-it-yourself</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1545,35 +1545,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/domcontentloaded-event</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/dotenv</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ejs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ekeycode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/emails</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1582,133 +1582,133 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/environment-variables</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/es6-classes</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/eslint</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/eslint-plugin-mdx</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/eslint</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/event-delegation</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/event-handling</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ewhich</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/expanding-skills</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/express</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/expressjs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/fetch-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/featured-tweet</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/fetch-api</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/figure-element</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/file-conversion</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/file-downloads</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/file-reversion</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/file-upload</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/finder</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/firefox</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1717,28 +1717,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/firefox-0-day-flaw</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/forking</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/forking-repos</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/fullscreen-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1747,7 +1740,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/fullstack-development</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/fullscreen-api</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1756,21 +1756,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/function-as-prop-component</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/gatsby-image</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/gatsbyjs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1779,21 +1779,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/gatsby-plugin-netlify-cms</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/geolocation</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/geolocation-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1802,63 +1802,56 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/getelementsbytagname</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/gh-</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/giscus</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-checkout</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-hooks</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/git-instaweb</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-index</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/git-log</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<loc>https:www.interglobalmnedianetwork.com/tags/git-instaweb</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1867,49 +1860,56 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/git-large-file-storage</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/git-log</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-push</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-reset</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-staging</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-status</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/git-subtree</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/github</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1918,7 +1918,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/github-https-authentication</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/gitweb</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1927,35 +1934,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/github-integration-app</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/gitweb</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/gmail</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/google-analytics</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/google-chrome</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1964,7 +1957,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/google-custom-search</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/google-chrome</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -1973,203 +1973,203 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/google-maps-api-maps-url</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/google-meet</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/google-search</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/got</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/heroku</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/homebrew</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/hooks</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/host-property</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/hotspot</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/hp-web-services</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/html-5</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/html-5-video</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/html-linting</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/html5</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/hugo</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/human-error</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/husky</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/hydration-failure</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/image-attribution</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/image-formats</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/image-lazy-load</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/input-event</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/image-lazy-load</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/interactive-shell</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ip-address</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/iphone</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/itunes</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/itunes-match</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/itunes-purchases</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/javascript</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2178,7 +2178,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/javascript-formatting</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2187,14 +2187,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/javascript-linting</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/jest-testing</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2203,14 +2203,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/jira-smart-commits</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/jscolor</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2219,7 +2219,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/json-placeholder-api</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/kbd-tags</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2228,63 +2235,56 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/jsx-spread-attributes</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/kbd-tags</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/keycode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/latest-version</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/lighthouse-audits</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/lint-staged</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/lighttpd</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/lint-staged</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/linters</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/linting</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2293,14 +2293,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/live-code-collaboration</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/live-server</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/live-share</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2309,21 +2316,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/live-server-plugin</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/live-share</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/local-development</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2332,42 +2332,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/local-git-repositories</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/local-hosts-file</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/local-ip-address</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/local-hosts-file</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/local-storage</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/localhost</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/macbook-pro</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2376,35 +2369,42 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/macbook-pro-silicon</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/macbook-pro</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/macos</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/macos-dictation</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/macos-storage</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/macos-ventura</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/macos-storage</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2413,49 +2413,49 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/manipulating-the-dom</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/media-queries</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mascos</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mdx</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/metadata</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<loc>https:www.interglobalmnedianetwork.com/tags/media-queries</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/missing-screws</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/metadata</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mobile-devices</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2464,35 +2464,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/mobile-first-design</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mobile-friendly</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/modern-javascript</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mojave</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/mongodb</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2501,7 +2494,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/mongo-legacy-shell</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/mongodb</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2510,49 +2510,42 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/mongodb-community-version-6</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mongodb-compass</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/mongosh-shell</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/monterey</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/multer</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/multi-networks</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/murray-hill</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2561,7 +2554,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/nested-api-objects</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/murray-hill</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2570,70 +2570,70 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/nested-map-methods</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/netlify-cms</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/new-lines</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/nextjs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/node-security</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/node-sass</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/node-security</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/nodejs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/nosql</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/npkill</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/npm</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2642,14 +2642,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/npm-force-resolutions</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/nvm</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/omdb-api</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2658,35 +2665,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/object-oriented-javascript</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/omdb-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/onerror</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/outdated-content</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/outdated-tooling</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2695,7 +2681,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/open-source-software</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/outdated-tooling</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/outdated-content</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2704,7 +2704,7 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/personal-access-token</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2713,28 +2713,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/photographer-attribution</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/phpcs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/phpdotenv</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/phpcs</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/poke-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2743,112 +2743,112 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/post-content-images</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/pre-commit</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/pre-commit-hook</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/pre-commit</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/prettier</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/privacy</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/progress-bar</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/project</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/promise-chaining</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/props</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/pseudo-elements</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/pyenv</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/python3</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/random-colors</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/random-quote-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/react</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/react-18</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/react</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2857,14 +2857,14 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/react-functional-components</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/react-hooks</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2873,21 +2873,21 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/react-image-lazy-loading</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/react-portal</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/reactjs</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2896,42 +2896,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/real-time-remote-code-collaboration</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/reflection</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/responsive-design</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/reinstalling-git</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/responsive-design</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/rest-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/rest-client</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -2940,231 +2933,238 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/rewording-commit-messages</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/rest-client</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/robohash-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/robo-3-t</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/rosetta</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/russia</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/safari</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/screen-capture</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/screen-sharing</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/screenshots</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/search</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/security-breach</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/search</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/semantic-html</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/seo</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/serve-favicon</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/serverless</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/serve-favicon</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/session-storage</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/shadow-dom</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/silicon</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/site-performance</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/socketio</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/site-propagation</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/socketio</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/source-maps</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/specialization</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/src-attribute</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ssh</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/src-attribute</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ssr</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/static-tweets</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/sticky-footer</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/stylelint</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/switching-careers</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/technology</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/terser</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/terminal</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/terser</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -3173,105 +3173,112 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/terser-npm-package</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/text-to-speech</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/this</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/thumb-slider</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/toml</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/thumb-slider</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/this</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/touch-events</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/touch-friendly</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/try-catch</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/tweet-embeds</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/twitter</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ui-mismatch</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ukraine</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/unicode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/unix</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/unsend</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/v13</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -3280,49 +3287,28 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/user-agent-stylesheets</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/v13</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/ventura</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/vercel</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/vh</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/video-sharing</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/viewport</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -3331,30 +3317,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/video-conferencing</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/video-sharing</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/vscode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/viewport</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/vscode-extensions</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc
-			>https:www.interglobalmnedianetwork.com/tags/web-based-visualizer</loc
-		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -3363,14 +3354,23 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/vulnerability-fixes</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/web-security</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<loc
+			>https:www.interglobalmnedianetwork.com/tags/web-based-visualizer</loc
+		>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/web-storage-api</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -3379,84 +3379,70 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/web-speech-recognition-api</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/web-storage-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<loc>https:www.interglobalmnedianetwork.com/tags/web-security</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/webp</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/webpack</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/webpack-config</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/websockets</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/wikipedia-api</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/websockets</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/window-object</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/window-pageoffset</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/window-scroll</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/windows</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
-		<changefreq>daily</changefreq>
-		<priority>1.0</priority>
-	</url>
-
-	<url>
-		<loc>https:www.interglobalmnedianetwork.com/tags/writings</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
@@ -3465,21 +3451,35 @@
 		<loc
 			>https:www.interglobalmnedianetwork.com/tags/world-balance-of-power</loc
 		>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/windows</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+
+	<url>
+		<loc>https:www.interglobalmnedianetwork.com/tags/writings</loc>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/xcode</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>
 
 	<url>
 		<loc>https:www.interglobalmnedianetwork.com/tags/zsh</loc>
-		<lastmod>3-31-2023 at 4:23 pm</lastmod>
+		<lastmod>4-2-2023 at 1:57 pm</lastmod>
 		<changefreq>daily</changefreq>
 		<priority>1.0</priority>
 	</url>

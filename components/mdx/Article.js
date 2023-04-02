@@ -1,9 +1,7 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from '@/components/Link'
 import Tag from '@/components/mdx/Tag'
 import Category from '@/components/mdx/Category'
-import formatDate from '@/lib/utils/formatDate'
-import '../../styles/partials/Article.module.scss'
+import '@/styles/partials/Article.module.scss'
 
 const Article = ({
 	slug,
@@ -20,13 +18,7 @@ const Article = ({
 		<Link href={`/blog/${slug}`} title={title} className="w-full xl:w-auto">
 			{/* eslint-disable-next-line @next/next/no-img-element */}
 			{images.length > 0 && (
-				<Image
-					alt={title}
-					src={images}
-					width={1280}
-					height={853}
-					layout="intrinsic"
-				/>
+				<img alt={title} src={images} width={1280} height={853} />
 			)}
 		</Link>
 	)

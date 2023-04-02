@@ -1,0 +1,152 @@
+---
+title: My Experience Updating My NextJS Business Site to Fix NPM Packages
+date: '2023-04-02'
+lastmod: '2023-04-02'
+tags: ['nextjs', 'npm']
+categories: ['post', 'nextjs']
+draft: false
+summary: My experience updating my Next.js business site to fix npm packages.
+images: ['/static/images/posts/img/webp/erik-mclean-RfkaDKptt-A-unsplash.webp']
+layout: PostLayout
+canonicalUrl: /blog/my-experience-updating-my-nextjs-business-site-to-fix-npm-packages
+authors: ['interglobalmedia']
+---
+
+<Unsplash
+	src="/static/images/posts/img/webp/erik-mclean-RfkaDKptt-A-unsplash.webp"
+	author="Erik Mclean"
+	alt="Builder fixing window frame"
+	srcUrl="https://unsplash.com/photos/RfkaDKptt-A"
+	authorUrl="https://unsplash.com/@introspectivedsgn"
+/>
+
+I **_just finished_** updating my (**_this_**) `business site` in **_order_** to
+**_fix_** `npm packages` (of their **_current versions_**) I am **_using_**. It
+was **_not_** a **_long ride_**, but it **_definitely_** was a **_bit_** of a
+**_wild one_**.
+
+There were a **_few packages_** with `vulnerabilities` that I **_wanted_** to
+**_remove_**. I **_first_** tried **_updating_** `everything` to the **_latest
+version_**. I **_broke_** the `site` **_doing that_**, and **_ended up_**
+`discovering` that the **_main culprit_** preventing me from **_at least_**
+updating `Next.js` and `React` **_for starters_** so that I could **_use_** the
+**_cool_** `new features` in `Next.js 13` (they are **_already releasing_**
+`v14` **_soon!_**) is `esbuild`. As **_great_** as `esbuild` is **_supposed_**
+to be for `mdx`, it is **_also_** really **_complex_** `behind` the `scenes` and
+**_hard_** to `“update”`.
+
+**_However_**, there is **_such_** a **_thing_** as **_fixing_**
+`existing versions` of **_packages_**. And **_thankfully_**, that is
+**_exactly_** what `Timothy Lin` (aka `timlrx` On **_Github_**) did with his
+`tailwind-nextjs-starter-blog` **_template_** which I **_used_** to **_build_**
+this **_site_**.
+
+**_Previously_**, I **_would visit_** to **_see_** if there had been any
+**_major changes_** that I **_would want_** to **_incorporate_** into the
+`site`, but there did **_not seem_** to **_be an_**y. When I **_started_** to
+**_try_** and `update` the `site packages` **_myself_** (and was
+**_unsuccessful_**), I **_decided_** to `clone` the `repository` and **_test_**
+it out **_locally_**.
+
+Some **_pretty important_** `changes` (**_to me_** anyway) **_Were made_** to
+the `repository`. **_Packages_** which **_needed fixing_** were **_addressed_**
+and **_almost totally_** fixed! I **_tested_** `everything out` in my
+`cloned version` of the `repository` **_locally_** on **_my machine_**, and
+**_brought_** in the `code changes` I **_had_** in **_my repository_**,
+**_bit_** by **_bit_**, to **_see_** what would **_happen_**. AND I did this
+**_all_** in `Node.js 18.12.1`. It is **_important_** to **_note_** that **_up
+till_** this **_time_** I **_had_** to **_work_** with **_my version_** of the
+`repository` in `16.17.0`. But **_after_** the `fixes` that were **_made_** to
+the `site` (**_primarily_** in the `package-lock.json`), I **_was able_** to
+**_work_** with it in `Node.js 18.12.1`, which is the **_version_** I am
+**_currently_** `working` **_with_**.
+
+**_After_** I had **_replicated_** my `site` in the **_cloned_**, **_updated
+version_** of `Timothy`’s `tailwind-nextjs-starter-blog` **_template_**, and in
+`Node.js 18.12.1`, I then **_replicated_** what I **_had there_** in my **_own
+repository_** of this `site`. The **_way_** I **_achieve_**d that was to
+**_replace_** the `contents` of my `package.json` with **_that_** of the
+**_cloned repository_**, and I **_replaced_** the `contents` of my
+`package-lock.json` with **_that_** of the **_cloned repository_**.
+**_Updating_** the `package-lock.json` was **_key_**. **_Then_**, **_whatever
+other_** packages were **_missing_** that I had **_been using_**, I just
+**_re-installed_** using the **_same versions_** that I **_had_** on `remote`.
+There was **_no issue_** with **_those_**. And **_lastly_**, **_remember_** to
+**_remove_** your `node_modules` **_folder_** and then **_reinstall_**. So
+first:
+
+```shell
+rm -rf node_modules
+```
+
+At the `root` of your **_project directory_** where your `node_modules`
+**_folder_** resides. Then **_run_** `npm i` in **_order_** to **_reinstall_**
+the `packages` which are **_present_** in the `package.json` file. There
+**_may_** be **_some packages_** you have **_subsequently installed_** that
+would then **_not_** be `present` in **_your project_** on
+**_re-installation_**. So **_between_** `throwing errors` when **_running_**
+`npm run dev` (**_running_** your `Next.js` **_project_** in `development mode`)
+or `errors` being **_highlighted _**in the `text editor` itself,
+**_technically_** you **_would_** be **_able_** to **_replicate_** your
+**_former instance_** of your `project`. I **_do advise_** that you **_take_**
+the **_approach_** of **_first cloning_** the **_updated_**
+`template repository` and **_replicating_** your `project` with the **_fixed
+packages_** in **_place_**. Then, **_when_** `everything works` there, you can
+**_integrate_** those **_changes_** into your **_existing_** project `repo`. The
+**_process_** will **_be_** a **_lot faster_**, and with **_much less_**
+`headache`! I **_learned_** the **_hard way_**, but that does **_not mean_** you
+**_have_** to **_go throug_**h that **_grueling process_** just because **_I
+did_**!
+
+It was **_also_** a **_good time_** to **_get rid_** of packages**_ and
+_**configurations**_ which I was _**never**_ going to _**use**_ that I had
+_**installed**_ along the _**way\*\*\*.
+
+The **_one thing_** that I did **_initially_** have `issue` with **_simply
+because_** I had **_forgotten_** that it **_had been_** an `issue` when I
+**_first_** started **_building_** the `site`, was that the **_example posts_**
+which **_came_** with the `template` were **_different_** in the **_included
+frontmatter_** from the `frontmatter` I **_ended up_** with. And I had
+`“temporarily”` **_forgotten_** about that. Why? In **_my site_**, I **_had
+kept_** those **_posts_** set to `draft: true` (`God` **_only knows_** why), but
+in the `clone`, they were **_set_** to `draft: false`. So **_when_** I
+**_brought_** in my `configurations` and `code changes` to the
+`cloned repository`, the `app` kept on **_throwing_** `errors` **_related_** to
+**_those_** added **_features_**. **_Namely_**, I **_added_** the
+`images property` to my `frontmatter` and a `categories property` **_as well_**.
+The `template` did**_ not support_** these **_features_** out of **_the box_**,
+so **_that_** is **_why_** the **_errors_** kept on **_occurring_**.
+
+When I **_finally_** remembered **_why_** this was **_happening_** with the
+**_help_** of **_helpful_** `error messages` in the `Terminal` **_console_**
+telling me**_ where_** these `errors` were **_taking place_**, **_especially_**
+on `build`, I **_remembered_** that I **_had_** the **_same exact_** `issue`(s)
+when **_first building_** the `sit`e and **_adding_** new **_features_** to the
+`template`. So I **_removed_** those `example posts` **_entirely_**!
+
+**_Remember this_** if **_ever_** you `encounter` **_similar behavior_** when
+**_updating_** your `template`(s) in **_any way_**, and **_especially_** if you
+are **_updating_** `Timothy Lin`’s `tailwind-nextjs-starter-blog`
+**_template_**. It is a **_great template_**, and you can **_learn much_** about
+`TailwindCSS`, `MDX`, and `Next.js` by **_implementing_** it in a `project` or
+`site`. That is what **_got me_** into **_learning_** about `TailwindCSS` and
+`Next.js`! I **_have since_** used **_both_** `Next.js` and `TailwindCSS` in
+**_other projects_** (**_not_** the `template`), so **_coming back_** here to
+**_tweak_** the `site` **_here_** and **_there_** was **_quick_** and
+(relatively) **_easy_** in the **_end_**!
+
+**_Feel free_** to **_check out_** the (**_public_**) **_repository_** of
+**_this site_** on `Github`. And **_please_** do **_check out_** the `Github`
+**_repository_** for` Timothy Lin`’s `tailwind-nextjs-starter-blog`
+**_template_**. I have **_included_** a link to **_both_** within the
+`Related Resources` section **_below_**.
+
+**_Happy TailwindCSS and Next.jsing!_**
+
+## Related Resources
+
+-   [interglobalmedia-tailwind-nextjs Github repository](https://github.com/interglobalmedia/interglobalmedia-tailwind-nextjs):
+    **_interlgyobalmedia_** on **_Github_**
+
+-   [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog):
+    **_timlrx_** on **_Github_**
