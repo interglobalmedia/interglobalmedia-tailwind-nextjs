@@ -1,6 +1,6 @@
 import Image from '../Image'
-import Link from 'next/link'
-import '../../styles/partials/Card.module.scss'
+import Link from '@/components/Link'
+import '@/styles/partials/Card.module.scss'
 
 const Card = ({ title, summary, imgSrc, href, tags }) => {
 	return (
@@ -37,7 +37,7 @@ const Card = ({ title, summary, imgSrc, href, tags }) => {
 							src={imgSrc}
 							className="object-cover object-center md:h-36 lg:h-48"
 							width={1280}
-							height={960}
+							height={895}
 							layout="intrinsic"
 						/>
 					))}
