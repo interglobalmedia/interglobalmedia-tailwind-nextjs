@@ -23,6 +23,7 @@ export default function Blog({ posts, initialDisplayPosts, pagination }) {
 			<PageSEO
 				title={`Blog - ${siteMetadata.author}`}
 				description={siteMetadata.description}
+				keywords={siteMetadata.keywords}
 				url={`${siteMetadata.siteUrl}/blog`}
 			/>
 			<ScrollTop />

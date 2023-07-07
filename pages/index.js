@@ -24,11 +24,12 @@ export default function Home({ posts, hasExtraLink = true }) {
 			<PageSEO
 				title={siteMetadata.title}
 				description={siteMetadata.description}
+				keywords={siteMetadata.keywords}
 			/>
 			<ScrollTop />
 			<div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
 				<article className="home-page-title-wrapper space-y-2 pb-8 pt-6 md:space-y-5">
-					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 md:text-6xl md:leading-14 sm:text-4xl sm:leading-10">
+					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
 						Hi there!
 					</h1>
 					<p className="home-page-description text-lg leading-7 text-gray-500 dark:text-gray-400">

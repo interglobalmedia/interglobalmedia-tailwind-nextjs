@@ -23,6 +23,7 @@ export default function Projects({ initialDisplayPosts = [] }) {
 			<PageSEO
 				title={`Projects - ${siteMetadata.author}`}
 				description={siteMetadata.description}
+				keywords={siteMetadata.keywords}
 			/>
 			<ScrollTop />
 			<main className="divide-y divide-gray-200 dark:divide-gray-900">
