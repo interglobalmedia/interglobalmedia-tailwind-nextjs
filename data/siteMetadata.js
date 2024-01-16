@@ -6,7 +6,9 @@ const siteMetadata = {
 	domain: 'interglobalmedianetwork.com',
 	headerTitle: 'Inter-Global Media',
 	headerTitleFull: 'Inter-Global Media Network, Inc.',
-	description: `Welcome to Inter-Global Media Network. I'm Maria, and I design, develop, and teach experiences that make people's lives simpler.`,
+	description: `Inter-Global Media Network designs, develops, trains, coaches, mentors, and teaches tech related experiences and online courses that make people's lives simpler and transforming the way to teach tech.`,
+	keywords:
+		'CSS3, CSS Flexbox, Command Line Interface, CSS Grid, Embedded JavaScript, ECMAScript 6 Plus, ES6 Modules, Express.js, Snagit screen capture and recording software, macWhisper transcription technology for macOS, Git, Github, Heroku, HTML5, JetBrains, Jira, Modern JavaScript, MongoDB, Netlify, Netlify CMS, Node.js, NPM, Stylelint, HTMLHint, ESLint, Husky, PostreSQL, Python 3.11+, Django, React, SASS (SCSS), Webpack, SQL, macOS, Windows OS, technical Writing, Presentation creation using reveal.js, reveal.md, and Marp, Online Course Development and Creation, and more',
 	language: 'en-us',
 	theme: 'system', // system, dark or light
 	siteUrl: 'https:www.interglobalmnedianetwork.com',
@@ -23,6 +25,7 @@ const siteMetadata = {
 	facebook: 'https://www.facebook.com/interglobalmedia/',
 	youtube: 'https://www.youtube.com/user/letsbsocial1',
 	linkedin: 'https://www.linkedin.com/in/mariacampbell/',
+	instagram: 'https://www.instagram.com/letsbsocial/',
 	sitemap: '/sitemap.xml',
 	locale: 'en-US',
 	category: '/categories',

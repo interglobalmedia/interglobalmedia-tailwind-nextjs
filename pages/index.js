@@ -24,11 +24,12 @@ export default function Home({ posts, hasExtraLink = true }) {
 			<PageSEO
 				title={siteMetadata.title}
 				description={siteMetadata.description}
+				keywords={siteMetadata.keywords}
 			/>
 			<ScrollTop />
 			<div className="home-page-wrapper divide-y divide-gray-200 dark:divide-gray-700">
 				<article className="home-page-title-wrapper space-y-2 pb-8 pt-6 md:space-y-5">
-					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 md:text-6xl md:leading-14 sm:text-4xl sm:leading-10">
+					<h1 className="home-page-title text-4xl font-extrabold leading-9 tracking-tight text-gray-500 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
 						Hi there!
 					</h1>
 					<p className="home-page-description text-lg leading-7 text-gray-500 dark:text-gray-400">
@@ -77,6 +78,30 @@ export default function Home({ posts, hasExtraLink = true }) {
 							<NewsletterForm />
 						</section>
 					)}
+				</article>
+				<article className="blog-page-post-wrapper">
+					<h2 className="index-post-latest-header text-left text-6xl font-bold">
+						<span className="circle-sketch-highlight text-gray-500 dark:text-gray-100">
+							Online Course
+						</span>
+					</h2>
+					<ul className="index-latest-posts-wrapper divide-y divide-gray-200 dark:divide-gray-700">
+						<li className="py-12">
+							<a
+								className={`home-personal-website`}
+								href="https://interglobalmedianetwork-site-84aa.thinkific.com/courses/comprehensive-guide-to-front-end-web-development"
+							>
+								A Comprehensive Guide to Front End Web
+								Development
+							</a>
+							<p className={`home-personal-website-para`}>
+								My online course hosted on thinkific.com. Check
+								out my video about the course and what is built,
+								located on the course site landing page. The
+								above link takes you there!
+							</p>
+						</li>
+					</ul>
 				</article>
 				<article className="blog-page-post-wrapper">
 					<h2 className="index-article-latest-header pb-10 text-left text-6xl font-bold">
