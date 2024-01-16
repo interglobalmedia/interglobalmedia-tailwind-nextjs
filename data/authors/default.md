@@ -42,8 +42,8 @@ I **_take_** a **_very_** `hands` on `approach`, and **_believe_** in
 to **_apply_** my `philosophy` and `mission` **_outside of_** the
 `traditional classroom`!
 
-`Teaching online` **_permits me_** to **_cover_** `subject matter` and in the
-**_way_** that I **_feel_** is **_most appropriate_** that a
+`Teaching online` **_permitted me_** to **_cover_** `subject matter` and in the
+**_way_** that I **_felt_** is **_most appropriate_** that a
 `traditional classroom` **_would not_**. The **_aim_** of this `course` is for
 `students` to **_gain_** `broader knowledge` and `skills` that **_make them_**
 more **_competitive_**.
@@ -53,7 +53,26 @@ more **_competitive_**.
 which I **_just published_** on
 [thinkific.com](https://interglobalmedianetwork-site-84aa.thinkific.com/courses/comprehensive-guide-to-front-end-web-development!
 Yu can **_learn more_** about the `course` and **_what_** is **_built_** by
-**_watching_** the `video` on the `course site`'s **_home page_**. Thanks!
+**_watching_** the `video` on the `course site`'s **_home page_**.
+
+## Switching into the field of CyberSecurity
+
+The advent of `npm audit`, and the exponential increase in cyber attacks during
+and after the Covid 19 pandemic inspired me to pursue a career in the field of
+CyberSecurity. In October 2023, I completed the
+`Google CyberSecurity certificate program` on `Coursera`, and I am **_currently
+enrolled_** in the `Rochester Institute of Technology`'s
+`Cybersecurity MicroMasters certificate program` **_via_** `edX` online.
+
+My `ideal position` would be as an `entry level digital analyst`, and my
+`first area` of `interest` is `digital` or `computer forensics`. I am o`pen` to
+`part time`, `full time`, and `paid internship opportunities` in
+`Cybersecurity`.
+
+Please be sure to also `visit` my `personal blog`
+[mariadcampbell.com](https://www.mariadcampbell.com/), `where` I `blog` about
+`CyberSecurity`, `fullstack development`, as `well` as `macOS`, `Command Line`,
+`Git`, and `ethics` in `technology`.
 
 `About` **_ME_**? **_When_** I’m **_not_** `coding`, I **_love_** to **_go_** to
 the `countryside` to **_recharge_**, **_watch_** `Film Noir` and
