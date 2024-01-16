@@ -57,9 +57,6 @@ const Skills = () => {
 				<li className="ability-vscode" title="vs code">
 					VS Code
 				</li>
-				<li className="ability-wordpress" title="wordpress">
-					WP
-				</li>
 			</ul>
 		</section>
 	)
